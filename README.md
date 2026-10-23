@@ -107,9 +107,12 @@ graph TD
 - **Dual-Mode Presenter Architecture**:
   - **Desktop Studio**: 2-column widescreen teleprompter with synchronized slide timeline, side-by-side presenter notes, and Lecturer Q&A cards.
   - **Dedicated Mobile Cockpit**: Purpose-built executive mobile prompter designed from the ground up:
+    - **Immediate Teleprompter Visibility (Zero-Scroll First Fold)**: Pre-speech header height reduced from 600px to ~230px, eliminating vertical clutter and displaying verbatim speech text immediately upon unlocking.
+    - **Zero Overflow Security Header**: Streamlined top bar with role capsule, module title, and responsive `[Settings]`, `[Stage]`, and `[Lock]` action cluster guaranteed to fit on narrow 360px–430px screens without horizontal clipping.
+    - **Ultra-Slim 7-Speaker Touch Rail**: 32px pill carousel with avatar badge, section kicker, and assessment marks (`15 Marks` / `10 Marks`) with smooth auto-centering on selection.
+    - **Consolidated Briefing HUD**: Single-line metadata strip combining target pace (`⏱️ 2:00`), word count (`📝 116w`), pacing velocity (`🗣️ ~52s`), and inline SVG diagram badges (`📊 #1 Mission...`).
     - **Interactive Presentation Stopwatch**: Live countdown/countup (`00:00 / 02:00`) with visual pacing feedback (`Ready`, `On Pace`, `Wrap Up`, `Overtime`) and progress track.
-    - **7-Speaker Touch Rail**: Rapid 1-tap speaker carousel with section allocation, assessment marks (`15 Marks` / `10 Marks`), and sequential handover (`Previous` / `Next Speaker`).
-    - **4-View Intelligence Switcher**: Instant switching between `🎙️ Speech Prompter`, `💡 Notes`, `🛡️ Q&A Defense`, and `📑 All-in-One Briefing`.
+    - **4-View Intelligence Switcher**: Instant switching between `🎙️ Speech Prompter`, `💡 Notes`, `🛡️ Q&A Defense`, and `📑 All`.
     - **One-Tap Utilities**: Ergonomic font scaling (`A−` / `A+`), one-tap script clipboard copy, and direct links to inspect related diagrams in the high-res SVG Lightbox.
     - **OLED Stage Teleprompter (`Stage Mode`)**: Distraction-free full-screen stage prompter with high-contrast typography, live elapsed timer, and thumb controls.
 - **Session Persistence**: Authentication persists across page navigation and background browser tab switches.

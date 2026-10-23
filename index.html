@@ -1226,34 +1226,815 @@
   .m-th-acc h4 { font-size: .88rem !important; }
   .m-th-body { padding: 0 .8rem .75rem !important; font-size: .78rem !important; }
 
-  /* Mobile Speaker Script Studio (Dedicated Native UI) */
+  /* =========================================================================
+     MOBILE SPEAKER SCRIPT STUDIO — DEDICATED MOBILE COCKPIT (NATIVE UI/UX)
+     ========================================================================= */
   .m-spk-studio {
-    background: rgba(15, 23, 42, 0.92);
-    border: 1px solid rgba(255,255,255,.13);
-    border-radius: 16px;
-    padding: .8rem;
+    background: linear-gradient(165deg, rgba(15, 23, 42, 0.96) 0%, rgba(9, 14, 26, 0.99) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 0.85rem;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
   }
   .m-spk-top {
-    display: flex; justify-content: space-between; align-items: center; gap: .4rem;
-    padding-bottom: .55rem; margin-bottom: .55rem;
-    border-bottom: 1px solid rgba(255,255,255,.09);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-  .m-spk-bar {
-    display: flex; justify-content: space-between; align-items: center; gap: .35rem;
-    background: rgba(9, 13, 22, 0.9); border: 1px solid rgba(255,90,95,.35);
-    border-radius: 11px; padding: .4rem .55rem; margin-bottom: .55rem;
+  .m-spk-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
   }
-  .m-spk-box {
-    background: rgba(9, 13, 22, 0.78); border: 1px solid rgba(255,255,255,.1);
-    border-radius: 13px; padding: .8rem .85rem;
+  .m-spk-role-badge {
+    font-size: 0.64rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 0.18rem 0.52rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
   }
-  .m-spk-box p {
-    color: #f8fafc; line-height: 1.58; font-weight: 500;
+  .m-spk-role-badge.superadmin {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
   }
-  .m-spk-meta-foot {
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: .7rem; color: #94a3b8; margin-top: .55rem; padding-top: .45rem;
-    border-top: 1px solid rgba(255,255,255,.08);
+  .m-spk-role-badge.admin {
+    background: rgba(20, 184, 166, 0.18);
+    color: #2dd4bf;
+    border: 1px solid rgba(20, 184, 166, 0.4);
+  }
+  .m-spk-role-badge.presenter {
+    background: rgba(56, 189, 248, 0.18);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+  }
+  .m-spk-title-group h2, .m-spk-title-group h1 {
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .m-spk-title-group span {
+    font-size: 0.68rem;
+    color: var(--text-muted, #94a3b8);
+    display: block;
+  }
+  .m-spk-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .m-spk-focus-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.34rem 0.58rem;
+    border-radius: 8px;
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+  .m-spk-focus-btn:active {
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  /* 7-Speaker Carousel Rail */
+  .m-spk-rail-wrap {
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+  .m-spk-rail {
+    display: flex;
+    gap: 0.42rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.15rem 0.1rem;
+  }
+  .m-spk-rail::-webkit-scrollbar {
+    display: none;
+  }
+  .m-spk-rail-chip {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.38rem 0.65rem;
+    cursor: pointer;
+    min-height: 44px;
+    text-align: left;
+    transition: all 0.15s ease;
+  }
+  .m-spk-rail-chip:active {
+    transform: scale(0.97);
+  }
+  .m-spk-rail-chip.active {
+    background: linear-gradient(135deg, rgba(232, 13, 19, 0.28) 0%, rgba(139, 0, 0, 0.45) 100%);
+    border-color: rgba(255, 90, 95, 0.55);
+    box-shadow: 0 4px 14px rgba(232, 13, 19, 0.3);
+  }
+  .m-spk-chip-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    font-size: 0.72rem;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .m-spk-rail-chip.active .m-spk-chip-avatar {
+    background: var(--alfa-red, #e80d13);
+    color: #fff;
+  }
+  .m-spk-chip-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .m-spk-chip-sec {
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.3px;
+  }
+  .m-spk-rail-chip.active .m-spk-chip-sec {
+    color: #ff8a8e;
+  }
+  .m-spk-chip-title {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    white-space: nowrap;
+  }
+
+  /* Active Member Briefing Card */
+  .m-spk-hero-card {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    padding: 0.75rem 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  .m-spk-hero-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.35rem;
+  }
+  .m-spk-hero-range {
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--alfa-pink, #ff8a8e);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .m-spk-hero-marks {
+    font-size: 0.68rem;
+    font-weight: 800;
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+  }
+  .m-spk-hero-title {
+    font-size: 0.94rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0 0 0.45rem 0;
+  }
+  .m-spk-hero-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.72rem;
+    color: #94a3b8;
+    padding-top: 0.35rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .m-spk-hero-meta-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  /* Related Diagrams Dock */
+  .m-speech-charts-dock {
+    margin-top: 0.5rem;
+    padding-top: 0.45rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.09);
+  }
+  .m-charts-dock-lbl {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.4px;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .m-charts-dock-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .m-chart-chip {
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    border-radius: 8px;
+    padding: 0.28rem 0.55rem;
+    font-size: 0.72rem;
+    color: #bae6fd;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    min-height: 32px;
+  }
+  .m-chart-chip:active {
+    background: rgba(56, 189, 248, 0.2);
+  }
+  .m-chip-no {
+    font-weight: 800;
+    color: #38bdf8;
+  }
+  .m-chip-name {
+    font-weight: 600;
+    color: #e0f2fe;
+  }
+  .m-chip-zoom {
+    opacity: 0.7;
+    display: grid;
+    place-items: center;
+  }
+
+  /* 4-Tab View Selector */
+  .m-spk-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(10, 15, 28, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 3px;
+    margin-bottom: 0.75rem;
+    gap: 2px;
+  }
+  .m-spk-tab-btn {
+    background: none;
+    border: 0;
+    padding: 0.45rem 0.2rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #94a3b8;
+    border-radius: 9px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    min-height: 42px;
+    justify-content: center;
+    transition: all 0.15s ease;
+  }
+  .m-spk-tab-btn.active {
+    background: linear-gradient(135deg, rgba(232, 13, 19, 0.85) 0%, rgba(139, 0, 0, 0.95) 100%);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(232, 13, 19, 0.35);
+  }
+  .m-spk-tab-btn small {
+    font-size: 0.65rem;
+    opacity: 0.85;
+  }
+
+  /* Interactive Stopwatch Bar */
+  .m-spk-stopwatch {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 0.65rem;
+  }
+  .m-stopwatch-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .m-stopwatch-time-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .m-stopwatch-icon {
+    color: var(--alfa-pink, #ff8a8e);
+    display: grid;
+    place-items: center;
+  }
+  .m-stopwatch-digits {
+    font-family: var(--font-mono, monospace), monospace;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  .m-stopwatch-target {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+  .m-timer-status-badge {
+    font-size: 0.64rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    letter-spacing: 0.3px;
+  }
+  .m-timer-status-badge.ready {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+  }
+  .m-timer-status-badge.pacing {
+    background: rgba(34, 197, 94, 0.18);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.35);
+  }
+  .m-timer-status-badge.warn {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+  }
+  .m-timer-status-badge.over {
+    background: rgba(232, 13, 19, 0.22);
+    color: #ff5a5f;
+    border: 1px solid rgba(232, 13, 19, 0.45);
+  }
+  .m-stopwatch-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .m-timer-toggle-btn {
+    background: linear-gradient(135deg, var(--alfa-red, #e80d13), var(--alfa-dark-red, #8b0000));
+    border: 1px solid #ff5a5f;
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 800;
+    padding: 0.35rem 0.7rem;
+    border-radius: 8px;
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+  .m-timer-toggle-btn.running {
+    background: rgba(245, 158, 11, 0.25);
+    border-color: #fbbf24;
+    color: #fbbf24;
+  }
+  .m-timer-reset-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #cbd5e1;
+    padding: 0.35rem 0.55rem;
+    border-radius: 8px;
+    min-height: 34px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+  .m-stopwatch-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+  .m-stopwatch-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    border-radius: 999px;
+  }
+
+  /* Prompter Toolstrip */
+  .m-prompter-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.65rem;
+  }
+  .m-font-stepper {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 8px;
+    padding: 2px 6px;
+  }
+  .m-font-lbl {
+    font-size: 0.65rem;
+    color: #94a3b8;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .m-font-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 0;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.2rem 0.45rem;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 26px;
+    min-height: 26px;
+  }
+  .m-font-btn:active {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .m-font-val {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #bae6fd;
+    min-width: 32px;
+    text-align: center;
+  }
+  .m-prompter-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .m-tool-action-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e2e8f0;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.32rem 0.65rem;
+    border-radius: 8px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+  .m-tool-action-btn.primary {
+    background: rgba(232, 13, 19, 0.2);
+    border-color: rgba(255, 90, 95, 0.4);
+    color: #fff;
+  }
+  .m-tool-action-btn:active {
+    transform: scale(0.96);
+  }
+
+  /* Verbatim Speech Card */
+  .m-speech-card {
+    background: rgba(9, 13, 22, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--alfa-red, #e80d13);
+    border-radius: 14px;
+    padding: 0.85rem 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .m-speech-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .m-speech-lead-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--alfa-pink, #ff8a8e);
+    letter-spacing: 0.4px;
+  }
+  .m-speech-word-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #94a3b8;
+  }
+  .m-speech-quote {
+    margin: 0;
+    padding: 0;
+  }
+  .m-speech-para {
+    color: #f8fafc;
+    line-height: 1.68;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.1px;
+  }
+  .m-speech-card-foot {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .m-speech-foot-ic {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+  .m-speech-foot-txt {
+    font-size: 0.72rem;
+    color: #cbd5e1;
+    line-height: 1.45;
+    font-style: italic;
+  }
+
+  /* Notes & Defense Cards */
+  .m-section-heading {
+    margin-bottom: 0.55rem;
+  }
+  .m-section-heading h4 {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--alfa-pink, #ff8a8e);
+    margin: 0 0 0.15rem 0;
+  }
+  .m-section-heading.defense h4 {
+    color: #2dd4bf;
+  }
+  .m-section-sub {
+    font-size: 0.68rem;
+    color: #94a3b8;
+    display: block;
+  }
+  .m-notes-list, .m-qa-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 0.75rem;
+  }
+  .m-note-card {
+    background: rgba(9, 13, 22, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-left: 3px solid #38bdf8;
+    border-radius: 12px;
+    padding: 0.75rem 0.85rem;
+  }
+  .m-note-head {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.35rem;
+  }
+  .m-note-slide-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .m-note-title {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+  }
+  .m-note-text {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Q&A Cards */
+  .m-qa-card {
+    background: rgba(9, 13, 22, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-left: 3px solid #14b8a6;
+    border-radius: 12px;
+    padding: 0.75rem 0.85rem;
+  }
+  .m-qa-q-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin-bottom: 0.45rem;
+  }
+  .m-qa-q-badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    font-size: 0.68rem;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .m-qa-q-text {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #fef08a;
+    line-height: 1.35;
+    margin: 0;
+  }
+  .m-qa-a-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .m-qa-a-badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(20, 184, 166, 0.2);
+    color: #2dd4bf;
+    border: 1px solid rgba(20, 184, 166, 0.4);
+    font-size: 0.68rem;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .m-qa-a-text {
+    font-size: 0.78rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+  }
+
+  /* Sequential Speaker Nav Footer */
+  .m-spk-nav-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .m-spk-nav-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 11px;
+    padding: 0.5rem 0.65rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    min-height: 46px;
+    text-align: left;
+  }
+  .m-spk-nav-btn.next {
+    text-align: right;
+    justify-content: flex-end;
+  }
+  .m-spk-nav-btn small {
+    display: block;
+    font-size: 0.58rem;
+    font-weight: 800;
+    color: #94a3b8;
+    letter-spacing: 0.4px;
+  }
+  .m-spk-nav-btn b {
+    display: block;
+    font-size: 0.78rem;
+    color: #fff;
+  }
+  .m-spk-nav-btn:active {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Fullscreen Stage Mode Overlay (OLED Optimization) */
+  .m-focus {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #060911;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .m-focus-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 15, 28, 0.95);
+  }
+  .m-focus-t {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .m-focus-t b {
+    font-size: 0.92rem;
+    color: #fff;
+  }
+  .m-focus-t span {
+    font-size: 0.68rem;
+    color: var(--alfa-pink, #ff8a8e);
+  }
+  .m-focus-timer-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-family: var(--font-mono, monospace), monospace;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #fff;
+  }
+  .m-focus-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .m-focus-body p {
+    color: #f8fafc;
+    line-height: 1.7;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
+  .m-focus-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 15, 28, 0.95);
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+  .m-focus-nav-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.82rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    min-height: 42px;
+  }
+  .m-focus-play-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--alfa-red, #e80d13), var(--alfa-dark-red, #8b0000));
+    border: 1px solid #ff5a5f;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(232, 13, 19, 0.45);
+  }
+  .m-focus-play-btn.running {
+    background: rgba(245, 158, 11, 0.25);
+    border-color: #fbbf24;
+    color: #fbbf24;
+  }
+  .m-focus-font-group {
+    display: flex;
+    gap: 0.35rem;
   }
 
   /* Mobile Overview Grid Refinements */
@@ -6970,6 +7751,7 @@ p.note, .note {
     close: '<path d="M18 6 6 18M6 6l12 12"/>',
     search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
     download: '<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>',
+    copy: '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
     clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     zoom: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/>',
     alert: '<path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/>',
@@ -7785,6 +8567,8 @@ p.note, .note {
     S.font = Math.max(14, Math.min(28, S.font + d));
     $$("[data-script]").forEach(p => { p.style.fontSize = S.font + "px"; });
     $$("[data-script-lg]").forEach(p => { p.style.fontSize = (S.font + 6) + "px"; });
+    const disp = $("#mFontValDisplay");
+    if (disp) disp.textContent = S.font + "px";
     haptic(6);
   }
 
@@ -7967,6 +8751,188 @@ p.note, .note {
   window.openDesktopFigureDrawer = openDesktopFigureDrawer;
   window.closeDesktopFigureDrawer = closeDesktopFigureDrawer;
 
+  /* =======================================================================
+     MOBILE SPEAKER SCRIPT COCKPIT METADATA & INTERACTIVE STOPWATCH
+     ======================================================================= */
+  const MEMBER_META = [
+    {
+      num: 1,
+      sec: "Section A · 15 Marks",
+      badge: "15 Marks",
+      kicker: "Profile & Problems",
+      title: "ALFA Profile, 100% Agent Reliance & Paperwork Delays",
+      charts: [{ id: 1, label: "Profile Timeline" }, { id: 2, label: "Agent Commission Breakdown" }],
+      pace: "116w · ~52s at 135 wpm",
+      advice: "Open with confidence. Emphasize ALFA's heritage since 1998 and the contrast between $150K agent spend vs 5–7 day paper delays."
+    },
+    {
+      num: 2,
+      sec: "Section B · 10 Marks",
+      badge: "10 Marks",
+      kicker: "Planning & Strategy",
+      title: "12-Month Strategic Roadmap, SMART Goals & $42K Budget",
+      charts: [{ id: 4, label: "OneHub Architecture" }, { id: 7, label: "Paperless vs $42K Budget" }],
+      pace: "100w · ~44s at 135 wpm",
+      advice: "Cite Robbins & Coulter planning framework. Clearly state the 65% direct goal and the $150 contingency scholarship trigger."
+    },
+    {
+      num: 3,
+      sec: "Section C · 10 Marks",
+      badge: "10 Marks",
+      kicker: "Organising & Structure",
+      title: "120-Staff Structure, Authority Delegation & Span 4–6",
+      charts: [{ id: 6, label: "120-Staff Organogram" }, { id: 3, label: "Span of Control 7 vs 4–6" }],
+      pace: "78w · ~35s at 135 wpm",
+      advice: "Highlight why narrowing span of control from 7 to 4–6 in digital units reduces Graicunas relational complexity without adding payroll."
+    },
+    {
+      num: 4,
+      sec: "Section D · 10 Marks",
+      badge: "10 Marks",
+      kicker: "Leading & Power",
+      title: "6-Step Leading Process & ERP Sandbox Change Strategy",
+      charts: [{ id: 8, label: "6 Leading Steps & Power" }, { id: 9, label: "Senior Clerks Sandbox" }],
+      pace: "93w · ~41s at 135 wpm",
+      advice: "Explain why Referent and Expert power overcame change resistance with senior clerks, avoiding Coercive friction."
+    },
+    {
+      num: 5,
+      sec: "Section E · 10 Marks",
+      badge: "10 Marks",
+      kicker: "Controlling & Variance",
+      title: "4-Step Control Process, 3 Types & 5-Area SLA Matrix",
+      charts: [{ id: 10, label: "4-Step Control Loop" }, { id: 11, label: "5-Area SLA Matrix" }],
+      pace: "73w · ~32s at 135 wpm",
+      advice: "Walk through Feedforward (Sandbox), Concurrent (CRM timestamps), and Feedback (Quarterly review) controls with traffic-light rules."
+    },
+    {
+      num: 6,
+      sec: "Section F · 10 Marks",
+      badge: "10 Marks",
+      kicker: "Motivation & People",
+      title: "Situational Leadership, Herzberg Motivators & Staff Bonus",
+      charts: [{ id: 8, label: "Situational Leadership" }, { id: 6, label: "120-Staff Structure" }],
+      pace: "69w · ~31s at 135 wpm",
+      advice: "Connect Maslow and Herzberg: explain how the $50 direct bonus and recognition satisfy both hygiene and true motivators."
+    },
+    {
+      num: 7,
+      sec: "Section G · 15 Marks",
+      badge: "15 Marks",
+      kicker: "POLC Synthesis & Math",
+      title: "Integrated POLC Loop & $97.5K / $55.5K Financial Math",
+      charts: [{ id: 4, label: "POLC Strategy Loop" }, { id: 5, label: "3-Tier Economics & Math" }],
+      pace: "82w · ~36s at 135 wpm",
+      advice: "Deliver the closing mathematical reconciliation: $97.5K gross commissions saved, $55.5K net savings, retaining 90.55% tuition."
+    }
+  ];
+
+  let mobileTimerSec = 0;
+  let mobileTimerRunning = false;
+  let mobileTimerInterval = null;
+
+  function toggleMobileTimer() {
+    if (mobileTimerRunning) pauseMobileTimer();
+    else startMobileTimer();
+  }
+
+  function startMobileTimer() {
+    if (mobileTimerRunning) return;
+    mobileTimerRunning = true;
+    if (mobileTimerInterval) clearInterval(mobileTimerInterval);
+    mobileTimerInterval = setInterval(() => {
+      mobileTimerSec++;
+      updateMobileTimerUI();
+      if (mobileTimerSec === 90) haptic([20, 30]);
+      if (mobileTimerSec === 120) haptic([30, 40, 50]);
+    }, 1000);
+    updateMobileTimerUI();
+    haptic(10);
+  }
+
+  function pauseMobileTimer() {
+    mobileTimerRunning = false;
+    if (mobileTimerInterval) {
+      clearInterval(mobileTimerInterval);
+      mobileTimerInterval = null;
+    }
+    updateMobileTimerUI();
+    haptic(10);
+  }
+
+  function resetMobileTimer() {
+    pauseMobileTimer();
+    mobileTimerSec = 0;
+    updateMobileTimerUI();
+    haptic([15, 20]);
+  }
+
+  function updateMobileTimerUI() {
+    const text = fmt(mobileTimerSec);
+    $$("[data-m-timer-display]").forEach(d => { d.textContent = text; });
+
+    const pctVal = Math.min(100, Math.round((mobileTimerSec / 120) * 100));
+    $$("[data-m-timer-bar]").forEach(b => {
+      b.style.width = pctVal + "%";
+      if (mobileTimerSec >= 120) b.style.backgroundColor = "var(--alfa-red, #e80d13)";
+      else if (mobileTimerSec >= 90) b.style.backgroundColor = "#fbbf24";
+      else b.style.backgroundColor = "#34d399";
+    });
+
+    $$("[data-m-timer-badge]").forEach(b => {
+      if (mobileTimerSec === 0) {
+        b.textContent = "Ready";
+        b.className = "m-timer-status-badge ready";
+      } else if (mobileTimerSec < 90) {
+        b.textContent = "On Pace";
+        b.className = "m-timer-status-badge pacing";
+      } else if (mobileTimerSec < 120) {
+        b.textContent = "Wrap Up";
+        b.className = "m-timer-status-badge warn";
+      } else {
+        b.textContent = "+" + fmt(mobileTimerSec - 120) + " Over";
+        b.className = "m-timer-status-badge over";
+      }
+    });
+
+    $$("[data-m-timer-toggle]").forEach(btn => {
+      btn.innerHTML = mobileTimerRunning ? `${ic("pause", 15)}<span>Pause</span>` : `${ic("play", 15)}<span>Start</span>`;
+      btn.classList.toggle("running", mobileTimerRunning);
+    });
+  }
+
+  function copyActiveSpeech(customText) {
+    const curSlide = ALL_SLIDES[S.slideIdx];
+    const text = customText || (vaultData && vaultData.members[curSlide.mi]?.speech) || "";
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        toast("Speech script copied to clipboard");
+        haptic([15, 25]);
+      }).catch(() => fallbackCopyText(text));
+    } else {
+      fallbackCopyText(text);
+    }
+  }
+
+  function fallbackCopyText(text) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      toast("Speech script copied to clipboard");
+      haptic([15, 25]);
+    } catch(e) {
+      toast("Select and copy speech manually");
+    }
+  }
+
   function setMobileSpkTab(tab) {
     S.mSpkTab = tab;
     renderScriptVault();
@@ -8095,6 +9061,7 @@ p.note, .note {
     } catch(e) {}
     vaultShowPwd = false;
     closeFocus();
+    resetMobileTimer();
     
     vaultErrorMsg = "Speaker Script locked.";
     
@@ -8297,71 +9264,222 @@ p.note, .note {
       </div>`;
 
     const spkTab = S.mSpkTab || "speech";
+    const memberMeta = MEMBER_META[curSlide.mi] || MEMBER_META[0];
+
     const buildMobileUnlockedHTML = (useH1) => `
       <div class="m-spk-studio">
+        <!-- Top Security & Action Header -->
         <div class="m-spk-top">
-          <div>
-            <span class="p-badge-member" style="font-size:.65rem;padding:.18rem .5rem">Member ${mData.num} · ${esc(mData.slidesRange)}</span>
-            <${useH1 ? "h1" : "h2"} style="font-size:1.05rem;font-weight:900;color:#fff;margin-top:.2rem">${esc(ui.studioTitle)}</${useH1 ? "h1" : "h2"}>
+          <div class="m-spk-brand">
+            <span class="m-spk-role-badge ${currentVaultUserRole === 'superadmin' ? 'superadmin' : currentVaultUserRole === 'admin' ? 'admin' : 'presenter'}">
+              ${currentVaultUserRole === 'superadmin' ? '👑 Super Admin' : currentVaultUserRole === 'admin' ? '🛡️ Admin' : '🎙️ Presenter'}
+            </span>
+            <div class="m-spk-title-group">
+              <${useH1 ? "h1" : "h2"}>${esc(ui.studioTitle || "Speaker Studio")}</${useH1 ? "h1" : "h2"}>
+              <span>Oral Defense &amp; Pacing Cockpit</span>
+            </div>
           </div>
-          <div style="display:flex;gap:.35rem;align-items:center">
+          <div class="m-spk-top-actions">
             ${currentVaultUserRole === "superadmin" ? `<button type="button" class="spk-settings-btn m-btn sm" onclick="openProjectSettingsModal()">${ic("gear", 14)}<span>Settings</span></button>` : ""}
-            <button type="button" class="m-btn sm" onclick="openFocus()">${ic("expand", 14)}<span>Focus</span></button>
-            <button type="button" class="spk-lock-btn" style="padding:.34rem .7rem;min-height:34px;font-size:.74rem" onclick="lockScriptVault(false)">${ic("lock", 14)}<span>${esc(ui.lockLabel)}</span></button>
+            <button type="button" class="m-spk-focus-btn" onclick="openFocus()" aria-label="Open Fullscreen Stage Teleprompter">${ic("expand", 14)}<span>Stage</span></button>
+            <button type="button" class="spk-lock-btn" style="padding:.32rem .65rem;min-height:34px;font-size:.74rem" onclick="lockScriptVault(false)" aria-label="Lock Speaker Script">${ic("lock", 14)}<span>${esc(ui.lockLabel || "Lock")}</span></button>
           </div>
         </div>
 
-        <div class="m-deck-strip" style="margin-bottom:.5rem">
-          <div class="m-rail" role="group" aria-label="Select member script">
-            ${vaultData.members.map((m, idx) => `<button type="button" class="m-rail-btn" role="tab" aria-selected="${idx === curSlide.mi}" onclick="goToMember(${idx})"><span>M${m.num}</span></button>`).join("")}
+        <!-- 7-Speaker Carousel Rail -->
+        <div class="m-spk-rail-wrap">
+          <div class="m-spk-rail" role="tablist" aria-label="Select Team Member">
+            ${vaultData.members.map((m, idx) => {
+              const meta = MEMBER_META[idx] || {};
+              const isActive = idx === curSlide.mi;
+              return `
+                <button type="button" class="m-spk-rail-chip ${isActive ? 'active' : ''}" role="tab" aria-selected="${isActive}" onclick="goToMember(${idx})" aria-label="Select Member ${m.num}">
+                  <span class="m-spk-chip-avatar">M${m.num}</span>
+                  <div class="m-spk-chip-info">
+                    <span class="m-spk-chip-sec">M${m.num} · ${meta.badge || ''}</span>
+                    <span class="m-spk-chip-title">${meta.kicker || ('Member ' + m.num)}</span>
+                  </div>
+                </button>
+              `;
+            }).join("")}
           </div>
-          </div>
-
-        <div class="m-seg" style="--n:3;margin:.35rem 0 .55rem" role="tablist">
-          <button type="button" role="tab" aria-selected="${spkTab === 'speech'}" onclick="setMobileSpkTab('speech')">🎙️ Speech</button>
-          <button type="button" role="tab" aria-selected="${spkTab === 'notes'}" onclick="setMobileSpkTab('notes')">💡 Notes (${(mData.explanations||[]).length})</button>
-          <button type="button" role="tab" aria-selected="${spkTab === 'qa'}" onclick="setMobileSpkTab('qa')">❓ Q&amp;A (${(mData.qa||[]).length})</button>
         </div>
 
-        ${spkTab === "speech" ? `
-          <div class="m-spk-bar">
-            <span class="timer-badge" data-timer>${fmt(S.timer)}</span>
-            <div style="display:flex;gap:.3rem;align-items:center">
-              
-              <button type="button" class="spk-btn" onclick="fontStep(-2)" aria-label="Decrease text size">A−</button>
-              <button type="button" class="spk-btn" onclick="fontStep(2)" aria-label="Increase text size">A+</button>
+        <!-- Active Speaker Hero Briefing Card -->
+        <article class="m-spk-hero-card" aria-label="Selected speaker briefing">
+          <div class="m-spk-hero-head">
+            <span class="m-spk-hero-range">Member ${mData.num} · ${esc(mData.slidesRange)}</span>
+            <span class="m-spk-hero-marks">${memberMeta.sec}</span>
+          </div>
+          <h3 class="m-spk-hero-title">${esc(memberMeta.title)}</h3>
+          <div class="m-spk-hero-meta-row">
+            <span>📝 <b>${words}</b> ${esc(ui.wordsLabel || "words")}</span>
+            <span>⏱️ <b>${esc(ui.targetLabel || "Target 2:00")}</b></span>
+            <span>🗣️ <b>${memberMeta.pace}</b></span>
+          </div>
+
+          ${memberMeta.charts && memberMeta.charts.length > 0 ? `
+            <div class="m-speech-charts-dock">
+              <span class="m-charts-dock-lbl">Core Visual Models for this Part:</span>
+              <div class="m-charts-dock-chips">
+                ${memberMeta.charts.map(c => `
+                  <button type="button" class="m-chart-chip" onclick="openLb(${c.id})" aria-label="Inspect ${esc(c.label)}">
+                    <span class="m-chip-no">Chart #${c.id}</span>
+                    <span class="m-chip-name">${esc(c.label)}</span>
+                    <span class="m-chip-zoom">${ic("zoom", 12)}</span>
+                  </button>
+                `).join("")}
+              </div>
+            </div>
+          ` : ""}
+        </article>
+
+        <!-- 4-Tab View Switcher -->
+        <div class="m-spk-tabs" role="tablist" aria-label="Content view mode">
+          <button type="button" role="tab" class="m-spk-tab-btn ${spkTab === 'speech' ? 'active' : ''}" aria-selected="${spkTab === 'speech'}" onclick="setMobileSpkTab('speech')">
+            <span>🎙️ Speech</span>
+          </button>
+          <button type="button" role="tab" class="m-spk-tab-btn ${spkTab === 'notes' ? 'active' : ''}" aria-selected="${spkTab === 'notes'}" onclick="setMobileSpkTab('notes')">
+            <span>💡 Notes <small>(${(mData.explanations || []).length})</small></span>
+          </button>
+          <button type="button" role="tab" class="m-spk-tab-btn ${spkTab === 'qa' ? 'active' : ''}" aria-selected="${spkTab === 'qa'}" onclick="setMobileSpkTab('qa')">
+            <span>🛡️ Defense <small>(${(mData.qa || []).length})</small></span>
+          </button>
+          <button type="button" role="tab" class="m-spk-tab-btn ${spkTab === 'all' ? 'active' : ''}" aria-selected="${spkTab === 'all'}" onclick="setMobileSpkTab('all')">
+            <span>📑 All-in-One</span>
+          </button>
+        </div>
+
+        <!-- Teleprompter Section (Shown in 'speech' and 'all') -->
+        ${spkTab === "speech" || spkTab === "all" ? `
+          <div class="m-spk-stopwatch" role="region" aria-label="Presentation Stopwatch">
+            <div class="m-stopwatch-main">
+              <div class="m-stopwatch-time-group">
+                <span class="m-stopwatch-icon">${ic("clock", 16)}</span>
+                <span class="m-stopwatch-digits" data-m-timer-display>${fmt(mobileTimerSec)}</span>
+                <span class="m-stopwatch-target">/ 02:00</span>
+                <span class="m-timer-status-badge ${mobileTimerSec === 0 ? 'ready' : mobileTimerSec < 90 ? 'pacing' : mobileTimerSec < 120 ? 'warn' : 'over'}" data-m-timer-badge>
+                  ${mobileTimerSec === 0 ? 'Ready' : mobileTimerSec < 90 ? 'On Pace' : mobileTimerSec < 120 ? 'Wrap Up' : '+' + fmt(mobileTimerSec - 120) + ' Over'}
+                </span>
+              </div>
+              <div class="m-stopwatch-actions">
+                <button type="button" class="m-timer-toggle-btn ${mobileTimerRunning ? 'running' : ''}" data-m-timer-toggle onclick="toggleMobileTimer()" aria-label="Start or pause timer">
+                  ${mobileTimerRunning ? `${ic("pause", 15)}<span>Pause</span>` : `${ic("play", 15)}<span>Start</span>`}
+                </button>
+                <button type="button" class="m-timer-reset-btn" onclick="resetMobileTimer()" aria-label="Reset timer" title="Reset Timer">
+                  ${ic("refresh", 14)}
+                </button>
+              </div>
+            </div>
+            <div class="m-stopwatch-track" aria-hidden="true">
+              <div class="m-stopwatch-bar" data-m-timer-bar style="width:${Math.min(100, Math.round((mobileTimerSec/120)*100))}%;background-color:${mobileTimerSec >= 120 ? 'var(--alfa-red, #e80d13)' : mobileTimerSec >= 90 ? '#fbbf24' : '#34d399'}"></div>
             </div>
           </div>
-          <div class="m-spk-box">
-            <p data-script style="font-size:${S.font}px">“${esc(mData.speech)}”</p>
-            <div class="m-spk-meta-foot">
-              
-              <b class="c-amber">${esc(ui.targetLabel)}</b>
+
+          <div class="m-prompter-strip">
+            <div class="m-font-stepper" role="group" aria-label="Text size control">
+              <span class="m-font-lbl">Size</span>
+              <button type="button" class="m-font-btn" onclick="fontStep(-2)" aria-label="Decrease text size">A−</button>
+              <span class="m-font-val" id="mFontValDisplay">${S.font}px</span>
+              <button type="button" class="m-font-btn" onclick="fontStep(2)" aria-label="Increase text size">A+</button>
+            </div>
+            <div class="m-prompter-actions">
+              <button type="button" class="m-tool-action-btn" onclick="copyActiveSpeech()" aria-label="Copy speech text" title="Copy Speech">
+                ${ic("copy", 14)}<span>Copy</span>
+              </button>
+              <button type="button" class="m-tool-action-btn primary" onclick="openFocus()" aria-label="Open Fullscreen Stage Teleprompter" title="Fullscreen Stage Mode">
+                ${ic("expand", 14)}<span>Stage</span>
+              </button>
             </div>
           </div>
-        ` : spkTab === "notes" ? `
-          <div class="spk-notes-list">
-            ${(mData.explanations || []).map(ex => `
-              <div class="spk-note-card ${ex.slide === curSlide.no ? "active" : ""}">
-                <b>${esc(ex.title)}</b>
-                <p>${esc(ex.note)}</p>
-              </div>
-            `).join("")}
+
+          <article class="m-speech-card" role="region" aria-label="Verbatim speech script">
+            <div class="m-speech-card-head">
+              <span class="m-speech-lead-badge">VERBATIM SCRIPT · 135 WPM</span>
+              <span class="m-speech-word-badge">${words} words</span>
+            </div>
+            <blockquote class="m-speech-quote">
+              <p class="m-speech-para" data-script style="font-size:${S.font}px">“${esc(mData.speech)}”</p>
+            </blockquote>
+            <div class="m-speech-card-foot">
+              <span class="m-speech-foot-ic">💡</span>
+              <span class="m-speech-foot-txt">${esc(memberMeta.advice)}</span>
+            </div>
+          </article>
+        ` : ""}
+
+        <!-- Study Notes Section (Shown in 'notes' and 'all') -->
+        ${spkTab === "notes" || spkTab === "all" ? `
+          <div class="m-notes-section">
+            <div class="m-section-heading">
+              <h4>${esc(ui.explainTitle || "Presenter Study Notes")}</h4>
+              <span class="m-section-sub">Slide-by-slide facts &amp; theory alignment</span>
+            </div>
+            <div class="m-notes-list">
+              ${(mData.explanations || []).map(ex => `
+                <article class="m-note-card">
+                  <div class="m-note-head">
+                    <span class="m-note-slide-tag">Slide ${ex.slide}</span>
+                    <h5 class="m-note-title">${esc(ex.title)}</h5>
+                  </div>
+                  <p class="m-note-text">${esc(ex.note)}</p>
+                </article>
+              `).join("")}
+            </div>
           </div>
-        ` : `
-          <div class="spk-notes-list">
-            ${(mData.qa || []).map(q => `
-              <div class="spk-note-card">
-                <b>Q: ${esc(q.q)}</b>
-                <p><strong>A:</strong> ${esc(q.a)}</p>
-              </div>
-            `).join("")}
+        ` : ""}
+
+        <!-- Q&A Defense Section (Shown in 'qa' and 'all') -->
+        ${spkTab === "qa" || spkTab === "all" ? `
+          <div class="m-qa-section">
+            <div class="m-section-heading defense">
+              <h4>${esc(ui.qaTitle || "Lecturer Q&A Defense")}</h4>
+              <span class="m-section-sub">Anticipated questions &amp; model answers</span>
+            </div>
+            <div class="m-qa-list">
+              ${(mData.qa || []).map(q => `
+                <article class="m-qa-card">
+                  <div class="m-qa-q-row">
+                    <span class="m-qa-q-badge">Q</span>
+                    <h5 class="m-qa-q-text">${esc(q.q)}</h5>
+                  </div>
+                  <div class="m-qa-a-row">
+                    <span class="m-qa-a-badge">A</span>
+                    <div class="m-qa-a-text">${esc(q.a)}</div>
+                  </div>
+                </article>
+              `).join("")}
+            </div>
           </div>
-        `}
+        ` : ""}
+
+        <!-- Sequential Handover Footer -->
+        <div class="m-spk-nav-footer">
+          <button type="button" class="m-spk-nav-btn prev" onclick="goToMember(${(curSlide.mi - 1 + 7) % 7})" aria-label="Go to Member ${((curSlide.mi + 6) % 7) + 1}">
+            ${ic("chevL", 18)}
+            <div>
+              <small>PREVIOUS</small>
+              <b>Member ${((curSlide.mi + 6) % 7) + 1}</b>
+            </div>
+          </button>
+          <button type="button" class="m-spk-nav-btn next" onclick="goToMember(${(curSlide.mi + 1) % 7})" aria-label="Go to Member ${((curSlide.mi + 1) % 7) + 1}">
+            <div>
+              <small>NEXT SPEAKER</small>
+              <b>Member ${((curSlide.mi + 1) % 7) + 1}</b>
+            </div>
+            ${ic("chevR", 18)}
+          </button>
+        </div>
       </div>`;
 
     if (dHost) dHost.innerHTML = buildUnlockedHTML(!isMobile() && S.dView === "script");
-    if (mHost) mHost.innerHTML = buildMobileUnlockedHTML(isMobile() && S.mView === "script");
+    if (mHost) {
+      mHost.innerHTML = buildMobileUnlockedHTML(isMobile() && S.mView === "script");
+      const activeChip = mHost.querySelector(".m-spk-rail-chip.active");
+      if (activeChip && typeof activeChip.scrollIntoView === "function") {
+        try { activeChip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); } catch(e){}
+      }
+    }
     
   }
 
@@ -8381,22 +9499,37 @@ p.note, .note {
     if (!vaultData) { closeFocus(); return; }
     const curSlide = ALL_SLIDES[S.slideIdx];
     const mData = vaultData.members[curSlide.mi] || vaultData.members[0];
-    const r = parseRole(mData.role);
+    const meta = MEMBER_META[curSlide.mi] || MEMBER_META[0];
     $("#mFocus").innerHTML = `
       <div class="m-focus-top">
-        <button type="button" class="m-ibtn" onclick="closeFocus()" aria-label="Close focus mode">${ic("close", 22)}</button>
-        <div class="m-focus-t"><b>Member ${mData.num} (Slide ${curSlide.no} of 17)</b><span>${esc(r.section)}</span></div>
-        
+        <button type="button" class="m-ibtn" onclick="closeFocus()" aria-label="Close stage mode">${ic("close", 22)}</button>
+        <div class="m-focus-t">
+          <b>Member ${mData.num} · ${esc(meta.sec)}</b>
+          <span>${esc(meta.kicker)}</span>
+        </div>
+        <div class="m-focus-timer-pill">
+          <span class="m-focus-timer-ic">${ic("clock", 14)}</span>
+          <span data-m-timer-display>${fmt(mobileTimerSec)}</span>
+        </div>
       </div>
-      <div class="m-focus-body"><p data-script-lg style="font-size:${S.font + 6}px">“${esc(mData.speech)}”</p></div>
+      <div class="m-focus-body">
+        <p data-script-lg style="font-size:${S.font + 6}px">“${esc(mData.speech)}”</p>
+      </div>
       <div class="m-focus-bar">
-        <button type="button" class="m-ibtn" onclick="prevSlide()" aria-label="Previous slide">${ic("chevL", 22)}</button>
-        <button type="button" class="m-ibtn" onclick="fontStep(-2)" aria-label="Decrease text size">A−</button>
-        
-        <button type="button" class="m-ibtn" onclick="fontStep(2)" aria-label="Increase text size">A+</button>
-        <button type="button" class="m-ibtn" onclick="nextSlide()" aria-label="Next slide">${ic("chevR", 22)}</button>
+        <button type="button" class="m-focus-nav-btn" onclick="goToMember(${(curSlide.mi - 1 + 7) % 7})" aria-label="Previous speaker">
+          ${ic("chevL", 20)}<span>M${((curSlide.mi + 6) % 7) + 1}</span>
+        </button>
+        <button type="button" class="m-focus-play-btn ${mobileTimerRunning ? 'running' : ''}" data-m-timer-toggle onclick="toggleMobileTimer()" aria-label="Toggle timer">
+          ${mobileTimerRunning ? ic("pause", 20) : ic("play", 20)}
+        </button>
+        <div class="m-focus-font-group">
+          <button type="button" class="m-ibtn" onclick="fontStep(-2)" aria-label="Decrease font">A−</button>
+          <button type="button" class="m-ibtn" onclick="fontStep(2)" aria-label="Increase font">A+</button>
+        </div>
+        <button type="button" class="m-focus-nav-btn" onclick="goToMember(${(curSlide.mi + 1) % 7})" aria-label="Next speaker">
+          <span>M${((curSlide.mi + 1) % 7) + 1}</span>${ic("chevR", 20)}
+        </button>
       </div>`;
-    
   }
 
   /* =======================================================================

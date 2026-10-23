@@ -98,7 +98,14 @@ graph TD
 - **Theory Admin Mode**: Password-protected knowledgebase editor.
 
 ### 6. Speaker Script Studio & Super Admin Settings
-- **Role-Based Presentation Mode**: Tailored speaking scripts, timing benchmarks, and stage cues for each of the 7 speakers.
+- **Dual-Mode Presenter Architecture**:
+  - **Desktop Studio**: 2-column widescreen teleprompter with synchronized slide timeline, side-by-side presenter notes, and Lecturer Q&A cards.
+  - **Dedicated Mobile Cockpit**: Purpose-built executive mobile prompter designed from the ground up:
+    - **Interactive Presentation Stopwatch**: Live countdown/countup (`00:00 / 02:00`) with visual pacing feedback (`Ready`, `On Pace`, `Wrap Up`, `Overtime`) and progress track.
+    - **7-Speaker Touch Rail**: Rapid 1-tap speaker carousel with section allocation, assessment marks (`15 Marks` / `10 Marks`), and sequential handover (`Previous` / `Next Speaker`).
+    - **4-View Intelligence Switcher**: Instant switching between `🎙️ Speech Prompter`, `💡 Notes`, `🛡️ Q&A Defense`, and `📑 All-in-One Briefing`.
+    - **One-Tap Utilities**: Ergonomic font scaling (`A−` / `A+`), one-tap script clipboard copy, and direct links to inspect related diagrams in the high-res SVG Lightbox.
+    - **OLED Stage Teleprompter (`Stage Mode`)**: Distraction-free full-screen stage prompter with high-contrast typography, live elapsed timer, and thumb controls.
 - **Session Persistence**: Authentication persists across page navigation and background browser tab switches.
 - **Explicit Security Lock**: Modules remain unlocked until the user explicitly clicks the **Lock** button.
 - **Super Admin Settings**: Independent administrative panel enabling module access toggling and in-app password editing for Admin and Presenter roles.

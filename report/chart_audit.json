@@ -1,0 +1,1546 @@
+{
+  "timestamp": "2026-10-23T17:46:37.165Z",
+  "totalChecks": 171,
+  "totalFailures": 0,
+  "records": [
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom out",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Reset zoom",
+      "measured": "54.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom in",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Close",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Reset zoom",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom in vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Chart 1",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 1",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 2",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 2",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 3",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 3",
+      "measured": "25 text elements verified"
+    },
+    {
+      "chart": "Chart 4",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 4",
+      "measured": "20 text elements verified"
+    },
+    {
+      "chart": "Chart 5",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 5",
+      "measured": "23 text elements verified"
+    },
+    {
+      "chart": "Chart 6",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 6",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 7",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 7",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 8",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 8",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 9",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 9",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 10",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 10",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 11",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 11",
+      "measured": "16 text elements verified"
+    },
+    {
+      "chart": "Slide 1 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 1",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 2 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 2",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 3 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 3",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 6 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 6",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 7 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 7",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 9 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 9",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 12 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 12",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 15 Visual",
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 15",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom out",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Reset zoom",
+      "measured": "54.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom in",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Close",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Reset zoom",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom in vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Chart 1",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 1",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 2",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 2",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 3",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 3",
+      "measured": "25 text elements verified"
+    },
+    {
+      "chart": "Chart 4",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 4",
+      "measured": "20 text elements verified"
+    },
+    {
+      "chart": "Chart 5",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 5",
+      "measured": "23 text elements verified"
+    },
+    {
+      "chart": "Chart 6",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 6",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 7",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 7",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 8",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 8",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 9",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 9",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 10",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 10",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 11",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 11",
+      "measured": "16 text elements verified"
+    },
+    {
+      "chart": "Slide 1 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 1",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 2 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 2",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 3 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 3",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 6 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 6",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 7 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 7",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 9 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 9",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 12 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 12",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 15 Visual",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 15",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom out",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Reset zoom",
+      "measured": "54.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom in",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Close",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Reset zoom",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom in vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Chart 1",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 1",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 2",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 2",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 3",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 3",
+      "measured": "25 text elements verified"
+    },
+    {
+      "chart": "Chart 4",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 4",
+      "measured": "20 text elements verified"
+    },
+    {
+      "chart": "Chart 5",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 5",
+      "measured": "23 text elements verified"
+    },
+    {
+      "chart": "Chart 6",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 6",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 7",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 7",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 8",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 8",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 9",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 9",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 10",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 10",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 11",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 11",
+      "measured": "16 text elements verified"
+    },
+    {
+      "chart": "Slide 1 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 1",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 2 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 2",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 3 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 3",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 6 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 6",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 7 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 7",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 9 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 9",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 12 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 12",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Slide 15 Visual",
+      "viewport": "1280x720",
+      "theme": "dark",
+      "check": "slide_viz_clean",
+      "result": "PASS",
+      "selector": "Slide 15",
+      "measured": "No clipping, no text overlap"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom out",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Reset zoom",
+      "measured": "54.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom in",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Close",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Reset zoom",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom in vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Chart 1",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 1",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 2",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 2",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 3",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 3",
+      "measured": "25 text elements verified"
+    },
+    {
+      "chart": "Chart 4",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 4",
+      "measured": "20 text elements verified"
+    },
+    {
+      "chart": "Chart 5",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 5",
+      "measured": "23 text elements verified"
+    },
+    {
+      "chart": "Chart 6",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 6",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 7",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 7",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 8",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 8",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 9",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 9",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 10",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 10",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 11",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 11",
+      "measured": "16 text elements verified"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom out",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Reset zoom",
+      "measured": "54.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom in",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Close",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Reset zoom",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom in vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Chart 1",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 1",
+      "measured": "16 text elements verified"
+    },
+    {
+      "chart": "Chart 2",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 2",
+      "measured": "14 text elements verified"
+    },
+    {
+      "chart": "Chart 3",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 3",
+      "measured": "27 text elements verified"
+    },
+    {
+      "chart": "Chart 4",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 4",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 5",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 5",
+      "measured": "17 text elements verified"
+    },
+    {
+      "chart": "Chart 6",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 6",
+      "measured": "25 text elements verified"
+    },
+    {
+      "chart": "Chart 7",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 7",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 8",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 8",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 9",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 9",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 10",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 10",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 11",
+      "viewport": "430x932",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 11",
+      "measured": "20 text elements verified"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom out",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Reset zoom",
+      "measured": "54.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom in",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Close",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Reset zoom",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom in vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Chart 1",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 1",
+      "measured": "16 text elements verified"
+    },
+    {
+      "chart": "Chart 2",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 2",
+      "measured": "14 text elements verified"
+    },
+    {
+      "chart": "Chart 3",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 3",
+      "measured": "27 text elements verified"
+    },
+    {
+      "chart": "Chart 4",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 4",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 5",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 5",
+      "measured": "17 text elements verified"
+    },
+    {
+      "chart": "Chart 6",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 6",
+      "measured": "25 text elements verified"
+    },
+    {
+      "chart": "Chart 7",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 7",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 8",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 8",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 9",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 9",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 10",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 10",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 11",
+      "viewport": "390x844",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 11",
+      "measured": "20 text elements verified"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom out",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Reset zoom",
+      "measured": "54.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Zoom in",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "min_size_44x44",
+      "result": "PASS",
+      "selector": "Close",
+      "measured": "44.0x44.0px"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Reset zoom",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom out vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Zoom in",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Reset zoom vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Viewer Controls",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "control_no_overlap",
+      "result": "PASS",
+      "selector": "Zoom in vs Close",
+      "measured": "CLEAR"
+    },
+    {
+      "chart": "Chart 1",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 1",
+      "measured": "16 text elements verified"
+    },
+    {
+      "chart": "Chart 2",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 2",
+      "measured": "14 text elements verified"
+    },
+    {
+      "chart": "Chart 3",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 3",
+      "measured": "27 text elements verified"
+    },
+    {
+      "chart": "Chart 4",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 4",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 5",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 5",
+      "measured": "17 text elements verified"
+    },
+    {
+      "chart": "Chart 6",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 6",
+      "measured": "25 text elements verified"
+    },
+    {
+      "chart": "Chart 7",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 7",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 8",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 8",
+      "measured": "24 text elements verified"
+    },
+    {
+      "chart": "Chart 9",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 9",
+      "measured": "21 text elements verified"
+    },
+    {
+      "chart": "Chart 10",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 10",
+      "measured": "15 text elements verified"
+    },
+    {
+      "chart": "Chart 11",
+      "viewport": "360x740",
+      "theme": "dark",
+      "check": "chart_layout_clean",
+      "result": "PASS",
+      "selector": "Chart 11",
+      "measured": "20 text elements verified"
+    }
+  ]
+}

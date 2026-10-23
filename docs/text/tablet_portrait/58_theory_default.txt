@@ -1,0 +1,58 @@
+Page 17 of 17: Today vs. Month-12 Scorecard & Conclusion. Member 7.
+FIB 2074 Management Theories and Lecturer Q&A
+Admin Panel
+All (8)
+L1 · POLC (1)
+L2 · Theories (1)
+L3 · Planning (1)
+L4 · Organising (1)
+L5 · Leading (1)
+Control & People (3)
+LECTURE 1 · NATURE OF MANAGEMENT
+4 Functions (POLC), 3 Roles & 3 Levels
+
+Core Concept: Management coordinates people and limited resources via Planning, Organising, Leading and Controlling across top, middle and first-line managers.
+
+At ALFA: Top management (Chairman & VC) sets the 15% total commission policy; middle management (4 division heads) runs Marketing, IT, Registry and the 7 Schools; first-line managers supervise daily Reels and < 24-hour digital student services. Origins in 1998 as Alif Creative Academy; University College since 2021.
+LECTURE 2 · MANAGEMENT THEORIES
+Classical, Behavioural & Contingency
+
+Core Concept: Classical = work efficiency and standardisation; Behavioural = people and motivation (Restaurant B); Contingency = adapt to the situation.
+
+At ALFA: Classical = < 24-hour digital student service SOP and 3 marketing units; Behavioural = $50/student direct bonus; Contingency = buddy coaching for older clerks vs. autonomy for young creators.
+LECTURE 3 · PLANNING
+Robbins & Coulter + SMART + Contingency
+
+Core Concept: 3 steps (Define Goals → Strategy → Plans) and 6 planning steps. Goals = broad destination; SMART objectives = measurable finish line.
+
+At ALFA: SMART goals shift direct intake from 0% to 65% (260 students), cut total spend from $160,000 to $94,500 ($400.00 → $236.25/student) and grow IG to 20K. Backup plan: $150 Direct Scholarship if Q2 direct intake is below 30%.
+LECTURE 4 · ORGANISING
+Authority, Delegation & Span of Control (7 vs. 4–6)
+
+Core Concept: Authority must match responsibility; managers can delegate authority but never accountability. Span of control depends on task complexity and experience.
+
+At ALFA: Current span is 7 direct reports per manager; recommended span is 4–6 for units adopting complex digital workflows (Marketing, IT, Registry). High-stakes tuition ($2,500) and the 15% commission cap stay centralised; daily 24-hr approvals are decentralised.
+LECTURE 5 · LEADING, POWER & INFLUENCE
+6-Step Leading & 5 Sources of Power
+
+Core Concept: Power = capacity a manager has; Influence = actual behaviour change. 5 sources: Legitimate, Reward, Coercive (formal) + Expert, Referent (personal).
+
+At ALFA: When 2 senior clerks resist the new ERP, managers use Referent Power (listening privately) and Expert Power (demonstrating the IT Sandbox Practice Mode with a manager preview check) to clear the 40-student timetable backlog in < 24 hours without friction.
+SECTIONS F & G · CONTROLLING & PEOPLE
+4-Step Control Loop & Feedforward / Concurrent / Feedback
+
+Core Concept: 4-step control process: Set Standard → Measure Performance → Compare & Find Variance (Actual − Standard) → Take Corrective Action. Feedforward controls anticipate issues, Concurrent monitors live, Feedback evaluates outcomes.
+
+At ALFA: Feedforward = sandbox pre-testing; Concurrent = CRM timestamps (reply <= 2 hrs; request <= 24 hrs); Feedback = quarterly direct share reviews. Variance example: 240 direct students leaves 160 agent students × $375 = $60,000 vs. $52,500 standard (+ $7,500 unfavourable).
+SECTIONS F & G · CONTROLLING & PEOPLE
+Participative/Situational Leadership, Maslow & Herzberg
+
+Core Concept: Situational leadership adapts style to follower readiness. Communication requires verbal clarity and supportive non-verbal cues. Maslow models needs hierarchy; Herzberg separates hygiene factors from motivators.
+
+At ALFA: Monday 15-min verbal stand-ups, patient eye-level non-verbal coaching. Hygiene = fair salary and clear SOPs; Motivators = $50 direct bonus, 'A Leader For All' monthly awards, and empowering CRM staff to grant instant application fee waivers.
+SECTIONS F & G · CONTROLLING & PEOPLE
+Financial Turnaround Math ($97.5K / $55.5K / $65.5K)
+
+Core Concept: Mathematical reconciliation of university revenue, baseline commission expenditure, transformation investment budget, and retained tuition percentage across intake channels.
+
+At ALFA: Baseline spend = $100K sub + $50K master + $10K marketing = $160K ($400/stu). Proposed spend = $52.5K commissions (140 × $375) + $42K plan = $94.5K ($236.25/stu). Gross commission savings = $97,500; Net annual savings = $55,500; Total savings = $65,500; Retained = $905,500 (90.55%).

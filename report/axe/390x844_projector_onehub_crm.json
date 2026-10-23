@@ -1,0 +1,329 @@
+{
+  "viewport": "390x844",
+  "theme": "projector",
+  "screen": "OneHub CRM",
+  "timestamp": "2026-10-22T09:08:22.433Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 36,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.0pt (13.3333px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-top-ibtn theme-toggle-btn\" id=\"mThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Projector (+15%) (tap to choose, press T to cycle)\" onclick=\"toggleThemeMenu('mobile')\">",
+                  "target": [
+                    "#mThemeBtn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"theme-btn-label\">Projector</span>",
+          "target": [
+            "#mThemeBtn > .theme-btn-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.8pt (14.352px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(4) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "11.9pt (15.824px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 1</b>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.8pt (14.352px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(5) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "11.9pt (15.824px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(5)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 2</b>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.8pt (14.352px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(6) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "11.9pt (15.824px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(6)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 3</b>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.8pt (14.352px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(7) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "11.9pt (15.824px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 4</b>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    }
+  ]
+}

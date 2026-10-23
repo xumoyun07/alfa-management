@@ -1,0 +1,11 @@
+{
+  "viewport": "1440x900",
+  "theme": "light",
+  "screen": "ROI Rate Test (10%)",
+  "timestamp": "2026-10-22T09:06:46.754Z",
+  "violationsCount": 0,
+  "incompleteCount": 0,
+  "passesCount": 46,
+  "violations": [],
+  "incomplete": []
+}

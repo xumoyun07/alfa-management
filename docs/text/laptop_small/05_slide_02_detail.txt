@@ -1,0 +1,66 @@
+Page 2 of 17: Dual Challenges: Agent Dependency & Paper Delays. Member 1.
+Member 1
+Member 2
+Member 3
+Member 4
+Member 5
+Member 6
+Member 7
+02 / 17
+Overview (17)
+More detail
+Presenter mode
+MEMBER 1 · 02 / 17
+ARCHETYPE B · SPLIT COMPARE & AGENT CHAIN
+Slide 2 | Core Organisational Problems
+Dual Challenges: Agent Dependency & Paper Delays
+
+100% agent dependency drains $150,000 a year in commissions while paper approvals delay enrolled students 5–7 days.
+
+All 400 students arrive via 12 master agents and 96 sub-agents at 15% ($375) per student ($160,000 total spend with $10,000 marketing, our assumption). Without CRM/ERP/HRM (our observation), paper approvals take 5–7 days (our estimate).
+
+Agent Commission Drain ($375 × 400 Students)
+$160,000 total spend ($400.00/student) · 5–7 day paper wait (our estimate)
+$150,000 / yr
+Hide detail ▲
+Use → / PageDown / Wheel for next page · Esc for Overview
+INTERACTIVE PROBLEM EXPLORER
+Switch challenge or scrub students
+Challenge 1: Agent Chain ($150K/yr)
+Challenge 2: Paper (5–7d) vs. OneHub (< 24h)
+ENROLLED
+400 Stu
+$2,500 Tuition
+0 Direct Online
+96 Consultancy Sub-Agents
+10% = $250/stu ($100,000)
+12 Univ. Master Agents
+5% = $125/stu, assumption ($50,000)
+15% ($375 / STU)
+$150,000
++$10K mktg (assumption)
+= $160,000 / yr
+Simulate Agent-Sourced Students: 400 of 400
+$150,000 commission ($375 × 400)
+Extended Reference Notes · Page 02 / 17 (Member 1 | Slides 1–4: Business Concept, Core Problems & Management Theories)
+Close detail
+Challenge 1: 100% Agent Dependency
+400 of 400 students come through agents; 0 students from direct online channels.
+12 university master agents × 8 consultancy sub-agents = 96 active sub-agents.
+Commission per agent student: 10% ($250) sub-agent + 5% ($125, our assumption) master agent = 15% ($375).
+Baseline: $100,000 + $50,000 = $150,000 / year; with $10,000 low-impact marketing (assumption) = $160,000 ($400.00 per student).
+Challenge 2: Paper Bureaucracy
+No unified CRM, ERP or HRM: (our observation) enrolled students wait about 5–7 days (our estimate) for several paper approvals for course registration, exam slips and letters.
+Weak social media: only ~2.1K Instagram followers and a confusing duplicate account.
+Result: slow service, paper waste and no smooth path for online leads.
+Reference Chart 6
+Agent Chain and Commission ($375 per student)
+Reference Chart 1
+Agent vs. Digital Acquisition Cost
+← Page 01
+Member 1 pages:
+01 / 17
+02 / 17
+03 / 17
+04 / 17
+Page 03 →

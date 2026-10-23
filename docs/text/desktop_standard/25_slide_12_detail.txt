@@ -1,0 +1,63 @@
+Page 12 of 17: Four-Step Control Loop & Three Control Types. Member 5.
+Member 1
+Member 2
+Member 3
+Member 4
+Member 5
+Member 6
+Member 7
+12 / 17
+Overview (17)
+More detail
+Presenter mode
+MEMBER 5 · 12 / 17
+ARCHETYPE F · CONTROL LOOP & SLA MONITOR
+Slide 12 | Control Process
+Four-Step Control Loop & Three Control Types
+
+Feedforward, concurrent, and feedback controls prevent errors before launch, track live SLAs, and review quarterly intake.
+
+Our 4-step loop sets standards, measures actual performance, calculates variance, and takes corrective action—combining pre-launch sandbox testing (Feedforward), live 2-hour/24-hour timestamps (Concurrent), and quarterly intake audits (Feedback).
+
+Concurrent Live CRM & Student Request SLAs
+Feedforward (Sandbox pre-test) · Concurrent (Live SLA) · Feedback (Quarterly)
+≤ 2h / 24h
+Hide detail ▲
+Use → / PageDown / Wheel for next page · Esc for Overview
+4-STEP CONTROL LOOP & 3 CONTROL TIMING HORIZONS
+Select control horizon
+1. Set Standards
+65% direct · <=24h
+→
+2. Measure Actual
+Live CRM/ERP logs
+→
+3. Find Variance
+Actual − Standard
+→
+4. Corrective Action
+$150 scholarship / coach
+Feedforward (Before)
+Concurrent (Live SLA)
+Feedback (Quarterly)
+2. Concurrent Control (During Activity)
+
+Live OneHub CRM & ERP timestamps flag any student inquiry over 2 hours or admin request over 24 hours.
+
+Extended Reference Notes · Page 12 / 17 (Member 5 | Slides 12–13: Controlling — 4-Step Process, Control Types, 5-Area Matrix & Variance)
+Close detail
+4-Step Control Process
+1) Set standards 2) Measure actual performance 3) Compare and find variance 4) Take corrective action.
+Three Control Types at ALFA
+Feedforward: pre-approve ad budgets and test OneHub in sandbox before go-live.
+Concurrent: live CRM timestamps flag any reply over 2 hours or request over 24 hours.
+Feedback: quarterly review of direct vs. agent intake and spend.
+Reference Chart 9
+Control Standards and Traffic-Light Rule
+Reference Chart 1
+Agent vs. Digital Acquisition Cost
+← Page 11
+Member 5 pages:
+12 / 17
+13 / 17
+Page 13 →

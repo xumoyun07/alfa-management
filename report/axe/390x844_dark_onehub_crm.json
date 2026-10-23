@@ -1,0 +1,1907 @@
+{
+  "viewport": "390x844",
+  "theme": "dark",
+  "screen": "OneHub CRM",
+  "timestamp": "2026-10-22T09:07:46.593Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 36,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.2pt (16.32px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"m-top\" id=\"mTop\" aria-label=\"Mobile Application Header\">",
+                  "target": [
+                    "#mTop"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"font-size:1.02rem;font-weight:900;margin:0;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis\">ALFA Management Plan</h1>",
+          "target": [
+            "#mTop > div:nth-child(1) > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.0pt (13.3333px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-top-ibtn theme-toggle-btn\" id=\"mThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Dark (tap to choose, press T to cycle)\" onclick=\"toggleThemeMenu('mobile')\">",
+                  "target": [
+                    "#mThemeBtn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"theme-btn-label\">Dark</span>",
+          "target": [
+            "#mThemeBtn > .theme-btn-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"m-eyebrow\">Paperless Cloud Ecosystem</p>",
+          "target": [
+            ".m-head > .m-eyebrow"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "17.4pt (23.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"m-h1\" id=\"mtHub\">ALFA OneHub</h2>",
+          "target": [
+            "#mtHub"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button role=\"tab\" data-hub=\"crm\" aria-selected=\"true\">CRM</button>",
+                  "target": [
+                    "#mHubSeg > button[data-hub=\"crm\"][role=\"tab\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"crm\" aria-selected=\"true\">CRM</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"crm\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-seg\" id=\"mHubSeg\" role=\"tablist\" aria-label=\"OneHub module\" style=\"--n: 4; --i: 0;\">",
+                  "target": [
+                    "#mHubSeg"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"erp\" aria-selected=\"false\">ERP</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"erp\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-seg\" id=\"mHubSeg\" role=\"tablist\" aria-label=\"OneHub module\" style=\"--n: 4; --i: 0;\">",
+                  "target": [
+                    "#mHubSeg"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"hrm\" aria-selected=\"false\">HRM (120)</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"hrm\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-seg\" id=\"mHubSeg\" role=\"tablist\" aria-label=\"OneHub module\" style=\"--n: 4; --i: 0;\">",
+                  "target": [
+                    "#mHubSeg"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"map\" aria-selected=\"false\">Diagram</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"map\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"m-hub-t\">ALFA CRM — Direct Social Media Leads &amp; 5-Minute Applications</p>",
+          "target": [
+            ".m-hub-t"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"m-lead sm\">Students who tap our Instagram (@alfauniversity.official) or TikTok links apply directly in 5 minutes, paying $0 in external agent commissions.</p>",
+          "target": [
+            ".m-lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.2pt (16.32px)",
+                "fontWeight": "bold",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div><b>4</b><span>applicants</span></div>",
+                  "target": [
+                    ".m-stats > div:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>4</b>",
+          "target": [
+            ".m-stats > div:nth-child(1) > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.6pt (10.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div><b>4</b><span>applicants</span></div>",
+                  "target": [
+                    ".m-stats > div:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>applicants</span>",
+          "target": [
+            ".m-stats > div:nth-child(1) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.2pt (16.32px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div><b>18.3 h</b><span>avg. turnaround</span></div>",
+                  "target": [
+                    ".m-stats > div:nth-child(2)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>18.3 h</b>",
+          "target": [
+            ".m-stats > div:nth-child(2) > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.6pt (10.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div><b>18.3 h</b><span>avg. turnaround</span></div>",
+                  "target": [
+                    ".m-stats > div:nth-child(2)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>avg. turnaround</span>",
+          "target": [
+            ".m-stats > div:nth-child(2) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.2pt (16.32px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div><b>3 / 4</b><span>direct, $0 commission</span></div>",
+                  "target": [
+                    ".m-stats > div:nth-child(3)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>3 / 4</b>",
+          "target": [
+            ".m-stats > div:nth-child(3) > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.6pt (10.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div><b>3 / 4</b><span>direct, $0 commission</span></div>",
+                  "target": [
+                    ".m-stats > div:nth-child(3)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>direct, $0 commission</span>",
+          "target": [
+            ".m-stats > div:nth-child(3) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(4) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.3pt (13.76px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 1</b>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>18 h</span>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-lc-b > .m-lc-t > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Kyrgyzstan · #AUC-2026-801</small>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-lc-b > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Foundation in Business (FIB)</p>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-lc-b > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag\">Instagram Reel (@alfauniversity.official)</span>",
+                  "target": [
+                    ".m-list-card:nth-child(4) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag\">Instagram Reel (@alfauniversity.official)</span>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag green\">Direct Enrolled (&lt; 24h SOP, $0 Commission)</span>",
+                  "target": [
+                    ".m-list-card:nth-child(4) > .m-lc-b > .m-tags > .green.m-tag"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag green\">Direct Enrolled (&lt; 24h SOP, $0 Commission)</span>",
+          "target": [
+            ".m-list-card:nth-child(4) > .m-lc-b > .m-tags > .green.m-tag"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(5) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.3pt (13.76px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(5)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 2</b>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(5)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>14 h</span>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-lc-b > .m-lc-t > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(5)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Malaysia · #AUC-2026-802</small>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-lc-b > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(5)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Bachelor of Graphic Design (Hons)</p>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-lc-b > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag\">TikTok Campus Studio Tour</span>",
+                  "target": [
+                    ".m-list-card:nth-child(5) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(5)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag\">TikTok Campus Studio Tour</span>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag green\">Direct Enrolled (&lt; 24h SOP, $0 Commission)</span>",
+                  "target": [
+                    ".m-list-card:nth-child(5) > .m-lc-b > .m-tags > .green.m-tag"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(5)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag green\">Direct Enrolled (&lt; 24h SOP, $0 Commission)</span>",
+          "target": [
+            ".m-list-card:nth-child(5) > .m-lc-b > .m-tags > .green.m-tag"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(6) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.3pt (13.76px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(6)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 3</b>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(6)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>19 h</span>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-lc-b > .m-lc-t > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(6)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Indonesia · #AUC-2026-803</small>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-lc-b > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(6)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Bachelor in Artificial Intelligence</p>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-lc-b > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag\">Direct Website Chat</span>",
+                  "target": [
+                    ".m-list-card:nth-child(6) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(6)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag\">Direct Website Chat</span>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag green\">Direct Enrolled (&lt; 24h SOP, $0 Commission)</span>",
+                  "target": [
+                    ".m-list-card:nth-child(6) > .m-lc-b > .m-tags > .green.m-tag"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(6)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag green\">Direct Enrolled (&lt; 24h SOP, $0 Commission)</span>",
+          "target": [
+            ".m-list-card:nth-child(6) > .m-lc-b > .m-tags > .green.m-tag"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(7) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-av[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.3pt (13.76px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Sample Applicant 4</b>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-lc-b > .m-lc-t > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>22 h</span>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-lc-b > .m-lc-t > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>China · #AUC-2026-804</small>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-lc-b > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Diploma in Architecture</p>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-lc-b > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag\">Master Agent #4 via sub-agent (15% = $375)</span>",
+                  "target": [
+                    ".m-list-card:nth-child(7) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag\">Master Agent #4 via sub-agent (15% = $375)</span>",
+          "target": [
+            ".m-list-card:nth-child(7) > .m-lc-b > .m-tags > .m-tag:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"m-tag amber\">EMGS Visa Verification (Agent-Sourced)</span>",
+                  "target": [
+                    ".amber"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-tag amber\">EMGS Visa Verification (Agent-Sourced)</span>",
+          "target": [
+            ".amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-av\" aria-hidden=\"true\">SA</div>",
+                  "target": [
+                    ".m-list-card:nth-child(7) > .m-av[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Home</small>",
+          "target": [
+            "button[data-go=\"home\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>ROI</small>",
+          "target": [
+            "button[data-go=\"roi\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>OneHub</small>",
+          "target": [
+            "button[data-go=\"hub\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Theory</small>",
+          "target": [
+            "button[data-go=\"theory\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<article class=\"m-list-card\">",
+                  "target": [
+                    ".m-list-card:nth-child(7)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Script 🔒</small>",
+          "target": [
+            "button[data-go=\"script\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2291 @@
+{
+  "viewport": "1440x900",
+  "theme": "auto",
+  "screen": "Slide 10",
+  "timestamp": "2026-10-22T09:06:00.203Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 37,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.36px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"brand-h1\">ALFA UNIVERSITY COLLEGE</h1>",
+          "target": [
+            ".brand-h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>FIB 2074 Introduction to Management · “A Leader For All” · Group Project Portal</span>",
+          "target": [
+            ".brand-text > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"home\">Home</button>",
+          "target": [
+            "button[data-view=\"home\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"calculator\">ROI Simulator</button>",
+          "target": [
+            "button[data-view=\"calculator\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"onehub\">OneHub</button>",
+          "target": [
+            "button[data-view=\"onehub\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"theories\">Theory &amp; Q&amp;A</button>",
+          "target": [
+            "button[data-view=\"theories\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"script\">",
+          "target": [
+            "button[data-view=\"script\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn theme-toggle-btn\" id=\"dThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Auto (System) (press T to cycle, click for menu)\" onclick=\"toggleThemeMenu('desktop')\">",
+                  "target": [
+                    "#dThemeBtn"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label theme-btn-label\">Auto</span>",
+          "target": [
+            ".theme-btn-label.tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleOverview()\" title=\"Slide overview grid (Esc)\">",
+                  "target": [
+                    "button[title=\"Slide overview grid (Esc)\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Overview</span>",
+          "target": [
+            "button[title=\"Slide overview grid (Esc)\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleHideUI()\" title=\"Hide UI chrome (U)\"><span class=\"tool-label\">Hide UI</span></button>",
+                  "target": [
+                    "button[title=\"Hide UI chrome (U)\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Hide UI</span>",
+          "target": [
+            "button[title=\"Hide UI chrome (U)\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleFullscreen()\" title=\"Full screen (F)\">",
+                  "target": [
+                    "button[onclick=\"toggleFullscreen()\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Full screen</span>",
+          "target": [
+            "button[onclick=\"toggleFullscreen()\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"openKbd()\" title=\"Keyboard shortcuts (?)\"><span aria-hidden=\"true\">⌨</span><span class=\"tool-label\">Shortcuts</span></button>",
+                  "target": [
+                    "button[onclick=\"openKbd()\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Shortcuts</span>",
+          "target": [
+            "button[onclick=\"openKbd()\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn d-back-home-btn\" onclick=\"dGo('home')\" aria-label=\"Back to home overview\">",
+                  "target": [
+                    ".d-back-home-btn"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>← Back to home</span>",
+          "target": [
+            ".d-back-home-btn > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(0)\">Member 1</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(0)\">Member 1</button>",
+          "target": [
+            "button[onclick=\"goToMember(0)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(1)\">Member 2</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(1)\">Member 2</button>",
+          "target": [
+            "button[onclick=\"goToMember(1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(2)\">Member 3</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(2)\">Member 3</button>",
+          "target": [
+            "button[onclick=\"goToMember(2)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill active\" role=\"tab\" aria-selected=\"true\" onclick=\"goToMember(3)\">Member 4</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(3)\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill active\" role=\"tab\" aria-selected=\"true\" onclick=\"goToMember(3)\">Member 4</button>",
+          "target": [
+            "button[onclick=\"goToMember(3)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(4)\">Member 5</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(4)\">Member 5</button>",
+          "target": [
+            "button[onclick=\"goToMember(4)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(5)\">Member 6</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(5)\">Member 6</button>",
+          "target": [
+            "button[onclick=\"goToMember(5)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(6)\">Member 7</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" role=\"tab\" aria-selected=\"false\" onclick=\"goToMember(6)\">Member 7</button>",
+          "target": [
+            "button[onclick=\"goToMember(6)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"p-counter-pill\" id=\"dSlideCounter\">10 / 17</span>",
+                  "target": [
+                    "#dSlideCounter"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-counter-pill\" id=\"dSlideCounter\">10 / 17</span>",
+          "target": [
+            "#dSlideCounter"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn\" onclick=\"toggleOverview()\" aria-label=\"Open 17-slide overview grid\">",
+                  "target": [
+                    "button[aria-label=\"Open 17-slide overview grid\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Overview (17)</span>",
+          "target": [
+            "button[aria-label=\"Open 17-slide overview grid\"] > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn\" id=\"dMoreDetailBtn\" onclick=\"toggleMoreDetail()\" aria-expanded=\"false\">",
+                  "target": [
+                    "#dMoreDetailBtn"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>More detail</span>",
+          "target": [
+            "#dMoreDetailBtn > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn accent\" onclick=\"openPresenterMode()\" title=\"Open locked Speaker Script module\">",
+                  "target": [
+                    ".accent"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-topbar\" role=\"toolbar\" aria-label=\"Presentation controls\">",
+                  "target": [
+                    ".p-topbar"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Presenter mode</span>",
+          "target": [
+            ".accent > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.9pt (11.84px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"p-badge-member\">Member 4 · 10 / 17</span>",
+                  "target": [
+                    ".p-meta-row > .p-badge-member"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-badge-member\">Member 4 · 10 / 17</span>",
+          "target": [
+            ".p-meta-row > .p-badge-member"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-badge-kicker\">Slide 10 | Leadership Framework (Lecture 5)</span>",
+          "target": [
+            ".p-badge-kicker"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"p-h1\">Six Leading Steps and Five Power Sources</h1>",
+          "target": [
+            ".p-h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.7pt (16.96px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"p-lead\">Transformational leadership combines expert and referent power to inspire adoption.</p>",
+          "target": [
+            ".p-lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-hero-stat\">",
+                  "target": [
+                    ".p-hero-stat"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-hero-stat-lbl\">Leadership Architecture</span>",
+          "target": [
+            ".p-hero-stat-lbl"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-hero-stat\">",
+                  "target": [
+                    ".p-hero-stat"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-hero-stat-sub\">Expert and referent alignment</span>",
+          "target": [
+            ".p-hero-stat-sub"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.6pt (28.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-hero-stat\">",
+                  "target": [
+                    ".p-hero-stat"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"p-hero-stat-num\">6 Steps × 5</div>",
+          "target": [
+            ".p-hero-stat-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn\" onclick=\"toggleMoreDetail()\" aria-expanded=\"false\">\n                  <span>More detail ▼ (D)</span>\n                </button>",
+                  "target": [
+                    ".p-copy-foot > .p-btn[onclick=\"toggleMoreDetail()\"][type=\"button\"]"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>More detail ▼ (D)</span>",
+          "target": [
+            ".p-copy-foot > .p-btn[onclick=\"toggleMoreDetail()\"][type=\"button\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-next-hint \">Press D for more detail · Esc for Overview · → Next</span>",
+          "target": [
+            ".p-next-hint"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13.12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"viz-title\">6 Leading Steps &amp; 5 Sources of Power</span>",
+          "target": [
+            ".viz-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"viz-hint\">Select power source</span>",
+          "target": [
+            ".viz-hint"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat red\"><small>Steps 1–2</small><b>Set Direction &amp; Communicate</b><span>Clear 65% direct &amp; OneHub vision</span></div>",
+                  "target": [
+                    ".ix-stat.red"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Steps 1–2</small>",
+          "target": [
+            ".ix-stat.red > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "14.2pt (18.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat red\"><small>Steps 1–2</small><b>Set Direction &amp; Communicate</b><span>Clear 65% direct &amp; OneHub vision</span></div>",
+                  "target": [
+                    ".ix-stat.red"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Set Direction &amp; Communicate</b>",
+          "target": [
+            ".ix-stat.red > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat red\"><small>Steps 1–2</small><b>Set Direction &amp; Communicate</b><span>Clear 65% direct &amp; OneHub vision</span></div>",
+                  "target": [
+                    ".ix-stat.red"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Clear 65% direct &amp; OneHub vision</span>",
+          "target": [
+            ".ix-stat.red > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat gold\"><small>Steps 3–4</small><b>Guide Live &amp; Motivate</b><span>Demonstrate screens &amp; $50 bonus</span></div>",
+                  "target": [
+                    ".ix-stat.gold"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Steps 3–4</small>",
+          "target": [
+            ".ix-stat.gold > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "14.2pt (18.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat gold\"><small>Steps 3–4</small><b>Guide Live &amp; Motivate</b><span>Demonstrate screens &amp; $50 bonus</span></div>",
+                  "target": [
+                    ".ix-stat.gold"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Guide Live &amp; Motivate</b>",
+          "target": [
+            ".ix-stat.gold > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat gold\"><small>Steps 3–4</small><b>Guide Live &amp; Motivate</b><span>Demonstrate screens &amp; $50 bonus</span></div>",
+                  "target": [
+                    ".ix-stat.gold"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Demonstrate screens &amp; $50 bonus</span>",
+          "target": [
+            ".ix-stat.gold > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat teal\"><small>Steps 5–6</small><b>Support &amp; Follow Up</b><span>Buddy coaching &amp; Friday check-ins</span></div>",
+                  "target": [
+                    ".ix-stat.teal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Steps 5–6</small>",
+          "target": [
+            ".ix-stat.teal > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "14.2pt (18.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat teal\"><small>Steps 5–6</small><b>Support &amp; Follow Up</b><span>Buddy coaching &amp; Friday check-ins</span></div>",
+                  "target": [
+                    ".ix-stat.teal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>Support &amp; Follow Up</b>",
+          "target": [
+            ".ix-stat.teal > b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-stat teal\"><small>Steps 5–6</small><b>Support &amp; Follow Up</b><span>Buddy coaching &amp; Friday check-ins</span></div>",
+                  "target": [
+                    ".ix-stat.teal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Buddy coaching &amp; Friday check-ins</span>",
+          "target": [
+            ".ix-stat.teal > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ix-tab active\" onclick=\"setIx('s10Power',0)\">Legitimate</button>",
+                  "target": [
+                    "button[onclick=\"setIx('s10Power',0)\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"ix-tab active\" onclick=\"setIx('s10Power',0)\">Legitimate</button>",
+          "target": [
+            "button[onclick=\"setIx('s10Power',0)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',1)\">Reward</button>",
+                  "target": [
+                    "button[onclick=\"setIx('s10Power',1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',1)\">Reward</button>",
+          "target": [
+            "button[onclick=\"setIx('s10Power',1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',2)\">Coercive</button>",
+                  "target": [
+                    "button[onclick=\"setIx('s10Power',2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',2)\">Coercive</button>",
+          "target": [
+            "button[onclick=\"setIx('s10Power',2)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',3)\">Expert</button>",
+                  "target": [
+                    "button[onclick=\"setIx('s10Power',3)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',3)\">Expert</button>",
+          "target": [
+            "button[onclick=\"setIx('s10Power',3)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',4)\">Referent</button>",
+                  "target": [
+                    "button[onclick=\"setIx('s10Power',4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"ix-tab \" onclick=\"setIx('s10Power',4)\">Referent</button>",
+          "target": [
+            "button[onclick=\"setIx('s10Power',4)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-card\">",
+                  "target": [
+                    ".ix-card"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"font-size:1rem;margin:0\">1. Legitimate Power</h2>",
+          "target": [
+            ".ix-card > div > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"tl-pill green\">Formal Authority</span>",
+                  "target": [
+                    ".tl-pill"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ix-card\">",
+                  "target": [
+                    ".ix-card"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tl-pill green\">Formal Authority</span>",
+          "target": [
+            ".tl-pill"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13.12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ix-card\">",
+                  "target": [
+                    ".ix-card"
+                  ]
+                },
+                {
+                  "html": "<div class=\"p-viz-box\">",
+                  "target": [
+                    ".p-viz-box"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Mandate paperless ALFA OneHub usage across all 4 divisions and close paper queues.</p>",
+          "target": [
+            ".ix-card > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn\" onclick=\"prevSlide()\" aria-label=\"Previous: Page 09\">← Page 09</button>",
+                  "target": [
+                    "button[aria-label=\"Previous: Page 09\"]"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-btn\" onclick=\"prevSlide()\" aria-label=\"Previous: Page 09\">← Page 09</button>",
+          "target": [
+            "button[aria-label=\"Previous: Page 09\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn\" onclick=\"toggleOverview()\" aria-label=\"Slide overview grid\">",
+                  "target": [
+                    "button[aria-label=\"Slide overview grid\"]"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Overview (Esc)</span>",
+          "target": [
+            "button[aria-label=\"Slide overview grid\"] > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn primary\" onclick=\"nextSlide()\" aria-label=\"Next: Page 11\">Page 11 →</button>",
+                  "target": [
+                    "button[aria-label=\"Next: Page 11\"]"
+                  ]
+                },
+                {
+                  "html": "<article class=\"p-viewport\" data-arch=\"arch-blueprint\" aria-label=\"Page 10 of 17\">",
+                  "target": [
+                    ".p-viewport"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-btn primary\" onclick=\"nextSlide()\" aria-label=\"Next: Page 11\">Page 11 →</button>",
+          "target": [
+            "button[aria-label=\"Next: Page 11\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ]
+}

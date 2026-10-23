@@ -1,0 +1,1621 @@
+{
+  "viewport": "1440x900",
+  "theme": "auto",
+  "screen": "OneHub ERP",
+  "timestamp": "2026-10-22T09:06:08.264Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 39,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.36px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"brand-h1\">ALFA UNIVERSITY COLLEGE</h1>",
+          "target": [
+            ".brand-h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>FIB 2074 Introduction to Management · “A Leader For All” · Group Project Portal</span>",
+          "target": [
+            ".brand-text > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"home\">Home</button>",
+          "target": [
+            "button[data-view=\"home\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"calculator\">ROI Simulator</button>",
+          "target": [
+            "button[data-view=\"calculator\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tab-btn active\" role=\"tab\" aria-selected=\"true\" data-view=\"onehub\">OneHub</button>",
+                  "target": [
+                    "button[data-view=\"onehub\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn active\" role=\"tab\" aria-selected=\"true\" data-view=\"onehub\">OneHub</button>",
+          "target": [
+            "button[data-view=\"onehub\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"theories\">Theory &amp; Q&amp;A</button>",
+          "target": [
+            "button[data-view=\"theories\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"script\">",
+          "target": [
+            "button[data-view=\"script\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn theme-toggle-btn\" id=\"dThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Auto (System) (press T to cycle, click for menu)\" onclick=\"toggleThemeMenu('desktop')\">",
+                  "target": [
+                    "#dThemeBtn"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label theme-btn-label\">Auto</span>",
+          "target": [
+            ".theme-btn-label.tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleOverview()\" title=\"Slide overview grid (Esc)\">",
+                  "target": [
+                    "button[title=\"Slide overview grid (Esc)\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Overview</span>",
+          "target": [
+            "button[title=\"Slide overview grid (Esc)\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleHideUI()\" title=\"Hide UI chrome (U)\"><span class=\"tool-label\">Hide UI</span></button>",
+                  "target": [
+                    "button[title=\"Hide UI chrome (U)\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Hide UI</span>",
+          "target": [
+            "button[title=\"Hide UI chrome (U)\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleFullscreen()\" title=\"Full screen (F)\">",
+                  "target": [
+                    "button[onclick=\"toggleFullscreen()\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Full screen</span>",
+          "target": [
+            "button[onclick=\"toggleFullscreen()\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"openKbd()\" title=\"Keyboard shortcuts (?)\"><span aria-hidden=\"true\">⌨</span><span class=\"tool-label\">Shortcuts</span></button>",
+                  "target": [
+                    "button[onclick=\"openKbd()\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Shortcuts</span>",
+          "target": [
+            "button[onclick=\"openKbd()\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.6pt (20.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"panel-h\">ALFA OneHub — Unified Paperless Cloud Ecosystem (Solving Challenge 2)</h2>",
+          "target": [
+            "#view-onehub > .panel > .panel-h"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"panel-lead\">Click through the modules to see how ALFA OneHub connects social media leads directly to paperless Admissions (CRM), Student Finance &amp; Visas (ERP) and 120-staff management (HRM).</p>",
+          "target": [
+            "#view-onehub > .panel > .panel-lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"crm\" aria-selected=\"false\">Module 1: ALFA CRM <span class=\"kpi-pill\">4 applicants</span></button>",
+                  "target": [
+                    ".hub-tab[data-hub=\"crm\"][role=\"tab\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"crm\" aria-selected=\"false\">Module 1: ALFA CRM <span class=\"kpi-pill\">4 applicants</span></button>",
+          "target": [
+            ".hub-tab[data-hub=\"crm\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"kpi-pill\">4 applicants</span>",
+                  "target": [
+                    ".hub-tab[data-hub=\"crm\"][role=\"tab\"] > .kpi-pill"
+                  ]
+                },
+                {
+                  "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"crm\" aria-selected=\"false\">Module 1: ALFA CRM <span class=\"kpi-pill\">4 applicants</span></button>",
+                  "target": [
+                    ".hub-tab[data-hub=\"crm\"][role=\"tab\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"kpi-pill\">4 applicants</span>",
+          "target": [
+            ".hub-tab[data-hub=\"crm\"][role=\"tab\"] > .kpi-pill"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"hrm\" aria-selected=\"false\">Module 3: ALFA HRM <span class=\"kpi-pill\">120 staff</span></button>",
+                  "target": [
+                    ".hub-tab[data-hub=\"hrm\"][role=\"tab\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"hrm\" aria-selected=\"false\">Module 3: ALFA HRM <span class=\"kpi-pill\">120 staff</span></button>",
+          "target": [
+            ".hub-tab[data-hub=\"hrm\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"kpi-pill\">120 staff</span>",
+                  "target": [
+                    ".hub-tab[data-hub=\"hrm\"][role=\"tab\"] > .kpi-pill"
+                  ]
+                },
+                {
+                  "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"hrm\" aria-selected=\"false\">Module 3: ALFA HRM <span class=\"kpi-pill\">120 staff</span></button>",
+                  "target": [
+                    ".hub-tab[data-hub=\"hrm\"][role=\"tab\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"kpi-pill\">120 staff</span>",
+          "target": [
+            ".hub-tab[data-hub=\"hrm\"][role=\"tab\"] > .kpi-pill"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"map\" aria-selected=\"false\">Architecture <span class=\"kpi-pill\">Diagram</span></button>",
+                  "target": [
+                    ".hub-tab[data-hub=\"map\"][role=\"tab\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"map\" aria-selected=\"false\">Architecture <span class=\"kpi-pill\">Diagram</span></button>",
+          "target": [
+            ".hub-tab[data-hub=\"map\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"kpi-pill\">Diagram</span>",
+                  "target": [
+                    ".hub-tab[data-hub=\"map\"][role=\"tab\"] > .kpi-pill"
+                  ]
+                },
+                {
+                  "html": "<button class=\"hub-tab\" role=\"tab\" data-hub=\"map\" aria-selected=\"false\">Architecture <span class=\"kpi-pill\">Diagram</span></button>",
+                  "target": [
+                    ".hub-tab[data-hub=\"map\"][role=\"tab\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"kpi-pill\">Diagram</span>",
+          "target": [
+            ".hub-tab[data-hub=\"map\"][role=\"tab\"] > .kpi-pill"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.8pt (18.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"hub-title\">ALFA ERP — Paperless Student Finance, EMGS Visa &amp; Academic Registry</h3>",
+          "target": [
+            ".hub-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"hub-desc\">Replaces manual email bank slips (admission@alfa.edu.my) and physical paper folders with instant Flywire/FPX tuition receipts, live EMGS visa tracking and digital timetables.</p>",
+          "target": [
+            ".hub-desc"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<th>ERP module</th>",
+                  "target": [
+                    "#dHub > table > thead > tr > th:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<th>ERP module</th>",
+          "target": [
+            "#dHub > table > thead > tr > th:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<th>Old paper process at ALFA</th>",
+                  "target": [
+                    "#dHub > table > thead > tr > th:nth-child(2)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<th>Old paper process at ALFA</th>",
+          "target": [
+            "#dHub > table > thead > tr > th:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<th>New ALFA OneHub ERP automation</th>",
+                  "target": [
+                    "#dHub > table > thead > tr > th:nth-child(3)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<th>New ALFA OneHub ERP automation</th>",
+          "target": [
+            "#dHub > table > thead > tr > th:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<th>Control standard</th>",
+                  "target": [
+                    "#dHub > table > thead > tr > th:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<th>Control standard</th>",
+          "target": [
+            "#dHub > table > thead > tr > th:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Tuition &amp; QR Exam Clearance</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(1) > td:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Queue at Finance Counter with paper bank slips</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(1) > td:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Instant Flywire / FPX API auto-receipt &amp; mobile QR Exam Pass</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(1) > td:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"badge-status badge-ok\">Instant Clearance</span>",
+                  "target": [
+                    "tr:nth-child(1) > td:nth-child(4) > .badge-status.badge-ok"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"badge-status badge-ok\">Instant Clearance</span>",
+          "target": [
+            "tr:nth-child(1) > td:nth-child(4) > .badge-status.badge-ok"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Course Registration &amp; Add/Drop</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(2) > td:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Paper add/drop forms with several approvals (about 5–7 days (our estimate), our estimate)</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(2) > td:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>1-click mobile registration &amp; automated prerequisite checks in &lt; 15 mins</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(2) > td:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"badge-status badge-ok\">&lt; 24h Digital SOP</span>",
+                  "target": [
+                    "tr:nth-child(2) > td:nth-child(4) > .badge-status.badge-ok"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"badge-status badge-ok\">&lt; 24h Digital SOP</span>",
+          "target": [
+            "tr:nth-child(2) > td:nth-child(4) > .badge-status.badge-ok"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Letters, Transcripts &amp; Attendance</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(3) > td:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Paper request slips (5–7 days (our estimate)) &amp; paper class sheets</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(3) > td:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>30-sec QR attendance &amp; authenticated digital letters in &lt; 24h</td>",
+          "target": [
+            "#dHub > table > tbody > tr:nth-child(3) > td:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"badge-status badge-ok\">90% Paper Saved</span>",
+                  "target": [
+                    "tr:nth-child(3) > td:nth-child(4) > .badge-status.badge-ok"
+                  ]
+                },
+                {
+                  "html": "<div class=\"panel\">",
+                  "target": [
+                    "#view-onehub > .panel"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"badge-status badge-ok\">90% Paper Saved</span>",
+          "target": [
+            "tr:nth-child(3) > td:nth-child(4) > .badge-status.badge-ok"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ]
+}

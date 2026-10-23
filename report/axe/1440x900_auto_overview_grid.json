@@ -1,0 +1,4802 @@
+{
+  "viewport": "1440x900",
+  "theme": "auto",
+  "screen": "Overview Modal",
+  "timestamp": "2026-10-22T09:06:11.253Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 41,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.36px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"brand-h1\">ALFA UNIVERSITY COLLEGE</h1>",
+          "target": [
+            ".brand-h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>FIB 2074 Introduction to Management · “A Leader For All” · Group Project Portal</span>",
+          "target": [
+            ".brand-text > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"home\">Home</button>",
+          "target": [
+            "button[data-view=\"home\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"calculator\">ROI Simulator</button>",
+          "target": [
+            "button[data-view=\"calculator\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"onehub\">OneHub</button>",
+          "target": [
+            "button[data-view=\"onehub\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"nav-tabs\" aria-label=\"Primary modules\" role=\"tablist\">",
+                  "target": [
+                    ".nav-tabs"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn\" role=\"tab\" aria-selected=\"false\" data-view=\"theories\">Theory &amp; Q&amp;A</button>",
+          "target": [
+            "button[data-view=\"theories\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.6pt (12.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tab-btn active\" role=\"tab\" aria-selected=\"true\" data-view=\"script\">",
+                  "target": [
+                    "button[data-view=\"script\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"tab-btn active\" role=\"tab\" aria-selected=\"true\" data-view=\"script\">",
+          "target": [
+            "button[data-view=\"script\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn theme-toggle-btn\" id=\"dThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Auto (System) (press T to cycle, click for menu)\" onclick=\"toggleThemeMenu('desktop')\">",
+                  "target": [
+                    "#dThemeBtn"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label theme-btn-label\">Auto</span>",
+          "target": [
+            ".theme-btn-label.tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleOverview()\" title=\"Slide overview grid (Esc)\">",
+                  "target": [
+                    "button[title=\"Slide overview grid (Esc)\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Overview</span>",
+          "target": [
+            "button[title=\"Slide overview grid (Esc)\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleHideUI()\" title=\"Hide UI chrome (U)\"><span class=\"tool-label\">Hide UI</span></button>",
+                  "target": [
+                    "button[title=\"Hide UI chrome (U)\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Hide UI</span>",
+          "target": [
+            "button[title=\"Hide UI chrome (U)\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"toggleFullscreen()\" title=\"Full screen (F)\">",
+                  "target": [
+                    "button[onclick=\"toggleFullscreen()\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Full screen</span>",
+          "target": [
+            "button[onclick=\"toggleFullscreen()\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"tool-btn\" onclick=\"openKbd()\" title=\"Keyboard shortcuts (?)\"><span aria-hidden=\"true\">⌨</span><span class=\"tool-label\">Shortcuts</span></button>",
+                  "target": [
+                    "button[onclick=\"openKbd()\"]"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tool-label\">Shortcuts</span>",
+          "target": [
+            "button[onclick=\"openKbd()\"] > .tool-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "17.4pt (23.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"vault-h1\">Speaker Script</h1>",
+          "target": [
+            "#dScriptHost > .vault-wrap > .vault-h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.3pt (13.76px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"vault-sub\">Protected presenter module for FIB 2074 team members. Enter the password to decrypt the 7 speeches and study notes in memory.</p>",
+          "target": [
+            "#dScriptHost > .vault-wrap > .vault-sub"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<label for=\"vaultPwd_d\">Password</label>",
+          "target": [
+            "label[for=\"vaultPwd_d\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.4pt (15.2px)",
+                "fontWeight": "normal",
+                "messageKey": "emptyValue",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input id=\"vaultPwd_d\" data-vault-input=\"\" type=\"password\" class=\"vault-input\" placeholder=\"Enter password\" required=\"\" autocomplete=\"off\">",
+                  "target": [
+                    "#vaultPwd_d"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has no value; test color contrast with a value entered"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input id=\"vaultPwd_d\" data-vault-input=\"\" type=\"password\" class=\"vault-input\" placeholder=\"Enter password\" required=\"\" autocomplete=\"off\">",
+          "target": [
+            "#vaultPwd_d"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+                  "target": [
+                    "#dScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+          "target": [
+            "#dScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.9pt (11.84px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"p-badge-member\">17 Interactive Pages · 7 Team Members</span>",
+                  "target": [
+                    ".ov-head > div:nth-child(1) > .p-badge-member"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-badge-member\">17 Interactive Pages · 7 Team Members</span>",
+          "target": [
+            ".ov-head > div:nth-child(1) > .p-badge-member"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.2pt (21.6px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"ovModalTitle\" style=\"font-size:1.35rem;font-weight:900;color:#fff;margin-top:.3rem\">Presentation Overview Grid</h2>",
+          "target": [
+            "#ovModalTitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill active\" onclick=\"setOvFilter(-1)\">All (17)</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(-1)\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill active\" onclick=\"setOvFilter(-1)\">All (17)</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(-1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(0)\">M1</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(0)\">M1</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(0)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(1)\">M2</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(1)\">M2</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(2)\">M3</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(2)\">M3</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(2)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(3)\">M4</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(3)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(3)\">M4</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(3)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(4)\">M5</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(4)\">M5</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(4)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(5)\">M6</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(5)\">M6</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(5)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(6)\">M7</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(6)\">M7</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(6)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-btn\" onclick=\"closeOverview()\" aria-label=\"Close overview\">",
+                  "target": [
+                    "button[onclick=\"closeOverview()\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<header>",
+                  "target": [
+                    ".d-app > header"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Close (Esc)</span>",
+          "target": [
+            "button[onclick=\"closeOverview()\"] > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(0)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">01 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(0)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(0)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 1</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(0)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(0)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">ALFA University College: Profile &amp; Verified Facts</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(0)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(0)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype A · Cinematic Cover &amp; Profile</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(0)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(0)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">$1,000,000</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(0)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(1)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">02 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(1)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(1)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 1</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(1)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(1)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Dual Challenges: Agent Dependency &amp; Paper Delays</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(1)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(1)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype B · Split Compare &amp; Agent Chain</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(1)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(1)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">$150,000 / yr</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(1)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(2)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">03 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(2)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(2)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 1</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(2)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Classical &amp; Behavioural Management Theories Applied</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(2)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(2)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-logo\" role=\"img\" aria-label=\"ALFA University College logo\"><i class=\"logo-i\"></i></div>",
+                  "target": [
+                    "#dScriptHost > .vault-wrap > .vault-logo[aria-label=\"ALFA University College logo\"][role=\"img\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype C · Theory &amp; SOP Matrix</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(2)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(2)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">&lt; 24 hrs</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(2)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(3)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(3)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">04 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(3)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(3)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(3)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 1</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(3)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Contingency Theory: Situational Fit at ALFA</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(3)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(3)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(3)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype C · Contingency Rule Engine</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(3)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(3)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(3)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">65% / 35%</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(3)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(4)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">05 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(4)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(4)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 2</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(4)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(4)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Overall Goal &amp; Three SMART Objectives</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(4)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(4)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype D · Big-Number &amp; SMART Builder</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(4)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(4)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">65% Direct</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(4)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(5)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">06 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(5)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(5)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 2</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(5)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(5)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Quarterly Direct-Intake Milestones &amp; Backup Plan</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(5)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(5)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype D · Milestone Curve &amp; Trigger</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(5)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(5)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">0% → 65%</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(5)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(6)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">07 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(6)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(6)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 2</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(6)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(6)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Annual $42,000 Transformation Budget &amp; Timeline</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(6)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(6)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype E · 12-Month Gantt &amp; Budget</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(6)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(6)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">$42,000</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(6)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(7)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(7)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">08 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(7)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(7)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(7)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 3</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(7)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">120-Staff Structure, Authority &amp; Delegation Map</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(7)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(7)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(7)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype E · Interactive Org Blueprint</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(7)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(7)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(7)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<input id=\"vaultPwd_d\" data-vault-input=\"\" type=\"password\" class=\"vault-input\" placeholder=\"Enter password\" required=\"\" autocomplete=\"off\">",
+                  "target": [
+                    "#vaultPwd_d"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">120 Staff</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(7)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(8)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(8)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">09 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(8)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(8)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(8)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 3</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(8)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(8)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(8)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Span of Control: 7 vs. 4–6 Recommended</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(8)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(8)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(8)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype B · Span of Control Comparator</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(8)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(8)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(8)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<input id=\"vaultPwd_d\" data-vault-input=\"\" type=\"password\" class=\"vault-input\" placeholder=\"Enter password\" required=\"\" autocomplete=\"off\">",
+                  "target": [
+                    "#vaultPwd_d"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#dScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">7 → 4–6</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(8)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(9)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(9)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">10 / 17</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(9)\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(9)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(9)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 4</span>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(9)\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(9)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(9)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Six Leading Steps &amp; Five Power Sources</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(9)\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(9)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(9)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype E · Leadership &amp; Power Map</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(9)\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(9)\">",
+                  "target": [
+                    "button[onclick=\"closeOverview();jumpToSlide(9)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">6 Steps × 5</div>",
+          "target": [
+            "button[onclick=\"closeOverview();jumpToSlide(9)\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(10)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(11)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">11 / 17</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(11) > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(10)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(11)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 4</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(11) > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(10)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(11)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Workplace Scenario: Senior Clerks &amp; ERP Sandbox</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(11) > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(10)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(11)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype E · Workplace Scenario Reveal</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(11) > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(10)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(11)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">&lt; 24 hrs</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(11) > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(11)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(12)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">12 / 17</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(12) > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(11)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(12)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+                  "target": [
+                    "#dScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 5</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(12) > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(11)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(12)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Four-Step Control Loop &amp; Three Control Types</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(12) > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(11)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(12)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype F · Control Loop &amp; SLA Monitor</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(12) > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(11)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(12)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">≤ 2h / 24h</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(12) > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(12)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(13)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+                  "target": [
+                    "#dScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">13 / 17</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(13) > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(12)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(13)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+                  "target": [
+                    "#dScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 5</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(13) > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(12)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(13)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+                  "target": [
+                    "#dScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Five-Area KPI Matrix &amp; Variance Analysis</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(13) > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(12)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(13)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype F · Traffic-Light KPI Dashboard</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(13) > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(12)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(13)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">+$7,500</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(13) > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(13)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(14)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+                  "target": [
+                    "#dScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">14 / 17</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(14) > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(13)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(14)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 6</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(14) > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Situational Leadership &amp; Team Communication Protocols</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(14) > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype C · Leadership &amp; Communication Matrix</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(14) > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(13)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(14)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">15-Min / 2-Hr</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(14) > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(14)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(15)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">15 / 17</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(15) > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(14)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(15)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 6</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(15) > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(14)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(15)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Maslow’s Hierarchy &amp; Herzberg’s Two-Factor Model</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(15) > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(14)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(15)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype C · Maslow Triangle &amp; Herzberg</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(15) > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(14)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(15)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">5 Tiers × 2</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(15) > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(15)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(16)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">16 / 17</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(16) > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(15)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(16)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 7</span>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(16) > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(15)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(16)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Integrated POLC Cycle &amp; First-90-Days Priorities</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(16) > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(15)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(16)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype F · Interactive POLC Wheel</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(16) > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card \" onclick=\"closeOverview();jumpToSlide(15)\">",
+                  "target": [
+                    ".ov-card[type=\"button\"]:nth-child(16)"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">P → O → L → C</div>",
+          "target": [
+            ".ov-card[type=\"button\"]:nth-child(16) > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.4pt (12.48px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card active\" onclick=\"closeOverview();jumpToSlide(16)\">",
+                  "target": [
+                    ".active.ov-card[type=\"button\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-num\">17 / 17</span>",
+          "target": [
+            ".active.ov-card[type=\"button\"] > div:nth-child(1) > .ov-card-top > .ov-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card active\" onclick=\"closeOverview();jumpToSlide(16)\">",
+                  "target": [
+                    ".active.ov-card[type=\"button\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"ov-mem\">Member 7</span>",
+          "target": [
+            ".active.ov-card[type=\"button\"] > div:nth-child(1) > .ov-card-top > .ov-mem"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card active\" onclick=\"closeOverview();jumpToSlide(16)\">",
+                  "target": [
+                    ".active.ov-card[type=\"button\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-title\" style=\"margin-top:.45rem\">Today vs. Month-12 Scorecard &amp; Conclusion</div>",
+          "target": [
+            ".active.ov-card[type=\"button\"] > div:nth-child(1) > .ov-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card active\" onclick=\"closeOverview();jumpToSlide(16)\">",
+                  "target": [
+                    ".active.ov-card[type=\"button\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"ov-arch\">Archetype F · Closing Turnaround Scorecard</div>",
+          "target": [
+            ".active.ov-card[type=\"button\"] > div:nth-child(2) > .ov-arch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ov-card active\" onclick=\"closeOverview();jumpToSlide(16)\">",
+                  "target": [
+                    ".active.ov-card[type=\"button\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"c-amber\" style=\"font-size:.75rem;font-weight:800;margin-top:.2rem\">+$55,500 net per year</div>",
+          "target": [
+            ".active.ov-card[type=\"button\"] > div:nth-child(2) > .c-amber"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ]
+}

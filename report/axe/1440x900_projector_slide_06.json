@@ -1,0 +1,545 @@
+{
+  "viewport": "1440x900",
+  "theme": "projector",
+  "screen": "Slide 6",
+  "timestamp": "2026-10-22T09:06:58.106Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 38,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.8pt (14.352px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill active\" role=\"tab\" aria-selected=\"true\" onclick=\"goToMember(1)\">Member 2</button>",
+                  "target": [
+                    "button[onclick=\"goToMember(1)\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill active\" role=\"tab\" aria-selected=\"true\" onclick=\"goToMember(1)\">Member 2</button>",
+          "target": [
+            "button[onclick=\"goToMember(1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.2pt (13.616px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"p-badge-member\">Member 2 · 06 / 17</span>",
+                  "target": [
+                    ".p-meta-row > .p-badge-member"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-badge-member\">Member 2 · 06 / 17</span>",
+          "target": [
+            ".p-meta-row > .p-badge-member"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.8pt (14.352px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-hero-stat\">",
+                  "target": [
+                    ".p-hero-stat"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-hero-stat-lbl\">Target Trajectory</span>",
+          "target": [
+            ".p-hero-stat-lbl"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.9pt (13.248px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-hero-stat\">",
+                  "target": [
+                    ".p-hero-stat"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-hero-stat-sub\">Q1 20% · Q2 40% · Q3 55%</span>",
+          "target": [
+            ".p-hero-stat-sub"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.6pt (28.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"p-hero-stat\">",
+                  "target": [
+                    ".p-hero-stat"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"p-hero-stat-num\">0% → 65%</div>",
+          "target": [
+            ".p-hero-stat-num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.8pt (14.352px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"ix-tab active\" onclick=\"setIx('s6Quarter',4)\">Q4 (65%)</button>",
+                  "target": [
+                    ".ix-tab.active[onclick=\"setIx('s6Quarter',4)\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"ix-tab active\" onclick=\"setIx('s6Quarter',4)\">Q4 (65%)</button>",
+          "target": [
+            ".ix-tab.active[onclick=\"setIx('s6Quarter',4)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"59\" y=\"72\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11.5\" font-weight=\"800\">0% (0)</text>",
+          "target": [
+            "text[y=\"72\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"59\" y=\"103\" text-anchor=\"middle\" fill=\"var(--text-muted, #cbd5e1)\" font-size=\"11\" font-weight=\"700\">Today</text>",
+          "target": [
+            "text[x=\"59\"][y=\"103\"][fill=\"var(--text-muted, #cbd5e1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"165\" y=\"58\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11.5\" font-weight=\"800\">20% (80)</text>",
+          "target": [
+            "text[y=\"58\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"165\" y=\"103\" text-anchor=\"middle\" fill=\"var(--text-muted, #cbd5e1)\" font-size=\"11\" font-weight=\"700\">Q1</text>",
+          "target": [
+            "text[x=\"165\"][y=\"103\"][fill=\"var(--text-muted, #cbd5e1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"271\" y=\"36\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11.5\" font-weight=\"800\">40% (160)</text>",
+          "target": [
+            "text[y=\"36\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"271\" y=\"103\" text-anchor=\"middle\" fill=\"var(--text-muted, #cbd5e1)\" font-size=\"11\" font-weight=\"700\">Q2</text>",
+          "target": [
+            "text[x=\"271\"][y=\"103\"][fill=\"var(--text-muted, #cbd5e1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"377\" y=\"19\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11.5\" font-weight=\"800\">55% (220)</text>",
+          "target": [
+            "text[y=\"19\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"377\" y=\"103\" text-anchor=\"middle\" fill=\"var(--text-muted, #cbd5e1)\" font-size=\"11\" font-weight=\"700\">Q3</text>",
+          "target": [
+            "text[x=\"377\"][y=\"103\"][fill=\"var(--text-muted, #cbd5e1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"483\" y=\"8\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11.5\" font-weight=\"800\">65% (260)</text>",
+          "target": [
+            "text[y=\"8\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 560 112\" width=\"100%\" role=\"img\" aria-label=\"Quarterly direct intake milestones: Today 0%, Q1 20%, Q2 40%, Q3 55%, Q4 65%\" style=\"display:block;margin-bottom:.5rem\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 560 112\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"483\" y=\"103\" text-anchor=\"middle\" fill=\"var(--text-muted, #cbd5e1)\" font-size=\"11\" font-weight=\"700\">Q4</text>",
+          "target": [
+            "text[x=\"483\"][y=\"103\"][fill=\"var(--text-muted, #cbd5e1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ]
+}

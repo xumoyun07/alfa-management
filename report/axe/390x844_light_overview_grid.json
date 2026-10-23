@@ -1,0 +1,545 @@
+{
+  "viewport": "390x844",
+  "theme": "light",
+  "screen": "Overview Modal",
+  "timestamp": "2026-10-22T09:08:08.294Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 40,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.2pt (16.32px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"m-top\" id=\"mTop\" aria-label=\"Mobile Application Header\">",
+                  "target": [
+                    "#mTop"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"font-size:1.02rem;font-weight:900;margin:0;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis\">ALFA Management Plan</h1>",
+          "target": [
+            "#mTop > div:nth-child(1) > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.0pt (13.3333px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-top-ibtn theme-toggle-btn\" id=\"mThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Light (tap to choose, press T to cycle)\" onclick=\"toggleThemeMenu('mobile')\">",
+                  "target": [
+                    "#mThemeBtn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"theme-btn-label\">Light</span>",
+          "target": [
+            "#mThemeBtn > .theme-btn-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+                  "target": [
+                    "#mScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"submit\" class=\"vault-submit\" data-vault-submit=\"\">\n              Unlock Speaker Script\n            </button>",
+          "target": [
+            "#mScriptHost > .vault-wrap > form > .vault-submit[data-vault-submit=\"\"][type=\"submit\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.9pt (11.84px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"p-badge-member\">17 Interactive Pages · 7 Team Members</span>",
+                  "target": [
+                    ".ov-head > div:nth-child(1) > .p-badge-member"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"p-badge-member\">17 Interactive Pages · 7 Team Members</span>",
+          "target": [
+            ".ov-head > div:nth-child(1) > .p-badge-member"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"ovModalTitle\" style=\"font-size:1.35rem;font-weight:900;color:#fff;margin-top:.3rem\">Presentation Overview Grid</h2>",
+          "target": [
+            "#ovModalTitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill active\" onclick=\"setOvFilter(-1)\">All (17)</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(-1)\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill active\" onclick=\"setOvFilter(-1)\">All (17)</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(-1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(0)\">M1</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(0)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(0)\">M1</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(0)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(1)\">M2</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(1)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(1)\">M2</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(1)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(2)\">M3</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(2)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(2)\">M3</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(2)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(3)\">M4</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(3)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(3)\">M4</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(3)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(4)\">M5</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(4)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(4)\">M5</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(4)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(5)\">M6</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(5)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(5)\">M6</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(5)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(6)\">M7</button>",
+                  "target": [
+                    "button[onclick=\"setOvFilter(6)\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"ov-modal\" id=\"ovModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ovModalTitle\" onclick=\"if(event.target===this)closeOverview()\">",
+                  "target": [
+                    "#ovModal"
+                  ]
+                },
+                {
+                  "html": "<div class=\"vault-wrap\">",
+                  "target": [
+                    "#mScriptHost > .vault-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"p-mpill \" onclick=\"setOvFilter(6)\">M7</button>",
+          "target": [
+            "button[onclick=\"setOvFilter(6)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+Page 12 of 17: Four-Step Control Loop & Three Control Types. Member 5.
+Member 1
+Member 2
+Member 3
+Member 4
+Member 5
+Member 6
+Member 7
+12 / 17
+Overview (17)
+More detail
+Presenter mode
+MEMBER 5 · 12 / 17
+ARCHETYPE F · CONTROL LOOP & SLA MONITOR
+Slide 12 | Control Process
+Four-Step Control Loop & Three Control Types
+
+Feedforward, concurrent, and feedback controls prevent errors before launch, track live SLAs, and review quarterly intake.
+
+Our 4-step loop sets standards, measures actual performance, calculates variance, and takes corrective action—combining pre-launch sandbox testing (Feedforward), live 2-hour/24-hour timestamps (Concurrent), and quarterly intake audits (Feedback).
+
+Concurrent Live CRM & Student Request SLAs
+Feedforward (Sandbox pre-test) · Concurrent (Live SLA) · Feedback (Quarterly)
+≤ 2h / 24h
+More detail ▼
+Use → / PageDown / Wheel for next page · Esc for Overview
+4-STEP CONTROL LOOP & 3 CONTROL TIMING HORIZONS
+Select control horizon
+1. Set Standards
+65% direct · <=24h
+→
+2. Measure Actual
+Live CRM/ERP logs
+→
+3. Find Variance
+Actual − Standard
+→
+4. Corrective Action
+$150 scholarship / coach
+Feedforward (Before)
+Concurrent (Live SLA)
+Feedback (Quarterly)
+2. Concurrent Control (During Activity)
+
+Live OneHub CRM & ERP timestamps flag any student inquiry over 2 hours or admin request over 24 hours.
+
+← Page 11
+Member 5 pages:
+12 / 17
+13 / 17
+Page 13 →

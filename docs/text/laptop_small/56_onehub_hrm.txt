@@ -1,0 +1,24 @@
+Page 17 of 17: Today vs. Month-12 Scorecard & Conclusion. Member 7.
+ALFA OneHub Unified Paperless Cloud Ecosystem
+ALFA OneHub — Unified Paperless Cloud Ecosystem (Solving Challenge 2)
+
+Click through the modules to see how ALFA OneHub connects social media leads directly to paperless Admissions (CRM), Student Finance & Visas (ERP) and 120-staff management (HRM).
+
+Module 1: ALFA CRM
+4 applicants
+Module 2: ALFA ERP
+3 processes
+Module 3: ALFA HRM
+120 staff
+Architecture
+Diagram
+ALFA HRM — 120-Employee Digital Portal, Training & Bonus Tracker
+
+Connects every division (5 Top + 65 Academic + 20 Marketing + 12 IT + 18 Registry = 120 staff, assumption) with paperless leave approvals and $50 direct bonuses.
+
+DIVISION	HEADCOUNT	SPAN OF CONTROL	ONEHUB ERP COMPETENCY	INCENTIVE / RECOGNITION
+Academic Affairs (7 Schools)	65 staff	Today 7 → recommended 4–6	97% Certified	Top Digital Faculty Award
+Digital Marketing & Direct CRM	20 staff	Today 7 → recommended 4–6	100% Certified	$50 / Direct Student Bonus
+IT & ALFA OneHub Systems	12 staff	Today 7 → recommended 4–6	100% Certified	99.9% Uptime SLA Bonus
+Registry, Finance & HR Ops	18 staff	Today 7 → recommended 4–6	95% Certified (Buddy Coached)	RM 1,500 Paperless Speed Bonus
+Top management (Chairman, VC & directors)	5 staff	—	—	—

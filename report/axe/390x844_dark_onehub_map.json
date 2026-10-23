@@ -1,0 +1,1292 @@
+{
+  "viewport": "390x844",
+  "theme": "dark",
+  "screen": "OneHub MAP",
+  "timestamp": "2026-10-22T09:07:48.423Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 37,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.2pt (16.32px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"m-top\" id=\"mTop\" aria-label=\"Mobile Application Header\">",
+                  "target": [
+                    "#mTop"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"font-size:1.02rem;font-weight:900;margin:0;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis\">ALFA Management Plan</h1>",
+          "target": [
+            "#mTop > div:nth-child(1) > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.0pt (13.3333px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-top-ibtn theme-toggle-btn\" id=\"mThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Dark (tap to choose, press T to cycle)\" onclick=\"toggleThemeMenu('mobile')\">",
+                  "target": [
+                    "#mThemeBtn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"theme-btn-label\">Dark</span>",
+          "target": [
+            "#mThemeBtn > .theme-btn-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.2pt (10.88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"m-eyebrow\">Paperless Cloud Ecosystem</p>",
+          "target": [
+            ".m-head > .m-eyebrow"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "17.4pt (23.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"m-h1\" id=\"mtHub\">ALFA OneHub</h2>",
+          "target": [
+            "#mtHub"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-seg\" id=\"mHubSeg\" role=\"tablist\" aria-label=\"OneHub module\" style=\"--n: 4; --i: 3;\">",
+                  "target": [
+                    "#mHubSeg"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"crm\" aria-selected=\"false\">CRM</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"crm\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-seg\" id=\"mHubSeg\" role=\"tablist\" aria-label=\"OneHub module\" style=\"--n: 4; --i: 3;\">",
+                  "target": [
+                    "#mHubSeg"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"erp\" aria-selected=\"false\">ERP</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"erp\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-seg\" id=\"mHubSeg\" role=\"tablist\" aria-label=\"OneHub module\" style=\"--n: 4; --i: 3;\">",
+                  "target": [
+                    "#mHubSeg"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"hrm\" aria-selected=\"false\">HRM (120)</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"hrm\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.1pt (12.16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button role=\"tab\" data-hub=\"map\" aria-selected=\"true\">Diagram</button>",
+                  "target": [
+                    "#mHubSeg > button[data-hub=\"map\"][role=\"tab\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button role=\"tab\" data-hub=\"map\" aria-selected=\"true\">Diagram</button>",
+          "target": [
+            "#mHubSeg > button[data-hub=\"map\"][role=\"tab\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"m-hub-t\">ALFA OneHub — Unified Cloud Architecture</p>",
+          "target": [
+            ".m-hub-t"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"m-lead sm\">How direct social media leads flow through paperless admissions, finance, visa tracking and staff management.</p>",
+          "target": [
+            ".m-lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"30\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"13\" font-weight=\"800\">ALFA University College: 120-Staff Structure</text>",
+          "target": [
+            ".m-card:nth-child(3) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > text[font-size=\"13\"][y=\"30\"][x=\"180\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"48\" text-anchor=\"middle\" fill=\"var(--text-muted, #94a3b8)\" font-size=\"10\">Our Assumption · Span of Control: 7 Current vs. 4–6 Recommended</text>",
+          "target": [
+            ".m-card:nth-child(3) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > text[y=\"48\"][font-size=\"10\"][fill=\"var(--text-muted, #94a3b8)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"140\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"12\" font-weight=\"800\">Vice-Chancellor &amp; Executive Board</text>",
+          "target": [
+            "text[x=\"140\"][y=\"22\"][font-size=\"12\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"140\" y=\"40\" text-anchor=\"middle\" fill=\"var(--gold, #f59e0b)\" font-size=\"11\">5 Executive Staff · Centralised Tuition Policy</text>",
+          "target": [
+            "text[x=\"140\"][y=\"40\"][fill=\"var(--gold, #f59e0b)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"22\" text-anchor=\"middle\" fill=\"var(--teal, #14b8a6)\" font-size=\"11.5\" font-weight=\"800\">Academic Affairs</text>",
+          "target": [
+            "text[fill=\"var(--teal, #14b8a6)\"][y=\"22\"][font-size=\"11.5\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"40\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"14\" font-weight=\"900\">65 Staff</text>",
+          "target": [
+            "g[transform=\"translate(20, 145)\"] > text[font-size=\"14\"][font-weight=\"900\"][y=\"40\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.9pt (10.5px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"56\" text-anchor=\"middle\" fill=\"var(--text-muted, #94a3b8)\" font-size=\"10.5\">7 Schools &amp; 4 Centres</text>",
+          "target": [
+            "g[transform=\"translate(20, 145)\"] > text[y=\"56\"][fill=\"var(--text-muted, #94a3b8)\"][font-size=\"10.5\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"22\" text-anchor=\"middle\" fill=\"var(--accent-red, #E80D13)\" font-size=\"11.5\" font-weight=\"800\">Marketing &amp; Direct CRM</text>",
+          "target": [
+            "text[fill=\"var(--accent-red, #E80D13)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"40\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"14\" font-weight=\"900\">20 Staff</text>",
+          "target": [
+            "g[transform=\"translate(20, 220)\"] > text[font-size=\"14\"][font-weight=\"900\"][y=\"40\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.9pt (10.5px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"56\" text-anchor=\"middle\" fill=\"var(--gold, #f59e0b)\" font-size=\"10.5\">+ 8 Student Ambassadors</text>",
+          "target": [
+            "text[y=\"56\"][fill=\"var(--gold, #f59e0b)\"][font-size=\"10.5\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"22\" text-anchor=\"middle\" fill=\"var(--blue, #3b82f6)\" font-size=\"11.5\" font-weight=\"800\">IT, Registry &amp; Ops</text>",
+          "target": [
+            "text[fill=\"var(--blue, #3b82f6)\"][y=\"22\"][font-size=\"11.5\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"40\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"14\" font-weight=\"900\">30 Staff</text>",
+          "target": [
+            "g[transform=\"translate(20, 295)\"] > text[font-size=\"14\"][font-weight=\"900\"][y=\"40\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.9pt (10.5px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"56\" text-anchor=\"middle\" fill=\"var(--text-muted, #94a3b8)\" font-size=\"10.5\">OneHub Platform Core</text>",
+          "target": [
+            "g[transform=\"translate(20, 295)\"] > text[y=\"56\"][fill=\"var(--text-muted, #94a3b8)\"][font-size=\"10.5\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"26\" text-anchor=\"middle\" fill=\"var(--gold, #f59e0b)\" font-size=\"11\" font-weight=\"800\">Organising Realignment: Span of Control 7 → 4–6</text>",
+          "target": [
+            "text[y=\"26\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"48\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"10\">Delegates social media lead, freeing Marketing Director</text>",
+          "target": [
+            "g[transform=\"translate(20, 375)\"] > text[y=\"48\"][font-size=\"10\"][x=\"180\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"30\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"13\" font-weight=\"800\">ALFA OneHub (CRM + ERP + HRM, our proposal) — Our Proposal</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > text[font-size=\"13\"][y=\"30\"][x=\"180\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"48\" text-anchor=\"middle\" fill=\"var(--text-muted, #94a3b8)\" font-size=\"10\">Unified Digital Campus Platform · Cloud-Hosted · 99.9% Uptime SLA</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > text[y=\"48\"][font-size=\"10\"][fill=\"var(--text-muted, #94a3b8)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"88\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11.5\" font-weight=\"800\">Central OneHub Cloud &amp; Security Layer</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > text[y=\"88\"][font-size=\"11.5\"][x=\"180\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.1pt (9.5px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"102\" text-anchor=\"middle\" fill=\"var(--gold, #f59e0b)\" font-size=\"9.5\">Single Sign-On · Real-Time Sync · Role-Based Permissions · Automated Receipts</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > text[y=\"102\"][font-size=\"9.5\"][fill=\"var(--gold, #f59e0b)\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"24\" text-anchor=\"middle\" fill=\"var(--teal, #14b8a6)\" font-size=\"12\" font-weight=\"800\">MODULE 1: CRM</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 125)\"] > text[fill=\"var(--teal, #14b8a6)\"][y=\"24\"][font-size=\"12\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"44\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11\" font-weight=\"700\">Admissions &amp; Leads</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 125)\"] > text[y=\"44\"][font-weight=\"700\"][font-size=\"11\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"64\" text-anchor=\"middle\" fill=\"var(--green, #10b981)\" font-size=\"11\" font-weight=\"800\">&lt; 24h Turnaround</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 125)\"] > text[y=\"64\"][fill=\"var(--green, #10b981)\"][font-size=\"11\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"24\" text-anchor=\"middle\" fill=\"var(--blue, #3b82f6)\" font-size=\"12\" font-weight=\"800\">MODULE 2: ERP</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 220)\"] > text[fill=\"var(--blue, #3b82f6)\"][y=\"24\"][font-size=\"12\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"44\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11\" font-weight=\"700\">Registry &amp; Academic</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 220)\"] > text[y=\"44\"][font-weight=\"700\"][font-size=\"11\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"64\" text-anchor=\"middle\" fill=\"var(--gold, #f59e0b)\" font-size=\"11\" font-weight=\"800\">100% Paperless</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 220)\"] > text[y=\"64\"][fill=\"var(--gold, #f59e0b)\"][font-size=\"11\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"24\" text-anchor=\"middle\" fill=\"var(--green, #10b981)\" font-size=\"12\" font-weight=\"800\">MODULE 3: HRM</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 315)\"] > text[y=\"24\"][fill=\"var(--green, #10b981)\"][font-size=\"12\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"44\" text-anchor=\"middle\" fill=\"var(--text, #fff)\" font-size=\"11\" font-weight=\"700\">Staff &amp; Motivation</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 315)\"] > text[y=\"44\"][font-weight=\"700\"][font-size=\"11\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"160\" y=\"64\" text-anchor=\"middle\" fill=\"var(--green, #10b981)\" font-size=\"11\" font-weight=\"800\">$50 Direct Bonus</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > g[transform=\"translate(20, 315)\"] > text[y=\"64\"][fill=\"var(--green, #10b981)\"][font-size=\"11\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<text x=\"180\" y=\"440\" text-anchor=\"middle\" fill=\"var(--text-dim, #64748b)\" font-size=\"9\">Replaces paper forms and email delays · Note: MyClass offers student login but registry runs on paper (our observation)</text>",
+          "target": [
+            ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"] > text[y=\"440\"][fill=\"var(--text-dim, #64748b)\"][font-size=\"9\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<svg viewBox=\"0 0 360 460\" width=\"100%\" style=\"display:block;height:auto\" role=\"img\" aria-label=\"Chart 5: ALFA OneHub Architecture (CRM + ERP + HRM)\">",
+                  "target": [
+                    ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Home</small>",
+          "target": [
+            "button[data-go=\"home\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<svg viewBox=\"0 0 360 460\" width=\"100%\" style=\"display:block;height:auto\" role=\"img\" aria-label=\"Chart 5: ALFA OneHub Architecture (CRM + ERP + HRM)\">",
+                  "target": [
+                    ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>ROI</small>",
+          "target": [
+            "button[data-go=\"roi\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<svg viewBox=\"0 0 360 460\" width=\"100%\" style=\"display:block;height:auto\" role=\"img\" aria-label=\"Chart 5: ALFA OneHub Architecture (CRM + ERP + HRM)\">",
+                  "target": [
+                    ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>OneHub</small>",
+          "target": [
+            "button[data-go=\"hub\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<svg viewBox=\"0 0 360 460\" width=\"100%\" style=\"display:block;height:auto\" role=\"img\" aria-label=\"Chart 5: ALFA OneHub Architecture (CRM + ERP + HRM)\">",
+                  "target": [
+                    ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Theory</small>",
+          "target": [
+            "button[data-go=\"theory\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.4pt (9.92px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"m-nav\" id=\"mBottomNav\" aria-label=\"Primary mobile navigation\" style=\"display: grid;\">",
+                  "target": [
+                    "#mBottomNav"
+                  ]
+                },
+                {
+                  "html": "<svg viewBox=\"0 0 360 460\" width=\"100%\" style=\"display:block;height:auto\" role=\"img\" aria-label=\"Chart 5: ALFA OneHub Architecture (CRM + ERP + HRM)\">",
+                  "target": [
+                    ".m-card:nth-child(4) > div:nth-child(2) > svg[viewBox=\"0 0 360 460\"][width=\"100%\"][role=\"img\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<small>Script 🔒</small>",
+          "target": [
+            "button[data-go=\"script\"] > small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ]
+}

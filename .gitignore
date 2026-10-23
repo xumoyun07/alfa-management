@@ -1,0 +1,14 @@
+# Dependencies & Scratch Scripts
+node_modules/
+scratch/
+*.log
+
+# OS & Office Temporary Files
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+
+# Large Archive Files & Test Screenshots (>100MB exceeds GitHub push limits)
+*.zip
+docs/shots/

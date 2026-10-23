@@ -1,0 +1,70 @@
+Page 13 of 17: Five-Area KPI Matrix & Variance Analysis. Member 5.
+Member 1
+Member 2
+Member 3
+Member 4
+Member 5
+Member 6
+Member 7
+13 / 17
+Overview (17)
+More detail
+Presenter mode
+MEMBER 5 · 13 / 17
+ARCHETYPE F · TRAFFIC-LIGHT KPI DASHBOARD
+Slide 13 | 5-Area Performance Matrix
+Five-Area KPI Matrix & Variance Analysis
+
+Five control areas enforce strict standards with a live traffic-light rule and variance formulas.
+
+Standards cap spend at $94,500 ($236.25/student; $161.54 direct), replies within 2 hours, requests under 24 hours, 95% staff certification, and 65% direct intake. Traffic-light rule: Green ≥ 100%, Amber 90–99%, Red < 90%.
+
+Sample Unfavourable Variance (240 vs. 260 Direct)
+160 agent students × $375 = $60,000 vs. $52,500 standard · Q2 30% vs. 40% = −10 pts
++$7,500
+Hide detail ▲
+Use → / PageDown / Wheel for next page · Esc for Overview
+5-AREA TRAFFIC-LIGHT MATRIX & LIVE VARIANCE SIMULATOR
+Adjust actual direct intake
+FINANCIAL & OPS
+≤ $94,500 · < 24h
+$236.25/stu ($161.54 direct) · CRM ≤ 2h · −90% paper
+QUALITY & HR
+20K IG · ≥ 95% Pass
+5 Reels/wk · ≥ 4.5/5 score · 100% digital leave
+STRATEGIC RAMP
+20 / 40 / 55 / 65%
+Q2 30% vs 40% std = −10 pts → $150 scholarship
+Actual Direct Students: 240 (Standard: 260)
+92% Achievement · AMBER (90–99%)
+ACTUAL AGENT BILL
+$60,000
+160 agents × $375
+STANDARD AGENT BILL
+$52,500
+140 agents × $375
+VARIANCE (ACTUAL − STD)
++$7,500 Unfav.
+Freeze weak ads & audit
+Extended Reference Notes · Page 13 / 17 (Member 5 | Slides 12–13: Controlling — 4-Step Process, Control Types, 5-Area Matrix & Variance)
+Close detail
+5-Area Matrix
+Financial: total spend at most $94,500 ($236.25/student); cost per direct student $161.54.
+Operations: CRM reply within 2 hrs; student requests within 24 hrs (vs. 5–7 days); paper -90%.
+Quality: 5 Reels/week, 20K followers, student score at least 4.5/5.0.
+HR: at least 95% of staff pass the OneHub test; 100% digital leave.
+Strategic: direct intake 20% / 40% / 55% / 65% by quarter.
+Variance Calculations
+Variance = Actual − Standard.
+Example: 240 direct students → 160 agents × $375 = $60,000 vs. $52,500 standard = +$7,500 unfavourable.
+Example: Q2 direct intake of 30% vs. 40% standard = −10 percentage points → trigger the $150 scholarship review.
+Corrective actions: freeze weak ads, audit agent invoices, reassign pending requests, 1-on-1 IT coaching.
+Reference Chart 1
+Agent vs. Digital Acquisition Cost
+Reference Chart 5
+12-Month Action Plan Timeline
+← Page 12
+Member 5 pages:
+12 / 17
+13 / 17
+Page 14 →

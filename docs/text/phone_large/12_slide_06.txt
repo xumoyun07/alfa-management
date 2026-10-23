@@ -1,0 +1,361 @@
+
+      Page 6 of 17: Quarterly Direct-Intake Milestones & Backup Plan. Member 2.
+      
+      
+      
+        
+        
+          Subang Jaya, Selangor · 68 MQA Programmes · 120 Employees (assumption)
+          ● POLC Restructuring PlanOneHub = our proposal
+        
+        Restructuring Recruitment & Paperless Operations at ALFA University College
+        An integrated Planning, Organising, Leading and Controlling (POLC) management plan to transition ALFA from 100% agent dependency to 65% direct social media enrolment within 12 months, eliminate consultancy sub-agent fees, and unite all 120 employees and students on the paperless ALFA OneHub (CRM + ERP + HRM) platform.
+      
+          $97,500commission saved per year
+          65%direct enrolment target
+          260students with $0 commission
+          < 24 hstudent admin wait (target)
+        
+      
+
+      
+      
+        Origins1998 as Alif Creative Academy
+        OwnershipNusantara Education Group (since 2017)
+        StatusUniversity College since 2021
+        Official Motto"A Leader For All"
+        Campus AddressLot 13, Persiaran Kewajipan, USJ 1, 47600 Subang Jaya, Selangor, Malaysia
+        Academic Scale68 MQA Programmes · 7 Schools · 4 Centres
+        Annual Intake & Revenue400 new students × $2,500 = $1,000,000 / yr
+        Workforce120 full-time staff (assumption)
+      
+
+      
+      
+        
+          Baseline annual spendBaseline (100% Agents)
+          $160,000 / yr
+          $150,000 commissions (15% = $375/student) + $10,000 marketing (assumption) = $400/student
+        
+        
+          Annual net savings targetGoal
+          +$55,500 / yr
+          $97,500 gross commission savings − $42,000 plan budget (total spend $160,000 → $94,500 = $65,500)
+        
+        
+          Direct online intakeIG / TikTok / CRM
+          0% → 65%
+          0 → 260 direct students; Instagram ~2.1K (our observation) → 20K, TikTok & YouTube
+        
+        
+          ALFA OneHub speedChallenge 2
+          < 24 hours
+          Course reg, fee clearance & exam slips down from about 5–7 days (our estimate); 90% less paper
+        
+      
+
+      
+
+      
+      
+        
+          Member 1Member 2Member 3Member 4Member 5Member 6Member 7
+          
+            06 / 17
+            Overview (17)
+            More detail
+            Presenter mode
+          
+        
+        
+        
+      
+        
+        
+
+        
+          
+            Member 2 · 06 / 17
+            Archetype D · Milestone Curve & Trigger
+            Slide 6 | Contingency Plan & Milestones
+          
+
+          
+            
+              Quarterly Direct-Intake Milestones & Backup Plan
+              Direct intake climbs from 0% today to 20%, 40%, 55% and 65%—backed by a Q2 scholarship trigger.
+              By Q4, 260 direct students carry $0 commission while 140 agent students cost $52,500 (140 × $375). If Q2 direct share falls below 30%, a $150 Direct Scholarship activates—still saving $225 per student.
+
+              
+                
+                  Today 0% → Q1 20% → Q2 40% → Q3 55% → Q4 65%
+                  Backup trigger: Q2 < 30% activates $150 scholarship ($225 saved vs. $375 fee)
+                
+                0% → 65%
+              
+
+              
+                
+                  More detail ▼
+                
+                Use → / PageDown / Wheel for next page · Esc for Overview
+              
+            
+
+            
+              
+        Quarterly Direct-Intake Ramp & Q2 Contingency TriggerSelect quarter or trigger backup
+        
+          Today (0%)Q1 (20%)Q2 (40%)Q3 (55%)Q4 (65%)
+        
+        
+          
+              
+                
+                0% (0)
+                Today
+              
+              
+                
+                20% (80)
+                Q1
+              
+              
+                
+                40% (160)
+                Q2
+              
+              
+                
+                55% (220)
+                Q3
+              
+              
+                
+                65% (260)
+                Q4
+              
+        
+        
+          Q4 Direct Students260 ($0 fee)65% direct share
+          Q4 Agent Students140 (× $375)$52,500 commission
+           Contingency RuleQ2 < 30%Reviewed monthly in CRM
+        
+        
+          Simulate “What-If Q2 Direct Intake Is Below 30%?” Backup Plan
+          Tap to test
+        
+            
+          
+
+          
+        
+
+        
+          ← Page 05
+          
+            Member 2 pages:
+            05 / 1706 / 1707 / 17
+          
+          Page 07 →
+        
+      
+      
+
+      
+      
+        ALFA University College ROI Simulator and Sensitivity Analysis
+        
+          
+            Tuition & Commission Simulator
+            Baseline: 100% agent dependency (400 of 400 students). Each agent student costs 10% to the consultancy sub-agent + 5% (our assumption) to the master agent = 15% ($375). Adjust sliders or choose a milestone scenario below:
+            
+              Scenarios:
+              ALFA Plan (65% direct)
+              Today (0% direct)
+              Q1 (20% direct)
+              Q2 (40% direct)
+              Q3 (55% direct)
+              Stretch (85% direct)
+            
+            Annual new student intake400 studentsFirst-year tuition fee (USD)$2,500Direct social media & CRM share65%Staff direct enrolment bonus$50 / student
+
+            
+              Annual Transformation Budget Allocation (Default Scenario)
+              
+                Studio resources & 8 student ambassadors$4,000
+                Contract audit$1,500
+                OneHub cloud upgrade$9,500
+                Meta / TikTok advertising$12,000
+                Staff direct bonuses (260 × $50)$13,000
+                Training programmes$2,000
+                Performance awards$400
+                Total Proposed Transformation Budget (fixed $29,000 + bonuses)$42,000
+              
+              Note: the itemised lines total $42,400 while the budget formula is $42,000 ($29,000 fixed + $13,000 direct bonuses). Remaining commissions are $52,500, enabling ALFA to retain $905,500 (90.55%).
+            
+          
+
+          
+            Live Financial Comparison
+            
+              Gross commission savings$97,500
+              Net savings vs. commissions+$55,500
+              Total savings vs. total spend+$65,500
+            
+
+            
+              Total annual expenditure$94,500down from $160,000 baseline ($236.25 vs $400.00 / student)
+              Tuition retained by ALFA90.55%vs. 84.00% under baseline agent model
+            
+
+            
+              Baseline total expenditure (10% sub-agent + 5% master + $10K marketing)$160,000
+              
+            
+            
+              Proposed plan total expenditure (remaining commissions + transformation budget)$94,500
+              
+            
+
+            
+              Financial metricBaseline (100% Agents)Proposed ALFA plan
+              Gross annual tuition revenue$1,000,000$1,000,000Students sourced via agents / direct400 / 0140 / 26010% consultancy sub-agent commission ($250/stu)$100,000$35,0005% master agent commission ($125/stu, assumption)$50,000$17,500Total commissions (15% = $375/stu)$150,000$52,500Marketing spend / Transformation budget$10,000 (assumption)$42,000Total annual expenditure$160,000 ($400.00/stu)$94,500 ($236.25/stu)Net tuition retained by ALFA$840,000 (84.00%)$905,500 (90.55%)Gross commission savings (sub + master)Baseline+$97,500 ($65,000 sub + $32,500 master)Net annual savings (vs. baseline commissions)Baseline+$55,500 / yearTotal annual savings (vs. total baseline spend)Baseline+$65,500 / yearCost per direct student ($42,000 ÷ 260)n/a$161.54Blended cost across all 400 students$400.00$236.25
+            
+            
+              Export CSV
+              Print
+            
+          
+        
+        
+          What if the master-agent rate is different?
+          The 5% master-agent rate is our assumption. Choose another rate and see that the plan still saves money.
+          5% base7.5%10%
+          
+            Master-agent rateMaster fee per studentTotal per studentAnnual commission today (400 students)Saving at 65% direct (260 students)Saving minus $42,000 budget5% (our base case)$125$375 (15%)$150,000$97,500$55,5007.5%$187.50$437.50 (17.5%)$175,000$113,750$71,75010%$250$500 (20%)$200,000$130,000$88,000
+            
+              Commission today$150,000
+              Saving at 65% direct$97,500
+              Net after $42,000$55,500
+            
+          
+          Total per student = $250 + master rate × $2,500 · Annual cost = total × 400 · Saving at 65% direct = total × 260 · Net saving = saving − $42,000
+          The plan saves more money when the commission is higher, so our conclusion is correct for any of these rates. We use 5% because it keeps the total at 15%, which is at the top of the typical 10 to 15% industry range for higher education (QualyHQ, 2026; GradPilot, 2026). The 5% and the split are our assumption, not an official ALFA figure.
+          Sources and assumptions
+
+QualyHQ. (2026). How education agent commissions work: Rates, gross vs net, and getting paid on time. qualyhq.com
+GradPilot. (2026). Study abroad consultancies and education agents: How the business works and what students should know. gradpilot.com
+Industry guides say sub-agents often keep 50% to 70% of the commission. Our split is about 67% (sub-agent) and 33% (master agent).
+Our assumptions: 12 master agents × 8 sub-agents, 400 new students, 120 staff, $2,500 first-year fee, 5% master-agent rate, $10,000 current marketing spend, 5–7 day admin wait. ALFA does not publish these numbers.
+OneHub is our proposal, not an existing ALFA system. The website offers a MyClass login, but applications, payment proof and many staff processes still run on forms and email.
+
+        
+      
+
+      
+      
+        ALFA OneHub Unified Paperless Cloud Ecosystem
+        
+          ALFA OneHub — Unified Paperless Cloud Ecosystem (Solving Challenge 2)
+          Click through the modules to see how ALFA OneHub connects social media leads directly to paperless Admissions (CRM), Student Finance & Visas (ERP) and 120-staff management (HRM).
+          
+            Module 1: ALFA CRM 4 applicants
+            Module 2: ALFA ERP 3 processes
+            Module 3: ALFA HRM 120 staff
+            Architecture Diagram
+          
+          ALFA CRM — Direct Social Media Leads & 5-Minute ApplicationsStudents who tap our Instagram (@alfauniversity.official) or TikTok links apply directly in 5 minutes, paying $0 in external agent commissions.Applicant IDStudent & countryProgramme appliedAcquisition channelTurnaroundCRM status#AUC-2026-801Aibek T. (Kyrgyzstan)Foundation in Business (FIB)Instagram Reel (@alfauniversity.official)19 hoursDirect Enrolled (< 24h SOP, $0 Commission)#AUC-2026-802Nurul Aina (Malaysia)Bachelor of Graphic Design (Hons)TikTok Campus Studio Tour14 hoursDirect Enrolled (< 24h SOP, $0 Commission)#AUC-2026-803Rizky Pratama (Indonesia)Bachelor in Artificial IntelligenceDirect Website Chat31 hoursDirect Enrolled (< 24h SOP, $0 Commission)#AUC-2026-804Chen Wei (China)Diploma in ArchitectureMaster Agent #4 via consultancy sub-agent (15% = $375)42 hoursEMGS Visa Verification (Agent-Sourced)
+        
+      
+
+      
+      
+        FIB 2074 Management Theories and Lecturer Q&A
+        
+          
+          Admin Panel
+        
+        All (8)L1 · POLC (1)L2 · Theories (1)L3 · Planning (1)L4 · Organising (1)L5 · Leading (1)Control & People (3)
+        
+        
+          Lecture 1 · Nature of Management
+          4 Functions (POLC), 3 Roles & 3 Levels
+          Core Concept: Management coordinates people and limited resources via Planning, Organising, Leading and Controlling across top, middle and first-line managers.
+          At ALFA: Top management (Chairman & VC) sets the 15% total commission policy; middle management (4 division heads) runs Marketing, IT, Registry and the 7 Schools; first-line managers supervise daily Reels and < 24-hour digital student services. Origins in 1998 as Alif Creative Academy; University College since 2021.
+        
+      
+        
+          Lecture 2 · Management Theories
+          Classical, Behavioural & Contingency
+          Core Concept: Classical = work efficiency and standardisation; Behavioural = people and motivation (Restaurant B); Contingency = adapt to the situation.
+          At ALFA: Classical = < 24-hour digital student service SOP and 3 marketing units; Behavioural = $50/student direct bonus; Contingency = buddy coaching for older clerks vs. autonomy for young creators.
+        
+      
+        
+          Lecture 3 · Planning
+          Robbins & Coulter + SMART + Contingency
+          Core Concept: 3 steps (Define Goals → Strategy → Plans) and 6 planning steps. Goals = broad destination; SMART objectives = measurable finish line.
+          At ALFA: SMART goals shift direct intake from 0% to 65% (260 students), cut total spend from $160,000 to $94,500 ($400.00 → $236.25/student) and grow IG to 20K. Backup plan: $150 Direct Scholarship if Q2 direct intake is below 30%.
+        
+      
+        
+          Lecture 4 · Organising
+          Authority, Delegation & Span of Control (7 vs. 4–6)
+          Core Concept: Authority must match responsibility; managers can delegate authority but never accountability. Span of control depends on task complexity and experience.
+          At ALFA: Current span is 7 direct reports per manager; recommended span is 4–6 for units adopting complex digital workflows (Marketing, IT, Registry). High-stakes tuition ($2,500) and the 15% commission cap stay centralised; daily 24-hr approvals are decentralised.
+        
+      
+        
+          Lecture 5 · Leading, Power & Influence
+          6-Step Leading & 5 Sources of Power
+          Core Concept: Power = capacity a manager has; Influence = actual behaviour change. 5 sources: Legitimate, Reward, Coercive (formal) + Expert, Referent (personal).
+          At ALFA: When 2 senior clerks resist the new ERP, managers use Referent Power (listening privately) and Expert Power (demonstrating the IT Sandbox Practice Mode with a manager preview check) to clear the 40-student timetable backlog in < 24 hours without friction.
+        
+      
+        
+          Sections F & G · Controlling & People
+          4-Step Control Loop & Feedforward / Concurrent / Feedback
+          Core Concept: 4-step control process: Set Standard → Measure Performance → Compare & Find Variance (Actual − Standard) → Take Corrective Action. Feedforward controls anticipate issues, Concurrent monitors live, Feedback evaluates outcomes.
+          At ALFA: Feedforward = sandbox pre-testing; Concurrent = CRM timestamps (reply <= 2 hrs; request <= 24 hrs); Feedback = quarterly direct share reviews. Variance example: 240 direct students leaves 160 agent students × $375 = $60,000 vs. $52,500 standard (+ $7,500 unfavourable).
+        
+      
+        
+          Sections F & G · Controlling & People
+          Participative/Situational Leadership, Maslow & Herzberg
+          Core Concept: Situational leadership adapts style to follower readiness. Communication requires verbal clarity and supportive non-verbal cues. Maslow models needs hierarchy; Herzberg separates hygiene factors from motivators.
+          At ALFA: Monday 15-min verbal stand-ups, patient eye-level non-verbal coaching. Hygiene = fair salary and clear SOPs; Motivators = $50 direct bonus, 'A Leader For All' monthly awards, and empowering CRM staff to grant instant application fee waivers.
+        
+      
+        
+          Sections F & G · Controlling & People
+          Financial Turnaround Math ($97.5K / $55.5K / $65.5K)
+          Core Concept: Mathematical reconciliation of university revenue, baseline commission expenditure, transformation investment budget, and retained tuition percentage across intake channels.
+          At ALFA: Baseline spend = $100K sub + $50K master + $10K marketing = $160K ($400/stu). Proposed spend = $52.5K commissions (140 × $375) + $42K plan = $94.5K ($236.25/stu). Gross commission savings = $97,500; Net annual savings = $55,500; Total savings = $65,500; Retained = $905,500 (90.55%).
+        
+      
+      
+
+      
+      
+        
+        
+          
+          Speaker Script
+          Protected presenter module for FIB 2074 team members. Enter the password to decrypt the 7 speeches and study notes in memory.
+          
+            
+              Password
+              
+                
+                
+              
+            
+            
+            
+              Unlock Speaker Script
+            
+          
+        
+      
+    

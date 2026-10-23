@@ -1,0 +1,144 @@
+Page 17 of 17: Today vs. Month-12 Scorecard & Conclusion. Member 7.
+SUBANG JAYA, SELANGOR · 68 MQA PROGRAMMES · 120 EMPLOYEES (ASSUMPTION)
+● POLC Restructuring Plan
+OneHub = our proposal
+Restructuring Recruitment & Paperless Operations at ALFA University College
+
+An integrated Planning, Organising, Leading and Controlling (POLC) management plan to transition ALFA from 100% agent dependency to 65% direct social media enrolment within 12 months, eliminate consultancy sub-agent fees, and unite all 120 employees and students on the paperless ALFA OneHub (CRM + ERP + HRM) platform.
+
+$97,500
+commission saved per year
+65%
+direct enrolment target
+260
+students with $0 commission
+< 24 h
+student admin wait (target)
+ORIGINS
+1998 as Alif Creative Academy
+OWNERSHIP
+Nusantara Education Group (since 2017)
+STATUS
+University College since 2021
+OFFICIAL MOTTO
+"A Leader For All"
+CAMPUS ADDRESS
+Lot 13, Persiaran Kewajipan, USJ 1, 47600 Subang Jaya, Selangor, Malaysia
+ACADEMIC SCALE
+68 MQA Programmes · 7 Schools · 4 Centres
+ANNUAL INTAKE & REVENUE
+400 new students × $2,500 = $1,000,000 / yr
+WORKFORCE
+120 full-time staff (assumption)
+BASELINE ANNUAL SPEND
+Baseline (100% Agents)
+$160,000 / yr
+$150,000 commissions (15% = $375/student) + $10,000 marketing (assumption) = $400/student
+ANNUAL NET SAVINGS TARGET
+Goal
++$55,500 / yr
+$97,500 gross commission savings − $42,000 plan budget (total spend $160,000 → $94,500 = $65,500)
+DIRECT ONLINE INTAKE
+IG / TikTok / CRM
+0% → 65%
+0 → 260 direct students; Instagram ~2.1K (our observation) → 20K, TikTok & YouTube
+ALFA ONEHUB SPEED
+Challenge 2
+< 24 hours
+Course reg, fee clearance & exam slips down from about 5–7 days (our estimate); 90% less paper
+ALFA University College ROI Simulator and Sensitivity Analysis
+Tuition & Commission Simulator
+
+Baseline: 100% agent dependency (400 of 400 students). Each agent student costs 10% to the consultancy sub-agent + 5% (our assumption) to the master agent = 15% ($375). Adjust sliders or choose a milestone scenario below:
+
+SCENARIOS:
+ALFA Plan (65% direct)
+Today (0% direct)
+Q1 (20% direct)
+Q2 (40% direct)
+Q3 (55% direct)
+Stretch (85% direct)
+Annual new student intake
+500 students
+First-year tuition fee (USD)
+$2,800
+Direct social media & CRM share
+85%
+Staff direct enrolment bonus
+$70 / student
+Annual Transformation Budget Allocation (Default Scenario)
+Studio resources & 8 student ambassadors
+$4,000
+Contract audit
+$1,500
+OneHub cloud upgrade
+$9,500
+Meta / TikTok advertising
+$12,000
+Staff direct bonuses (260 × $50)
+$13,000
+Training programmes
+$2,000
+Performance awards
+$400
+Total Proposed Transformation Budget (fixed $29,000 + bonuses)
+$42,000
+
+Note: the itemised lines total $42,400 while the budget formula is $42,000 ($29,000 fixed + $13,000 direct bonuses). Remaining commissions are $52,500, enabling ALFA to retain $905,500 (90.55%).
+
+Live Financial Comparison
+GROSS COMMISSION SAVINGS
+$178,500
+NET SAVINGS VS. COMMISSIONS
++$119,750
+TOTAL SAVINGS VS. TOTAL SPEND
++$129,750
+TOTAL ANNUAL EXPENDITURE
+$90,250
+down from $220,000 baseline ($180.50 vs $440.00 / student)
+TUITION RETAINED BY ALFA
+93.55%
+vs. 84.29% under baseline agent model
+Baseline total expenditure (10% sub-agent + 5% master + $10K marketing)
+$220,000
+Proposed plan total expenditure (remaining commissions + transformation budget)
+$90,250
+FINANCIAL METRIC	BASELINE (100% AGENTS)	PROPOSED ALFA PLAN
+Gross annual tuition revenue	$1,400,000	$1,400,000
+Students sourced via agents / direct	500 / 0	75 / 425
+10% consultancy sub-agent commission ($250/stu)	$140,000	$21,000
+5% master agent commission ($125/stu, assumption)	$70,000	$10,500
+Total commissions (15% = $375/stu)	$210,000	$31,500
+Marketing spend / Transformation budget	$10,000 (assumption)	$58,750
+Total annual expenditure	$220,000 ($440.00/stu)	$90,250 ($180.50/stu)
+Net tuition retained by ALFA	$1,180,000 (84.29%)	$1,309,750 (93.55%)
+Gross commission savings (sub + master)	Baseline	+$178,500 ($119,000 sub + $59,500 master)
+Net annual savings (vs. baseline commissions)	Baseline	+$119,750 / year
+Total annual savings (vs. total baseline spend)	Baseline	+$129,750 / year
+Cost per direct student ($42,000 ÷ 260)	n/a	$138.24
+Blended cost across all 400 students	$440.00	$180.50
+Export CSV
+Print
+What if the master-agent rate is different?
+
+The 5% master-agent rate is our assumption. Choose another rate and see that the plan still saves money.
+
+5% base
+7.5%
+10%
+MASTER-AGENT RATE	MASTER FEE PER STUDENT	TOTAL PER STUDENT	ANNUAL COMMISSION TODAY (400 STUDENTS)	SAVING AT 65% DIRECT (260 STUDENTS)	SAVING MINUS $42,000 BUDGET
+5% (our base case)	$125	$375 (15%)	$150,000	$97,500	$55,500
+7.5%	$187.50	$437.50 (17.5%)	$175,000	$113,750	$71,750
+10%	$250	$500 (20%)	$200,000	$130,000	$88,000
+Commission today
+$150,000
+Saving at 65% direct
+$97,500
+Net after $42,000
+$55,500
+
+Total per student = $250 + master rate × $2,500 · Annual cost = total × 400 · Saving at 65% direct = total × 260 · Net saving = saving − $42,000
+
+The plan saves more money when the commission is higher, so our conclusion is correct for any of these rates. We use 5% because it keeps the total at 15%, which is at the top of the typical 10 to 15% industry range for higher education (QualyHQ, 2026; GradPilot, 2026). The 5% and the split are our assumption, not an official ALFA figure.
+
+Sources and assumptions

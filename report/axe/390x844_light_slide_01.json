@@ -1,0 +1,409 @@
+{
+  "viewport": "390x844",
+  "theme": "light",
+  "screen": "Slide 1",
+  "timestamp": "2026-10-22T09:07:52.510Z",
+  "violationsCount": 0,
+  "incompleteCount": 1,
+  "passesCount": 34,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.2pt (16.32px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"m-top\" id=\"mTop\" aria-label=\"Mobile Application Header\">",
+                  "target": [
+                    "#mTop"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"font-size:1.02rem;font-weight:900;margin:0;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis\">ALFA Management Plan</h1>",
+          "target": [
+            "#mTop > div:nth-child(1) > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.0pt (13.3333px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-top-ibtn theme-toggle-btn\" id=\"mThemeBtn\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-label=\"Theme: Light (tap to choose, press T to cycle)\" onclick=\"toggleThemeMenu('mobile')\">",
+                  "target": [
+                    "#mThemeBtn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"theme-btn-label\">Light</span>",
+          "target": [
+            "#mThemeBtn > .theme-btn-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.1pt (13.44px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-top-btn\" onclick=\"closeMobilePresentation()\" aria-label=\"Exit presentation to Home\">\n            <span>← Home</span>\n          </button>",
+                  "target": [
+                    ".m-top-btn"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-present-topbar\">",
+                  "target": [
+                    ".m-present-topbar"
+                  ]
+                },
+                {
+                  "html": "<section class=\"m-screen\" id=\"m-present\" aria-label=\"Mobile Presentation Story Pages\">",
+                  "target": [
+                    "#m-present"
+                  ]
+                },
+                {
+                  "html": "<i class=\"logo-i\"></i>",
+                  "target": [
+                    ".m-logo > .logo-i"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>← Home</span>",
+          "target": [
+            ".m-top-btn > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.1pt (13.44px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-top-chip\" id=\"mTopMemberChip\" onclick=\"openMemberSwitchSheet()\" aria-label=\"M1 · Slides 1–4 (switch member)\"><span>M1 · Slides 1–4 ▾</span></button>",
+                  "target": [
+                    "#mTopMemberChip"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-present-topbar\">",
+                  "target": [
+                    ".m-present-topbar"
+                  ]
+                },
+                {
+                  "html": "<section class=\"m-screen\" id=\"m-present\" aria-label=\"Mobile Presentation Story Pages\">",
+                  "target": [
+                    "#m-present"
+                  ]
+                },
+                {
+                  "html": "<header class=\"m-top\" id=\"mTop\" aria-label=\"Mobile Application Header\">",
+                  "target": [
+                    "#mTop"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>M1 · Slides 1–4 ▾</span>",
+          "target": [
+            "#mTopMemberChip > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"m-present-topbar\">",
+                  "target": [
+                    ".m-present-topbar"
+                  ]
+                },
+                {
+                  "html": "<section class=\"m-screen\" id=\"m-present\" aria-label=\"Mobile Presentation Story Pages\">",
+                  "target": [
+                    "#m-present"
+                  ]
+                },
+                {
+                  "html": "<header class=\"m-top\" id=\"mTop\" aria-label=\"Mobile Application Header\">",
+                  "target": [
+                    "#mTop"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"m-present-badge\" id=\"mTopSlideBadge\">01 / 17</span>",
+          "target": [
+            "#mTopSlideBadge"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13.12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-thumb-btn\" id=\"mPrev\" onclick=\"prevSlide()\" aria-label=\"Previous page 17\">",
+                  "target": [
+                    "#mPrev"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-story-bar\" role=\"toolbar\" aria-label=\"Slide navigation\">",
+                  "target": [
+                    ".m-story-bar"
+                  ]
+                },
+                {
+                  "html": "<section class=\"m-screen\" id=\"m-present\" aria-label=\"Mobile Presentation Story Pages\">",
+                  "target": [
+                    "#m-present"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>17</span>",
+          "target": [
+            "#mPrev > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13.12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-thumb-btn\" onclick=\"toggleOverview()\" aria-label=\"01/17 Overview grid\">",
+                  "target": [
+                    "button[aria-label=\"01/17 Overview grid\"]"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-story-bar\" role=\"toolbar\" aria-label=\"Slide navigation\">",
+                  "target": [
+                    ".m-story-bar"
+                  ]
+                },
+                {
+                  "html": "<section class=\"m-screen\" id=\"m-present\" aria-label=\"Mobile Presentation Story Pages\">",
+                  "target": [
+                    "#m-present"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span id=\"mOvCount\">01/17</span>",
+          "target": [
+            "#mOvCount"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13.12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"m-thumb-btn highlight\" id=\"mMoreDetailBtn\" onclick=\"toggleMoreDetail()\" aria-label=\"Open slide more detail\">",
+                  "target": [
+                    "#mMoreDetailBtn"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-story-bar\" role=\"toolbar\" aria-label=\"Slide navigation\">",
+                  "target": [
+                    ".m-story-bar"
+                  ]
+                },
+                {
+                  "html": "<section class=\"m-screen\" id=\"m-present\" aria-label=\"Mobile Presentation Story Pages\">",
+                  "target": [
+                    "#m-present"
+                  ]
+                },
+                {
+                  "html": "<div class=\"m-app\">",
+                  "target": [
+                    ".m-app"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Detail</span>",
+          "target": [
+            "#mMoreDetailBtn > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ]
+}

@@ -1849,6 +1849,309 @@
       height: auto;
     }
 
+    /* =========================================================================
+       MOBILE HOME MODALS — DEDICATED BOTTOM SHEETS (FIGURES & POLC STEPS)
+       ========================================================================= */
+    .m-fig-sheet-panel,
+    .m-plan-sheet-panel {
+      max-height: 88dvh !important;
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.98) 0%, rgba(10, 15, 26, 1) 100%) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+      padding: 0.65rem 0.85rem calc(1rem + env(safe-area-inset-bottom, 0px)) 0.85rem !important;
+      border-radius: 24px 24px 0 0 !important;
+      box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.75) !important;
+    }
+
+    .m-sheet-grab-bar {
+      width: 44px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      margin: 0.15rem auto 0.6rem auto;
+    }
+
+    /* Quick Nav Switcher Pills inside Bottom Sheet */
+    .m-sheet-nav-pills {
+      display: flex;
+      gap: 0.35rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 0.55rem;
+      margin-bottom: 0.45rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      scrollbar-width: none;
+    }
+    .m-sheet-nav-pills::-webkit-scrollbar { display: none; }
+
+    .m-sheet-nav-btn {
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #94a3b8;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      min-height: 34px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .m-sheet-nav-btn:active {
+      transform: scale(0.96);
+    }
+    .m-sheet-nav-btn.active {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.3);
+      font-weight: 800;
+    }
+    .m-sheet-nav-btn.active.c-saving {
+      background: rgba(16, 185, 129, 0.22);
+      border-color: #10b981;
+      color: #34d399;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    }
+    .m-sheet-nav-btn.active.c-direct {
+      background: rgba(245, 158, 11, 0.22);
+      border-color: #f59e0b;
+      color: #fbbf24;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+    }
+    .m-sheet-nav-btn.active.c-cost {
+      background: rgba(239, 68, 68, 0.22);
+      border-color: #ef4444;
+      color: #f87171;
+      box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+    }
+    .m-sheet-nav-btn.active.c-sla {
+      background: rgba(20, 184, 166, 0.22);
+      border-color: #14b8a6;
+      color: #2dd4bf;
+      box-shadow: 0 0 12px rgba(20, 184, 166, 0.3);
+    }
+
+    /* POLC Steps Nav Colors */
+    .m-sheet-nav-btn.active.step-1 {
+      background: rgba(59, 130, 246, 0.25);
+      border-color: #3b82f6;
+      color: #60a5fa;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+    }
+    .m-sheet-nav-btn.active.step-2 {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: #a855f7;
+      color: #c084fc;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+    }
+    .m-sheet-nav-btn.active.step-3 {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: #f59e0b;
+      color: #fbbf24;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+    }
+    .m-sheet-nav-btn.active.step-4 {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: #10b981;
+      color: #34d399;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Header & Close Button */
+    .m-sheet-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .m-sheet-sub {
+      font-size: 0.64rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .m-sheet-sub.emerald { color: #34d399; }
+    .m-sheet-sub.amber { color: #fbbf24; }
+    .m-sheet-sub.red { color: #f87171; }
+    .m-sheet-sub.teal { color: #2dd4bf; }
+    .m-sheet-sub.blue { color: #60a5fa; }
+    .m-sheet-sub.purple { color: #c084fc; }
+
+    .m-sheet-h3 {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #fff;
+      margin: 0;
+      line-height: 1.25;
+    }
+
+    .m-sheet-close-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .m-sheet-close-circle:active {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(0.92);
+    }
+
+    /* Structured Calculation & Metric Breakdown Cards */
+    .m-sheet-calc-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 0.75rem 0.85rem;
+      margin-bottom: 0.65rem;
+    }
+    .m-sheet-calc-title {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #94a3b8;
+      margin: 0 0 0.45rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .m-sheet-formula-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.28rem 0;
+      font-size: 0.76rem;
+      color: #cbd5e1;
+    }
+    .m-sheet-formula-row b {
+      font-weight: 800;
+      color: #fff;
+    }
+    .m-sheet-formula-row.result {
+      border-top: 1px dashed rgba(255, 255, 255, 0.14);
+      margin-top: 0.35rem;
+      padding-top: 0.45rem;
+      font-size: 0.84rem;
+    }
+    .m-sheet-formula-row.result b {
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    /* Micro KPI 2-Col Grid */
+    .m-sheet-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.45rem;
+      margin-bottom: 0.65rem;
+    }
+    .m-sheet-mini-stat {
+      background: rgba(22, 32, 50, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 0.55rem 0.65rem;
+    }
+    .m-sheet-mini-stat small {
+      display: block;
+      font-size: 0.62rem;
+      color: #94a3b8;
+      margin-bottom: 0.15rem;
+    }
+    .m-sheet-mini-stat b {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .m-sheet-mini-stat span {
+      display: block;
+      font-size: 0.65rem;
+      color: #cbd5e1;
+      margin-top: 0.15rem;
+    }
+
+    /* Structured Step Insights (For POLC Plan) */
+    .m-sheet-step-card {
+      background: rgba(22, 32, 50, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 0.65rem 0.75rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+    .m-sheet-step-ico {
+      font-size: 1.1rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .m-sheet-step-b {
+      flex: 1;
+      min-width: 0;
+    }
+    .m-sheet-step-h {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 0.15rem 0;
+      line-height: 1.3;
+    }
+    .m-sheet-step-p {
+      font-size: 0.72rem;
+      color: #cbd5e1;
+      margin: 0;
+      line-height: 1.38;
+    }
+
+    /* Contextual 1-Tap Action Button at Bottom of Sheet */
+    .m-sheet-action-btn {
+      width: 100%;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.85), rgba(185, 28, 28, 0.95));
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      box-shadow: 0 4px 14px rgba(232, 13, 19, 0.35);
+      cursor: pointer;
+      margin-top: 0.45rem;
+      transition: all 0.2s ease;
+    }
+    .m-sheet-action-btn:active {
+      transform: scale(0.97);
+    }
+    .m-sheet-action-btn.teal {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.85), rgba(15, 118, 110, 0.95));
+      box-shadow: 0 4px 14px rgba(20, 184, 166, 0.35);
+    }
+    .m-sheet-action-btn.purple {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.85), rgba(126, 34, 206, 0.95));
+      box-shadow: 0 4px 14px rgba(168, 85, 247, 0.35);
+    }
+
     /* Theory & Q&A Mobile Search & Compact Accordion */
     .m-admin-pill {
       background: rgba(251,233,231,.09); border: 1px solid rgba(251,233,231,.3); color: var(--alfa-pink);
@@ -11812,18 +12115,92 @@ p.note, .note {
     if (!data) return;
     const sheet = $("#mPlanStepSheet");
     const title = $("#mPlanStepSheetTitle");
+    const category = $("#mPlanStepCategory");
     const content = $("#mPlanStepSheetContent");
+    const nav = $("#mPlanStepNav");
     if (!sheet || !title || !content) return;
+
+    // Update active nav button
+    if (nav) {
+      nav.querySelectorAll(".m-sheet-nav-btn").forEach(b => {
+        const isActive = b.dataset.step === key;
+        const stepNum = b.dataset.step === "planning" ? 1 : b.dataset.step === "organising" ? 2 : b.dataset.step === "leading" ? 3 : 4;
+        b.className = `m-sheet-nav-btn step-${stepNum}` + (isActive ? " active" : "");
+        b.setAttribute("aria-selected", isActive);
+      });
+    }
+
+    const stepThemes = {
+      planning: { cat: "STEP 1 OF 4 · PLANNING", color: "blue" },
+      organising: { cat: "STEP 2 OF 4 · ORGANISING", color: "purple" },
+      leading: { cat: "STEP 3 OF 4 · LEADING", color: "amber" },
+      controlling: { cat: "STEP 4 OF 4 · CONTROLLING", color: "emerald" }
+    };
+    const theme = stepThemes[key] || stepThemes.planning;
+
+    if (category) {
+      category.textContent = theme.cat;
+      category.className = `m-sheet-sub ${theme.color}`;
+    }
     title.textContent = data.title;
+
+    const icons = {
+      planning: ["🎯", "📈", "💵", "🛡️"],
+      organising: ["🏛️", "📐", "🤝", "⚡"],
+      leading: ["🧭", "💡", "⏱️", "🏆"],
+      controlling: ["🔄", "⚡", "📊", "🚦"]
+    };
+    const stepIcons = icons[key] || ["📌", "📌", "📌", "📌"];
+
     content.innerHTML = `
-      <div style="background:var(--bg);padding:0.75rem 1rem;border-radius:10px;margin-bottom:0.85rem;border-left:3.5px solid var(--accent-red,#e80d13)">
-        <span style="font-size:0.75rem;font-weight:800;color:var(--accent-red,#ff8a8e);text-transform:uppercase;letter-spacing:0.5px">Core Focus</span>
-        <p style="margin:0.2rem 0 0 0;font-weight:700;color:var(--text,#f8fafc)">${esc(data.badge)}</p>
+      <div class="m-sheet-calc-card" style="border-left: 3.5px solid var(--accent-${theme.color}, #3b82f6)">
+        <div class="m-sheet-calc-title">
+          <span>Core Strategic Focus</span>
+          <span class="m-tag ${theme.color}" style="font-size:0.6rem">POLC Priority</span>
+        </div>
+        <p style="margin:0;font-size:0.86rem;font-weight:800;color:#fff;line-height:1.35">${esc(data.badge)}</p>
       </div>
-      <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:0.65rem">
-        ${data.bullets.map(b => `<li style="line-height:1.45;color:var(--text,#e2e8f0)">${esc(b)}</li>`).join("")}
-      </ul>
+
+      <div class="m-sheet-steps-list">
+        ${data.bullets.map((b, i) => {
+          const parts = b.split(":");
+          const head = parts.length > 1 ? parts[0] : `Point ${i + 1}`;
+          const body = parts.length > 1 ? parts.slice(1).join(":").trim() : b;
+          return `
+            <div class="m-sheet-step-card">
+              <div class="m-sheet-step-ico">${stepIcons[i] || "🔹"}</div>
+              <div class="m-sheet-step-b">
+                <h5 class="m-sheet-step-h">${esc(head)}</h5>
+                <p class="m-sheet-step-p">${esc(body)}</p>
+              </div>
+            </div>
+          `;
+        }).join("")}
+      </div>
+
+      ${key === "planning" ? `
+        <button type="button" class="m-sheet-action-btn" onclick="closePlanStepSheet(); openLb(5)">
+          <span>🗺️ View 12-Month Action Plan (Chart 5)</span>
+          <span style="font-size:0.9rem">🔍</span>
+        </button>
+      ` : key === "organising" ? `
+        <button type="button" class="m-sheet-action-btn purple" onclick="closePlanStepSheet(); openLb(4)">
+          <span>👥 View 120-Staff Structure (Chart 4)</span>
+          <span style="font-size:0.9rem">🔍</span>
+        </button>
+      ` : key === "leading" ? `
+        <button type="button" class="m-sheet-action-btn" style="background:linear-gradient(135deg,rgba(245,158,11,0.85),rgba(217,119,6,0.95));box-shadow:0 4px 14px rgba(245,158,11,0.35)" onclick="closePlanStepSheet(); mGo('theory'); setTimeout(()=>{ const s=$('#mThSearch'); if(s){ s.value='Situational'; onTheorySearchInput(); } }, 200)">
+          <span>🧭 Search Leadership in Theory Defense</span>
+          <span style="font-size:0.9rem">➔</span>
+        </button>
+      ` : `
+        <button type="button" class="m-sheet-action-btn teal" onclick="closePlanStepSheet(); mGo('hub'); setTimeout(()=>setHub('erp'), 100)">
+          <span>⚡ Explore Feedforward &amp; SLA Controls</span>
+          <span style="font-size:0.9rem">➔</span>
+        </button>
+      `}
     `;
+
     sheet.hidden = false;
     haptic(8);
   }
@@ -11836,53 +12213,215 @@ p.note, .note {
   function openFigureSheet(fig) {
     const sheet = $("#mFigureSheet");
     const title = $("#mFigSheetTitle");
+    const category = $("#mFigSheetCategory");
     const body = $("#mFigSheetContent");
+    const nav = $("#mFigSheetNav");
     if (!sheet || !title || !body) return;
 
+    // Update active nav button
+    if (nav) {
+      nav.querySelectorAll(".m-sheet-nav-btn").forEach(b => {
+        const isActive = b.dataset.fig === fig;
+        b.className = "m-sheet-nav-btn" + (isActive ? ` active c-${fig}` : "");
+        b.setAttribute("aria-selected", isActive);
+      });
+    }
+
     if (fig === "saving") {
+      if (category) { category.textContent = "FINANCIAL AUDIT · CHALLENGE 1"; category.className = "m-sheet-sub emerald"; }
       title.textContent = "Net Annual Saving: +$55,500";
       body.innerHTML = `
-        <div style="background:var(--bg);padding:1rem;border-radius:10px;margin-bottom:.75rem">
-          <p style="margin:0 0 .5rem 0"><b>Formula:</b></p>
-          <code style="font-size:1rem;color:var(--green)">$97,500 Gross Saving − $42,000 Budget = +$55,500 Net / yr</code>
+        <div class="m-sheet-calc-card">
+          <div class="m-sheet-calc-title">
+            <span>Annual Net Equation</span>
+            <span class="m-tag green" style="font-size:0.6rem">Retained Profit</span>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>Gross Commissions Saved (260 Direct @ $375)</span>
+            <b style="color:#34d399">+$97,500</b>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>Less Reinvestment Budget (Ops + $50 Bonuses)</span>
+            <b style="color:#f87171">−$42,000</b>
+          </div>
+          <div class="m-sheet-formula-row result">
+            <span>Net Annual Savings Added to Reserve</span>
+            <b style="color:#34d399">+$55,500 / yr</b>
+          </div>
         </div>
-        <p><b>Retention:</b> ALFA retains <b>90.55%</b> of tuition ($905,500 of $1,000,000) vs. 84.00% ($840,000) baseline.</p>
-        <p><b>Baseline spend:</b> $160,000 down to $94,500 (total saving of $65,500 per year).</p>
-        <p><small style="color:var(--text-muted)">Labels: 5% master-agent rate (our assumption), 120 staff (our assumption).</small></p>
+
+        <div class="m-sheet-grid-2">
+          <div class="m-sheet-mini-stat">
+            <small>Tuition Retention</small>
+            <b style="color:#34d399">90.55%</b>
+            <span>vs. 84.00% today (+$65.5K)</span>
+          </div>
+          <div class="m-sheet-mini-stat">
+            <small>Total Spend Down</small>
+            <b style="color:#5eead4">$94,500</b>
+            <span>From $160,000 baseline</span>
+          </div>
+        </div>
+
+        <div class="m-sheet-step-card">
+          <div class="m-sheet-step-ico">🛡️</div>
+          <div class="m-sheet-step-b">
+            <h5 class="m-sheet-step-h">Built-in Strategic Protection</h5>
+            <p class="m-sheet-step-p">Even after paying $42K in studio ops, Meta/TikTok ads, and direct staff bonuses, ALFA retains an extra $55,500 net every single year.</p>
+          </div>
+        </div>
+
+        <button type="button" class="m-sheet-action-btn" onclick="closeFigureSheet(); mGo('roi')">
+          <span>📊 Open in ROI Simulator</span>
+          <span style="font-size:0.9rem">➔</span>
+        </button>
       `;
     } else if (fig === "direct") {
+      if (category) { category.textContent = "RECRUITMENT SHIFT · 400 INTAKE"; category.className = "m-sheet-sub amber"; }
       title.textContent = "Direct Enrolment: 65% (260 Students)";
       body.innerHTML = `
-        <div style="background:var(--bg);padding:1rem;border-radius:10px;margin-bottom:.75rem">
-          <p style="margin:0 0 .5rem 0"><b>Target:</b></p>
-          <code style="font-size:1rem;color:var(--gold)">400 Total Students × 65% Direct = 260 Direct Students</code>
+        <div class="m-sheet-calc-card">
+          <div class="m-sheet-calc-title">
+            <span>Intake Channel Redistribution</span>
+            <span class="m-tag amber" style="font-size:0.6rem">Zero Agent Drag</span>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>Direct Social Pipeline (65% Target)</span>
+            <b style="color:#fbbf24">260 Students ($0 Fee)</b>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>Retained Master Agent Pipeline (35%)</span>
+            <b style="color:#94a3b8">140 Students ($52,500)</b>
+          </div>
+          <div class="m-sheet-formula-row result">
+            <span>Total Annual New Student Intake</span>
+            <b style="color:#fff">400 Enrolled Students</b>
+          </div>
         </div>
-        <p><b>Agent Share:</b> Remaining 35% (140 students) remain with top master agents at 15% ($375) = $52,500.</p>
-        <p><b>Staff Incentives:</b> 260 direct students × $50 direct bonus = $13,000 distributed to recruitment staff.</p>
-        <p><small style="color:var(--text-muted)">Labels: 400 new intake scale (our assumption), 67/33 commission split (our assumption).</small></p>
+
+        <div class="m-sheet-grid-2">
+          <div class="m-sheet-mini-stat">
+            <small>Direct Staff Bonus</small>
+            <b style="color:#fbbf24">$13,000</b>
+            <span>$50 paid per direct student</span>
+          </div>
+          <div class="m-sheet-mini-stat">
+            <small>Commission Bypassed</small>
+            <b style="color:#34d399">$97,500</b>
+            <span>Saved from external middle-men</span>
+          </div>
+        </div>
+
+        <div class="m-sheet-step-card">
+          <div class="m-sheet-step-ico">📱</div>
+          <div class="m-sheet-step-b">
+            <h5 class="m-sheet-step-h">Direct Conversion Engine</h5>
+            <p class="m-sheet-step-p">Students apply directly via @alfauniversity.official TikTok and Instagram virtual campus tours, completing admissions in 5 minutes with zero agent drag.</p>
+          </div>
+        </div>
+
+        <button type="button" class="m-sheet-action-btn" onclick="closeFigureSheet(); mGo('hub')">
+          <span>💬 View Direct CRM Pipeline in OneHub</span>
+          <span style="font-size:0.9rem">➔</span>
+        </button>
       `;
     } else if (fig === "cost") {
+      if (category) { category.textContent = "UNIT ECONOMICS · 41% REDUCTION"; category.className = "m-sheet-sub red"; }
       title.textContent = "Acquisition Cost: $400 → $236.25 / Student";
       body.innerHTML = `
-        <div style="background:var(--bg);padding:1rem;border-radius:10px;margin-bottom:.75rem">
-          <p style="margin:0 0 .5rem 0"><b>Comparison:</b></p>
-          <p style="margin:0"><b>Baseline:</b> $160,000 / 400 = <b>$400.00</b> per student</p>
-          <p style="margin:.3rem 0 0 0"><b>Plan:</b> $94,500 / 400 = <b>$236.25</b> blended per student</p>
-          <p style="margin:.3rem 0 0 0"><b>Direct only:</b> $42,000 / 260 = <b>$161.54</b> per direct student</p>
+        <div class="m-sheet-calc-card">
+          <div class="m-sheet-calc-title">
+            <span>Blended Cost Benchmark</span>
+            <span class="m-tag red" style="font-size:0.6rem">-41% Cheaper</span>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>Baseline Cost (100% Agent Dependency)</span>
+            <b style="color:#f87171">$400.00 / student</b>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>New Blended Cost ($94,500 Total / 400)</span>
+            <b style="color:#fbbf24">$236.25 / student</b>
+          </div>
+          <div class="m-sheet-formula-row result">
+            <span>Direct-Only Cost ($42,000 Budget / 260)</span>
+            <b style="color:#34d399">$161.54 / student</b>
+          </div>
         </div>
-        <p><b>Tuition Fee:</b> Stays constant at $2,500 per first-year student.</p>
-        <p><small style="color:var(--text-muted)">Labels: $10,000 baseline marketing spend (our assumption).</small></p>
+
+        <div class="m-sheet-grid-2">
+          <div class="m-sheet-mini-stat">
+            <small>Unit Savings</small>
+            <b style="color:#34d399">-$163.75</b>
+            <span>Per enrolled student</span>
+          </div>
+          <div class="m-sheet-mini-stat">
+            <small>Gross Tuition Fee</small>
+            <b style="color:#fff">$2,500</b>
+            <span>Fixed (Zero tuition inflation)</span>
+          </div>
+        </div>
+
+        <div class="m-sheet-step-card">
+          <div class="m-sheet-step-ico">📉</div>
+          <div class="m-sheet-step-b">
+            <h5 class="m-sheet-step-h">Sustainable Unit Margins</h5>
+            <p class="m-sheet-step-p">Slashing blended acquisition costs from $400 to $236.25 gives ALFA higher gross operating margins while maintaining exact tuition stability.</p>
+          </div>
+        </div>
+
+        <button type="button" class="m-sheet-action-btn" onclick="closeFigureSheet(); mGo('roi'); setTimeout(()=>setRoiTab('table'), 100)">
+          <span>📋 View 13-Line Cost Audit in Table</span>
+          <span style="font-size:0.9rem">➔</span>
+        </button>
       `;
     } else if (fig === "sla") {
+      if (category) { category.textContent = "OPERATIONAL SLA · CHALLENGE 2"; category.className = "m-sheet-sub teal"; }
       title.textContent = "Student Admin Wait: < 24 Hours";
       body.innerHTML = `
-        <div style="background:var(--bg);padding:1rem;border-radius:10px;margin-bottom:.75rem">
-          <p style="margin:0 0 .5rem 0"><b>Turnaround Improvement:</b></p>
-          <code style="font-size:1rem;color:var(--teal)">5–7 Days (our estimate) → &lt; 24 Hours SOP</code>
+        <div class="m-sheet-calc-card">
+          <div class="m-sheet-calc-title">
+            <span>Service Turnaround Improvement</span>
+            <span class="m-tag teal" style="font-size:0.6rem">Zero Paper Queue</span>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>Legacy Paper Queues (Counter approvals)</span>
+            <b style="color:#f87171">5–7 Days (120–168 h)</b>
+          </div>
+          <div class="m-sheet-formula-row">
+            <span>OneHub Self-Service Cloud Pipeline</span>
+            <b style="color:#2dd4bf">&lt; 24 Hours SOP</b>
+          </div>
+          <div class="m-sheet-formula-row result">
+            <span>Speed Acceleration</span>
+            <b style="color:#2dd4bf">85%+ Faster Turnaround</b>
+          </div>
         </div>
-        <p><b>OneHub Cloud:</b> 1-click course registration, digital add/drop, QR exam passes and instant payment receipts.</p>
-        <p><b>Environmental impact:</b> Reduces paper forms and physical queue bottlenecks across campus.</p>
-        <p><small style="color:var(--text-muted)">Labels: 5–7 day paper wait (our estimate), &lt; 24h digital turnaround (our proposal).</small></p>
+
+        <div class="m-sheet-grid-2">
+          <div class="m-sheet-mini-stat">
+            <small>Paper Eliminated</small>
+            <b style="color:#2dd4bf">90%</b>
+            <span>Digital tokens &amp; QR passes</span>
+          </div>
+          <div class="m-sheet-mini-stat">
+            <small>Payment Clearance</small>
+            <b style="color:#34d399">Instant</b>
+            <span>Flywire &amp; FPX API</span>
+          </div>
+        </div>
+
+        <div class="m-sheet-step-card">
+          <div class="m-sheet-step-ico">⚡</div>
+          <div class="m-sheet-step-b">
+            <h5 class="m-sheet-step-h">Automated Campus Workflows</h5>
+            <p class="m-sheet-step-p">Course registration drops to &lt; 15 mins, tuition clearance is instantaneous, and attendance takes 30 seconds via mobile QR codes.</p>
+          </div>
+        </div>
+
+        <button type="button" class="m-sheet-action-btn teal" onclick="closeFigureSheet(); mGo('hub'); setTimeout(()=>setHub('erp'), 100)">
+          <span>⚡ Explore ERP Operations in OneHub</span>
+          <span style="font-size:0.9rem">➔</span>
+        </button>
       `;
     }
     sheet.hidden = false;
@@ -13157,24 +13696,44 @@ p.note, .note {
 
   <!-- FIGURE BREAKDOWN BOTTOM SHEET -->
   <div class="m-sheet-backdrop" id="mFigureSheet" role="dialog" aria-modal="true" aria-labelledby="mFigSheetTitle" onclick="if(event.target===this)closeFigureSheet()" hidden>
-    <div class="m-sheet-panel">
-      <div class="m-sheet-head">
-        <h2 id="mFigSheetTitle" style="margin:0;font-size:1.15rem;font-weight:900;color:var(--text)">Metric Breakdown</h2>
-        <button type="button" class="btn btn-outline btn-sm" onclick="closeFigureSheet()" aria-label="Close metric breakdown">✕ Close</button>
+    <div class="m-sheet-panel m-fig-sheet-panel">
+      <div class="m-sheet-grab-bar" aria-hidden="true"></div>
+      <div class="m-sheet-nav-pills" id="mFigSheetNav">
+        <button type="button" class="m-sheet-nav-btn" data-fig="saving" onclick="openFigureSheet('saving')">💰 Net Saving</button>
+        <button type="button" class="m-sheet-nav-btn" data-fig="direct" onclick="openFigureSheet('direct')">🎯 65% Direct</button>
+        <button type="button" class="m-sheet-nav-btn" data-fig="cost" onclick="openFigureSheet('cost')">📉 Cost/Student</button>
+        <button type="button" class="m-sheet-nav-btn" data-fig="sla" onclick="openFigureSheet('sla')">⚡ Admin SLA</button>
       </div>
-      <div class="m-sheet-content" id="mFigSheetContent" style="padding:1rem 0;font-size:.95rem;line-height:1.55;color:var(--text)"></div>
+      <div class="m-sheet-head">
+        <div>
+          <span class="m-sheet-sub emerald" id="mFigSheetCategory">KEY METRIC BREAKDOWN</span>
+          <h2 id="mFigSheetTitle" class="m-sheet-h3">Metric Breakdown</h2>
+        </div>
+        <button type="button" class="m-sheet-close-circle" onclick="closeFigureSheet()" aria-label="Close metric breakdown">✕</button>
+      </div>
+      <div class="m-sheet-content" id="mFigSheetContent"></div>
     </div>
   </div>
 
 
   <!-- MOBILE PLAN STEP DETAIL SHEET -->
   <div class="m-sheet-backdrop" id="mPlanStepSheet" role="dialog" aria-modal="true" aria-labelledby="mPlanStepSheetTitle" onclick="if(event.target===this)closePlanStepSheet()" hidden>
-    <div class="m-sheet-panel">
-      <div class="m-sheet-head">
-        <h2 id="mPlanStepSheetTitle" style="margin:0;font-size:1.15rem;font-weight:900;color:var(--text)">Plan Step Details</h2>
-        <button type="button" class="btn btn-outline btn-sm" onclick="closePlanStepSheet()" aria-label="Close step details">✕ Close</button>
+    <div class="m-sheet-panel m-plan-sheet-panel">
+      <div class="m-sheet-grab-bar" aria-hidden="true"></div>
+      <div class="m-sheet-nav-pills" id="mPlanStepNav">
+        <button type="button" class="m-sheet-nav-btn step-1" data-step="planning" onclick="openPlanStepSheet('planning')">1. Planning</button>
+        <button type="button" class="m-sheet-nav-btn step-2" data-step="organising" onclick="openPlanStepSheet('organising')">2. Organising</button>
+        <button type="button" class="m-sheet-nav-btn step-3" data-step="leading" onclick="openPlanStepSheet('leading')">3. Leading</button>
+        <button type="button" class="m-sheet-nav-btn step-4" data-step="controlling" onclick="openPlanStepSheet('controlling')">4. Controlling</button>
       </div>
-      <div class="m-sheet-content" id="mPlanStepSheetContent" style="padding:1rem 0;font-size:.92rem;line-height:1.55;color:var(--text)"></div>
+      <div class="m-sheet-head">
+        <div>
+          <span class="m-sheet-sub blue" id="mPlanStepCategory">POLC FRAMEWORK · 12-MONTH PLAN</span>
+          <h2 id="mPlanStepSheetTitle" class="m-sheet-h3">Plan Step Details</h2>
+        </div>
+        <button type="button" class="m-sheet-close-circle" onclick="closePlanStepSheet()" aria-label="Close step details">✕</button>
+      </div>
+      <div class="m-sheet-content" id="mPlanStepSheetContent"></div>
     </div>
   </div>
 

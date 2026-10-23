@@ -1423,52 +1423,431 @@
       color: #fcd34d;
     }
 
-    /* OneHub Mobile Cards */
-    .m-lead { font-size: .8rem; color: #cbd5e1; line-height: 1.45; margin-bottom: .65rem; }
-    .m-lead.sm { font-size: .76rem; margin-bottom: .6rem; }
-    .m-hub-t { font-size: .92rem; font-weight: 800; color: #5eead4; margin-bottom: .2rem; }
-    .m-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: .45rem; margin-bottom: .65rem; }
-    .m-stats div { background: rgba(15,23,42,.85); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: .55rem .4rem; text-align: center; }
-    .m-stats b { display: block; font-size: 1.05rem; font-weight: 900; color: #fff; }
-    .m-stats span { font-size: .63rem; color: var(--text-muted); display: block; line-height: 1.15; margin-top: .1rem; }
+    /* =========================================================================
+       ALFA ONEHUB MOBILE CLOUD COCKPIT — DEDICATED MOBILE UI/UX
+       ========================================================================= */
+    .m-hub-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: .5rem;
+      margin-bottom: .45rem;
+    }
+    .m-hub-head-info { flex: 1; min-width: 0; }
+    .m-hub-live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .68rem;
+      font-weight: 800;
+      color: #2dd4bf;
+      background: rgba(20, 184, 166, 0.12);
+      border: 1px solid rgba(45, 212, 191, 0.32);
+      border-radius: 999px;
+      padding: .28rem .6rem;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(20, 184, 166, 0.18);
+    }
+    .m-hub-live-badge .m-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #2dd4bf;
+      box-shadow: 0 0 8px #2dd4bf;
+      animation: hubPulse 2s infinite ease-in-out;
+    }
+    @keyframes hubPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.85); }
+    }
 
+    /* Segmented Control with Teal Active Accent */
+    .m-hub-seg button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .3rem;
+      font-size: .74rem;
+      padding: .5rem .25rem;
+    }
+    .m-hub-seg button[aria-selected="true"] {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.95), rgba(15, 118, 110, 0.98)) !important;
+      color: #fff !important;
+      box-shadow: 0 2px 10px rgba(20, 184, 166, 0.4) !important;
+    }
+    .m-seg-ico { font-size: .8rem; }
+
+    /* Executive Tab Banner */
+    .m-hub-banner {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.12) 0%, rgba(15, 23, 42, 0.88) 100%);
+      border: 1px solid rgba(45, 212, 191, 0.22);
+      border-radius: 14px;
+      padding: .65rem .75rem;
+      margin-bottom: .6rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+    .m-hub-banner-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .4rem;
+      margin-bottom: .35rem;
+    }
+    .m-hub-banner-pill {
+      font-size: .65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: .18rem .45rem;
+      border-radius: 6px;
+      background: rgba(45, 212, 191, 0.18);
+      color: #5eead4;
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+    }
+    .m-hub-banner-title, .m-hub-t {
+      font-size: .88rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 .15rem;
+      line-height: 1.3;
+    }
+    .m-hub-banner-sub, .m-lead.sm {
+      font-size: .74rem;
+      color: #94a3b8;
+      line-height: 1.38;
+      margin: 0;
+    }
+
+    /* Executive KPI Stats Grid */
+    .m-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .4rem;
+      margin-bottom: .6rem;
+    }
+    .m-stats > div {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: .5rem .35rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+    .m-stats b {
+      display: block;
+      font-size: 1.02rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .m-stats b.teal { color: #5eead4; }
+    .m-stats b.emerald { color: #34d399; }
+    .m-stats b.gold { color: #fcd34d; }
+    .m-stats span {
+      font-size: .62rem;
+      color: #94a3b8;
+      display: block;
+      line-height: 1.15;
+      margin-top: .18rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* CRM Cards */
     .m-list-card {
-      background: rgba(22,32,50,.82); border: 1px solid rgba(255,255,255,.09);
-      border-radius: 14px; padding: .75rem; margin-bottom: .5rem;
-      display: flex; gap: .65rem; align-items: flex-start;
+      background: rgba(22, 32, 50, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+      padding: .75rem;
+      margin-bottom: .55rem;
+      display: flex;
+      gap: .65rem;
+      align-items: flex-start;
+      transition: transform .15s ease, border-color .15s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+    .m-list-card.direct {
+      border-left: 3.5px solid #10b981;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(22, 32, 50, 0.88) 100%);
+    }
+    .m-list-card.agent {
+      border-left: 3.5px solid #f59e0b;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(22, 32, 50, 0.88) 100%);
     }
     .m-av {
-      width: 36px; height: 36px; border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
       background: linear-gradient(135deg, #0f766e, #14b8a6);
-      color: #fff; font-weight: 900; font-size: .78rem;
-      display: grid; place-items: center; flex-shrink: 0;
+      color: #fff;
+      font-weight: 900;
+      font-size: .95rem;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(20, 184, 166, 0.25);
+    }
+    .m-av.agent-av {
+      background: linear-gradient(135deg, #b45309, #f59e0b);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
     }
     .m-lc-b { flex: 1; min-width: 0; }
-    .m-lc-t { display: flex; justify-content: space-between; align-items: baseline; gap: .4rem; }
-    .m-lc-t b { font-size: .86rem; color: #fff; }
-    .m-lc-t span { font-size: .7rem; font-weight: 800; color: #5eead4; }
-    .m-lc-b small { display: block; font-size: .68rem; color: var(--text-muted); margin-bottom: .2rem; }
-    .m-lc-b p { font-size: .76rem; color: #e2e8f0; margin-bottom: .35rem; font-weight: 600; }
-    .m-tags { display: flex; flex-wrap: wrap; gap: .3rem; }
-
-    .m-flow {
-      background: rgba(22,32,50,.82); border: 1px solid rgba(255,255,255,.09);
-      border-radius: 14px; padding: .8rem; margin-bottom: .55rem;
+    .m-lc-t {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: .4rem;
+      margin-bottom: .15rem;
     }
-    .m-flow-h { display: flex; justify-content: space-between; align-items: center; gap: .4rem; margin-bottom: .45rem; }
-    .m-flow-h b { font-size: .86rem; color: #fff; }
-    .m-step { border-radius: 9px; padding: .45rem .6rem; font-size: .75rem; line-height: 1.35; }
-    .m-step small { display: block; font-size: .6rem; text-transform: uppercase; font-weight: 800; margin-bottom: .1rem; }
-    .m-step.before { background: rgba(232,13,19,.12); border: 1px solid rgba(255,90,95,.25); color: #fecdd3; }
-    .m-step.before small { color: #ff8a8e; }
-    .m-step.after { background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.3); color: #d1fae5; }
+    .m-lc-t b {
+      font-size: .88rem;
+      color: #fff;
+      font-weight: 800;
+    }
+    .m-lc-t span {
+      font-size: .72rem;
+      font-weight: 800;
+      color: #5eead4;
+      white-space: nowrap;
+    }
+    .m-lc-t span.emerald { color: #34d399; }
+    .m-lc-t span.gold { color: #fbbf24; }
+    .m-lc-meta {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .68rem;
+      color: #94a3b8;
+      margin-bottom: .3rem;
+    }
+    .m-lc-meta .m-lc-id {
+      color: #cbd5e1;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: .66rem;
+    }
+    .m-lc-b p {
+      font-size: .78rem;
+      color: #f1f5f9;
+      margin: 0 0 .4rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .m-tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+    .m-tag {
+      font-size: .66rem;
+      padding: .2rem .45rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      font-weight: 600;
+      line-height: 1.2;
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+    }
+    .m-tag.green {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-weight: 700;
+    }
+    .m-tag.amber {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fbbf24;
+      font-weight: 700;
+    }
+    .m-tag.teal {
+      background: rgba(20, 184, 166, 0.15);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+      color: #5eead4;
+      font-weight: 700;
+    }
+    .m-tag.source {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+    }
+
+    /* ERP Transition Flow Cards */
+    .m-flow {
+      background: rgba(22, 32, 50, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+      padding: .75rem;
+      margin-bottom: .6rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+    }
+    .m-flow-h {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .4rem;
+      margin-bottom: .5rem;
+    }
+    .m-flow-h b {
+      font-size: .88rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .m-step {
+      border-radius: 10px;
+      padding: .5rem .65rem;
+      font-size: .75rem;
+      line-height: 1.4;
+    }
+    .m-step small {
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .62rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: .04em;
+      margin-bottom: .2rem;
+    }
+    .m-step.before {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      color: #fecdd3;
+    }
+    .m-step.before small { color: #f87171; }
+    .m-step.after {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      color: #d1fae5;
+    }
     .m-step.after small { color: #34d399; }
-    .m-step-arrow { text-align: center; color: var(--text-muted); padding: .1rem 0; }
-    .m-div-n { font-size: 1.2rem; font-weight: 900; color: #5eead4; margin-bottom: .3rem; }
-    .m-div-n small { font-size: .72rem; color: var(--text-muted); margin-left: .25rem; font-weight: 600; }
-    .m-kv { display: flex; justify-content: space-between; font-size: .74rem; color: #cbd5e1; margin: .2rem 0; }
-    .m-prog { height: 7px; background: rgba(15,23,42,.9); border-radius: 999px; overflow: hidden; margin: .3rem 0 .45rem; }
-    .m-prog i { display: block; height: 100%; background: linear-gradient(90deg, #14b8a6, #34d399); border-radius: 999px; }
+    .m-step-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      color: #2dd4bf;
+      font-size: .68rem;
+      font-weight: 800;
+      padding: .28rem 0;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .m-step-arrow svg { color: #2dd4bf; }
+
+    /* HRM Division Governance Cards */
+    .m-hrm-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: .4rem;
+      margin-bottom: .45rem;
+    }
+    .m-div-n {
+      display: flex;
+      align-items: baseline;
+      gap: .3rem;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #5eead4;
+      line-height: 1.2;
+    }
+    .m-div-n small {
+      font-size: .72rem;
+      color: #94a3b8;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .m-kv {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .74rem;
+      color: #cbd5e1;
+      margin: .25rem 0;
+    }
+    .m-kv b {
+      color: #fff;
+      font-weight: 800;
+    }
+    .m-prog {
+      height: 7px;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 999px;
+      overflow: hidden;
+      margin: .35rem 0 .5rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .m-prog i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #14b8a6, #34d399);
+      border-radius: 999px;
+      transition: width .3s ease;
+    }
+
+    /* Architecture Flow & Cards */
+    .m-arch-flow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: .45rem .55rem;
+      margin-bottom: .6rem;
+      font-size: .66rem;
+      color: #cbd5e1;
+    }
+    .m-arch-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .15rem;
+    }
+    .m-arch-node b { color: #5eead4; font-size: .7rem; }
+    .m-arch-node span { color: #94a3b8; font-size: .58rem; }
+    .m-arch-arr { color: #2dd4bf; font-weight: 900; font-size: .8rem; }
+    .m-arch-card {
+      background: rgba(22, 32, 50, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: .75rem;
+      margin-bottom: .65rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+    }
+    .m-arch-card-h {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .5rem;
+      gap: .4rem;
+    }
+    .m-arch-card-h h3 {
+      margin: 0;
+      font-size: .88rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .m-arch-svg-wrap {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: .4rem;
+      overflow: hidden;
+    }
+    .m-arch-svg-wrap svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     /* Theory & Q&A Mobile Search & Compact Accordion */
     .m-admin-pill {
@@ -1888,14 +2267,6 @@
 
   /* Compact Sticky Slide Toolbar */
 
-  /* Mobile OneHub Refinements */
-  .m-hub-t { font-size: .92rem !important; margin-bottom: .15rem !important; }
-  .m-lead.sm { font-size: .75rem !important; margin-bottom: .55rem !important; line-height: 1.38 !important; }
-  .m-stats { margin-bottom: .55rem !important; gap: .35rem !important; }
-  .m-stats > div { padding: .48rem .4rem !important; border-radius: 11px !important; }
-  .m-stats b { font-size: 1.02rem !important; }
-  .m-list-card { padding: .65rem .75rem !important; margin-bottom: .45rem !important; border-radius: 13px !important; }
-  .m-flow { padding: .7rem .8rem !important; margin-bottom: .5rem !important; border-radius: 13px !important; }
 
   /* Mobile Theory & Q&A Refinements */
   .m-admin-pill { white-space: nowrap !important; flex-shrink: 0 !important; padding: .34rem .62rem !important; font-size: .7rem !important; }
@@ -6853,12 +7224,21 @@ p.note, .note {
 
       <!-- 4. ONEHUB SCREEN (CRM · ERP · HRM · ARCHITECTURE) -->
       <section class="m-screen" id="m-hub" aria-labelledby="mtHub" hidden>
-        <div class="m-head"><p class="m-eyebrow">Paperless Cloud Ecosystem</p><h2 class="m-h1" id="mtHub">ALFA OneHub</h2><p class="m-demo-note">Demo data, not real students</p></div>
-        <div class="m-seg" id="mHubSeg" role="tablist" aria-label="OneHub module" style="--n:4">
-          <button role="tab" data-hub="crm" aria-selected="true">CRM</button>
-          <button role="tab" data-hub="erp" aria-selected="false">ERP</button>
-          <button role="tab" data-hub="hrm" aria-selected="false">HRM (120)</button>
-          <button role="tab" data-hub="map" aria-selected="false">Diagram</button>
+        <div class="m-head m-hub-head">
+          <div class="m-hub-head-info">
+            <p class="m-eyebrow">Challenge 2 · Paperless Cloud Ecosystem</p>
+            <h2 class="m-h1" id="mtHub">ALFA OneHub</h2>
+            <p class="m-demo-note">Demo data · Zero paper · Real-time POLC integration</p>
+          </div>
+          <div class="m-hub-head-badge">
+            <span class="m-hub-live-badge"><span class="m-pulse-dot"></span>Cloud Active</span>
+          </div>
+        </div>
+        <div class="m-seg m-hub-seg" id="mHubSeg" role="tablist" aria-label="OneHub module" style="--n:4">
+          <button role="tab" data-hub="crm" aria-selected="true"><span class="m-seg-ico">💬</span> CRM</button>
+          <button role="tab" data-hub="erp" aria-selected="false"><span class="m-seg-ico">⚡</span> ERP</button>
+          <button role="tab" data-hub="hrm" aria-selected="false"><span class="m-seg-ico">👥</span> HRM (120)</button>
+          <button role="tab" data-hub="map" aria-selected="false"><span class="m-seg-ico">🗺️</span> Diagram</button>
         </div>
         <div class="m-hub-body" id="mHub"></div>
       </section>
@@ -10990,36 +11370,189 @@ p.note, .note {
       d = `<table class="data-table"><thead><tr><th>Applicant ID</th><th>Student &amp; country</th><th>Programme applied</th><th>Acquisition channel</th><th>Turnaround</th><th>CRM status</th></tr></thead><tbody>${CRM.map(x => `<tr><td>${x.id}</td><td>${esc(x.name)} (${esc(x.country)})</td><td>${esc(x.prog)}</td><td>${esc(x.channel)}</td><td>${esc(x.time)}</td><td><span class="badge-status ${x.ok ? "badge-ok" : "badge-warn"}">${esc(x.status)}</span></td></tr>`).join("")}</tbody></table>`;
       const avg = (CRM.reduce((a, x) => a + parseFloat(x.time), 0) / CRM.length).toFixed(1);
       const direct = CRM.filter(x => x.ok).length;
-      m = `<div class="m-stats"><div><b>${CRM.length}</b><span>applicants</span></div><div><b>${avg} h</b><span>avg. turnaround</span></div><div><b>${direct} / ${CRM.length}</b><span>direct, $0 commission</span></div></div>` +
-        CRM.map(x => `<article class="m-list-card"><div class="m-av" aria-hidden="true">${esc(x.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase())}</div><div class="m-lc-b"><div class="m-lc-t"><b>${esc(x.name)}</b><span>${esc(x.time.replace(" hours", " h"))}</span></div><small>${esc(x.country)} · ${x.id}</small><p>${esc(x.prog)}</p><div class="m-tags"><span class="m-tag">${esc(x.channel)}</span><span class="m-tag ${x.ok ? "green" : "amber"}">${esc(x.status)}</span></div></div></article>`).join("");
+      const commSaved = (direct * 375).toLocaleString();
+      m = `
+        <div class="m-hub-banner">
+          <div class="m-hub-banner-top">
+            <span class="m-hub-banner-pill">⚡ Direct Admissions</span>
+            <span class="m-tag teal" style="font-size:.65rem">$0 Agent Comm</span>
+          </div>
+          <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
+          <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
+        </div>
+        <div class="m-stats">
+          <div><b class="emerald">${direct} / ${CRM.length}</b><span>Direct ($0 Fee)</span></div>
+          <div><b class="teal">${avg} h</b><span>Avg Speed (&lt;24h)</span></div>
+          <div><b class="gold">$${commSaved}</b><span>Comm Saved</span></div>
+        </div>
+        ${CRM.map(x => {
+          const isDirect = x.ok;
+          const flag = x.country === 'Kyrgyzstan' ? '🇰🇬' : x.country === 'Malaysia' ? '🇲🇾' : x.country === 'Indonesia' ? '🇮🇩' : x.country === 'China' ? '🇨🇳' : '🌐';
+          return `<article class="m-list-card ${isDirect ? 'direct' : 'agent'}">
+            <div class="m-av ${isDirect ? '' : 'agent-av'}" aria-hidden="true">${flag}</div>
+            <div class="m-lc-b">
+              <div class="m-lc-t">
+                <b>${esc(x.name)}</b>
+                <span class="${isDirect ? 'emerald' : 'gold'}">${esc(x.time.replace(" hours", " h"))}</span>
+              </div>
+              <div class="m-lc-meta">
+                <span>${esc(x.country)}</span>
+                <span>•</span>
+                <span class="m-lc-id">${esc(x.id)}</span>
+                <span>•</span>
+                <span style="color:${isDirect ? '#34d399' : '#fbbf24'};font-weight:700">${isDirect ? '&lt; 24h SOP' : 'Agent Queue'}</span>
+              </div>
+              <p>${esc(x.prog)}</p>
+              <div class="m-tags">
+                <span class="m-tag source">${esc(x.channel)}</span>
+                <span class="m-tag ${isDirect ? 'green' : 'amber'}">${isDirect ? '✓ Direct ($0 Comm)' : '⚠️ Agent (15% Comm)'}</span>
+              </div>
+            </div>
+          </article>`;
+        }).join("")}
+      `;
     } else if (k === "erp") {
       d = `<table class="data-table"><thead><tr><th>ERP module</th><th>Old paper process at ALFA</th><th>New ALFA OneHub ERP automation</th><th>Control standard</th></tr></thead><tbody>${ERP.map(x => `<tr><td>${esc(x.mod)}</td><td>${esc(x.old)}</td><td>${esc(x.neu)}</td><td><span class="badge-status badge-ok">${esc(x.std)}</span></td></tr>`).join("")}</tbody></table>`;
-      m = ERP.map(x => `<article class="m-flow"><div class="m-flow-h"><b>${esc(x.mod)}</b><span class="m-tag green">${esc(x.std)}</span></div><div class="m-step before"><small>Before</small>${esc(x.old)}</div><div class="m-step-arrow">${ic("arrowD", 18)}</div><div class="m-step after"><small>With OneHub</small>${esc(x.neu)}</div></article>`).join("");
+      m = `
+        <div class="m-hub-banner">
+          <div class="m-hub-banner-top">
+            <span class="m-hub-banner-pill">⚡ Core Digital Operations</span>
+            <span class="m-tag green" style="font-size:.65rem">Zero Paper Squeeze</span>
+          </div>
+          <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
+          <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
+        </div>
+        <div class="m-stats">
+          <div><b class="emerald">90%</b><span>Paper Saved</span></div>
+          <div><b class="teal">&lt; 24h</b><span>Digital SOP SLA</span></div>
+          <div><b class="gold">Instant</b><span>Flywire / FPX</span></div>
+        </div>
+        ${ERP.map(x => `
+          <article class="m-flow">
+            <div class="m-flow-h">
+              <b>${esc(x.mod)}</b>
+              <span class="m-tag green">${esc(x.std)}</span>
+            </div>
+            <div class="m-step before">
+              <small>🔴 Legacy Paper Bottleneck (5–7 Days)</small>
+              ${esc(x.old)}
+            </div>
+            <div class="m-step-arrow">
+              <span>OneHub Digital Flow</span>
+              ${ic("arrowD", 14)}
+            </div>
+            <div class="m-step after">
+              <small>🟢 OneHub Cloud Automation</small>
+              ${esc(x.neu)}
+            </div>
+          </article>
+        `).join("")}
+      `;
     } else if (k === "hrm") {
       d = `<table class="data-table"><thead><tr><th>Division</th><th>Headcount</th><th>Span of control</th><th>OneHub ERP competency</th><th>Incentive / recognition</th></tr></thead><tbody>${HRM.map(x => `<tr><td>${esc(x.div)}</td><td>${x.n} staff</td><td>${esc(x.span)}</td><td>${esc(x.compTxt)}</td><td><span class="badge-status badge-ok">${esc(x.inc)}</span></td></tr>`).join("")}<tr><td>Top management (Chairman, VC &amp; directors)</td><td>5 staff</td><td>—</td><td>—</td><td>—</td></tr></tbody></table>`;
-      m = `<div class="m-stats"><div><b>120</b><span>employees (assumption)</span></div><div><b>4</b><span>divisions</span></div><div><b>+5</b><span>top management</span></div></div>` +
-        HRM.map(x => `<article class="m-flow"><div class="m-flow-h"><b>${esc(x.div)}</b></div><div class="m-div-n">${x.n}<small>staff</small></div><div class="m-kv"><span>OneHub competency</span><b>${esc(x.compTxt)}</b></div><div class="m-prog" role="img" aria-label="${x.comp}% certified"><i style="width:${x.comp}%"></i></div><div class="m-kv"><span>Span of control</span><b>${esc(x.span)}</b></div><div class="m-tags" style="margin-top:10px"><span class="m-tag teal">${esc(x.inc)}</span></div></article>`).join("");
+      m = `
+        <div class="m-hub-banner">
+          <div class="m-hub-banner-top">
+            <span class="m-hub-banner-pill">👥 120-Staff Governance</span>
+            <span class="m-tag teal" style="font-size:.65rem">POLC Organizing</span>
+          </div>
+          <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
+          <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
+        </div>
+        <div class="m-stats">
+          <div><b class="teal">120</b><span>Staff Members</span></div>
+          <div><b class="emerald">4 – 6</b><span>Optimized Span</span></div>
+          <div><b class="gold">+$50</b><span>Direct Bonus</span></div>
+        </div>
+        ${HRM.map(x => `
+          <article class="m-flow">
+            <div class="m-hrm-top">
+              <div>
+                <div class="m-flow-h" style="margin-bottom:0.15rem">
+                  <b>${esc(x.div)}</b>
+                </div>
+                <div class="m-div-n">${x.n} <small>Staff</small></div>
+              </div>
+              <span class="m-tag teal">${esc(x.inc)}</span>
+            </div>
+            <div class="m-kv">
+              <span>OneHub ERP Competency</span>
+              <b style="color:#5eead4">${esc(x.compTxt)}</b>
+            </div>
+            <div class="m-prog" role="img" aria-label="${x.comp}% certified">
+              <i style="width:${x.comp}%"></i>
+            </div>
+            <div class="m-kv">
+              <span>Span of Control (Robbins &amp; Coulter)</span>
+              <b>${esc(x.span)}</b>
+            </div>
+          </article>
+        `).join("")}
+        <div style="background:rgba(15,23,42,0.6);border:1px dashed rgba(255,255,255,0.12);border-radius:12px;padding:0.6rem 0.75rem;font-size:0.72rem;color:#94a3b8;display:flex;justify-content:space-between;align-items:center;margin-top:.4rem">
+          <span>🏛️ Top Management (Chairman, VC &amp; Directors)</span>
+          <b style="color:#fff">5 Staff</b>
+        </div>
+      `;
     } else {
       d = `<div class="hub-arch-wrap" style="padding:.5rem;background:var(--card,#151d2d);border-radius:12px;border:1px solid var(--border,rgba(255,255,255,0.1))"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem"><h3 style="margin:0;font-size:1rem;color:var(--text,#fff)">ALFA OneHub Enterprise Architecture (Our Proposal)</h3><button type="button" class="p-btn accent" onclick="openLb(5)">Zoom / Expand</button></div><div style="max-width:700px;margin:0 auto">${renderChartSVG(5, isMobile())}</div></div>`;
       m = `
-      <div class="m-card" style="margin-bottom:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.75rem">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-          <h3 style="margin:0;font-size:1rem;color:var(--text)">Chart 4 · 120-Staff Organisation</h3>
-          <button type="button" class="btn btn-sm btn-outline" onclick="openLb(4)">Zoom</button>
+        <div class="m-hub-banner">
+          <div class="m-hub-banner-top">
+            <span class="m-hub-banner-pill">🗺️ Enterprise Architecture</span>
+            <span class="m-tag teal" style="font-size:.65rem">Interactive SVGs</span>
+          </div>
+          <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
+          <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
         </div>
-        <div style="background:var(--chart-bg,#0f172a);padding:.35rem;border-radius:8px">${renderChartSVG(4, true)}</div>
-      </div>
-      <div class="m-card" style="margin-bottom:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.75rem">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-          <h3 style="margin:0;font-size:1rem;color:var(--text)">Chart 5 · 12-Month Action Plan</h3>
-          <button type="button" class="btn btn-sm btn-outline" onclick="openLb(5)">Zoom</button>
+
+        <div class="m-arch-flow">
+          <div class="m-arch-node">
+            <b>📱 Social Discovery</b>
+            <span>Instagram/TikTok</span>
+          </div>
+          <span class="m-arch-arr">➔</span>
+          <div class="m-arch-node">
+            <b>💬 Direct CRM</b>
+            <span>5-Min Portal</span>
+          </div>
+          <span class="m-arch-arr">➔</span>
+          <div class="m-arch-node">
+            <b>⚡ ERP Cloud</b>
+            <span>Flywire / FPX</span>
+          </div>
+          <span class="m-arch-arr">➔</span>
+          <div class="m-arch-node">
+            <b>👥 120 Staff</b>
+            <span>$50 Bonus</span>
+          </div>
         </div>
-        <div style="background:var(--chart-bg,#0f172a);padding:.35rem;border-radius:8px">${renderChartSVG(5, true)}</div>
-      </div>`;
+
+        <div class="m-card m-arch-card" style="margin-bottom:0.75rem">
+          <div class="m-arch-card-h">
+            <div>
+              <span class="m-tag teal" style="font-size:0.62rem;margin-bottom:0.2rem">Primary Action Blueprint</span>
+              <h3>Chart 5 · 12-Month Action Plan</h3>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline" style="border-color:#14b8a6;color:#5eead4" onclick="openLb(5)">🔍 Zoom</button>
+          </div>
+          <div class="m-arch-svg-wrap">${renderChartSVG(5, true)}</div>
+        </div>
+
+        <div class="m-card m-arch-card">
+          <div class="m-arch-card-h">
+            <div>
+              <span class="m-tag teal" style="font-size:0.62rem;margin-bottom:0.2rem">Governance Structure</span>
+              <h3>Chart 4 · 120-Staff Organisation</h3>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline" style="border-color:#14b8a6;color:#5eead4" onclick="openLb(4)">🔍 Zoom</button>
+          </div>
+          <div class="m-arch-svg-wrap">${renderChartSVG(4, true)}</div>
+        </div>
+      `;
     }
     $("#dHub").innerHTML = `<h3 class="hub-title">${esc(info.t)}</h3><p class="hub-desc">${esc(info.d)}</p>${d}`;
     const mh = $("#mHub");
-    mh.innerHTML = `<p class="m-hub-t">${esc(info.t)}</p><p class="m-lead sm">${esc(info.d)}</p>${m}`;
+    mh.innerHTML = m;
     mh.classList.remove("m-fade"); void mh.offsetWidth; mh.classList.add("m-fade");
   }
 

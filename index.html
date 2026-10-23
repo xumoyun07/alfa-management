@@ -922,6 +922,7 @@
        3. SHARED OVERLAYS (Admin, Lightbox, Toast)
        ===================================================================== */
     .admin-modal { position: fixed; inset: 0; z-index: 250; background: rgba(0,0,0,.75); backdrop-filter: blur(10px); display: grid; place-items: center; padding: 1rem; }
+    .admin-modal[hidden] { display: none !important; }
     .admin-dialog-box { background: #1e293b; border: 1px solid var(--border-subtle); border-radius: 18px; max-width: 440px; width: 100%; padding: 2rem; position: relative; box-shadow: 0 20px 45px rgba(0,0,0,.6); }
     .admin-modal-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: 0; color: var(--text-muted); cursor: pointer; }
     .admin-dialog-head { text-align: center; margin-bottom: 1.5rem; }
@@ -940,6 +941,7 @@
     .admin-panel-header { background: rgba(30,41,59,.9); border-bottom: 1px solid var(--border-subtle); padding: 1.2rem 1.6rem; display: flex; justify-content: space-between; align-items: center; }
     .admin-badge-row { display: flex; gap: .5rem; margin-bottom: .3rem; }
     .admin-auth-badge { background: rgba(16,185,129,.18); color: #6ee7b7; border: 1px solid #10b981; font-size: .7rem; font-weight: 800; padding: .15rem .5rem; border-radius: 999px; display: inline-flex; align-items: center; gap: .3rem; }
+    .admin-auth-badge.super { background: rgba(245,158,11,.18); color: #fcd34d; border: 1px solid #f59e0b; }
     .admin-count-badge { background: rgba(255,255,255,.08); color: #e2e8f0; font-size: .7rem; font-weight: 800; padding: .15rem .5rem; border-radius: 999px; }
     .admin-header-actions { display: flex; gap: .6rem; align-items: center; }
     .admin-panel-content { padding: 1.4rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1.4rem; }
@@ -950,19 +952,80 @@
     .admin-field input, .admin-field select, .admin-field textarea { width: 100%; background: rgba(15,23,42,.85); border: 1px solid rgba(255,255,255,.14); border-radius: 10px; padding: .65rem .85rem; font-size: .88rem; }
     .admin-form-actions { display: flex; gap: .6rem; margin-top: .8rem; }
     .admin-topics-list { display: flex; flex-direction: column; gap: 1rem; }
-    .admin-topic-item { background: rgba(15,23,42,.7); border: 1px solid rgba(255,255,255,.08); border-radius: 10px; padding: .9rem; display: flex; justify-content: space-between; gap: .8rem; align-items: start; }
+
+    /* Topic Item Cards & Clean Preview */
+    .admin-topic-item { background: rgba(15,23,42,.7); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 1rem; display: flex; justify-content: space-between; gap: .8rem; align-items: start; margin-bottom: .75rem; transition: border-color .15s ease; }
+    .admin-topic-item:hover { border-color: rgba(255,255,255,.16); }
     .admin-topic-info b { display: block; font-size: .95rem; margin: .2rem 0; color: #fff; }
     .admin-topic-info p { font-size: .82rem; color: #cbd5e1; line-height: 1.4; margin-bottom: .3rem; }
-    .admin-topic-actions { display: flex; gap: .4rem; flex-shrink: 0; }@media (max-width: 767px){
-      .admin-modal { padding: .5rem; }
-      .admin-dialog-box { padding: 1.4rem 1.15rem; border-radius: 16px; }
-      .admin-panel-container { max-height: 96vh; border-radius: 16px; }
-      .admin-panel-header { padding: .85rem 1rem; flex-wrap: wrap; gap: .6rem; }
-      .admin-panel-content { padding: 1rem .85rem; gap: 1rem; }
-      .admin-card { padding: 1rem .85rem; }
+    .admin-topic-concept-box { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 8px; padding: .55rem .7rem; margin: .4rem 0; font-size: .83rem; line-height: 1.45; color: #cbd5e1; }
+    .admin-topic-concept-lbl { font-size: .68rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .2rem; display: block; }
+    .admin-topic-alfa-box { background: rgba(20,184,166,.07); border: 1px solid rgba(20,184,166,.2); border-radius: 8px; padding: .55rem .7rem; margin: .4rem 0; font-size: .83rem; line-height: 1.45; color: #ccfbf1; }
+    .admin-topic-alfa-lbl { font-size: .68rem; font-weight: 800; color: #5eead4; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .2rem; display: block; }
+    .admin-topic-actions { display: flex; gap: .4rem; flex-shrink: 0; }
+    .admin-card-btn { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; padding: .42rem .75rem; border-radius: 8px; font-size: .8rem; font-weight: 700; border: 1px solid transparent; cursor: pointer; transition: all .15s ease; min-height: 36px; }
+    .admin-card-btn.edit { background: rgba(59,130,246,.16); color: #93c5fd; border-color: rgba(59,130,246,.35); }
+    .admin-card-btn.edit:hover { background: rgba(59,130,246,.25); }
+    .admin-card-btn.delete { background: rgba(239,68,68,.14); color: #fca5a5; border-color: rgba(239,68,68,.35); }
+    .admin-card-btn.delete:hover { background: rgba(239,68,68,.24); }
+
+    /* Topic Lecture Presets & Filter Toolbar */
+    .m-adm-presets { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .6rem; }
+    .m-adm-preset-btn { font-size: .74rem; font-weight: 700; padding: .3rem .6rem; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); color: #cbd5e1; cursor: pointer; transition: all .15s ease; }
+    .m-adm-preset-btn.active { background: rgba(232,13,19,.22); color: #fff; border-color: var(--accent-red, #E80D13); }
+    .m-adm-filter-bar { margin-bottom: 1rem; }
+    .m-adm-search { position: relative; display: flex; align-items: center; margin-bottom: .65rem; }
+    .m-adm-search input { width: 100%; background: rgba(15,23,42,.85); border: 1px solid rgba(255,255,255,.14); border-radius: 10px; padding: .65rem 2.2rem .65rem 2.4rem; font-size: .88rem; color: #fff; }
+    .m-adm-search .search-icon { position: absolute; left: .8rem; color: #64748b; pointer-events: none; display: flex; align-items: center; }
+    .m-adm-search .clear-btn { position: absolute; right: .6rem; background: none; border: 0; color: #94a3b8; cursor: pointer; padding: .2rem; display: flex; align-items: center; }
+    .m-adm-chips-row { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .3rem; scrollbar-width: none; }
+    .m-adm-chips-row::-webkit-scrollbar { display: none; }
+    .m-adm-chip { white-space: nowrap; font-size: .75rem; font-weight: 700; padding: .32rem .7rem; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); color: #cbd5e1; cursor: pointer; transition: all .15s ease; flex-shrink: 0; }
+    .m-adm-chip.active { background: #E80D13; color: #fff; border-color: #ff5a5f; box-shadow: 0 2px 8px rgba(232,13,19,.3); }
+
+    /* Desktop defaults for mobile-only widgets */
+    .m-adm-sheet-handle { display: none; }
+    .m-adm-seg { display: none; }
+    .m-adm-mobile-only { display: none !important; }
+
+    @media (max-width: 767px){
+      .admin-modal { padding: .75rem .5rem; }
+      .admin-dialog-box { width: calc(100% - 20px) !important; max-width: 400px !important; padding: 1.5rem 1.2rem !important; border-radius: 20px !important; background: #0f172a !important; border: 1px solid rgba(232,13,19,.35) !important; box-shadow: 0 25px 60px rgba(0,0,0,.85), 0 0 35px rgba(232,13,19,.12) !important; }
+      .admin-btn-row .m-btn { flex: 1; min-height: 46px; justify-content: center; }
+
+      /* Mobile Full-Height Admin Studio Sheet */
+      .admin-modal[hidden], .admin-modal#adminPanelModal[hidden] { display: none !important; }
+      .admin-modal#adminPanelModal:not([hidden]) { padding: 0 !important; align-items: flex-end !important; justify-content: flex-end !important; display: flex !important; background: rgba(3,7,18,.88) !important; }
+      #adminPanelModal .admin-panel-container { height: 94dvh !important; max-height: 94dvh !important; width: 100% !important; max-width: 100% !important; border-radius: 22px 22px 0 0 !important; border: 1px solid rgba(255,255,255,.14) !important; border-bottom: 0 !important; background: #090e17 !important; box-shadow: 0 -12px 50px rgba(0,0,0,.9) !important; animation: admMobileSheetSlideUp .26s cubic-bezier(.16,1,.3,1); }
+      @keyframes admMobileSheetSlideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+      .m-adm-sheet-handle { display: block !important; width: 38px; height: 4px; border-radius: 999px; background: rgba(255,255,255,.22); margin: .55rem auto .25rem; flex-shrink: 0; }
+      .admin-panel-header { display: grid !important; grid-template-columns: 1fr auto !important; grid-template-areas: "badges actions" "title title" !important; align-items: center !important; padding: .65rem 1rem .65rem !important; gap: .25rem .75rem !important; background: rgba(15,23,42,.98) !important; border-bottom: 1px solid rgba(255,255,255,.08) !important; }
+      .m-adm-head-title-wrap { display: contents !important; }
+      .admin-badge-row { grid-area: badges !important; margin: 0 !important; gap: .35rem; }
+      .admin-panel-header h2 { grid-area: title !important; font-size: 1.15rem !important; margin: .15rem 0 0 !important; white-space: normal !important; }
+      .admin-header-actions { grid-area: actions !important; display: flex !important; align-items: center !important; justify-content: flex-end !important; gap: .4rem !important; }
+      .admin-header-actions .m-btn.sm { padding: .35rem .6rem; min-height: 36px; border-radius: 8px; font-size: .75rem; }
+      .admin-panel-header .admin-modal-close { position: static !important; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 8px; background: rgba(255,255,255,.06); color: #cbd5e1; }
+
+      /* Sticky Segmented Studio Tabs */
+      .m-adm-seg { display: grid !important; grid-template-columns: 1fr 1fr; background: rgba(11,17,32,.98); padding: .4rem .85rem; gap: .5rem; border-bottom: 1px solid rgba(255,255,255,.08); flex-shrink: 0; position: sticky; top: 0; z-index: 10; }
+      .m-adm-seg-btn { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; padding: .65rem .8rem; border-radius: 10px; font-size: .84rem; font-weight: 700; border: 1px solid transparent; background: transparent; color: #94a3b8; transition: all .2s ease; cursor: pointer; min-height: 42px; }
+      .m-adm-seg-btn.active { background: rgba(232,13,19,.16); color: #fff; border-color: rgba(232,13,19,.4); box-shadow: 0 2px 10px rgba(232,13,19,.15); }
+      .m-adm-mobile-only { display: block !important; }
+
+      .admin-panel-content { padding: .85rem .9rem 2.5rem !important; gap: .85rem; -webkit-overflow-scrolling: touch; }
+      .admin-card { padding: .95rem !important; border-radius: 16px !important; }
       .admin-grid-2 { grid-template-columns: 1fr; gap: .6rem; }
-      .admin-topic-item { flex-direction: column; align-items: stretch; gap: .6rem; }
-      .admin-topic-actions { justify-content: flex-end; }
+      .admin-field input, .admin-field select, .admin-field textarea { font-size: 16px !important; min-height: 44px; }
+      .admin-field textarea { min-height: 90px; }
+      .admin-form-actions { flex-direction: column; gap: .5rem; }
+      .admin-form-actions .m-btn { width: 100%; min-height: 48px; justify-content: center; font-size: .95rem; }
+
+      /* Mobile Topic Cards */
+      .admin-topic-item { flex-direction: column !important; align-items: stretch !important; gap: .75rem !important; padding: .9rem !important; border-radius: 14px !important; }
+      .admin-topic-actions { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: .5rem !important; width: 100% !important; }
+      .admin-topic-actions .admin-card-btn { justify-content: center; min-height: 42px; }
     }
 
     /* Super Admin Settings Dialog & Toggle Switches */
@@ -6116,29 +6179,60 @@ p.note, .note {
   <!-- ADMIN MANAGEMENT PANEL -->
   <div class="admin-modal" id="adminPanelModal" role="dialog" aria-modal="true" aria-labelledby="admPanelTitle" onclick="if(event.target===this)closeAdminPanel()" hidden>
     <div class="admin-panel-container">
+      <div class="m-adm-sheet-handle"></div>
       <div class="admin-panel-header">
-        <div>
+        <div class="m-adm-head-title-wrap" style="min-width:0;flex:1">
           <div class="admin-badge-row">
-            <span class="admin-auth-badge"><span data-ic="check" data-s="14"></span> Authenticated</span>
+            <span class="admin-auth-badge" id="admAuthBadge"><span data-ic="check" data-s="14"></span> Authenticated</span>
             <span class="admin-count-badge" id="admTotalCount">8 Topics</span>
           </div>
-          <h2 id="admPanelTitle">Q&amp;A Topic Management</h2>
+          <h2 id="admPanelTitle" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Q&amp;A Admin Studio</h2>
         </div>
         <div class="admin-header-actions">
+          <button class="spk-settings-btn" id="admSettingsBtn" onclick="openProjectSettingsModal()" title="Project Settings & Access Control" style="display:none;padding:.35rem .65rem;font-size:.76rem;border-radius:8px">
+            <span data-ic="gear" data-s="15"></span>
+            <span class="d-none-mob">Settings</span>
+          </button>
           <button class="m-btn sm" onclick="adminSignOut()" title="Lock Admin Panel"><span data-ic="lock" data-s="16"></span><span>Lock</span></button>
           <button class="admin-modal-close" onclick="closeAdminPanel()" aria-label="Close Admin Panel"><span data-ic="close" data-s="20"></span></button>
         </div>
       </div>
 
+      <!-- MOBILE SEGMENTED VIEW SWITCHER -->
+      <div class="m-adm-seg" id="admMobileSeg" role="tablist" aria-label="Admin View">
+        <button type="button" class="m-adm-seg-btn active" id="admTabBtnList" onclick="setMobileAdminTab('list')" role="tab" aria-selected="true">
+          <span data-ic="book" data-s="16"></span>
+          <span>Topics (<span id="admTabTopicsCount">8</span>)</span>
+        </button>
+        <button type="button" class="m-adm-seg-btn" id="admTabBtnForm" onclick="setMobileAdminTab('form')" role="tab" aria-selected="false">
+          <span data-ic="edit" data-s="16"></span>
+          <span id="admTabFormLabel">New Topic</span>
+        </button>
+      </div>
+
       <div class="admin-panel-content">
         <!-- Add / Edit Topic Form -->
-        <section class="admin-card">
+        <section class="admin-card" id="admFormSection">
           <div class="admin-card-head">
             <h3 id="admFormTitle">Add New Topic</h3>
             <span class="m-tag" id="admFormModeTag">Create Mode</span>
           </div>
           <form id="adminTopicForm" onsubmit="event.preventDefault(); saveTopicFromForm();">
             <input type="hidden" id="admTopicId" value="" />
+
+            <!-- Quick Lecture Chips -->
+            <div class="admin-field" style="margin-bottom:.6rem">
+              <label>Lecture Quick Select</label>
+              <div class="m-adm-presets" id="admLecturePresets">
+                <button type="button" class="m-adm-preset-btn active" data-cat="L1" onclick="selectAdminLecturePreset('L1')">L1 · POLC</button>
+                <button type="button" class="m-adm-preset-btn" data-cat="L2" onclick="selectAdminLecturePreset('L2')">L2 · Theories</button>
+                <button type="button" class="m-adm-preset-btn" data-cat="L3" onclick="selectAdminLecturePreset('L3')">L3 · Planning</button>
+                <button type="button" class="m-adm-preset-btn" data-cat="L4" onclick="selectAdminLecturePreset('L4')">L4 · Organising</button>
+                <button type="button" class="m-adm-preset-btn" data-cat="L5" onclick="selectAdminLecturePreset('L5')">L5 · Leading</button>
+                <button type="button" class="m-adm-preset-btn" data-cat="FG" onclick="selectAdminLecturePreset('FG')">FG · Control &amp; People</button>
+                <button type="button" class="m-adm-preset-btn" data-cat="custom" onclick="selectAdminLecturePreset('custom')">+ Custom</button>
+              </div>
+            </div>
             
             <div class="admin-grid-2">
               <div class="admin-field">
@@ -6183,12 +6277,27 @@ p.note, .note {
         </section>
 
         <!-- Topics List by Lecture Distribution -->
-        <section class="admin-card">
+        <section class="admin-card" id="admListSection">
           <div class="admin-card-head">
             <h3>Topics by Lecture Distribution</h3>
             <div class="admin-tools-row">
               <button type="button" class="m-btn sm" onclick="adminResetDefaults()" title="Reset to original syllabus"><span data-ic="refresh" data-s="14"></span><span>Reset Defaults</span></button>
               <button type="button" class="m-btn sm" onclick="adminExportJSON()" title="Export JSON"><span data-ic="download" data-s="14"></span><span>Export</span></button>
+            </div>
+          </div>
+
+          <!-- Filter & Search Toolbar -->
+          <div class="m-adm-filter-bar" id="admFilterBar">
+            <div class="m-adm-search">
+              <span class="search-icon" data-ic="search" data-s="16"></span>
+              <input type="search" id="admTopicSearch" placeholder="Search topics, concepts, ALFA..." oninput="onAdminSearchInput(this.value)" aria-label="Search topics" autocomplete="off" />
+              <button type="button" class="clear-btn" id="admSearchClear" onclick="clearAdminTopicSearch()" aria-label="Clear search" hidden><span data-ic="close" data-s="14"></span></button>
+            </div>
+            <div class="m-adm-chips-row" id="admLectureFilterChips" role="group" aria-label="Filter topics by lecture"></div>
+            <div class="m-adm-mobile-only" style="margin-top:.6rem">
+              <button type="button" class="m-btn primary" onclick="setMobileAdminTab('form')" style="width:100%;min-height:42px;justify-content:center">
+                <span data-ic="plus" data-s="16"></span><span>Create New Topic</span>
+              </button>
             </div>
           </div>
 
@@ -7767,6 +7876,8 @@ p.note, .note {
     eyeOff: '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><path d="m1 1 22 22"/>',
     refresh: '<path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/>',
     check: '<path d="m5 12 5 5L20 7"/>',
+    crown: '<path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/>',
+    shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
     gear: '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>'
   };
 
@@ -10874,7 +10985,10 @@ p.note, .note {
 
       if (pwd === MASTER_KEY || computedHash === HASH_LEKTOR) {
         adminAuthedMemory = true;
-        try { sessionStorage.setItem("alfa_admin_authed", "true"); } catch(e) {}
+        try {
+          sessionStorage.setItem("alfa_admin_authed", "true");
+          sessionStorage.setItem("alfa_admin_role", "superadmin");
+        } catch(e) {}
         closeAdminLogin();
         toast("Authenticated as Super Administrator");
         openAdminPanel();
@@ -10888,7 +11002,10 @@ p.note, .note {
           return;
         }
         adminAuthedMemory = true;
-        try { sessionStorage.setItem("alfa_admin_authed", "true"); } catch(e) {}
+        try {
+          sessionStorage.setItem("alfa_admin_authed", "true");
+          sessionStorage.setItem("alfa_admin_role", "admin");
+        } catch(e) {}
         closeAdminLogin();
         toast("Authenticated as Administrator");
         openAdminPanel();
@@ -10913,12 +11030,71 @@ p.note, .note {
     }
   }
 
+  let currentMobileAdminTab = 'list';
+  let currentAdminLectureFilter = 'all';
+  let currentAdminSearchQuery = '';
+
   function openAdminPanel() {
     $("#adminPanelModal").hidden = false;
     lock(true);
+
+    let role = "admin";
+    try { role = sessionStorage.getItem("alfa_admin_role") || "admin"; } catch(e) {}
+    const isSuper = role === "superadmin";
+
+    const authBadge = $("#admAuthBadge");
+    if (authBadge) {
+      if (isSuper) {
+        authBadge.className = "admin-auth-badge super";
+        authBadge.innerHTML = `<span data-ic="crown" data-s="14"></span><span>Super Admin</span>`;
+      } else {
+        authBadge.className = "admin-auth-badge";
+        authBadge.innerHTML = `<span data-ic="check" data-s="14"></span><span>Admin</span>`;
+      }
+    }
+    const admSettingsBtn = $("#admSettingsBtn");
+    if (admSettingsBtn) {
+      admSettingsBtn.style.display = isSuper ? "inline-flex" : "none";
+    }
+
     resetAdminForm();
     renderAdminTopicsList();
+
+    if (window.innerWidth < 768) {
+      setMobileAdminTab('list');
+    } else {
+      const formSec = $("#admFormSection");
+      const listSec = $("#admListSection");
+      if (formSec) formSec.style.display = "block";
+      if (listSec) listSec.style.display = "block";
+    }
+    hydrateIcons($("#adminPanelModal"));
     haptic(10);
+  }
+
+  function setMobileAdminTab(tab) {
+    currentMobileAdminTab = tab;
+    const isForm = tab === 'form';
+    const bList = $("#admTabBtnList");
+    const bForm = $("#admTabBtnForm");
+    if (bList && bForm) {
+      bList.classList.toggle("active", !isForm);
+      bList.setAttribute("aria-selected", !isForm);
+      bForm.classList.toggle("active", isForm);
+      bForm.setAttribute("aria-selected", isForm);
+    }
+    const formSec = $("#admFormSection");
+    const listSec = $("#admListSection");
+    if (window.innerWidth < 768) {
+      if (formSec) formSec.style.display = isForm ? "block" : "none";
+      if (listSec) listSec.style.display = !isForm ? "block" : "none";
+    } else {
+      if (formSec) formSec.style.display = "block";
+      if (listSec) listSec.style.display = "block";
+    }
+    const scroller = $(".admin-panel-content");
+    if (scroller) scroller.scrollTop = 0;
+    haptic(6);
   }
 
   function closeAdminPanel() {
@@ -10928,10 +11104,28 @@ p.note, .note {
 
   function adminSignOut() {
     adminAuthedMemory = false;
-    try { sessionStorage.removeItem("alfa_admin_authed"); } catch(e) {}
+    try {
+      sessionStorage.removeItem("alfa_admin_authed");
+      sessionStorage.removeItem("alfa_admin_role");
+    } catch(e) {}
     closeAdminPanel();
     toast("Admin Panel locked");
     haptic(10);
+  }
+
+  function selectAdminLecturePreset(cat) {
+    const sel = $("#admCatSelect");
+    if (sel) {
+      sel.value = cat;
+      onLectureSelectChange(cat);
+    }
+    updateAdminQuickChips(cat);
+  }
+
+  function updateAdminQuickChips(activeCat) {
+    $$("#admLecturePresets .m-adm-preset-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.cat === activeCat);
+    });
   }
 
   function onLectureSelectChange(cat) {
@@ -10942,6 +11136,7 @@ p.note, .note {
       $("#admTagInput").value = "Custom Lecture · Title";
       $("#admTagInput").focus();
     }
+    updateAdminQuickChips(cat);
   }
 
   function resetAdminForm() {
@@ -10952,11 +11147,18 @@ p.note, .note {
     $("#admSaveBtnText").textContent = "Add Topic";
     $("#admSaveBtn").innerHTML = `${ic("plus", 18)}<span id="admSaveBtnText">Add Topic</span>`;
     $("#admCancelEditBtn").hidden = true;
-    onLectureSelectChange($("#admCatSelect").value);
+    const tabFormLabel = $("#admTabFormLabel");
+    if (tabFormLabel) tabFormLabel.textContent = "New Topic";
+    const curCat = $("#admCatSelect") ? $("#admCatSelect").value : "L1";
+    onLectureSelectChange(curCat);
+    updateAdminQuickChips(curCat);
   }
 
   function cancelTopicEdit() {
     resetAdminForm();
+    if (window.innerWidth < 768) {
+      setMobileAdminTab('list');
+    }
     toast("Edit canceled");
   }
 
@@ -10975,8 +11177,15 @@ p.note, .note {
     $("#admSaveBtnText").textContent = "Update Topic";
     $("#admSaveBtn").innerHTML = `${ic("edit", 18)}<span id="admSaveBtnText">Update Topic</span>`;
     $("#admCancelEditBtn").hidden = false;
-    const scroller = $(".admin-panel-content");
-    if (scroller) scroller.scrollTop = 0;
+    updateAdminQuickChips($("#admCatSelect").value);
+    const tabFormLabel = $("#admTabFormLabel");
+    if (tabFormLabel) tabFormLabel.textContent = "Edit Topic";
+    if (window.innerWidth < 768) {
+      setMobileAdminTab('form');
+    } else {
+      const scroller = $(".admin-panel-content");
+      if (scroller) scroller.scrollTop = 0;
+    }
     $("#admTitleInput").focus();
   }
 
@@ -11004,6 +11213,9 @@ p.note, .note {
     }
     saveStoredTheory();
     resetAdminForm();
+    if (window.innerWidth < 768) {
+      setMobileAdminTab('list');
+    }
   }
 
   function deleteTopic(id) {
@@ -11027,32 +11239,119 @@ p.note, .note {
     toast(`Reassigned "${t.title}" to ${opt ? opt.short : newCat}`);
   }
 
-  function renderAdminTopicsList() {
-    $("#admTotalCount").textContent = `${THEORY.length} Topics`;
-    const groups = {};
+  function setAdminLectureFilter(cat) {
+    currentAdminLectureFilter = cat;
+    renderAdminTopicsList();
+    haptic(6);
+  }
+
+  function onAdminSearchInput(val) {
+    currentAdminSearchQuery = (val || "").trim().toLowerCase();
+    const clearBtn = $("#admSearchClear");
+    if (clearBtn) clearBtn.hidden = !currentAdminSearchQuery;
+    renderAdminTopicsList();
+  }
+
+  function clearAdminTopicSearch() {
+    currentAdminSearchQuery = "";
+    const inp = $("#admTopicSearch");
+    if (inp) {
+      inp.value = "";
+      inp.focus();
+    }
+    const clearBtn = $("#admSearchClear");
+    if (clearBtn) clearBtn.hidden = true;
+    renderAdminTopicsList();
+  }
+
+  function renderAdminLectureFilterChips() {
+    const wrap = $("#admLectureFilterChips");
+    if (!wrap) return;
+    const counts = { all: THEORY.length };
     THEORY.forEach(t => {
+      counts[t.cat] = (counts[t.cat] || 0) + 1;
+    });
+    let html = `<button type="button" class="m-adm-chip ${currentAdminLectureFilter === 'all' ? 'active' : ''}" onclick="setAdminLectureFilter('all')">All (${counts.all})</button>`;
+    LECTURE_OPTIONS.forEach(opt => {
+      const cnt = counts[opt.cat] || 0;
+      html += `<button type="button" class="m-adm-chip ${currentAdminLectureFilter === opt.cat ? 'active' : ''}" onclick="setAdminLectureFilter('${opt.cat}')">${esc(opt.short)} (${cnt})</button>`;
+    });
+    const standardCats = new Set(LECTURE_OPTIONS.map(l => l.cat));
+    const customCnt = THEORY.filter(t => !standardCats.has(t.cat)).length;
+    if (customCnt > 0) {
+      html += `<button type="button" class="m-adm-chip ${currentAdminLectureFilter === 'custom' ? 'active' : ''}" onclick="setAdminLectureFilter('custom')">Custom (${customCnt})</button>`;
+    }
+    wrap.innerHTML = html;
+  }
+
+  function renderAdminTopicsList() {
+    const totalCountEl = $("#admTotalCount");
+    if (totalCountEl) totalCountEl.textContent = `${THEORY.length} Topics`;
+    const tabCountEl = $("#admTabTopicsCount");
+    if (tabCountEl) tabCountEl.textContent = `${THEORY.length}`;
+
+    renderAdminLectureFilterChips();
+
+    // Filter by lecture and search query
+    let filtered = THEORY;
+    if (currentAdminLectureFilter !== "all") {
+      const standardCats = new Set(LECTURE_OPTIONS.map(l => l.cat));
+      if (currentAdminLectureFilter === "custom") {
+        filtered = filtered.filter(t => !standardCats.has(t.cat));
+      } else {
+        filtered = filtered.filter(t => t.cat === currentAdminLectureFilter);
+      }
+    }
+    if (currentAdminSearchQuery) {
+      const q = currentAdminSearchQuery;
+      filtered = filtered.filter(t =>
+        t.title.toLowerCase().includes(q) ||
+        t.concept.toLowerCase().includes(q) ||
+        t.alfa.toLowerCase().includes(q) ||
+        t.tag.toLowerCase().includes(q)
+      );
+    }
+
+    if (filtered.length === 0) {
+      $("#admTopicsList").innerHTML = `
+        <div style="text-align: center; padding: 2rem 1rem; background: rgba(15,23,42,.4); border-radius: 12px; border: 1px dashed rgba(255,255,255,.15);">
+          <div style="color: var(--text-muted); margin-bottom: .6rem;"><span data-ic="search" data-s="28"></span></div>
+          <b style="display: block; font-size: .95rem; color: #fff; margin-bottom: .3rem;">No Q&amp;A Topics Found</b>
+          <p style="font-size: .8rem; color: var(--text-muted); margin-bottom: 1rem;">No topics matched your search or lecture filter.</p>
+          <button type="button" class="m-btn sm" onclick="clearAdminTopicSearch(); setAdminLectureFilter('all');">Reset Filters</button>
+        </div>`;
+      hydrateIcons($("#admTopicsList"));
+      return;
+    }
+
+    // Grouping by lecture for organized overview
+    const groups = {};
+    filtered.forEach(t => {
       if (!groups[t.cat]) groups[t.cat] = [];
       groups[t.cat].push(t);
     });
+
     let htmlStr = "";
     LECTURE_OPTIONS.forEach(opt => {
-      const list = groups[opt.cat] || [];
+      const list = groups[opt.cat];
+      if (!list || list.length === 0) return;
       htmlStr += `
-        <div style="background: rgba(15,23,42,.6); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1rem; margin-bottom: .8rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: .6rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: .4rem;">
+        <div style="background: rgba(15,23,42,.6); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 1rem; margin-bottom: .85rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: .65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: .45rem;">
             <b style="color: var(--pink); font-size: .92rem;">${esc(opt.tag)}</b>
             <span class="m-tag">${list.length} Topics</span>
           </div>
-          ${list.length > 0 ? list.map(t => renderAdminTopicItemHTML(t)).join("") : '<p style="font-size: .82rem; color: var(--text-muted); font-style: italic;">No topics assigned to this lecture yet.</p>'}
+          ${list.map(t => renderAdminTopicItemHTML(t)).join("")}
         </div>`;
     });
+
     const standardCats = new Set(LECTURE_OPTIONS.map(l => l.cat));
     Object.keys(groups).forEach(cat => {
       if (!standardCats.has(cat)) {
         const list = groups[cat];
         htmlStr += `
-          <div style="background: rgba(15,23,42,.6); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1rem; margin-bottom: .8rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: .6rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: .4rem;">
+          <div style="background: rgba(15,23,42,.6); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 1rem; margin-bottom: .85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: .65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: .45rem;">
               <b style="color: var(--pink); font-size: .92rem;">Custom Lecture (${esc(cat)})</b>
               <span class="m-tag">${list.length} Topics</span>
             </div>
@@ -11060,7 +11359,9 @@ p.note, .note {
           </div>`;
       }
     });
+
     $("#admTopicsList").innerHTML = htmlStr;
+    hydrateIcons($("#admTopicsList"));
   }
 
   function renderAdminTopicItemHTML(t) {
@@ -11068,25 +11369,49 @@ p.note, .note {
       `<option value="${opt.cat}" ${t.cat === opt.cat ? "selected" : ""}>${esc(opt.short)}</option>`
     ).join("");
     return `
-      <div class="admin-topic-item">
-        <div class="admin-topic-info">
-          <small class="m-tag">${esc(t.tag)}</small>
-          <b>${esc(t.title)}</b>
-          <p><strong>Concept:</strong> ${esc(t.concept.substring(0, 120))}${t.concept.length > 120 ? "..." : ""}</p>
-          <p style="color: #99f6e4;"><strong>ALFA:</strong> ${esc(t.alfa.substring(0, 120))}${t.alfa.length > 120 ? "..." : ""}</p>
-          <div style="margin-top: .4rem; display: flex; align-items: center; gap: .5rem;">
-            <label style="font-size: .72rem; color: var(--text-muted);">Reassign:</label>
-            <select onchange="reassignTopicLecture('${t.id}', this.value)" style="background: rgba(15,23,42,.9); border: 1px solid rgba(255,255,255,.2); font-size: .76rem; padding: .15rem .4rem; border-radius: 6px;">
+      <div class="admin-topic-item" data-id="${t.id}">
+        <div class="admin-topic-info" style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:.4rem;margin-bottom:.35rem;flex-wrap:wrap">
+            <span class="m-tag">${esc(t.tag)}</span>
+            <span style="font-size:.7rem;color:var(--text-muted);font-family:monospace">ID: ${esc(t.id)}</span>
+          </div>
+          <b style="font-size:1rem;color:#fff;display:block;margin-bottom:.4rem">${esc(t.title)}</b>
+          <div class="admin-topic-concept-box">
+            <span class="admin-topic-concept-lbl">📘 Theoretical Concept</span>
+            <p style="margin:0">${esc(t.concept)}</p>
+          </div>
+          <div class="admin-topic-alfa-box">
+            <span class="admin-topic-alfa-lbl">🏛️ ALFA Practical Application</span>
+            <p style="margin:0">${esc(t.alfa)}</p>
+          </div>
+          <div style="margin-top:.6rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap">
+            <label style="font-size:.74rem;font-weight:700;color:var(--text-muted)">Reassign Lecture:</label>
+            <select onchange="reassignTopicLecture('${t.id}', this.value)" style="background:rgba(15,23,42,.9);border:1px solid rgba(255,255,255,.2);font-size:.78rem;padding:.25rem .5rem;border-radius:8px;color:#fff;min-height:36px">
               ${lectureSelectOptions}
             </select>
           </div>
         </div>
         <div class="admin-topic-actions">
-          <button class="m-ibtn" onclick="editTopic('${t.id}')" title="Edit Topic" aria-label="Edit Topic">${ic("edit", 16)}</button>
-          <button class="m-ibtn" onclick="deleteTopic('${t.id}')" title="Delete Topic" aria-label="Delete Topic" style="color: #ff5a5f;">${ic("trash", 16)}</button>
+          <button type="button" class="admin-card-btn edit" onclick="editTopic('${t.id}')" title="Edit Topic" aria-label="Edit Topic">
+            ${ic("edit", 16)}<span>Edit</span>
+          </button>
+          <button type="button" class="admin-card-btn delete" onclick="deleteTopic('${t.id}')" title="Delete Topic" aria-label="Delete Topic">
+            ${ic("trash", 16)}<span>Delete</span>
+          </button>
         </div>
       </div>`;
   }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      const formSec = $("#admFormSection");
+      const listSec = $("#admListSection");
+      if (formSec) formSec.style.display = "block";
+      if (listSec) listSec.style.display = "block";
+    } else {
+      setMobileAdminTab(currentMobileAdminTab);
+    }
+  });
 
   function adminResetDefaults() {
     if (confirm("Reset all Q&A topics to the default course curriculum? Any customized additions will be removed.")) {

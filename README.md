@@ -95,7 +95,13 @@ graph TD
   - **Lecture 5 (L5)**: 6-Step Leading Process, Referent/Expert Power vs. Coercive Power.
   - **Sections F & G (FG)**: 4-Step Control Process (Feedforward, Concurrent, Feedback) and Motivation Models (Herzberg & Maslow).
 - **Interactive Multi-Token Search**: Instant real-time filtering across titles, concepts, and ALFA institutional case studies.
-- **Theory Admin Mode**: Password-protected knowledgebase editor.
+- **Dedicated Mobile & Desktop Theory Admin Studio**:
+  - **Full-Height Mobile Studio Sheet**: Native 94dvh slide-up bottom sheet with backdrop blur, drag handle, and zero horizontal clipping across 360px–430px devices.
+  - **Segmented Dual-Mode Navigation**: Instant sticky switcher between **📚 Topics Manager** (browse, filter, reassign, delete) and **✏️ Editor Studio** (distraction-free creation and editing).
+  - **Live Filter & Search Toolbar**: Horizontal touch chips (`All`, `L1`, `L2`, `L3`, `L4`, `L5`, `FG`, `Custom`) and instant live search across theories, concepts, and ALFA cases.
+  - **1-Tap Auto-Switch Editing**: Tapping "Edit" on any topic automatically navigates to the Editor tab with pre-filled fields, visual Editing Mode banner, and character focus.
+  - **Quick Preset Lecture Chips**: 1-tap lecture assignment chips (`L1` to `FG`) that immediately populate syllabus tags and synchronize with standard selectors.
+  - **Executive RBAC Integration**: Displays `👑 Super Admin` or `🛡️ Admin` badge with pulse dot, lock button, and direct 1-tap shortcut to the Super Admin Settings modal when authorized.
 
 ### 6. Speaker Script Studio & Super Admin Settings
 - **Dual-Mode Presenter Architecture**:

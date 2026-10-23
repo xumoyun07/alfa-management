@@ -751,55 +751,677 @@
     .m-pager { display: grid; grid-template-columns: 1fr 1.25fr; gap: .5rem; margin-top: .65rem; }
     .m-hint { font-size: .68rem; color: var(--text-muted); text-align: center; margin-top: .45rem; }
 
-    /* Mobile ROI — Unified Cockpit */
+    /* =========================================================================
+       MOBILE ROI SIMULATOR — EXECUTIVE FINANCIAL COCKPIT (NATIVE UI/UX)
+       ========================================================================= */
     .m-save {
-      background: linear-gradient(145deg, rgba(139,0,0,.4) 0%, rgba(22,32,50,.95) 100%);
-      border: 1px solid rgba(255,90,95,.3); border-radius: 16px; padding: .95rem 1rem; margin-bottom: .75rem;
+      background: linear-gradient(160deg, rgba(139, 0, 0, 0.35) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1px solid rgba(255, 90, 95, 0.3);
+      border-radius: 16px;
+      padding: 0.75rem 0.85rem;
+      margin-bottom: 0.6rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
-    .m-save-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; }
-    .m-save-l { font-size: .68rem; text-transform: uppercase; color: var(--alfa-pink); font-weight: 800; letter-spacing: .5px; }
-    .m-save-v { font-size: 1.7rem; font-weight: 900; color: #fcd34d; line-height: 1.1; margin: .1rem 0 .25rem; font-variant-numeric: tabular-nums; }
-    .m-save-s { font-size: .76rem; color: #cbd5e1; margin-bottom: .65rem; line-height: 1.35; }
-    .m-save-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; border-top: 1px solid rgba(255,255,255,.08); padding-top: .55rem; margin-bottom: .65rem; }
-    .m-save-grid small { display: block; font-size: .64rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
-    .m-save-grid span { font-size: .8rem; font-weight: 800; }
+    .m-save-hero-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.55rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .m-save-kpi-block {
+      display: flex;
+      flex-direction: column;
+    }
+    .m-save-lbl {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      color: var(--alfa-pink, #ff8a8e);
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .m-save-v {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #fcd34d;
+      line-height: 1.1;
+      margin: 0.1rem 0 0;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 2px 10px rgba(252, 211, 77, 0.25);
+    }
+    .m-retained-capsule {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 10px;
+      padding: 0.35rem 0.55rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .m-retained-lbl {
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #34d399;
+      letter-spacing: 0.3px;
+    }
+    .m-retained-val {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #4ade80;
+      line-height: 1.15;
+    }
+    .m-retained-sub {
+      font-size: 0.6rem;
+      color: #94a3b8;
+    }
 
-    .m-chips-row { display: flex; gap: .38rem; overflow-x: auto; padding-bottom: .3rem; scrollbar-width: none; }
-    .m-chips-row::-webkit-scrollbar { display: none; }
-    .m-chip { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); color: #cbd5e1; padding: .34rem .72rem; border-radius: 999px; font-size: .73rem; font-weight: 700; white-space: nowrap; }
-    .m-chip[aria-pressed="true"], .m-chip.active { background: var(--alfa-pink); color: var(--alfa-dark-red); border-color: var(--alfa-pink); font-weight: 800; }
+    /* Comparative Spend Visual Bars */
+    .m-spend-compare {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.55rem;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 0.45rem 0.55rem;
+    }
+    .m-spend-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .m-spend-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.68rem;
+      color: #cbd5e1;
+    }
+    .m-spend-num {
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+    .m-spend-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .m-spend-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .m-spend-fill.old {
+      background: linear-gradient(90deg, #ef4444, #dc2626);
+    }
+    .m-spend-fill.new {
+      background: linear-gradient(90deg, #10b981, #059669);
+    }
 
-    .m-slider { margin-bottom: .85rem; }
-    .m-slider:last-child { margin-bottom: 0; }
-    .m-slider-h { display: flex; justify-content: space-between; font-size: .78rem; margin-bottom: .25rem; }
-    .m-slider-h output { font-weight: 800; color: #fcd34d; }
-    .m-slider-r { display: flex; justify-content: space-between; font-size: .64rem; color: var(--text-muted); margin-top: .15rem; }
+    /* 3 Micro KPI Tiles */
+    .m-save-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.35rem;
+    }
+    .m-kpi-tile {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 0.35rem 0.45rem;
+      text-align: center;
+    }
+    .m-kpi-tile small {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      margin-bottom: 0.15rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .m-kpi-tile span {
+      display: block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .m-kpi-tile s {
+      color: #64748b;
+      font-size: 0.68rem;
+      margin-right: 2px;
+    }
 
-    .m-bar { margin-bottom: .5rem; }
-    .m-bar:last-child { margin-bottom: 0; }
-    .m-bar-h { display: flex; justify-content: space-between; font-size: .74rem; margin-bottom: .2rem; color: #e2e8f0; }
-    .m-bar-t { height: 12px; background: rgba(9,13,22,.85); border-radius: 999px; overflow: hidden; padding: 2px; border: 1px solid rgba(255,255,255,.07); }
-    .m-bar-f { height: 100%; border-radius: 999px; transition: width .35s cubic-bezier(.16,1,.3,1); }
-    .m-bar-f.old { background: linear-gradient(90deg, var(--alfa-red), var(--alfa-dark-red)); }
-    .m-bar-f.new { background: linear-gradient(90deg, #10b981, #059669); }
-    .m-bar small { font-size: .65rem; color: var(--text-muted); display: block; margin-top: .15rem; }
+    /* Segmented 3-Tab Switcher */
+    #mRoiSeg.m-seg {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: rgba(10, 15, 28, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 2px;
+      margin-bottom: 0.6rem;
+      gap: 2px;
+      min-height: 38px;
+    }
+    #mRoiSeg button[role="tab"] {
+      background: none;
+      border: 0;
+      padding: 0.38rem 0.2rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #94a3b8;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    #mRoiSeg button[role="tab"][aria-selected="true"] {
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.85) 0%, rgba(139, 0, 0, 0.95) 100%);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(232, 13, 19, 0.35);
+    }
+    .m-seg-tab-ic {
+      font-size: 0.82rem;
+    }
 
-    .m-roi-pane[hidden] { display: none !important; }
-    .m-budget-pills { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
-    .m-budget-pill { background: rgba(15,23,42,.8); border: 1px solid rgba(255,255,255,.08); border-radius: 8px; padding: .28rem .5rem; font-size: .68rem; color: #cbd5e1; }
-    .m-budget-pill b { color: #fcd34d; margin-left: .2rem; }
+    /* Milestone Quick Scenarios */
+    .m-roi-scenarios-card {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 0.55rem 0.65rem;
+      margin-bottom: 0.55rem;
+    }
+    .m-chips-row {
+      display: flex;
+      gap: 0.35rem;
+      overflow-x: auto;
+      padding: 0.15rem 0;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .m-chips-row::-webkit-scrollbar {
+      display: none;
+    }
+    .m-chip {
+      flex: 0 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 0.28rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .m-chip:active {
+      transform: scale(0.96);
+    }
+    .m-chip[aria-pressed="true"], .m-chip.active {
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.85) 0%, rgba(139, 0, 0, 0.95) 100%);
+      color: #fff;
+      border-color: rgba(255, 90, 95, 0.6);
+      box-shadow: 0 2px 8px rgba(232, 13, 19, 0.3);
+      font-weight: 800;
+    }
 
-    .m-acc-card summary { font-size: .82rem; font-weight: 800; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .m-acc-card summary::-webkit-details-marker { display: none; }
-    .m-break { margin-top: .5rem; }
-    .m-brow { padding: .45rem 0; border-bottom: 1px solid rgba(255,255,255,.06); font-size: .76rem; }
-    .m-brow.strong { background: rgba(255,255,255,.03); padding: .45rem .4rem; border-radius: 8px; }
-    .m-brow-l { font-weight: 700; color: #cbd5e1; margin-bottom: .15rem; }
-    .m-brow-v { display: flex; justify-content: space-between; }
-    .m-brow-v small { color: var(--text-muted); font-size: .63rem; display: block; }
-    .m-brow-v span { font-weight: 800; }
-    .m-brow-v span.good { color: #34d399; }
-    .m-brow-v span.gold { color: #fcd34d; }
+    /* Sliders Modern Financial Cards */
+    .m-slider-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 0.6rem 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .m-slider-h {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .m-slider-h label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+    .m-slider-h output {
+      font-family: var(--font-mono, monospace), monospace;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #fcd34d;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 0.1rem 0.45rem;
+      border-radius: 6px;
+      line-height: 1.2;
+    }
+    .m-range-wrap {
+      padding: 0.2rem 0;
+    }
+    .m-range {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--alfa-red, #e80d13) 0%, var(--alfa-red, #e80d13) var(--p, 50%), rgba(255, 255, 255, 0.12) var(--p, 50%), rgba(255, 255, 255, 0.12) 100%);
+      outline: none;
+      cursor: pointer;
+    }
+    .m-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid var(--alfa-red, #e80d13);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+    .m-range::-webkit-slider-thumb:active {
+      transform: scale(1.15);
+    }
+    .m-range::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid var(--alfa-red, #e80d13);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+    }
+    .m-slider-r {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.62rem;
+      color: #94a3b8;
+      margin-top: 0.2rem;
+      font-weight: 600;
+    }
+
+    /* Transformation Budget Allocation Card */
+    .m-budget-card {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 0.65rem 0.75rem;
+      margin-top: 0.55rem;
+    }
+    .m-badge-reconciled {
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .m-budget-lead {
+      font-size: 0.72rem;
+      color: #cbd5e1;
+      margin: 0.25rem 0 0.5rem 0;
+      line-height: 1.35;
+    }
+    .m-budget-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.32rem;
+      margin-bottom: 0.45rem;
+    }
+    .m-budget-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.3rem;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 0.32rem 0.45rem;
+      min-height: 34px;
+    }
+    .m-budget-item:last-child {
+      grid-column: span 2;
+    }
+    .m-b-ic {
+      font-size: 0.85rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .m-b-text {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .m-b-name {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .m-b-text small {
+      display: none;
+    }
+    .m-b-val {
+      font-family: var(--font-mono, monospace), monospace;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: #fcd34d;
+      flex-shrink: 0;
+    }
+    .m-budget-foot {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.72rem;
+      color: #cbd5e1;
+    }
+    .m-budget-foot b {
+      color: #4ade80;
+    }
+    .m-budget-foot-sub {
+      font-size: 0.65rem;
+      color: #94a3b8;
+    }
+
+    /* Master-Agent Sensitivity Lab */
+    .sx-m {
+      padding: 0.75rem 0.85rem;
+    }
+    .sx-m-lead {
+      font-size: 0.74rem;
+      color: #cbd5e1;
+      line-height: 1.4;
+      margin: 0.2rem 0 0.55rem 0;
+    }
+    .sx-seg {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.35rem;
+      margin-bottom: 0.65rem;
+    }
+    .sx-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9px;
+      padding: 0.45rem 0.25rem;
+      color: #cbd5e1;
+      font-size: 0.74rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+      min-height: 42px;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .sx-btn[aria-pressed="true"] {
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.85) 0%, rgba(139, 0, 0, 0.95) 100%);
+      color: #fff;
+      border-color: rgba(255, 90, 95, 0.6);
+      box-shadow: 0 2px 10px rgba(232, 13, 19, 0.35);
+    }
+    .sx-btn small {
+      font-size: 0.58rem;
+      opacity: 0.85;
+      font-weight: 600;
+    }
+    .sx-hero {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 12px;
+      padding: 0.6rem 0.75rem;
+      text-align: center;
+      margin-bottom: 0.65rem;
+    }
+    .sx-hero small {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--alfa-pink, #ff8a8e);
+      letter-spacing: 0.3px;
+    }
+    .sx-hero b {
+      display: block;
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #fcd34d;
+      line-height: 1.15;
+      margin: 0.1rem 0;
+    }
+    .sx-hero span {
+      font-size: 0.68rem;
+      color: #94a3b8;
+    }
+    .sx-card {
+      display: none;
+      border: 1px solid rgba(255, 90, 95, 0.4);
+      border-radius: 12px;
+      padding: 0.65rem 0.75rem;
+      background: rgba(232, 13, 19, 0.12);
+      margin-bottom: 0.65rem;
+    }
+    .sx-card.sel {
+      display: block;
+    }
+    .sx-card header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.45rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .sx-card header b {
+      font-size: 0.78rem;
+      color: #fff;
+    }
+    .sx-card header span {
+      font-size: 0.64rem;
+      color: #ff8a8e;
+    }
+    .sx-card dl {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin: 0;
+    }
+    .sx-card dl div {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+    }
+    .sx-card dt {
+      color: #cbd5e1;
+    }
+    .sx-card dd {
+      font-weight: 800;
+      color: #fff;
+      margin: 0;
+    }
+    .sx-card dl div.net {
+      padding-top: 0.3rem;
+      margin-top: 0.2rem;
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .sx-card dl div.net dt {
+      color: #fbbf24;
+      font-weight: 800;
+    }
+    .sx-card dl div.net dd {
+      color: #fcd34d;
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    /* Sensitivity Comparison Bars */
+    .m-sens-bars-card {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 0.6rem 0.75rem;
+      margin-bottom: 0.65rem;
+    }
+    .m-sens-bars-title {
+      display: block;
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #94a3b8;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.45rem;
+    }
+    .m-sens-bar-item {
+      margin-bottom: 0.4rem;
+    }
+    .m-sens-bar-item:last-child {
+      margin-bottom: 0;
+    }
+    .m-sens-bar-lbl {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.68rem;
+      color: #cbd5e1;
+      margin-bottom: 0.15rem;
+    }
+    .m-sens-bar-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .m-sens-bar-track i {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .m-sens-bar-track i.red-bar {
+      background: linear-gradient(90deg, #ef4444, #dc2626);
+    }
+    .m-sens-bar-track i.green-bar {
+      background: linear-gradient(90deg, #10b981, #059669);
+    }
+    .m-sens-bar-track i.gold-bar {
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+    }
+
+    /* Defense Verdict Box */
+    .m-defense-verdict-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 10px;
+      padding: 0.55rem 0.65rem;
+      margin-bottom: 0.65rem;
+    }
+    .m-verdict-icon {
+      font-size: 0.95rem;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+    .m-verdict-text {
+      flex: 1 1 auto;
+      font-size: 0.7rem;
+      color: #e2e8f0;
+      line-height: 1.45;
+    }
+    .m-verdict-text b {
+      display: block;
+      color: #fbbf24;
+      font-size: 0.72rem;
+      margin-bottom: 0.15rem;
+    }
+    .m-verdict-text p {
+      margin: 0;
+    }
+
+    /* 13-Line Financial Table Rows */
+    .m-table-lead {
+      font-size: 0.72rem;
+      color: #cbd5e1;
+      margin: 0.2rem 0 0.55rem 0;
+      line-height: 1.35;
+    }
+    .m-break {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .m-brow {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 0.45rem 0.6rem;
+      font-size: 0.74rem;
+    }
+    .m-brow.strong {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .m-brow-l {
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.25rem;
+    }
+    .m-brow.strong .m-brow-l {
+      color: #fff;
+      font-weight: 800;
+    }
+    .m-brow-v {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .m-brow-v small {
+      display: block;
+      color: #94a3b8;
+      font-size: 0.58rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+    }
+    .m-brow-v span {
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: #e2e8f0;
+    }
+    .m-brow-v span.good {
+      color: #34d399;
+    }
+    .m-brow-v span.gold {
+      color: #fcd34d;
+    }
 
     /* OneHub Mobile Cards */
     .m-lead { font-size: .8rem; color: #cbd5e1; line-height: 1.45; margin-bottom: .65rem; }
@@ -1265,13 +1887,6 @@
   .m-viz-stage .ix-stat span { font-size: .65rem; line-height: 1.2; }
 
   /* Compact Sticky Slide Toolbar */
-
-  /* Mobile ROI Cockpit Refinements */
-  .m-save { padding: .75rem .85rem !important; margin-bottom: .55rem !important; border-radius: 15px !important; }
-  .m-save-v { font-size: 1.55rem !important; }
-  .m-save-s { font-size: .73rem !important; margin-bottom: .45rem !important; }
-  .m-save-grid { padding: .4rem 0 !important; margin-bottom: .4rem !important; }
-  .m-slider { padding: .5rem 0 !important; }
 
   /* Mobile OneHub Refinements */
   .m-hub-t { font-size: .92rem !important; margin-bottom: .15rem !important; }
@@ -6006,68 +6621,128 @@ p.note, .note {
       <section class="m-screen" id="m-roi" aria-labelledby="mtRoi" hidden>
         <div class="m-head m-head-split">
           <div>
-            <p class="m-eyebrow">100% Agent vs. 65% Direct</p>
+            <p class="m-eyebrow">POLC Financial Model · 100% Agent vs. 65% Direct</p>
             <h2 class="m-h1" id="mtRoi">ROI Simulator</h2>
           </div>
-          <button class="m-btn sm" onclick="exportCSV()"><span data-ic="download" data-s="15"></span><span>CSV</span></button>
+          <button type="button" class="m-btn sm" onclick="exportCSV()"><span data-ic="download" data-s="15"></span><span>CSV</span></button>
         </div>
 
+        <!-- Executive Financial Cockpit HUD -->
         <div class="m-save" aria-live="polite">
-          <div class="m-save-top">
-            <div>
-              <p class="m-save-l">Annual Net Savings vs. Commissions</p>
+          <div class="m-save-hero-row">
+            <div class="m-save-kpi-block">
+              <span class="m-save-lbl">Annual Net Savings</span>
               <p class="m-save-v" data-saved>+$55,500</p>
             </div>
-            <span class="m-tag green" style="margin-top:.15rem">Retains <b data-retained style="margin-left:2px">90.55%</b></span>
+            <div class="m-retained-capsule">
+              <span class="m-retained-lbl">Tuition Retained</span>
+              <b class="m-retained-val" data-retained>90.55%</b>
+              <span class="m-retained-sub">vs. <span data-retained-old>84.00%</span> baseline</span>
+            </div>
           </div>
-          <p class="m-save-s">ALFA retains <b data-retained>90.55%</b> of $1M tuition ($905,500) vs. <b data-retained-old>84.00%</b> ($840,000) baseline. Total spend saved: <b data-total-saved class="c-green">+$65,500</b>/yr.</p>
-          <div class="m-save-grid">
-            <div><small>Blended cost / student</small><span><s data-cps-old style="color:var(--text-dim)">$400.00</s> → <b data-cps-new class="c-green">$236.25</b></span></div>
-            <div><small>Gross commission saved</small><span data-gross-saved class="c-amber">$97,500</span></div>
+
+          <div class="m-spend-compare">
+            <div class="m-spend-row">
+              <div class="m-spend-info">
+                <span class="m-spend-lbl">Baseline Spend (100% Agents)</span>
+                <b class="m-spend-num c-red" data-old-cost>$160,000</b>
+              </div>
+              <div class="m-spend-track"><div class="m-spend-fill old" data-bar-old style="width:100%"></div></div>
+            </div>
+            <div class="m-spend-row">
+              <div class="m-spend-info">
+                <span class="m-spend-lbl">Proposed Plan (Commissions + $42K Plan)</span>
+                <b class="m-spend-num c-green" data-new-cost>$94,500</b>
+              </div>
+              <div class="m-spend-track"><div class="m-spend-fill new" data-bar-new style="width:59%"></div></div>
+            </div>
           </div>
-          <div class="m-bar">
-            <div class="m-bar-h"><span>Baseline Spend (100% Agents + $10K Ads)</span><b data-old-cost class="c-red">$160,000</b></div>
-            <div class="m-bar-t"><div class="m-bar-f old" data-bar-old style="width:100%"></div></div>
-          </div>
-          <div class="m-bar">
-            <div class="m-bar-h"><span>Proposed Plan (Commissions + $42K Plan)</span><b data-new-cost class="c-green">$94,500</b></div>
-            <div class="m-bar-t"><div class="m-bar-f new" data-bar-new style="width:59%"></div></div>
+
+          <div class="m-save-kpi-grid">
+            <div class="m-kpi-tile">
+              <small>Blended / Stu</small>
+              <span><s data-cps-old>$400.00</s> → <b data-cps-new class="c-green">$236.25</b></span>
+            </div>
+            <div class="m-kpi-tile">
+              <small>Gross Saved</small>
+              <span data-gross-saved class="c-amber">$97,500</span>
+            </div>
+            <div class="m-kpi-tile">
+              <small>Total Spend Saved</small>
+              <span data-total-saved class="c-green">+$65,500</span>
+            </div>
           </div>
         </div>
 
         <!-- Sub-navigation inside ROI to prevent vertical clutter -->
         <div class="m-seg" id="mRoiSeg" role="tablist" aria-label="ROI Simulator Views" style="--n:3">
-          <button type="button" role="tab" data-roi-tab="sim" aria-selected="true">Simulator</button>
-          <button type="button" role="tab" data-roi-tab="sens" aria-selected="false">Rate Test</button>
-          <button type="button" role="tab" data-roi-tab="table" aria-selected="false">Breakdown</button>
+          <button type="button" role="tab" data-roi-tab="sim" aria-selected="true"><span class="m-seg-tab-ic">⚙️</span><span>Simulator</span></button>
+          <button type="button" role="tab" data-roi-tab="sens" aria-selected="false"><span class="m-seg-tab-ic">📊</span><span>Rate Test</span></button>
+          <button type="button" role="tab" data-roi-tab="table" aria-selected="false"><span class="m-seg-tab-ic">📑</span><span>Breakdown</span></button>
         </div>
 
         <!-- Pane 1: Interactive Sliders & Scenarios -->
         <div class="m-roi-pane" id="mRoiPaneSim">
-          <div class="m-sec" style="margin-bottom:.65rem">
-            <div class="m-sec-h"><h3>Milestone Scenarios</h3><span>Tap preset</span></div>
-            <div class="m-chips-row">
-              <button class="m-chip" data-preset="plan" aria-pressed="true">ALFA Plan · 65%</button>
-              <button class="m-chip" data-preset="current" aria-pressed="false">Today · 0%</button>
-              <button class="m-chip" data-preset="q1" aria-pressed="false">Q1 · 20%</button>
-              <button class="m-chip" data-preset="q2" aria-pressed="false">Q2 · 40%</button>
-              <button class="m-chip" data-preset="q3" aria-pressed="false">Q3 · 55%</button>
-              <button class="m-chip" data-preset="stretch" aria-pressed="false">Stretch · 85%</button>
+          <div class="m-roi-scenarios-card">
+            <div class="m-sec-h"><h3>Strategic Milestone Scenarios</h3><span>Tap preset</span></div>
+            <div class="m-chips-row" role="group" aria-label="Scenario Presets">
+              <button type="button" class="m-chip" data-preset="plan" aria-pressed="true">🏆 ALFA Plan · 65%</button>
+              <button type="button" class="m-chip" data-preset="current" aria-pressed="false">📌 Today · 0%</button>
+              <button type="button" class="m-chip" data-preset="q1" aria-pressed="false">🌱 Q1 · 20%</button>
+              <button type="button" class="m-chip" data-preset="q2" aria-pressed="false">🌿 Q2 · 40%</button>
+              <button type="button" class="m-chip" data-preset="q3" aria-pressed="false">🚀 Q3 · 55%</button>
+              <button type="button" class="m-chip" data-preset="stretch" aria-pressed="false">⭐ Stretch · 85%</button>
             </div>
           </div>
 
-          <div class="m-card" id="mSliders"></div>
+          <div class="m-card" id="mSliders" style="background:transparent;border:none;padding:0;box-shadow:none"></div>
 
-          <div class="m-card" style="padding:.75rem .85rem">
-            <div class="m-sec-h" style="margin-bottom:.3rem"><h3>$42,000 Transformation Budget</h3><span>$29K fixed + $13K bonus</span></div>
-            <div class="m-budget-pills">
-              <span class="m-budget-pill">Ads <b>$12K</b></span>
-              <span class="m-budget-pill">Staff Bonus <b>$13K</b></span>
-              <span class="m-budget-pill">OneHub Cloud <b>$9.5K</b></span>
-              <span class="m-budget-pill">Studio &amp; 8 Amb. <b>$4K</b></span>
-              <span class="m-budget-pill">Training <b>$2K</b></span>
-              <span class="m-budget-pill">Audit <b>$1.5K</b></span>
-              <span class="m-budget-pill">Awards <b>$400</b></span>
+          <div class="m-budget-card">
+            <div class="m-sec-h" style="margin-bottom:.25rem">
+              <h3>$42,000 Transformation Budget</h3>
+              <span class="m-badge-reconciled">$29K Fixed + $13K Bonuses</span>
+            </div>
+            <p class="m-budget-lead">Itemized strategic investment delivering $97,500 gross commission savings:</p>
+            <div class="m-budget-grid">
+              <div class="m-budget-item">
+                <span class="m-b-ic">📢</span>
+                <div class="m-b-text"><span class="m-b-name">Meta &amp; TikTok Ads</span><small>Targeted digital acquisition</small></div>
+                <b class="m-b-val">$12,000</b>
+              </div>
+              <div class="m-budget-item">
+                <span class="m-b-ic">👥</span>
+                <div class="m-b-text"><span class="m-b-name">Staff Direct Bonuses</span><small>260 students × $50 bonus</small></div>
+                <b class="m-b-val">$13,000</b>
+              </div>
+              <div class="m-budget-item">
+                <span class="m-b-ic">☁️</span>
+                <div class="m-b-text"><span class="m-b-name">OneHub Cloud Upgrade</span><small>Paperless CRM/ERP infra</small></div>
+                <b class="m-b-val">$9,500</b>
+              </div>
+              <div class="m-budget-item">
+                <span class="m-b-ic">🎬</span>
+                <div class="m-b-text"><span class="m-b-name">Studio &amp; 8 Ambassadors</span><small>Organic student creators</small></div>
+                <b class="m-b-val">$4,000</b>
+              </div>
+              <div class="m-budget-item">
+                <span class="m-b-ic">🎓</span>
+                <div class="m-b-text"><span class="m-b-name">Staff Training</span><small>Direct recruitment upskilling</small></div>
+                <b class="m-b-val">$2,000</b>
+              </div>
+              <div class="m-budget-item">
+                <span class="m-b-ic">📋</span>
+                <div class="m-b-text"><span class="m-b-name">Contract Legal Audit</span><small>Master agency restructuring</small></div>
+                <b class="m-b-val">$1,500</b>
+              </div>
+              <div class="m-budget-item">
+                <span class="m-b-ic">🏆</span>
+                <div class="m-b-text"><span class="m-b-name">Performance Awards</span><small>Quarterly team recognition</small></div>
+                <b class="m-b-val">$400</b>
+              </div>
+            </div>
+            <div class="m-budget-foot">
+              <span>Total Strategic Investment: <b>$42,000</b></span>
+              <span class="m-budget-foot-sub">Remaining Commissions: $52,500 · Retains 90.55%</span>
             </div>
           </div>
         </div>
@@ -6076,24 +6751,84 @@ p.note, .note {
         <div class="m-roi-pane" id="mRoiPaneSens" hidden>
           <div id="sensMob">
             <div class="m-card sx-m">
+              <div class="m-sec-h" style="margin-bottom:.3rem">
+                <h3>Master-Agent Rate Sensitivity Lab</h3>
+                <span class="m-badge-reconciled">Stress Test</span>
+              </div>
               <p class="sx-m-lead">Our base case assumes a 5% master-agent fee (+10% sub-agent = 15%). Tap to test higher rates:</p>
+              
               <div class="sx-seg" role="group" aria-label="Master-agent rate">
-                <button type="button" class="sx-btn" data-sens="5" aria-pressed="true">5% <small>base</small></button>
-                <button type="button" class="sx-btn" data-sens="7.5" aria-pressed="false">7.5%</button>
-                <button type="button" class="sx-btn" data-sens="10" aria-pressed="false">10%</button>
+                <button type="button" class="sx-btn" data-sens="5" aria-pressed="true">5.0% <small>base (15%)</small></button>
+                <button type="button" class="sx-btn" data-sens="7.5" aria-pressed="false">7.5% <small>stress (17.5%)</small></button>
+                <button type="button" class="sx-btn" data-sens="10" aria-pressed="false">10.0% <small>max (20%)</small></button>
               </div>
-              <div class="sx-hero"><small>Net annual saving after $42,000 budget</small><b data-sx-val="net">$55,500</b><span>at 65% direct enrolment (260 students)</span></div>
+
+              <div class="sx-hero">
+                <small>Net annual saving after $42,000 budget</small>
+                <b data-sx-val="net">$55,500</b>
+                <span>at 65% direct enrolment (260 students)</span>
+              </div>
+
               <div class="sx-cards">
-                <article class="sx-card sel" data-sens-row="5"><header><b>5% Master Rate</b><span>Base case (15% total)</span></header><dl><div><dt>Total commission / student</dt><dd>$375 ($250 + $125)</dd></div><div><dt>Baseline commission (400 stu)</dt><dd>$150,000</dd></div><div><dt>Gross saved at 65% direct</dt><dd>$97,500</dd></div><div class="net"><dt>Net saving after $42K plan</dt><dd>$55,500</dd></div></dl></article>
-                <article class="sx-card" data-sens-row="7.5"><header><b>7.5% Master Rate</b><span>17.5% total commission</span></header><dl><div><dt>Total commission / student</dt><dd>$437.50 ($250 + $187.50)</dd></div><div><dt>Baseline commission (400 stu)</dt><dd>$175,000</dd></div><div><dt>Gross saved at 65% direct</dt><dd>$113,750</dd></div><div class="net"><dt>Net saving after $42K plan</dt><dd>$71,750</dd></div></dl></article>
-                <article class="sx-card" data-sens-row="10"><header><b>10% Master Rate</b><span>20% total commission</span></header><dl><div><dt>Total commission / student</dt><dd>$500 ($250 + $250)</dd></div><div><dt>Baseline commission (400 stu)</dt><dd>$200,000</dd></div><div><dt>Gross saved at 65% direct</dt><dd>$130,000</dd></div><div class="net"><dt>Net saving after $42K plan</dt><dd>$88,000</dd></div></dl></article>
+                <article class="sx-card sel" data-sens-row="5">
+                  <header><b>5.0% Master Rate</b><span>Base case (15% total = $375/stu)</span></header>
+                  <dl>
+                    <div><dt>Total commission / student</dt><dd>$375 ($250 + $125)</dd></div>
+                    <div><dt>Baseline commission (400 stu)</dt><dd>$150,000</dd></div>
+                    <div><dt>Gross saved at 65% direct</dt><dd>$97,500</dd></div>
+                    <div class="net"><dt>Net saving after $42K plan</dt><dd>$55,500</dd></div>
+                  </dl>
+                </article>
+                <article class="sx-card" data-sens-row="7.5">
+                  <header><b>7.5% Master Rate</b><span>17.5% total commission ($437.50/stu)</span></header>
+                  <dl>
+                    <div><dt>Total commission / student</dt><dd>$437.50 ($250 + $187.50)</dd></div>
+                    <div><dt>Baseline commission (400 stu)</dt><dd>$175,000</dd></div>
+                    <div><dt>Gross saved at 65% direct</dt><dd>$113,750</dd></div>
+                    <div class="net"><dt>Net saving after $42K plan</dt><dd>$71,750</dd></div>
+                  </dl>
+                </article>
+                <article class="sx-card" data-sens-row="10">
+                  <header><b>10.0% Master Rate</b><span>20% total commission ($500/stu)</span></header>
+                  <dl>
+                    <div><dt>Total commission / student</dt><dd>$500 ($250 + $250)</dd></div>
+                    <div><dt>Baseline commission (400 stu)</dt><dd>$200,000</dd></div>
+                    <div><dt>Gross saved at 65% direct</dt><dd>$130,000</dd></div>
+                    <div class="net"><dt>Net saving after $42K plan</dt><dd>$88,000</dd></div>
+                  </dl>
+                </article>
               </div>
-              <p class="sx-note" style="font-size:.76rem;margin-top:.65rem;">Higher commission rates yield even larger savings. We use 5% (15% total) as a conservative benchmark aligned with higher-ed industry ranges (QualyHQ, 2026; GradPilot, 2026).</p>
-              <details class="sx-src"><summary>Sources &amp; project assumptions</summary>
+
+              <div class="m-sens-bars-card">
+                <span class="m-sens-bars-title">Financial Differential Comparison:</span>
+                <div class="m-sens-bar-item">
+                  <div class="m-sens-bar-lbl"><span>Commission Today (400 stu)</span><b data-sx-val="today" class="c-red">$150,000</b></div>
+                  <div class="m-sens-bar-track"><i data-sx-bar="today" class="red-bar" style="width:75%"></i></div>
+                </div>
+                <div class="m-sens-bar-item">
+                  <div class="m-sens-bar-lbl"><span>Gross Saved at 65% Direct</span><b data-sx-val="save" class="c-green">$97,500</b></div>
+                  <div class="m-sens-bar-track"><i data-sx-bar="save" class="green-bar" style="width:48.75%"></i></div>
+                </div>
+                <div class="m-sens-bar-item">
+                  <div class="m-sens-bar-lbl"><span>Net Saved (after $42K Plan)</span><b data-sx-val="net" class="c-gold">$55,500</b></div>
+                  <div class="m-sens-bar-track"><i data-sx-bar="net" class="gold-bar" style="width:27.75%"></i></div>
+                </div>
+              </div>
+
+              <div class="m-defense-verdict-box">
+                <span class="m-verdict-icon">💡</span>
+                <div class="m-verdict-text">
+                  <b>Strategic Lecturer Defense:</b>
+                  <p>Higher master-agent commissions yield even greater net savings for ALFA ($71,750 to $88,000/yr). This proves our 5% baseline assumption is structurally conservative and defensible under any external audit.</p>
+                </div>
+              </div>
+
+              <details class="sx-src">
+                <summary>Sources &amp; Academic Assumptions</summary>
                 <ul>
                   <li>QualyHQ (2026): <a href="https://qualyhq.com/blog/how-education-agent-commissions-work/" target="_blank" rel="noopener">qualyhq.com</a> · GradPilot (2026): <a href="https://gradpilot.com/news/study-abroad-consultancy-agents-what-students-should-know" target="_blank" rel="noopener">gradpilot.com</a></li>
-                  <li>Assumptions: 12 master × 8 sub-agents (96), 400 new students, 120 staff, $2,500 tuition, 5% master rate, $10K baseline marketing, 5–7 day paper wait (our estimate).</li>
-                  <li>OneHub is our proposed cloud platform upgrading ALFA's current form/email workflows.</li>
+                  <li>Higher education agency networks typically operate at 10% to 15% aggregate commission. Sub-agents keep ~67% ($250) and master agencies retain ~33% ($125, our assumption).</li>
+                  <li>Baseline assumptions: 12 master × 8 sub-agents (96 total), 400 new intakes, 120 staff, $2,500 tuition fee, $10K baseline marketing.</li>
                 </ul>
               </details>
             </div>
@@ -6103,9 +6838,15 @@ p.note, .note {
         <!-- Pane 3: Full 13-Row Financial Breakdown Table -->
         <div class="m-roi-pane" id="mRoiPaneTable" hidden>
           <div class="m-card">
-            <div class="m-sec-h" style="margin-bottom:.2rem"><h3>13-Line Financial Reconciliation</h3><span>Baseline vs. Plan</span></div>
+            <div class="m-sec-h" style="margin-bottom:.25rem">
+              <h3>13-Line Financial Reconciliation</h3>
+              <span class="m-badge-reconciled">Baseline vs. Plan</span>
+            </div>
+            <p class="m-table-lead">Full line-by-line financial audit comparing 100% agent dependency against the proposed 65% direct model:</p>
             <div class="m-break" id="mBreak"></div>
-            <button class="m-btn primary full" style="margin-top:.8rem" onclick="exportCSV()"><span data-ic="download" data-s="18"></span>Export Full ROI Model (CSV)</button>
+            <button type="button" class="m-btn primary full" style="margin-top:.85rem;min-height:44px" onclick="exportCSV()">
+              <span data-ic="download" data-s="18"></span><span>Export Full ROI Model (CSV)</span>
+            </button>
           </div>
         </div>
       </section>
@@ -10161,7 +10902,7 @@ p.note, .note {
   function buildSliders() {
     const mk = (p) => FIELDS.map(f => p === "d"
       ? `<div class="slider-group"><div class="slider-h"><label for="d-in-${f.k}">${f.label}</label><output id="d-out-${f.k}" for="d-in-${f.k}"></output></div><input class="d-range" type="range" id="d-in-${f.k}" data-calc="${f.k}" min="${f.min}" max="${f.max}" step="${f.step}" value="${S.calc[f.k]}"></div>`
-      : `<div class="m-slider"><div class="m-slider-h"><label for="m-in-${f.k}">${f.label}</label><output id="m-out-${f.k}" for="m-in-${f.k}"></output></div><input class="m-range" type="range" id="m-in-${f.k}" data-calc="${f.k}" min="${f.min}" max="${f.max}" step="${f.step}" value="${S.calc[f.k]}"><div class="m-slider-r"><span>${f.fmt(f.min)}</span><span>${f.fmt(f.max)}</span></div></div>`
+      : `<div class="m-slider-card"><div class="m-slider-h"><label for="m-in-${f.k}">${f.label}</label><output id="m-out-${f.k}" for="m-in-${f.k}"></output></div><div class="m-range-wrap"><input class="m-range" type="range" id="m-in-${f.k}" data-calc="${f.k}" min="${f.min}" max="${f.max}" step="${f.step}" value="${S.calc[f.k]}" aria-label="${f.label}"></div><div class="m-slider-r"><span>${f.fmt(f.min)}</span><span>${f.fmt(f.max)}</span></div></div>`
     ).join("");
     $("#dSliders").innerHTML = mk("d");
     $("#mSliders").innerHTML = mk("m");

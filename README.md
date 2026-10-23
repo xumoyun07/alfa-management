@@ -76,8 +76,13 @@ graph TD
 
 ### 3. Dynamic Financial ROI Simulator
 - **Live Financial Cockpit**: Real-time mathematical simulation engine testing student intake (100–1000), tuition rates ($1,500–$5,000), direct enrolment share (0%–100%), and staff bonus levels ($0–$150/student).
-- **6 Milestone Presets**: `ALFA Plan · 65%`, `Today Baseline · 0%`, `Q1 · 20%`, `Q2 · 40%`, `Q3 · 55%`, and `Stretch Goal · 85%`.
-- **Sensitivity Matrix & CSV Export**: Rate testing table and one-click data export to spreadsheet formats.
+- **Dedicated Mobile Executive Cockpit**:
+  - **Executive Impact HUD**: Compact 3-tier financial header uniting Net Annual Savings (`+$55,500`), Tuition Retention (`90.55%` vs `84.00%` baseline), dual-track comparative spend reduction ($160K → $94.5K), and blended per-student cost drops (`$400` → `$236.25`).
+  - **Tactile Financial Sliders**: Custom touch-optimized slider tracks with active percentage gradient fill and live tabular value outputs.
+  - **Milestone Quick Scenarios**: 1-tap rapid presets (`🏆 ALFA Plan · 65%`, `📌 Today · 0%`, `🌱 Q1 · 20%`, `🌿 Q2 · 40%`, `🚀 Q3 · 55%`, `⭐ Stretch · 85%`).
+  - **$42,000 Strategic Transformation Budget**: Dense 2-column itemized allocation grid reconciling all $42,000 expenses (Ads $12K, Staff Bonuses $13K, OneHub Cloud $9.5K, Studio $4K, Training $2K, Audit $1.5K, Awards $400).
+  - **Master-Agent Sensitivity Lab**: Interactive 3-way stress testing (`5% Base`, `7.5% Stress`, `10% Max`) with comparative bars proving that ALFA saves even more ($71.8K–$88K) under higher third-party fees.
+  - **13-Line Financial Reconciliation Table**: Complete line-by-line financial audit with 1-tap CSV export.
 
 ### 4. ALFA OneHub Cloud Architecture
 - **Interactive Architecture Viewer**:

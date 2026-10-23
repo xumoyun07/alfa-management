@@ -46,7 +46,7 @@ graph TD
 
     C --> C1[7 Team Members / 17 Pages]
     C --> C2[Full Vector SVG Lightbox & Pan/Zoom]
-    C --> C3[Mobile Touch Swipe & Slide Notes Sheet]
+    C --> C3[Desktop Hotkeys & Slide Notes Drawer]
 
     D --> D1[Real-Time Sliders & 6 Milestone Presets]
     D --> D2[Sensitivity Matrix & CSV Data Export]
@@ -66,12 +66,13 @@ graph TD
 - **Executive Scorecard**: Instant inspection of the 4 foundational turnaround metrics (Net Annual Saving `+$55,500`, Direct Enrolment `65%`, Cost per Student `$400.00 → $236.25`, Student Admin Turnaround `<24 hours`). Tap any figure for mathematical assumptions and formulas.
 - **11 Interactive Strategy & Economics Models**: Dual-mode vector chart index featuring **Deck Spotlight Mode** and **2-Column Responsive Grid**, complete with category filter chips (`Economics & ROI`, `OneHub & Ops`, `120 Staff`, `POLC & Strategy`).
 
-### 2. 17-Slide Executive Presentation Deck
-- **17 Dedicated Full-Viewport Story Pages**: Structured across all 7 team members according to the official Malaysian Higher Education assessment guidelines.
+### 2. 17-Slide Executive Presentation Deck (Desktop Optimized)
+- **17 Dedicated Full-Viewport Story Pages**: Tailored for desktop presentation displays and projectors, structured across all 7 team members according to the official Malaysian Higher Education assessment guidelines.
 - **Interactive Visualizations**: Every slide features an interactive component (timelines, before/after switches, organograms, process flows, and sensitivity matrices).
 - **Full Vector Lightbox**: Click any diagram to inspect high-resolution vector graphics with wheel zoom, drag pan, double-tap zoom, and touch gesture support.
 - **Overview Grid (`Esc`)**: Rapid navigation across all 17 slides filtered by team member.
-- **Extended Reference Drawer / Sheet (`D`)**: In-depth academic commentary, data tables, and evidence sources.
+- **Extended Reference Drawer (`D`)**: In-depth academic commentary, data tables, and evidence sources.
+- **Mobile Experience Alignment**: On mobile devices, presentation slides are removed in favor of the touch-first **Executive Hub & Management Cockpit** (Hero Metrics, 11-Model Vector Spotlight & Grid, ROI Simulator, OneHub Architecture, Theory Flashcards, Speaker Script), ensuring an optimal, non-cluttered mobile experience.
 
 ### 3. Dynamic Financial ROI Simulator
 - **Live Financial Cockpit**: Real-time mathematical simulation engine testing student intake (100–1000), tuition rates ($1,500–$5,000), direct enrolment share (0%–100%), and staff bonus levels ($0–$150/student).
@@ -126,11 +127,13 @@ The portal implements an offline client-side security architecture powered by **
   - Cache-first Service Worker (`sw.js`, cache version `v4.5`) ensuring 100% offline capability.
   - Web App Manifest (`manifest.json`) with 5 high-resolution and maskable app icons.
   - Install prompt integration via `#dInstallBtn` (desktop header) and `#mInstallBtn` (mobile corner).
-- **Responsive Engineering**: Dual-mode rendering engine optimized for 4K/1080p desktop presentation displays and touch-first smartphones (360px–430px) with **0 horizontal scrollbar overflow**.
+- **Responsive Engineering**: Dual-mode rendering engine with zero horizontal scrollbar overflow:
+  - **Desktop Display**: 6 full-feature executive modules, including the full-viewport 17-Slide Presentation Deck with keyboard hotkeys (`←`/`→`, `Space`, `Esc`, `D`, `O`) and drawer notes.
+  - **Mobile Touch**: 5 streamlined core modules (`Home`, `ROI`, `OneHub`, `Theory`, `Script`) centered around the Executive Overview Hub & 11-Model Vector Spotlight, engineered cleanly for 360px–430px viewports with zero horizontal clipping.
 - **Automated Verification**:
-  - `171 / 171` automated vector SVG layout checks passed with zero clipping.
-  - `160 / 160` unique DOM IDs with zero duplicate collisions.
-  - `224` inline event handlers verified against `68` custom functions with zero missing definitions.
+  - `171 / 171` automated vector SVG layout checks passed with zero clipping across 7 responsive viewports.
+  - `149 / 149` unique DOM IDs with zero duplicate collisions.
+  - `213` inline event handlers verified against `67` custom functions with zero missing definitions.
 
 ---
 

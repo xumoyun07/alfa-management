@@ -140,13 +140,12 @@
     :focus-visible { outline: 2px solid var(--alfa-pink); outline-offset: 2px; }
 
     /* Desktop/Tablet vs. Independent Mobile DOM */
-    .m-app, .m-nav, .m-top, .m-focus, .m-sheet-backdrop { display: none !important; }
+    .m-app, .m-nav, .m-top, .m-focus { display: none !important; }
     @media (max-width: 767px), (pointer: coarse) and (max-height: 500px){
       .d-app { display: none !important; }
       .m-app { display: block !important; width: 100%; max-width: 100vw; overflow-x: clip; }
       .m-nav { display: grid !important; }
       .m-top { display: flex !important; }
-      .m-sheet-backdrop:not([hidden]) { display: flex !important; }
       .m-focus:not([hidden]) { display: flex !important; }
       body { background: var(--bg); }
     }
@@ -4567,17 +4566,12 @@ p.note, .note {
           <p class="m-hero-sub">FIB 2074 Introduction to Management · ALFA University College</p>
           <h2 class="m-hero-title" id="mtHome">From 100% agents to 65% direct enrolment and one paperless platform</h2>
           <div class="m-hero-actions">
-            <button type="button" class="m-btn primary full" onclick="mGo('present')" aria-label="Open 17-slide presentation deck">
-              <span data-ic="play" data-s="18"></span><span>Start Presentation (17 Slides)</span>
+            <button type="button" class="m-btn primary full" onclick="mGo('roi')" aria-label="Open ROI Simulator">
+              <span data-ic="roi" data-s="18"></span><span>ROI Simulator</span>
             </button>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;width:100%">
-              <button type="button" class="m-btn full" onclick="mGo('roi')" aria-label="Open ROI Simulator">
-                <span data-ic="roi" data-s="16"></span><span>ROI Simulator</span>
-              </button>
-              <button type="button" class="m-btn full" onclick="mGo('script')" aria-label="Open Speaker Script module">
-                <span data-ic="lock" data-s="16"></span><span>Speaker Script</span>
-              </button>
-            </div>
+            <button type="button" class="m-btn full" onclick="mGo('script')" aria-label="Open Speaker Script module">
+              <span data-ic="lock" data-s="16"></span><span>Speaker Script</span>
+            </button>
           </div>
         </div>
 
@@ -5122,27 +5116,6 @@ p.note, .note {
           </div>
 
       </section>  
-      
-      <!-- 2. PRESENTATION DECK SCREEN (17 NATIVE MOBILE STORY PAGES) -->
-      <section class="m-screen" id="m-present" aria-label="Mobile Presentation Story Pages" hidden>
-        <div class="m-deck-strip">
-          <div class="m-rail" id="mRail" role="tablist" aria-label="Jump to team member"></div>
-          <div class="m-sub-slides" id="mSlideChips" role="tablist" aria-label="Member pages"></div>
-        </div>
-
-        <div id="mSwipe">
-          <div id="mSpk" class="sr-only"></div>
-          <div id="mSeg" hidden></div>
-          <div class="m-deck-body" id="mDeckBody"></div>
-        </div>
-
-        <div class="m-story-bar" role="toolbar" aria-label="Slide navigation">
-          <button type="button" class="m-story-btn" id="mPrev" onclick="prevSlide()" aria-label="Previous slide"></button>
-          <button type="button" class="m-story-btn" onclick="toggleOverview()" aria-label="Open 17-slide overview"><span data-ic="grid" data-s="14"></span><span id="mOvCount">01/17</span></button>
-          <button type="button" class="m-story-btn" onclick="toggleMoreDetail()" aria-label="Open more detail sheet"><span data-ic="book" data-s="14"></span><span>Notes</span></button>
-          <button type="button" class="m-story-btn primary" id="mNext" onclick="nextSlide()" aria-label="Next slide"></button>
-        </div>
-      </section>
 
       <!-- 3. ROI SIMULATOR SCREEN (UNIFIED COCKPIT WITH 3 SUB-MODES) -->
       <section class="m-screen" id="m-roi" aria-labelledby="mtRoi" hidden>
@@ -5300,10 +5273,9 @@ p.note, .note {
       </section>
     </main>
 
-    <!-- Bottom Navigation Bar (6 Modules: Home | Slides | ROI Simulator | OneHub | Theory & Q&A | Speaker Script) -->
+    <!-- Bottom Navigation Bar (5 Modules: Home | ROI Simulator | OneHub | Theory & Q&A | Speaker Script) -->
     <nav class="m-nav" id="mBottomNav" aria-label="Primary mobile navigation">
       <button type="button" class="m-nav-btn active" data-go="home" aria-label="Home page" aria-current="page"><span class="m-nav-ind"></span><span data-ic="home" data-s="19"></span><small>Home</small></button>
-      <button type="button" class="m-nav-btn" data-go="present" aria-label="17-slide presentation deck"><span class="m-nav-ind"></span><span data-ic="play" data-s="19"></span><small>Slides</small></button>
       <button type="button" class="m-nav-btn" data-go="roi" aria-label="ROI financial simulator"><span class="m-nav-ind"></span><span data-ic="roi" data-s="19"></span><small>ROI</small></button>
       <button type="button" class="m-nav-btn" data-go="hub" aria-label="ALFA OneHub digital platform"><span class="m-nav-ind"></span><span data-ic="grid" data-s="19"></span><small>OneHub</small></button>
       <button type="button" class="m-nav-btn" data-go="theory" aria-label="Academic management theory and Q&amp;A"><span class="m-nav-ind"></span><span data-ic="book" data-s="19"></span><small>Theory</small></button>
@@ -5311,7 +5283,6 @@ p.note, .note {
     </nav>
 
     <div class="m-focus" id="mFocus" role="dialog" aria-modal="true" aria-label="Focus mode speaker studio" hidden></div>
-    <div class="m-sheet-backdrop" id="mDetailSheet" role="dialog" aria-modal="true" aria-label="Slide details" onclick="if(event.target===this)closeMoreDetail()" hidden></div>
     
   </div>
 
@@ -7026,7 +6997,7 @@ p.note, .note {
     master: 14 * 60, masterTick: null, font: 17,
     calc: { ...PRESETS.plan }, preset: "plan", roiTab: "sim",
     hub: "crm", thFilter: "all", thQuery: "", thExpandAll: false,
-    dView: "deck", mView: "present", scroll: {},
+    dView: "deck", mView: "home", scroll: {},
     moreDetail: false, ovOpen: false, ovFilter: -1, hideUI: false, hintFaded: false
   };
 
@@ -7082,7 +7053,6 @@ p.note, .note {
   function setIx(key, val) {
     IX[key] = val;
     renderDesktopDeck();
-    renderMobileDeck();
     haptic(6);
   }
 
@@ -7720,7 +7690,6 @@ p.note, .note {
     closeMoreDetail();
     
     renderDesktopDeck();
-    if (isMobile()) renderMobileDeck();
     if (vaultData) renderScriptVault();
     updateSlideHash();
     announceSlide();
@@ -7731,65 +7700,22 @@ p.note, .note {
   function goToMember(mi) {
     const firstSlideIndex = ALL_SLIDES.findIndex(s => s.mi === mi);
     if (firstSlideIndex !== -1) {
-      if (isMobile()) mGo("present");
-      else dGo("deck");
+      if (!isMobile()) dGo("deck");
       goToSlide(firstSlideIndex);
     }
   }
   function jumpToSlide(i) {
     goToSlide(i);
-    if (isMobile()) mGo("present"); else dGo("deck");
+    if (isMobile()) mGo("home"); else dGo("deck");
   }
 
   function toggleMoreDetail() {
     S.moreDetail = !S.moreDetail;
-    if (!isMobile()) {
-      renderDesktopDeck();
-    } else {
-      const sheet = $("#mDetailSheet");
-      if (sheet) {
-        if (S.moreDetail) {
-          const curSlide = ALL_SLIDES[S.slideIdx];
-          const charts = curSlide.charts || [];
-          sheet.innerHTML = `
-            <div class="m-sheet-panel">
-              <div class="m-sheet-handle"></div>
-              <div class="m-sheet-head">
-                <div>
-                  <span class="p-badge-member">Member ${curSlide.memberNum} · ${String(curSlide.no).padStart(2,"0")} / 17</span>
-                  <h3 class="m-sheet-h3" style="margin-top:.2rem">${esc(curSlide.cleanTitle || curSlide.shortTitle)}</h3>
-                </div>
-                <button type="button" class="m-ibtn" onclick="closeMoreDetail()" aria-label="Close notes">✕</button>
-              </div>
-              <div style="overflow-y:auto;padding-top:.75rem;flex:1">
-                <p style="font-size:.85rem;line-height:1.5;color:var(--text);margin-bottom:.75rem">${esc(curSlide.bodyCopy)}</p>
-                <div class="slide-cols" style="margin-bottom:.75rem">
-                  ${curSlide.cols.map(c => `<div class="slide-box"><h3>${esc(c.heading)}</h3><ul>${c.items.map(it => `<li>${esc(it)}</li>`).join("")}</ul></div>`).join("")}
-                </div>
-                ${charts.length > 0 ? `
-                  <div style="margin-top:.5rem">
-                    <small style="display:block;font-size:.66rem;text-transform:uppercase;color:#5eead4;font-weight:800;margin-bottom:.3rem">Reference Diagrams (Tap to Zoom)</small>
-                    <div style="display:flex;gap:.5rem;flex-wrap:wrap">
-                      ${charts.map(n => `<button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.4rem .6rem" onclick="closeMoreDetail();openLb(${n})">Chart ${n}: ${esc(CHARTS[n].title)}</button>`).join("")}
-                    </div>
-                  </div>
-                ` : ""}
-              </div>
-            </div>`;
-          sheet.hidden = false;
-          lock(true);
-        } else {
-          sheet.hidden = true;
-          lock(false);
-        }
-      }
-    }
+    if (!isMobile()) renderDesktopDeck();
   }
 
   function closeMoreDetail() {
     S.moreDetail = false;
-    const sheet = $("#mDetailSheet");
-    if (sheet) sheet.hidden = true;
     const btn = $("#dMoreDetailBtn");
     if (btn) btn.setAttribute("aria-expanded", "false");
     lock(!$("#lb").hidden);
@@ -8835,12 +8761,9 @@ p.note, .note {
     // 1. Deck
     $$(".d-home-actions button[onclick*='startDesktopPresentation']").forEach(b => { b.style.display = deckOn ? "" : "none"; });
     $$(".d-home-sec-head button[onclick*='startDesktopPresentation']").forEach(b => { b.style.display = deckOn ? "" : "none"; });
-    $$("nav.m-nav button[data-go='present']").forEach(b => { b.style.display = deckOn ? "" : "none"; });
-    $$(".m-hero-actions button[onclick*='mGo(\\'present\\')']").forEach(b => { b.style.display = deckOn ? "" : "none"; });
     const membersSec = $(".d-home-members-section");
     if (membersSec) membersSec.style.display = deckOn ? "" : "none";
     if (!deckOn && S.dView === "deck") dGo("home");
-    if (!deckOn && S.mView === "present") mGo("home");
 
     // 2. Calculator / ROI
     $$("header .tab-btn[data-view='calculator']").forEach(b => { b.style.display = calcOn ? "" : "none"; });
@@ -9281,7 +9204,7 @@ p.note, .note {
   }
 
   const M_ORDER = ["roi", "hub", "theory", "script", "home"];
-  const M_TITLES = { home: "ALFA Management Plan", present: "Presentation Deck", roi: "ROI Simulator", hub: "OneHub", theory: "Theory & Q&A", script: "Speaker Script" };
+  const M_TITLES = { home: "ALFA Management Plan", roi: "ROI Simulator", hub: "OneHub", theory: "Theory & Q&A", script: "Speaker Script" };
   
   /* =======================================================================
      MOBILE POLC STEP LOGIC & FIGURE DETAILS
@@ -9417,7 +9340,6 @@ p.note, .note {
   }
 
   const MOBILE_TO_MOD_MAP = {
-    present: "deck",
     roi: "calculator",
     hub: "onehub",
     theory: "theories",
@@ -9425,6 +9347,7 @@ p.note, .note {
   };
 
   function mGo(v, instant) {
+    if (v === "present" || v === "deck") v = "home";
     const accessCfg = getAccessConfig();
     const modKey = MOBILE_TO_MOD_MAP[v];
     if (modKey && accessCfg.modules[modKey] === false) {
@@ -9444,10 +9367,7 @@ p.note, .note {
       b.setAttribute("aria-current", active ? "page" : "false");
     });
     if (v === "script") renderScriptVault();
-    if (v === "present") {
-      renderMobileDeck();
-      updateSlideHash();
-    } else if (v === "home") {
+    if (v === "home") {
       const mc1 = $("#mHomeProbChart1");
       if (mc1 && !mc1.innerHTML.trim()) mc1.innerHTML = renderChartSVG(2, true);
       const mc2 = $("#mHomeProbChart2");
@@ -9534,83 +9454,6 @@ p.note, .note {
     updateLbTransform();
     lock(true);
     haptic(10);
-    hydrateIcons();
-  }
-
-  /* ---------- Mobile Presentation (17 Native Mobile Story Pages) ---------- */
-  function renderMobileDeck() {
-    const curSlide = ALL_SLIDES[S.slideIdx];
-    const curMember = members[curSlide.mi];
-    const padNo = String(curSlide.no).padStart(2, "0");
-
-    const badge = $("#mTopSlideBadge");
-    if (badge) {
-      badge.textContent = `${padNo} / 17`;
-      badge.hidden = (S.mView !== "present");
-    }
-    const ovCnt = $("#mOvCount");
-    if (ovCnt) ovCnt.textContent = `${padNo}/17`;
-    const topProg = $("#mTopProg");
-    if (topProg) topProg.style.width = `${Math.round((S.slideIdx + 1) / ALL_SLIDES.length * 100)}%`;
-
-    const rail = $("#mRail");
-    if (rail) {
-      rail.style.setProperty("--pp", curSlide.mi / (members.length - 1));
-      rail.innerHTML = members.map((m, i) =>
-        `<button type="button" class="m-rail-btn ${i < curSlide.mi ? "done" : ""}" role="tab" aria-selected="${i === curSlide.mi}" aria-label="Member ${m.num}" onclick="goToMember(${i})"><span>M${m.num}</span></button>`
-      ).join("");
-    }
-
-    const memberSlideIndexes = ALL_SLIDES.map((s, i) => ({ s, i })).filter(o => o.s.mi === curSlide.mi);
-    const chipsEl = $("#mSlideChips");
-    if (chipsEl) {
-      chipsEl.innerHTML = memberSlideIndexes.map(o =>
-        `<button type="button" class="m-sub-chip ${o.i === S.slideIdx ? "active" : ""}" onclick="goToSlide(${o.i})">Slide ${String(o.s.no).padStart(2,"0")}</button>`
-      ).join("");
-    }
-
-    const prevNo = String(ALL_SLIDES[(S.slideIdx - 1 + ALL_SLIDES.length) % ALL_SLIDES.length].no).padStart(2, "0");
-    const nextNo = String(ALL_SLIDES[(S.slideIdx + 1) % ALL_SLIDES.length].no).padStart(2, "0");
-    const prevBtn = $("#mPrev");
-    const nextBtn = $("#mNext");
-    if (prevBtn) {
-      prevBtn.innerHTML = `${ic("chevL", 15)}<span>${prevNo}</span>`;
-      prevBtn.setAttribute("aria-label", `Previous page ${prevNo}`);
-    }
-    if (nextBtn) {
-      nextBtn.innerHTML = `<span>${nextNo}</span>${ic("chevR", 15)}`;
-      nextBtn.setAttribute("aria-label", `Next page ${nextNo}`);
-    }
-
-    const body = $("#mDeckBody");
-    if (body) {
-      const mHeadingTag = S.mView === "present" ? "h1" : "h2";
-      body.innerHTML = `
-        <article class="m-story-card" data-arch="${curSlide.arch}">
-          <div class="m-story-meta">
-            <span class="p-badge-member">Member ${curMember.num} · ${padNo} / 17</span>
-            <span class="p-badge-kicker">${esc(curSlide.kicker)}</span>
-          </div>
-          <${mHeadingTag} class="m-story-h1">${esc(curSlide.cleanTitle || curSlide.shortTitle)}</${mHeadingTag}>
-          <p class="m-story-lead">${esc(curSlide.cleanMsg || curSlide.mainMsg)}</p>
-          <div class="m-story-stat">
-            <b>${esc(curSlide.cleanHeroNum || curSlide.heroNum)}</b>
-            <span>${esc(curSlide.cleanHeroLbl || curSlide.heroLbl)}</span>
-          </div>
-          
-          <div class="m-viz-stage">
-            ${renderSlideVisual(curSlide.no, true)}
-            <p class="m-story-summary" style="margin-top:.75rem;font-size:.9rem;line-height:1.45;color:var(--text,#fff)">${esc(curSlide.bodyCopy)}</p>
-          </div>
-          <div style="margin-top:.85rem;display:flex;gap:.5rem;flex-wrap:wrap">
-            <button type="button" class="btn btn-outline" style="width:100%;font-weight:700;display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.6rem 1rem" onclick="toggleMoreDetail()">
-              <span>📋 Extended Evidence &amp; References</span>
-              <span>▼</span>
-            </button>
-          </div>
-        </article>`;
-    }
-    if ($("#mFocus") && !$("#mFocus").hidden) renderFocus();
     hydrateIcons();
   }
 
@@ -10160,24 +10003,6 @@ p.note, .note {
     }
   });
 
-  // Touch swipe on mobile presentation deck
-  const mSwipeArea = $("#mSwipe");
-  if (mSwipeArea) {
-    let mDeckTouchStartX = 0, mDeckTouchStartY = 0;
-    mSwipeArea.addEventListener("touchstart", e => {
-      mDeckTouchStartX = e.changedTouches[0].screenX;
-      mDeckTouchStartY = e.changedTouches[0].screenY;
-    }, { passive: true });
-    mSwipeArea.addEventListener("touchend", e => {
-      const dx = e.changedTouches[0].screenX - mDeckTouchStartX;
-      const dy = e.changedTouches[0].screenY - mDeckTouchStartY;
-      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-        if (dx < 0) nextSlide();
-        else prevSlide();
-      }
-    }, { passive: true });
-  }
-
   let touchStartX = 0, touchStartY = 0;
   const lbStageEl = $("#lbStage");
   let lastTapTime = 0;
@@ -10255,7 +10080,7 @@ p.note, .note {
       return;
     }
     const k = e.key;
-    const anyModalOpen = !$("#lb").hidden || !$("#mFocus").hidden || !$("#kbd").hidden || !$("#adminLoginModal").hidden || !$("#adminPanelModal").hidden || !$("#projectSettingsModal").hidden || !$("#ovModal").hidden || ($("#mDetailSheet") && !$("#mDetailSheet").hidden) || ($("#dFigureDrawer") && !$("#dFigureDrawer").hidden);
+    const anyModalOpen = !$("#lb").hidden || !$("#mFocus").hidden || !$("#kbd").hidden || !$("#adminLoginModal").hidden || !$("#adminPanelModal").hidden || !$("#projectSettingsModal").hidden || !$("#ovModal").hidden || ($("#dFigureDrawer") && !$("#dFigureDrawer").hidden);
     if (k === "Escape") {
       if (anyModalOpen) {
         closeLb(); closeFocus(); closeKbd(); closeAdminLogin(); closeAdminPanel(); closeProjectSettingsModal(); closeMoreDetail(); closeDesktopFigureDrawer(); closeOverview();

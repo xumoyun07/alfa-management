@@ -400,9 +400,19 @@
     .onehub-tabs { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
     .hub-tab { background: rgba(15,23,42,.7); border: 1px solid var(--line); color: var(--tx2); padding: .6rem 1.1rem; border-radius: var(--r-sm); font-size: .88rem; font-weight: 700; display: inline-flex; align-items: center; gap: .6rem; }
     .hub-tab:hover { color: #fff; background: rgba(255,255,255,.06); }
-    .hub-tab.active { background: #0f766e; border-color: #5eead4; color: #fff; }
-    .hub-tab.active .kpi-pill { background: #022c22 !important; color: #6ee7b7 !important; font-weight: 800 !important; }
-    .hub-title { font-size: 1.15rem; font-weight: 800; color: #5eead4; margin-bottom: .4rem; }
+    .hub-tab.active {
+      background: linear-gradient(135deg, var(--red, #E80D13), var(--red-d, #8B0000));
+      border-color: #ff5a5f;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(232, 13, 19, 0.4);
+    }
+    .hub-tab.active .kpi-pill {
+      background: rgba(0, 0, 0, 0.35) !important;
+      color: #fbe9e7 !important;
+      font-weight: 800 !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    }
+    .hub-title { font-size: 1.15rem; font-weight: 900; color: #fff; margin-bottom: .4rem; }
     .hub-desc { font-size: .92rem; color: var(--tx2); margin-bottom: 1.2rem; }
     .badge-status { padding: .2rem .6rem; border-radius: 999px; font-size: .76rem; font-weight: 700; display: inline-block; }
     .badge-ok { background: rgba(16,185,129,.18); color: #6ee7b7; border: 1px solid #10b981; }
@@ -1686,15 +1696,26 @@
     }
 
     /* =========================================================================
-       ALFA ONEHUB MOBILE CLOUD COCKPIT — HERO & NAVIGATION (NATIVE UI/UX)
+       ALFA ONEHUB MOBILE CLOUD COCKPIT — HERO & NAVIGATION (70% RED THEME)
        ========================================================================= */
     .m-hub-cockpit-header {
-      background: linear-gradient(155deg, rgba(22, 32, 50, 0.9) 0%, rgba(13, 20, 36, 0.96) 100%);
-      border: 1px solid rgba(45, 212, 191, 0.22);
+      background: linear-gradient(155deg, rgba(35, 18, 25, 0.92) 0%, rgba(13, 20, 36, 0.96) 100%);
+      border: 1px solid rgba(232, 13, 19, 0.32);
       border-radius: 16px;
       padding: 0.65rem 0.8rem;
       margin-bottom: 0.45rem;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    .m-hub-cockpit-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #e80d13, #ff5a5f, #b91c1c);
     }
     .m-hub-top-row {
       display: flex;
@@ -1716,17 +1737,17 @@
       letter-spacing: 0.05em;
       padding: 0.15rem 0.42rem;
       border-radius: 6px;
-      background: rgba(232, 13, 19, 0.15);
-      border: 1px solid rgba(255, 90, 95, 0.3);
+      background: rgba(232, 13, 19, 0.2);
+      border: 1px solid rgba(255, 90, 95, 0.4);
       color: #ff8a8e;
       white-space: nowrap;
     }
     .m-hub-subchip {
       font-size: 0.62rem;
       font-weight: 700;
-      color: #5eead4;
-      background: rgba(20, 184, 166, 0.14);
-      border: 1px solid rgba(45, 212, 191, 0.28);
+      color: var(--alfa-pink, #fbe9e7);
+      background: rgba(232, 13, 19, 0.12);
+      border: 1px solid rgba(232, 13, 19, 0.28);
       border-radius: 6px;
       padding: 0.15rem 0.42rem;
       white-space: nowrap;
@@ -1737,9 +1758,9 @@
       gap: 0.32rem;
       font-size: 0.64rem;
       font-weight: 800;
-      color: #2dd4bf;
-      background: rgba(20, 184, 166, 0.12);
-      border: 1px solid rgba(45, 212, 191, 0.35);
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.28);
       border-radius: 999px;
       padding: 0.18rem 0.52rem;
       white-space: nowrap;
@@ -1749,8 +1770,8 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #2dd4bf;
-      box-shadow: 0 0 8px #2dd4bf;
+      background: #34d399;
+      box-shadow: 0 0 8px #34d399;
       animation: hubPulse 2s infinite ease-in-out;
     }
     @keyframes hubPulse {
@@ -1842,19 +1863,19 @@
       letter-spacing: 0 !important;
     }
     .m-hub-seg button[aria-selected="true"] {
-      background: linear-gradient(135deg, rgba(20, 184, 166, 0.95), rgba(15, 118, 110, 0.98)) !important;
+      background: linear-gradient(135deg, #e80d13 0%, #b91c1c 100%) !important;
       color: #fff !important;
-      box-shadow: 0 2px 10px rgba(20, 184, 166, 0.4) !important;
+      box-shadow: 0 3px 12px rgba(232, 13, 19, 0.45) !important;
     }
     .m-hub-seg button[aria-selected="true"] .m-seg-badge {
-      background: rgba(255, 255, 255, 0.25) !important;
+      background: rgba(255, 255, 255, 0.28) !important;
       color: #fff !important;
     }
 
     /* Executive Tab Banner */
     .m-hub-banner {
-      background: linear-gradient(135deg, rgba(20, 184, 166, 0.12) 0%, rgba(15, 23, 42, 0.88) 100%);
-      border: 1px solid rgba(45, 212, 191, 0.22);
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.12) 0%, rgba(15, 23, 42, 0.88) 100%);
+      border: 1px solid rgba(232, 13, 19, 0.28);
       border-radius: 14px;
       padding: .65rem .75rem;
       margin-bottom: .6rem;
@@ -1874,8 +1895,9 @@
       letter-spacing: .04em;
       padding: .18rem .45rem;
       border-radius: 6px;
-      background: rgba(45, 212, 191, 0.18);
-      color: #5eead4;
+      background: rgba(232, 13, 19, 0.18);
+      border: 1px solid rgba(255, 90, 95, 0.35);
+      color: var(--alfa-pink, #fbe9e7);
       display: inline-flex;
       align-items: center;
       gap: .25rem;
@@ -2161,7 +2183,8 @@
     .m-prog i {
       display: block;
       height: 100%;
-      background: linear-gradient(90deg, #14b8a6, #34d399);
+      background: linear-gradient(90deg, #e80d13, #ff5a5f);
+      box-shadow: 0 0 8px rgba(232, 13, 19, 0.35);
       border-radius: 999px;
       transition: width .3s ease;
     }
@@ -11302,8 +11325,6 @@ p.note, .note {
               <div class="spk-head">
                 <span class="spk-badge">Member ${mData.num} · ${esc(mData.slidesRange)}</span>
                 <div class="spk-ctl">
-                  <span class="timer-badge" data-timer>${fmt(S.timer)}</span>
-                  
                   <button type="button" class="spk-btn" onclick="fontStep(-2)" aria-label="Decrease text size">A−</button>
                   <button type="button" class="spk-btn" onclick="fontStep(2)" aria-label="Increase text size">A+</button>
                 </div>
@@ -11420,30 +11441,6 @@ p.note, .note {
 
         <!-- Teleprompter Section (Shown in 'speech' and 'all') -->
         ${spkTab === "speech" || spkTab === "all" ? `
-          <div class="m-spk-stopwatch" role="region" aria-label="Presentation Stopwatch">
-            <div class="m-stopwatch-main">
-              <div class="m-stopwatch-time-group">
-                <span class="m-stopwatch-icon">${ic("clock", 15)}</span>
-                <span class="m-stopwatch-digits" data-m-timer-display>${fmt(mobileTimerSec)}</span>
-                <span class="m-stopwatch-target">/ 02:00</span>
-                <span class="m-timer-status-badge ${mobileTimerSec === 0 ? 'ready' : mobileTimerSec < 90 ? 'pacing' : mobileTimerSec < 120 ? 'warn' : 'over'}" data-m-timer-badge>
-                  ${mobileTimerSec === 0 ? 'Ready' : mobileTimerSec < 90 ? 'On Pace' : mobileTimerSec < 120 ? 'Wrap Up' : '+' + fmt(mobileTimerSec - 120) + ' Over'}
-                </span>
-              </div>
-              <div class="m-stopwatch-actions">
-                <button type="button" class="m-timer-toggle-btn ${mobileTimerRunning ? 'running' : ''}" data-m-timer-toggle onclick="toggleMobileTimer()" aria-label="Start or pause timer">
-                  ${mobileTimerRunning ? `${ic("pause", 13)}<span>Pause</span>` : `${ic("play", 13)}<span>Start</span>`}
-                </button>
-                <button type="button" class="m-timer-reset-btn" onclick="resetMobileTimer()" aria-label="Reset timer" title="Reset Timer">
-                  ${ic("refresh", 13)}
-                </button>
-              </div>
-            </div>
-            <div class="m-stopwatch-track" aria-hidden="true">
-              <div class="m-stopwatch-bar" data-m-timer-bar style="width:${Math.min(100, Math.round((mobileTimerSec/120)*100))}%;background-color:${mobileTimerSec >= 120 ? 'var(--alfa-red, #e80d13)' : mobileTimerSec >= 90 ? '#fbbf24' : '#34d399'}"></div>
-            </div>
-          </div>
-
           <div class="m-prompter-strip">
             <div class="m-font-stepper" role="group" aria-label="Text size control">
               <span class="m-font-lbl">Size</span>
@@ -11575,10 +11572,7 @@ p.note, .note {
           <b>Member ${mData.num} · ${esc(meta.sec)}</b>
           <span>${esc(meta.kicker)}</span>
         </div>
-        <div class="m-focus-timer-pill">
-          <span class="m-focus-timer-ic">${ic("clock", 14)}</span>
-          <span data-m-timer-display>${fmt(mobileTimerSec)}</span>
-        </div>
+        <div style="width:36px"></div>
       </div>
       <div class="m-focus-body">
         <p data-script-lg style="font-size:${S.font + 6}px">“${esc(mData.speech)}”</p>
@@ -11586,9 +11580,6 @@ p.note, .note {
       <div class="m-focus-bar">
         <button type="button" class="m-focus-nav-btn" onclick="goToMember(${(curSlide.mi - 1 + 7) % 7})" aria-label="Previous speaker">
           ${ic("chevL", 20)}<span>M${((curSlide.mi + 6) % 7) + 1}</span>
-        </button>
-        <button type="button" class="m-focus-play-btn ${mobileTimerRunning ? 'running' : ''}" data-m-timer-toggle onclick="toggleMobileTimer()" aria-label="Toggle timer">
-          ${mobileTimerRunning ? ic("pause", 20) : ic("play", 20)}
         </button>
         <div class="m-focus-font-group">
           <button type="button" class="m-ibtn" onclick="fontStep(-2)" aria-label="Decrease font">A−</button>
@@ -12174,14 +12165,14 @@ p.note, .note {
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
             <span class="m-hub-banner-pill">⚡ Direct Admissions</span>
-            <span class="m-tag teal" style="font-size:.65rem">$0 Agent Comm</span>
+            <span class="m-tag amber" style="font-size:.65rem">$0 Agent Comm</span>
           </div>
           <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
           <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
         </div>
         <div class="m-stats">
           <div><b class="emerald">${direct} / ${CRM.length}</b><span>Direct ($0 Fee)</span></div>
-          <div><b class="teal">${avg} h</b><span>Avg Speed (&lt;24h)</span></div>
+          <div><b style="color:#ff8a8e">${avg} h</b><span>Avg Speed (&lt;24h)</span></div>
           <div><b class="gold">$${commSaved}</b><span>Comm Saved</span></div>
         </div>
         ${CRM.map(x => {
@@ -12222,8 +12213,8 @@ p.note, .note {
           <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
         </div>
         <div class="m-stats">
-          <div><b class="emerald">90%</b><span>Paper Saved</span></div>
-          <div><b class="teal">&lt; 24h</b><span>Digital SOP SLA</span></div>
+          <div><b style="color:#ff8a8e">90%</b><span>Paper Saved</span></div>
+          <div><b class="emerald">&lt; 24h</b><span>Digital SOP SLA</span></div>
           <div><b class="gold">Instant</b><span>Flywire / FPX</span></div>
         </div>
         ${ERP.map(x => `
@@ -12253,13 +12244,13 @@ p.note, .note {
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
             <span class="m-hub-banner-pill">👥 120-Staff Governance</span>
-            <span class="m-tag teal" style="font-size:.65rem">POLC Organizing</span>
+            <span class="m-tag red" style="font-size:.65rem">POLC Organizing</span>
           </div>
           <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
           <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
         </div>
         <div class="m-stats">
-          <div><b class="teal">120</b><span>Staff Members</span></div>
+          <div><b style="color:#ff8a8e">120</b><span>Staff Members</span></div>
           <div><b class="emerald">4 – 6</b><span>Optimized Span</span></div>
           <div><b class="gold">+$50</b><span>Direct Bonus</span></div>
         </div>
@@ -12272,11 +12263,11 @@ p.note, .note {
                 </div>
                 <div class="m-div-n">${x.n} <small>Staff</small></div>
               </div>
-              <span class="m-tag teal">${esc(x.inc)}</span>
+              <span class="m-tag amber">${esc(x.inc)}</span>
             </div>
             <div class="m-kv">
               <span>OneHub ERP Competency</span>
-              <b style="color:#5eead4">${esc(x.compTxt)}</b>
+              <b style="color:var(--alfa-pink, #fbe9e7)">${esc(x.compTxt)}</b>
             </div>
             <div class="m-prog" role="img" aria-label="${x.comp}% certified">
               <i style="width:${x.comp}%"></i>

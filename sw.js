@@ -3,7 +3,7 @@
    FIB 2074 Introduction to Management · Group Project Portal
    ======================================================================= */
 
-const CACHE_NAME = 'alfa-portal-cache-v4.5';
+const CACHE_NAME = 'alfa-portal-cache-v4.6';
 const OFFLINE_URL = './index.html';
 
 const CORE_ASSETS = [
@@ -61,7 +61,7 @@ self.addEventListener('fetch', (event) => {
   if (!url.protocol.startsWith('http')) return;
 
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
+    caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
       if (cachedResponse) {
         // Return cached asset immediately; revalidate in background if online
         fetch(event.request)
@@ -92,7 +92,9 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           // If network failed and requesting a page navigation, return the offline app
           if (event.request.mode === 'navigate') {
-            return caches.match(OFFLINE_URL);
+            return caches.match(OFFLINE_URL, { ignoreSearch: true }).then((offlineRes) => {
+              return offlineRes || caches.match('./', { ignoreSearch: true });
+            });
           }
         });
     })

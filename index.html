@@ -325,14 +325,31 @@
 
     /* Calculator (ROI) */
     .calc-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 1.8rem; }
-    .panel { background: rgba(30,41,59,.75); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.8rem; box-shadow: var(--shadow); }
-    .panel-h { font-size: 1.3rem; font-weight: 800; margin-bottom: .4rem; }
+    .panel {
+      background: rgba(30,41,59,.75);
+      border: 1px solid rgba(232, 13, 19, 0.22);
+      border-radius: var(--r-lg);
+      padding: 1.8rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red, #E80D13), #ff5a5f, var(--red-d, #8B0000));
+    }
+    .panel-h { font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: .4rem; }
     .panel-lead { font-size: .92rem; color: var(--text-muted); margin-bottom: 1.2rem; }
     .presets { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.4rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-    .presets span { font-size: .82rem; font-weight: 700; color: var(--tx3); text-transform: uppercase; letter-spacing: .5px; }
+    .presets span { font-size: .82rem; font-weight: 700; color: var(--pink); text-transform: uppercase; letter-spacing: .5px; }
     .preset-chip { background: rgba(255,255,255,.07); border: 1px solid var(--line); color: var(--tx2); padding: .35rem .8rem; border-radius: 999px; font-size: .8rem; font-weight: 600; }
-    .preset-chip:hover { color: #fff; background: rgba(255,255,255,.14); }
-    .preset-chip[aria-pressed="true"] { background: var(--pink); color: var(--red-d); border-color: var(--pink); font-weight: 800; }
+    .preset-chip:hover { color: #fff; background: rgba(232,13,19,.2); }
+    .preset-chip[aria-pressed="true"] { background: linear-gradient(135deg, var(--red), var(--red-d)); color: #fff; border-color: #ff5a5f; box-shadow: 0 4px 12px rgba(232,13,19,.4); font-weight: 800; }
 
     .slider-group { margin-bottom: 1.3rem; }
     .slider-h { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .4rem; font-size: .88rem; }
@@ -363,23 +380,41 @@
       box-shadow: 0 2px 8px rgba(0,0,0,.55); cursor: grab;
     }
 
-    .budget-box { background: rgba(15, 23, 42, 0.65); border: 1px solid var(--line); border-radius: var(--r-md); padding: 1.1rem; margin-top: 1.4rem; }
-    .budget-box h4 { color: var(--pink); font-size: .95rem; margin-bottom: .6rem; }
+    .budget-box {
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.06) 0%, rgba(15, 23, 42, 0.85) 100%);
+      border: 1px solid rgba(255, 90, 95, 0.25);
+      border-left: 4px solid var(--red, #E80D13);
+      border-radius: var(--r-md);
+      padding: 1.1rem;
+      margin-top: 1.4rem;
+    }
+    .budget-box h4, .budget-box h3 { color: var(--pink) !important; font-size: .95rem; margin-bottom: .6rem; }
     .budget-box ul { list-style: none; }
     .budget-box li { display: flex; justify-content: space-between; gap: 1rem; font-size: .84rem; padding: .3rem 0; border-bottom: 1px solid var(--line); color: #e2e8f0; }
-    .budget-box li.total { border-bottom: none; font-weight: 800; color: #fcd34d; font-size: .9rem; padding-top: .5rem; }
+    .budget-box li.total { border-bottom: none; font-weight: 800; color: #fff; text-shadow: 0 0 12px rgba(232, 13, 19, 0.4); font-size: .95rem; padding-top: .5rem; }
     .budget-box .note { font-size: .74rem; color: var(--tx3); margin-top: .6rem; line-height: 1.4; }
 
     .hl-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.4rem; }
-    .hl-card { background: rgba(15,23,42,.8); border: 1px solid var(--line); border-radius: var(--r-md); padding: 1rem 1.2rem; }
-    .hl-t { font-size: .76rem; text-transform: uppercase; letter-spacing: .6px; color: var(--tx3); font-weight: 700; }
-    .hl-v { font-size: 1.9rem; font-weight: 900; color: #fcd34d; margin: .2rem 0; letter-spacing: -.5px; }
+    .hl-card {
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%);
+      border: 1px solid rgba(255, 90, 95, 0.28);
+      border-left: 4px solid var(--red, #E80D13);
+      border-radius: var(--r-md);
+      padding: 1rem 1.2rem;
+    }
+    .hl-t { font-size: .76rem; text-transform: uppercase; letter-spacing: .6px; color: var(--pink); font-weight: 700; }
+    .hl-v { font-size: 1.9rem; font-weight: 900; color: #fff; text-shadow: 0 0 14px rgba(232, 13, 19, 0.35); margin: .2rem 0; letter-spacing: -.5px; }
     .hl-s { font-size: .82rem; color: var(--tx2); }
 
     .result-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; margin-bottom: 1.2rem; }
-    .tile { background: rgba(251, 233, 231, 0.07); border: 1px solid rgba(251, 233, 231, 0.2); border-radius: var(--r-sm); padding: .75rem; }
+    .tile {
+      background: linear-gradient(135deg, rgba(232, 13, 19, 0.08) 0%, rgba(30, 41, 59, 0.75) 100%);
+      border: 1px solid rgba(255, 90, 95, 0.28);
+      border-radius: var(--r-sm);
+      padding: .75rem;
+    }
     .tile span { display: block; font-size: .72rem; color: var(--pink); text-transform: uppercase; font-weight: 700; }
-    .tile b { font-size: 1.2rem; color: #fcd34d; }
+    .tile b { font-size: 1.2rem; color: #fff; }
 
     .bar-row { margin-bottom: 1.2rem; }
     .bar-label { display: flex; justify-content: space-between; font-size: .86rem; margin-bottom: .35rem; }
@@ -762,15 +797,26 @@
     .m-hint { font-size: .68rem; color: var(--text-muted); text-align: center; margin-top: .45rem; }
 
     /* =========================================================================
-       MOBILE ROI SIMULATOR — EXECUTIVE FINANCIAL COCKPIT (NATIVE UI/UX)
+       MOBILE ROI SIMULATOR — EXECUTIVE FINANCIAL COCKPIT (70% RED THEME)
        ========================================================================= */
     .m-save {
-      background: linear-gradient(160deg, rgba(139, 0, 0, 0.35) 0%, rgba(15, 23, 42, 0.98) 100%);
-      border: 1px solid rgba(255, 90, 95, 0.3);
+      background: linear-gradient(160deg, rgba(139, 0, 0, 0.45) 0%, rgba(18, 15, 26, 0.98) 100%);
+      border: 1px solid rgba(232, 13, 19, 0.35);
       border-radius: 16px;
       padding: 0.75rem 0.85rem;
       margin-bottom: 0.6rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .m-save::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #e80d13, #ff5a5f, #b91c1c);
     }
     .m-save-hero-row {
       display: flex;
@@ -795,11 +841,11 @@
     .m-save-v {
       font-size: 1.65rem;
       font-weight: 900;
-      color: #fcd34d;
+      color: #ffffff;
       line-height: 1.1;
       margin: 0.1rem 0 0;
       font-variant-numeric: tabular-nums;
-      text-shadow: 0 2px 10px rgba(252, 211, 77, 0.25);
+      text-shadow: 0 2px 14px rgba(232, 13, 19, 0.55);
     }
     .m-retained-capsule {
       background: rgba(16, 185, 129, 0.12);
@@ -1015,12 +1061,13 @@
       font-family: var(--font-mono, monospace), monospace;
       font-size: 0.8rem;
       font-weight: 800;
-      color: #fcd34d;
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #ffffff;
+      background: rgba(232, 13, 19, 0.18);
+      border: 1px solid rgba(255, 90, 95, 0.38);
       padding: 0.1rem 0.45rem;
       border-radius: 6px;
       line-height: 1.2;
+      text-shadow: 0 1px 4px rgba(232, 13, 19, 0.35);
     }
     .m-range-wrap {
       padding: 0.2rem 0;
@@ -1069,11 +1116,11 @@
     }
 
     /* =========================================================================
-       ALFA $42,000 TRANSFORMATION BUDGET — DEDICATED MOBILE COCKPIT
+       ALFA $42,000 TRANSFORMATION BUDGET — DEDICATED MOBILE COCKPIT (70% RED THEME)
        ========================================================================= */
     .m-budget-card {
-      background: linear-gradient(160deg, rgba(17, 24, 39, 0.95) 0%, rgba(10, 15, 28, 0.98) 100%);
-      border: 1px solid rgba(245, 158, 11, 0.22);
+      background: linear-gradient(160deg, rgba(28, 16, 24, 0.95) 0%, rgba(10, 15, 28, 0.98) 100%);
+      border: 1px solid rgba(232, 13, 19, 0.3);
       border-radius: 16px;
       padding: 0.85rem 0.85rem 0.75rem 0.85rem;
       margin-top: 0.75rem;
@@ -1088,7 +1135,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, #f59e0b, #e80d13, #14b8a6, #3b82f6);
+      background: linear-gradient(90deg, #e80d13, #ff5a5f, #b91c1c);
     }
     .m-budget-head-top {
       display: flex;
@@ -1104,9 +1151,9 @@
       letter-spacing: 0.05em;
       padding: 0.15rem 0.42rem;
       border-radius: 6px;
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.32);
-      color: #fbbf24;
+      background: rgba(232, 13, 19, 0.2);
+      border: 1px solid rgba(255, 90, 95, 0.4);
+      color: #ff8a8e;
       white-space: nowrap;
     }
     .m-budget-reconciled-pill {
@@ -1159,8 +1206,8 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
     .m-budget-capsule.fixed {
-      border-color: rgba(59, 130, 246, 0.28);
-      background: rgba(59, 130, 246, 0.08);
+      border-color: rgba(232, 13, 19, 0.32);
+      background: rgba(232, 13, 19, 0.1);
     }
     .m-budget-capsule.bonus {
       border-color: rgba(245, 158, 11, 0.28);
@@ -1184,7 +1231,7 @@
       line-height: 1.2;
       margin-top: 0.1rem;
     }
-    .m-budget-capsule.fixed .m-cap-val { color: #60a5fa; }
+    .m-budget-capsule.fixed .m-cap-val { color: #ff8a8e; }
     .m-budget-capsule.bonus .m-cap-val { color: #fbbf24; }
     .m-cap-sub {
       font-size: 0.58rem;
@@ -1278,9 +1325,9 @@
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .m-b-tab-btn.active {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.98));
-      color: #fff;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+      background: linear-gradient(135deg, #e80d13 0%, #b91c1c 100%) !important;
+      color: #fff !important;
+      box-shadow: 0 2px 8px rgba(232, 13, 19, 0.4) !important;
     }
 
     /* Single-column, bulletproof item list */
@@ -1359,7 +1406,7 @@
       font-family: var(--font-mono, monospace), monospace;
       font-size: 0.78rem;
       font-weight: 900;
-      color: #fcd34d;
+      color: #ffffff;
       line-height: 1;
     }
     .m-b-row-share {
@@ -1464,8 +1511,8 @@
       font-weight: 600;
     }
     .sx-hero {
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(245, 158, 11, 0.25);
+      background: radial-gradient(circle at 50% 0, rgba(232, 13, 19, 0.35), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(255, 90, 95, 0.35);
       border-radius: 12px;
       padding: 0.6rem 0.75rem;
       text-align: center;
@@ -1483,7 +1530,8 @@
       display: block;
       font-size: 1.65rem;
       font-weight: 900;
-      color: #fcd34d;
+      color: #ffffff;
+      text-shadow: 0 2px 14px rgba(232, 13, 19, 0.55);
       line-height: 1.15;
       margin: 0.1rem 0;
     }
@@ -1543,11 +1591,11 @@
       border-top: 1px dashed rgba(255, 255, 255, 0.1);
     }
     .sx-card dl div.net dt {
-      color: #fbbf24;
+      color: var(--alfa-pink, #ff8a8e);
       font-weight: 800;
     }
     .sx-card dl div.net dd {
-      color: #fcd34d;
+      color: #34d399;
       font-size: 0.82rem;
       font-weight: 900;
     }
@@ -5938,7 +5986,7 @@ p.note, .note {
 .sx-seg .sx-btn[aria-pressed="true"]{border-color:transparent}
 .sx-hero{margin:.7rem 0;text-align:center;padding:.85rem;border-radius:14px;background:radial-gradient(circle at 50% 0,rgba(232,13,19,.35),rgba(15,23,42,.4));border:1px solid rgba(255,90,95,.25)}
 .sx-hero small{display:block;color:#cbd5e1;font-size:.72rem}
-.sx-hero b{display:block;font-size:2rem;font-weight:900;color:#fcd34d;font-variant-numeric:tabular-nums;line-height:1.15}
+.sx-hero b{display:block;font-size:2rem;font-weight:900;color:#ffffff;text-shadow:0 2px 14px rgba(232,13,19,.55);font-variant-numeric:tabular-nums;line-height:1.15}
 .sx-hero span{font-size:.74rem;color:#34d399;font-weight:700}
 .sx-cards{display:grid;gap:.5rem}
 .sx-m .sx-card{display:none;border:1px solid rgba(255,90,95,.45);border-radius:12px;padding:.75rem .85rem;background:rgba(232,13,19,.14)}

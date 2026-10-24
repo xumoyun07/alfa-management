@@ -1058,93 +1058,355 @@
       font-weight: 600;
     }
 
-    /* Transformation Budget Allocation Card */
+    /* =========================================================================
+       ALFA $42,000 TRANSFORMATION BUDGET — DEDICATED MOBILE COCKPIT
+       ========================================================================= */
     .m-budget-card {
-      background: rgba(255, 255, 255, 0.035);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 0.65rem 0.75rem;
-      margin-top: 0.55rem;
+      background: linear-gradient(160deg, rgba(17, 24, 39, 0.95) 0%, rgba(10, 15, 28, 0.98) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.22);
+      border-radius: 16px;
+      padding: 0.85rem 0.85rem 0.75rem 0.85rem;
+      margin-top: 0.75rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
     }
-    .m-badge-reconciled {
-      font-size: 0.62rem;
-      font-weight: 800;
-      color: #fbbf24;
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      padding: 0.1rem 0.4rem;
-      border-radius: 999px;
-      white-space: nowrap;
+    .m-budget-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #e80d13, #14b8a6, #3b82f6);
     }
-    .m-budget-lead {
-      font-size: 0.72rem;
-      color: #cbd5e1;
-      margin: 0.25rem 0 0.5rem 0;
-      line-height: 1.35;
-    }
-    .m-budget-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.32rem;
-      margin-bottom: 0.45rem;
-    }
-    .m-budget-item {
+    .m-budget-head-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+    .m-budget-kpi-chip {
+      font-size: 0.62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.42rem;
+      border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.32);
+      color: #fbbf24;
+      white-space: nowrap;
+    }
+    .m-budget-reconciled-pill {
+      display: inline-flex;
+      align-items: center;
       gap: 0.3rem;
-      background: rgba(15, 23, 42, 0.6);
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 999px;
+      padding: 0.12rem 0.45rem;
+      white-space: nowrap;
+    }
+    .m-budget-title-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.4rem;
+      margin-bottom: 0.45rem;
+    }
+    .m-budget-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .m-budget-lead-sub {
+      font-size: 0.72rem;
+      color: #cbd5e1;
+      margin: 0 0 0.55rem 0;
+      line-height: 1.35;
+    }
+    .m-budget-split-capsules {
+      display: flex;
+      gap: 0.35rem;
+      margin-bottom: 0.55rem;
+    }
+    .m-budget-capsule {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.4rem 0.5rem;
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .m-budget-capsule.fixed {
+      border-color: rgba(59, 130, 246, 0.28);
+      background: rgba(59, 130, 246, 0.08);
+    }
+    .m-budget-capsule.bonus {
+      border-color: rgba(245, 158, 11, 0.28);
+      background: rgba(245, 158, 11, 0.08);
+    }
+    .m-cap-lbl {
+      font-size: 0.58rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .m-cap-val {
+      font-size: 0.88rem;
+      font-weight: 900;
+      font-family: var(--font-mono, monospace), monospace;
+      color: #fff;
+      line-height: 1.2;
+      margin-top: 0.1rem;
+    }
+    .m-budget-capsule.fixed .m-cap-val { color: #60a5fa; }
+    .m-budget-capsule.bonus .m-cap-val { color: #fbbf24; }
+    .m-cap-sub {
+      font-size: 0.58rem;
+      color: #cbd5e1;
+      margin-top: 0.1rem;
+      white-space: nowrap;
+    }
+
+    /* Proportional Allocation Bar */
+    .m-alloc-bar-wrap {
+      margin-bottom: 0.65rem;
+      background: rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 8px;
-      padding: 0.32rem 0.45rem;
-      min-height: 34px;
+      border-radius: 10px;
+      padding: 0.45rem 0.55rem;
     }
-    .m-budget-item:last-child {
-      grid-column: span 2;
-    }
-    .m-b-ic {
-      font-size: 0.85rem;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-    .m-b-text {
-      flex: 1 1 auto;
-      min-width: 0;
-    }
-    .m-b-name {
-      display: block;
-      font-size: 0.68rem;
+    .m-alloc-bar-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.62rem;
       font-weight: 700;
-      color: #f1f5f9;
+      color: #94a3b8;
+      margin-bottom: 0.35rem;
+    }
+    .m-alloc-bar-track {
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      overflow: hidden;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+    }
+    .m-alloc-seg {
+      height: 100%;
+      position: relative;
+    }
+    .m-alloc-seg.ads { background: #f43f5e; width: 38.1%; }        /* $16K = 38.1% */
+    .m-alloc-seg.bonus { background: #fbbf24; width: 31.0%; }      /* $13K = 31.0% */
+    .m-alloc-seg.cloud { background: #14b8a6; width: 22.6%; }      /* $9.5K = 22.6% */
+    .m-alloc-seg.gov { background: #818cf8; width: 8.3%; }         /* $3.5K = 8.3% */
+
+    .m-alloc-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.6rem;
+      margin-top: 0.35rem;
+    }
+    .m-alloc-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.58rem;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+    .m-alloc-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    .m-alloc-dot.ads { background: #f43f5e; }
+    .m-alloc-dot.bonus { background: #fbbf24; }
+    .m-alloc-dot.cloud { background: #14b8a6; }
+    .m-alloc-dot.gov { background: #818cf8; }
+
+    /* View Switcher Tabs (4 Pillars vs 7 Items) */
+    .m-budget-view-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 3px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 0.6rem;
+    }
+    .m-b-tab-btn {
+      background: transparent;
+      border: none;
+      padding: 0.35rem 0.2rem;
+      border-radius: 7px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: #94a3b8;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .m-b-tab-btn.active {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.98));
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+    }
+
+    /* Single-column, bulletproof item list */
+    .m-budget-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.65rem;
+    }
+    .m-budget-row-card {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 0.45rem 0.55rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      position: relative;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .m-budget-row-card:active {
+      background: rgba(30, 41, 59, 0.85);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    .m-b-row-left {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+    .m-b-row-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .m-b-row-meta {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+    .m-b-row-title {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #f8fafc;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      display: block;
+      line-height: 1.25;
     }
-    .m-b-text small {
-      display: none;
+    .m-b-row-desc {
+      font-size: 0.62rem;
+      color: #94a3b8;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      margin-top: 0.08rem;
     }
-    .m-b-val {
-      font-family: var(--font-mono, monospace), monospace;
-      font-size: 0.74rem;
-      font-weight: 800;
-      color: #fcd34d;
-      flex-shrink: 0;
-    }
-    .m-budget-foot {
+    .m-b-row-right {
       display: flex;
       flex-direction: column;
-      gap: 0.15rem;
-      padding-top: 0.45rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.72rem;
-      color: #cbd5e1;
+      align-items: flex-end;
+      flex-shrink: 0;
+      gap: 0.12rem;
     }
-    .m-budget-foot b {
-      color: #4ade80;
+    .m-b-row-amount {
+      font-family: var(--font-mono, monospace), monospace;
+      font-size: 0.78rem;
+      font-weight: 900;
+      color: #fcd34d;
+      line-height: 1;
     }
-    .m-budget-foot-sub {
-      font-size: 0.65rem;
+    .m-b-row-share {
+      font-size: 0.58rem;
+      font-weight: 700;
       color: #94a3b8;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.05rem 0.25rem;
+      border-radius: 4px;
+      line-height: 1.1;
+    }
+
+    /* Bottom Summary Rail */
+    .m-budget-rail {
+      background: rgba(0, 0, 0, 0.35);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0 0 14px 14px;
+      margin: 0 -0.85rem -0.75rem -0.85rem;
+      padding: 0.6rem 0.85rem 0.65rem 0.85rem;
+    }
+    .m-budget-rail-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.35rem;
+      text-align: center;
+      margin-bottom: 0.45rem;
+    }
+    .m-b-rail-kpi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .m-b-rail-lbl {
+      font-size: 0.55rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #94a3b8;
+    }
+    .m-b-rail-val {
+      font-family: var(--font-mono, monospace), monospace;
+      font-size: 0.76rem;
+      font-weight: 900;
+      margin-top: 0.08rem;
+      color: #fff;
+    }
+    .m-b-rail-sub {
+      font-size: 0.62rem;
+      color: #cbd5e1;
+      text-align: center;
+      line-height: 1.35;
+      border-top: 1px dashed rgba(255, 255, 255, 0.08);
+      padding-top: 0.4rem;
+      margin: 0;
+    }
+    .m-b-rail-sub strong {
+      color: #4ade80;
     }
 
     /* Master-Agent Sensitivity Lab */
@@ -7395,51 +7657,239 @@ p.note, .note {
           <div class="m-card" id="mSliders" style="background:transparent;border:none;padding:0;box-shadow:none"></div>
 
           <div class="m-budget-card">
-            <div class="m-sec-h" style="margin-bottom:.25rem">
-              <h3>$42,000 Transformation Budget</h3>
-              <span class="m-badge-reconciled">$29K Fixed + $13K Bonuses</span>
+            <!-- Cockpit Top Header -->
+            <div class="m-budget-head-top">
+              <span class="m-budget-kpi-chip">POLC Investment</span>
+              <span class="m-budget-reconciled-pill">✓ Reconciled $42,000</span>
             </div>
-            <p class="m-budget-lead">Itemized strategic investment delivering $97,500 gross commission savings:</p>
-            <div class="m-budget-grid">
-              <div class="m-budget-item">
-                <span class="m-b-ic">📢</span>
-                <div class="m-b-text"><span class="m-b-name">Meta &amp; TikTok Ads</span><small>Targeted digital acquisition</small></div>
-                <b class="m-b-val">$12,000</b>
+
+            <!-- Title & Subtitle -->
+            <div class="m-budget-title-row">
+              <h3 class="m-budget-title">$42,000 Transformation Budget</h3>
+            </div>
+            <p class="m-budget-lead-sub">Itemized strategic investment delivering $97,500 gross commission savings:</p>
+
+            <!-- Dual Macro-Capsules: Fixed vs Bonuses -->
+            <div class="m-budget-split-capsules">
+              <div class="m-budget-capsule fixed">
+                <span class="m-cap-lbl">🏛️ Fixed Foundation</span>
+                <span class="m-cap-val">$29,000</span>
+                <span class="m-cap-sub">Infra, Media &amp; Training (69%)</span>
               </div>
-              <div class="m-budget-item">
-                <span class="m-b-ic">👥</span>
-                <div class="m-b-text"><span class="m-b-name">Staff Direct Bonuses</span><small>260 students × $50 bonus</small></div>
-                <b class="m-b-val">$13,000</b>
-              </div>
-              <div class="m-budget-item">
-                <span class="m-b-ic">☁️</span>
-                <div class="m-b-text"><span class="m-b-name">OneHub Cloud Upgrade</span><small>Paperless CRM/ERP infra</small></div>
-                <b class="m-b-val">$9,500</b>
-              </div>
-              <div class="m-budget-item">
-                <span class="m-b-ic">🎬</span>
-                <div class="m-b-text"><span class="m-b-name">Studio &amp; 8 Ambassadors</span><small>Organic student creators</small></div>
-                <b class="m-b-val">$4,000</b>
-              </div>
-              <div class="m-budget-item">
-                <span class="m-b-ic">🎓</span>
-                <div class="m-b-text"><span class="m-b-name">Staff Training</span><small>Direct recruitment upskilling</small></div>
-                <b class="m-b-val">$2,000</b>
-              </div>
-              <div class="m-budget-item">
-                <span class="m-b-ic">📋</span>
-                <div class="m-b-text"><span class="m-b-name">Contract Legal Audit</span><small>Master agency restructuring</small></div>
-                <b class="m-b-val">$1,500</b>
-              </div>
-              <div class="m-budget-item">
-                <span class="m-b-ic">🏆</span>
-                <div class="m-b-text"><span class="m-b-name">Performance Awards</span><small>Quarterly team recognition</small></div>
-                <b class="m-b-val">$400</b>
+              <div class="m-budget-capsule bonus">
+                <span class="m-cap-lbl">🎯 Direct Bonuses</span>
+                <span class="m-cap-val">$13,000</span>
+                <span class="m-cap-sub">260 students × $50 (31%)</span>
               </div>
             </div>
-            <div class="m-budget-foot">
-              <span>Total Strategic Investment: <b>$42,000</b></span>
-              <span class="m-budget-foot-sub">Remaining Commissions: $52,500 · Retains 90.55%</span>
+
+            <!-- Proportional Allocation Bar -->
+            <div class="m-alloc-bar-wrap">
+              <div class="m-alloc-bar-top">
+                <span>Capital Distribution</span>
+                <b>100% Reconciled</b>
+              </div>
+              <div class="m-alloc-bar-track" aria-hidden="true">
+                <div class="m-alloc-seg ads" title="Media & Ads: 38.1%"></div>
+                <div class="m-alloc-seg bonus" title="Direct Bonuses: 31.0%"></div>
+                <div class="m-alloc-seg cloud" title="OneHub Cloud: 22.6%"></div>
+                <div class="m-alloc-seg gov" title="Governance & Training: 8.3%"></div>
+              </div>
+              <div class="m-alloc-legend">
+                <span class="m-alloc-legend-item"><i class="m-alloc-dot ads"></i> Ads 38.1%</span>
+                <span class="m-alloc-legend-item"><i class="m-alloc-dot bonus"></i> Bonus 31.0%</span>
+                <span class="m-alloc-legend-item"><i class="m-alloc-dot cloud"></i> Cloud 22.6%</span>
+                <span class="m-alloc-legend-item"><i class="m-alloc-dot gov"></i> Gov 8.3%</span>
+              </div>
+            </div>
+
+            <!-- View Switcher (4 Pillars vs 7 Lines) -->
+            <div class="m-budget-view-tabs" role="tablist" aria-label="Budget Breakdown View">
+              <button type="button" role="tab" class="m-b-tab-btn active" id="btnBudgetPillars" onclick="toggleBudgetMobileView('pillars')" aria-selected="true">
+                <span>🎯</span> 4 Strategic Pillars
+              </button>
+              <button type="button" role="tab" class="m-b-tab-btn" id="btnBudgetItemized" onclick="toggleBudgetMobileView('itemized')" aria-selected="false">
+                <span>📑</span> All 7 Line Items
+              </button>
+            </div>
+
+            <!-- VIEW 1: 4 STRATEGIC PILLARS (DEFAULT CONSOLIDATED) -->
+            <div class="m-budget-list" id="mBudgetPillars">
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">📢</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Digital Growth &amp; Media</span>
+                    <span class="m-b-row-desc">Meta/TikTok Ads ($12K) + Content Studio ($4K)</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$16,000</b>
+                  <span class="m-b-row-share">38.1%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">👥</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Staff Direct Bonuses</span>
+                    <span class="m-b-row-desc">260 direct students × $50 direct payout</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$13,000</b>
+                  <span class="m-b-row-share">31.0%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">☁️</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">OneHub Cloud Upgrade</span>
+                    <span class="m-b-row-desc">Paperless ERP/CRM/HRM infra (&lt;24h SLA)</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$9,500</b>
+                  <span class="m-b-row-share">22.6%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">🎓</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Training &amp; Governance</span>
+                    <span class="m-b-row-desc">120 staff upskilling ($2K) + Legal audit ($1.5K)</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$3,500</b>
+                  <span class="m-b-row-share">8.3%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- VIEW 2: ALL 7 LINE ITEMS (ITEMIZED TRANSPARENT) -->
+            <div class="m-budget-list" id="mBudgetItemized" hidden>
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">📢</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Meta &amp; TikTok Ads</span>
+                    <span class="m-b-row-desc">Targeted digital acquisition campaigns</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$12,000</b>
+                  <span class="m-b-row-share">28.6%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">👥</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Staff Direct Bonuses</span>
+                    <span class="m-b-row-desc">260 direct students × $50 incentive</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$13,000</b>
+                  <span class="m-b-row-share">31.0%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">☁️</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">OneHub Cloud Upgrade</span>
+                    <span class="m-b-row-desc">Paperless CRM, ERP &amp; HRM platform</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$9,500</b>
+                  <span class="m-b-row-share">22.6%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">🎬</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Studio &amp; 8 Ambassadors</span>
+                    <span class="m-b-row-desc">Creator studio equipment &amp; stipends</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$4,000</b>
+                  <span class="m-b-row-share">9.5%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">🎓</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Staff Training</span>
+                    <span class="m-b-row-desc">Direct recruitment digital upskilling</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$2,000</b>
+                  <span class="m-b-row-share">4.8%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">📋</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Contract Legal Audit</span>
+                    <span class="m-b-row-desc">Master agency restructuring &amp; compliance</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$1,500</b>
+                  <span class="m-b-row-share">3.6%</span>
+                </div>
+              </div>
+
+              <div class="m-budget-row-card">
+                <div class="m-b-row-left">
+                  <div class="m-b-row-icon">🏆</div>
+                  <div class="m-b-row-meta">
+                    <span class="m-b-row-title">Performance Awards</span>
+                    <span class="m-b-row-desc">Quarterly team recognition incentives</span>
+                  </div>
+                </div>
+                <div class="m-b-row-right">
+                  <b class="m-b-row-amount">$400</b>
+                  <span class="m-b-row-share">1.0%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Executive KPI Rail -->
+            <div class="m-budget-rail">
+              <div class="m-budget-rail-kpis">
+                <div class="m-b-rail-kpi">
+                  <span class="m-b-rail-lbl">Direct Cost/Stu</span>
+                  <b class="m-b-rail-val c-green">$161.54</b>
+                </div>
+                <div class="m-b-rail-kpi">
+                  <span class="m-b-rail-lbl">Gross Saved</span>
+                  <b class="m-b-rail-val c-amber">$97,500</b>
+                </div>
+                <div class="m-b-rail-kpi">
+                  <span class="m-b-rail-lbl">Net Benefit</span>
+                  <b class="m-b-rail-val c-green">+$55,500</b>
+                </div>
+              </div>
+              <p class="m-b-rail-sub">ALFA retains <strong>$905,500 (90.55%)</strong> of $1M tuition vs. $840,000 baseline.</p>
             </div>
           </div>
         </div>
@@ -12510,6 +12960,31 @@ p.note, .note {
       hydrateIcons(b);
     }
   }
+
+  function toggleBudgetMobileView(view) {
+    const p1 = document.getElementById('mBudgetPillars');
+    const p2 = document.getElementById('mBudgetItemized');
+    const b1 = document.getElementById('btnBudgetPillars');
+    const b2 = document.getElementById('btnBudgetItemized');
+    if (!p1 || !p2 || !b1 || !b2) return;
+    if (view === 'pillars') {
+      p1.hidden = false;
+      p2.hidden = true;
+      b1.classList.add('active');
+      b1.setAttribute('aria-selected', 'true');
+      b2.classList.remove('active');
+      b2.setAttribute('aria-selected', 'false');
+    } else {
+      p1.hidden = true;
+      p2.hidden = false;
+      b1.classList.remove('active');
+      b1.setAttribute('aria-selected', 'false');
+      b2.classList.add('active');
+      b2.setAttribute('aria-selected', 'true');
+    }
+    if (typeof haptic === 'function') haptic(6);
+  }
+  window.toggleBudgetMobileView = toggleBudgetMobileView;
 
   /* =======================================================================
      LIGHTBOX & SHORTCUTS (VECTOR CHART MODAL)

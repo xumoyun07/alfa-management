@@ -1870,95 +1870,6 @@
       margin: 0.15rem auto 0.6rem auto;
     }
 
-    /* Quick Nav Switcher Pills inside Bottom Sheet */
-    .m-sheet-nav-pills {
-      display: flex;
-      gap: 0.35rem;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 0.55rem;
-      margin-bottom: 0.45rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      scrollbar-width: none;
-    }
-    .m-sheet-nav-pills::-webkit-scrollbar { display: none; }
-
-    .m-sheet-nav-btn {
-      flex-shrink: 0;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 999px;
-      padding: 0.35rem 0.65rem;
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: #94a3b8;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      min-height: 34px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .m-sheet-nav-btn:active {
-      transform: scale(0.96);
-    }
-    .m-sheet-nav-btn.active {
-      background: rgba(255, 255, 255, 0.16);
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.3);
-      font-weight: 800;
-    }
-    .m-sheet-nav-btn.active.c-saving {
-      background: rgba(16, 185, 129, 0.22);
-      border-color: #10b981;
-      color: #34d399;
-      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
-    }
-    .m-sheet-nav-btn.active.c-direct {
-      background: rgba(245, 158, 11, 0.22);
-      border-color: #f59e0b;
-      color: #fbbf24;
-      box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
-    }
-    .m-sheet-nav-btn.active.c-cost {
-      background: rgba(239, 68, 68, 0.22);
-      border-color: #ef4444;
-      color: #f87171;
-      box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
-    }
-    .m-sheet-nav-btn.active.c-sla {
-      background: rgba(20, 184, 166, 0.22);
-      border-color: #14b8a6;
-      color: #2dd4bf;
-      box-shadow: 0 0 12px rgba(20, 184, 166, 0.3);
-    }
-
-    /* POLC Steps Nav Colors */
-    .m-sheet-nav-btn.active.step-1 {
-      background: rgba(59, 130, 246, 0.25);
-      border-color: #3b82f6;
-      color: #60a5fa;
-      box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
-    }
-    .m-sheet-nav-btn.active.step-2 {
-      background: rgba(168, 85, 247, 0.25);
-      border-color: #a855f7;
-      color: #c084fc;
-      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
-    }
-    .m-sheet-nav-btn.active.step-3 {
-      background: rgba(245, 158, 11, 0.25);
-      border-color: #f59e0b;
-      color: #fbbf24;
-      box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
-    }
-    .m-sheet-nav-btn.active.step-4 {
-      background: rgba(16, 185, 129, 0.25);
-      border-color: #10b981;
-      color: #34d399;
-      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
-    }
-
     /* Header & Close Button */
     .m-sheet-head {
       display: flex;
@@ -12117,18 +12028,7 @@ p.note, .note {
     const title = $("#mPlanStepSheetTitle");
     const category = $("#mPlanStepCategory");
     const content = $("#mPlanStepSheetContent");
-    const nav = $("#mPlanStepNav");
     if (!sheet || !title || !content) return;
-
-    // Update active nav button
-    if (nav) {
-      nav.querySelectorAll(".m-sheet-nav-btn").forEach(b => {
-        const isActive = b.dataset.step === key;
-        const stepNum = b.dataset.step === "planning" ? 1 : b.dataset.step === "organising" ? 2 : b.dataset.step === "leading" ? 3 : 4;
-        b.className = `m-sheet-nav-btn step-${stepNum}` + (isActive ? " active" : "");
-        b.setAttribute("aria-selected", isActive);
-      });
-    }
 
     const stepThemes = {
       planning: { cat: "STEP 1 OF 4 · PLANNING", color: "blue" },
@@ -12215,17 +12115,7 @@ p.note, .note {
     const title = $("#mFigSheetTitle");
     const category = $("#mFigSheetCategory");
     const body = $("#mFigSheetContent");
-    const nav = $("#mFigSheetNav");
     if (!sheet || !title || !body) return;
-
-    // Update active nav button
-    if (nav) {
-      nav.querySelectorAll(".m-sheet-nav-btn").forEach(b => {
-        const isActive = b.dataset.fig === fig;
-        b.className = "m-sheet-nav-btn" + (isActive ? ` active c-${fig}` : "");
-        b.setAttribute("aria-selected", isActive);
-      });
-    }
 
     if (fig === "saving") {
       if (category) { category.textContent = "FINANCIAL AUDIT · CHALLENGE 1"; category.className = "m-sheet-sub emerald"; }
@@ -13698,12 +13588,6 @@ p.note, .note {
   <div class="m-sheet-backdrop" id="mFigureSheet" role="dialog" aria-modal="true" aria-labelledby="mFigSheetTitle" onclick="if(event.target===this)closeFigureSheet()" hidden>
     <div class="m-sheet-panel m-fig-sheet-panel">
       <div class="m-sheet-grab-bar" aria-hidden="true"></div>
-      <div class="m-sheet-nav-pills" id="mFigSheetNav">
-        <button type="button" class="m-sheet-nav-btn" data-fig="saving" onclick="openFigureSheet('saving')">💰 Net Saving</button>
-        <button type="button" class="m-sheet-nav-btn" data-fig="direct" onclick="openFigureSheet('direct')">🎯 65% Direct</button>
-        <button type="button" class="m-sheet-nav-btn" data-fig="cost" onclick="openFigureSheet('cost')">📉 Cost/Student</button>
-        <button type="button" class="m-sheet-nav-btn" data-fig="sla" onclick="openFigureSheet('sla')">⚡ Admin SLA</button>
-      </div>
       <div class="m-sheet-head">
         <div>
           <span class="m-sheet-sub emerald" id="mFigSheetCategory">KEY METRIC BREAKDOWN</span>
@@ -13720,12 +13604,6 @@ p.note, .note {
   <div class="m-sheet-backdrop" id="mPlanStepSheet" role="dialog" aria-modal="true" aria-labelledby="mPlanStepSheetTitle" onclick="if(event.target===this)closePlanStepSheet()" hidden>
     <div class="m-sheet-panel m-plan-sheet-panel">
       <div class="m-sheet-grab-bar" aria-hidden="true"></div>
-      <div class="m-sheet-nav-pills" id="mPlanStepNav">
-        <button type="button" class="m-sheet-nav-btn step-1" data-step="planning" onclick="openPlanStepSheet('planning')">1. Planning</button>
-        <button type="button" class="m-sheet-nav-btn step-2" data-step="organising" onclick="openPlanStepSheet('organising')">2. Organising</button>
-        <button type="button" class="m-sheet-nav-btn step-3" data-step="leading" onclick="openPlanStepSheet('leading')">3. Leading</button>
-        <button type="button" class="m-sheet-nav-btn step-4" data-step="controlling" onclick="openPlanStepSheet('controlling')">4. Controlling</button>
-      </div>
       <div class="m-sheet-head">
         <div>
           <span class="m-sheet-sub blue" id="mPlanStepCategory">POLC FRAMEWORK · 12-MONTH PLAN</span>

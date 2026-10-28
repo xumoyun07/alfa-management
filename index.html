@@ -5925,12 +5925,16 @@ p.note, .note {
   gap: 0.65rem !important;
 }
 .m-charts-container.mode-grid .m-chart-card {
-  display: flex !important;
+  display: flex;
   flex-direction: column !important;
   justify-content: space-between !important;
   border-radius: 12px !important;
   padding: 0.6rem !important;
   cursor: pointer !important;
+}
+.m-charts-container.mode-grid .m-chart-card[hidden],
+.m-charts-container.mode-deck .m-chart-card[hidden] {
+  display: none !important;
 }
 .m-charts-container.mode-grid .m-chart-card:active {
   transform: scale(0.97);
@@ -13302,9 +13306,11 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         var isActive = (i === mChartState.activeNum);
         card.classList.toggle("is-active", isActive);
         card.style.display = isActive ? "flex" : "none";
+        card.hidden = !isActive;
       } else {
         card.classList.remove("is-active");
         card.style.display = inCategory ? "flex" : "none";
+        card.hidden = !inCategory;
       }
     }
 
@@ -13328,6 +13334,15 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     var container = document.getElementById("mChartsContainer");
     if (!container || container._hasSwipeGestures) return;
     container._hasSwipeGestures = true;
+
+    container.addEventListener("click", function(e) {
+      if (mChartState.view === 'grid') {
+        var card = e.target.closest(".m-chart-card");
+        if (card && card.dataset.num) {
+          openLb(parseInt(card.dataset.num, 10));
+        }
+      }
+    });
 
     container.addEventListener("touchstart", function(e) {
       if (mChartState.view !== "deck") return;

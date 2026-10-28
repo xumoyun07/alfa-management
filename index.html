@@ -21,6 +21,16 @@
 
   <style>
 
+/* Hallmark · built: the project · redesign: polish · copy: verbatim · shape: app screen */
+
+/* ===== HALLMARK POLISH: GATE F3 & GATE F6 TYPOGRAPHY & NUMERIC TUNING ===== */
+h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .m-sheet-h3, .d-home-h2, .m-hub-cockpit-title {
+  text-wrap: balance;
+}
+.slide-counter, .data-table, .data-table th, .data-table td, .badge-status, .m-stats span, .m-count, .admin-count-badge, .m-viz-stage .ix-stat small, .m-viz-stage .ix-stat b, .m-viz-stage .ix-stat span, .vault-countdown-notice, .d-tile-num, .p-hero-stat-lbl, .p-hero-stat-sub, .ix-stat small, .ix-stat b, .ix-stat span, .m-spend-stat b, .m-ba-row b, .m-bento-cell b, .d-kpi-val, .p-counter-pill, .m-b-row-amount, .m-b-row-share, [data-total-saved], [data-sx-val], .d-mem-pages {
+  font-variant-numeric: tabular-nums;
+}
+
 /* ===== EXECUTIVE DARK THEME TOKEN ENGINE (EXCLUSIVE THEME) ===== */
 :root,
 :root[data-theme="dark"] {
@@ -133,6 +143,7 @@
     html { overflow-x: clip; max-width: 100vw; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-variant-numeric: tabular-nums;
       background: radial-gradient(circle at top right, #2a0508 0%, #0f172a 45%, #090d16 100%) fixed;
       color: #f8fafc;
       line-height: 1.6;
@@ -518,7 +529,7 @@
 
     /* Top App Bar (Sticky Header in Mobile Mode) */
     .m-top {
-      position: sticky; top: 0; z-index: 95;
+      position: sticky; top: env(safe-area-inset-top, 0px); z-index: 95;
       background: rgba(9, 13, 22, 0.86);
       backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -2692,7 +2703,7 @@
       .admin-panel-header .admin-modal-close { position: static !important; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 8px; background: rgba(255,255,255,.06); color: #cbd5e1; }
 
       /* Sticky Segmented Studio Tabs */
-      .m-adm-seg { display: grid !important; grid-template-columns: 1fr 1fr; background: rgba(11,17,32,.98); padding: .4rem .85rem; gap: .5rem; border-bottom: 1px solid rgba(255,255,255,.08); flex-shrink: 0; position: sticky; top: 0; z-index: 10; }
+      .m-adm-seg { display: grid !important; grid-template-columns: 1fr 1fr; background: rgba(11,17,32,.98); padding: .4rem .85rem; gap: .5rem; border-bottom: 1px solid rgba(255,255,255,.08); flex-shrink: 0; position: sticky; top: 48px; z-index: 10; }
       .m-adm-seg-btn { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; padding: .65rem .8rem; border-radius: 10px; font-size: .84rem; font-weight: 700; border: 1px solid transparent; background: transparent; color: #94a3b8; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; cursor: pointer; min-height: 42px; }
       .m-adm-seg-btn.active { background: rgba(232,13,19,.16); color: #fff; border-color: rgba(232,13,19,.4); box-shadow: 0 2px 10px rgba(232,13,19,.15); }
       .m-adm-mobile-only { display: block !important; }
@@ -6054,7 +6065,7 @@ p.note, .note {
 .m-glance b{display:block;font-size:1.15rem;font-weight:900;font-variant-numeric:tabular-nums}
 .m-glance span{display:block;font-size:.66rem;color:#cbd5e1}
 /* scroll reveal (added by JS only when motion is allowed) */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1)}
+html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1)}.rv{opacity:1;transform:none}
 .rv.in{opacity:1;transform:none}@media (max-width:1100px){.glance{grid-template-columns:repeat(2,1fr)}.sx-grid{grid-template-columns:1fr}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 
 
@@ -6613,14 +6624,14 @@ p.note, .note {
         <button type="button" class="tab-btn" role="tab" aria-selected="false" data-view="calculator">ROI Simulator</button>
         <button type="button" class="tab-btn" role="tab" aria-selected="false" data-view="onehub">OneHub</button>
         <button type="button" class="tab-btn" role="tab" aria-selected="false" data-view="theories">Theory &amp; Q&amp;A</button>
-        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-view="script"><span data-ic="lock" data-s="13" style="margin-right:4px;vertical-align:-2px"></span>Speaker Script 🔒</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-view="script"><span data-ic="lock" data-s="13" style="margin-right:4px;vertical-align:-2px"></span>Speaker Script</button>
       </nav>
       <div class="header-tools">
         <button type="button" class="tool-btn pwa-install-btn" id="dInstallBtn" onclick="installPWA()" title="Install ALFA Portal as offline application" style="display:none"><span data-ic="download" data-s="14"></span><span class="tool-label">Install App</span></button>
         <button type="button" class="tool-btn" onclick="toggleOverview()" title="Slide overview grid (Esc)"><span data-ic="grid" data-s="15"></span><span class="tool-label">Overview</span></button>
         <button type="button" class="tool-btn" onclick="toggleHideUI()" title="Hide UI chrome (U)"><span class="tool-label">Hide UI</span></button>
         <button type="button" class="tool-btn" onclick="toggleFullscreen()" title="Full screen (F)"><span data-ic="expand" data-s="16"></span><span class="tool-label">Full screen</span></button>
-        <button type="button" class="tool-btn" onclick="openKbd()" title="Keyboard shortcuts (?)"><span aria-hidden="true">⌨</span><span class="tool-label">Shortcuts</span></button>
+        <button type="button" class="tool-btn" onclick="openKbd()" title="Keyboard shortcuts (?)"><span data-ic="keyboard" data-s="15"></span><span class="tool-label">Shortcuts</span></button>
       </div>
     </header>
 
@@ -6644,7 +6655,7 @@ p.note, .note {
                   <span data-ic="play" data-s="18"></span><span>Present (17 slides)</span>
                 </button>
                 <button type="button" class="d-btn lg" onclick="dGo('script')" aria-label="Open locked Speaker Script module">
-                  <span data-ic="lock" data-s="16"></span><span>Speaker Script 🔒</span>
+                  <span data-ic="lock" data-s="16"></span><span>Speaker Script</span>
                 </button>
               </div>
             </div>
@@ -7111,7 +7122,7 @@ p.note, .note {
         <div class="kbd-row"><span>Previous slide</span><span><kbd>←</kbd> or <kbd>H</kbd></span></div>
         <div class="kbd-row"><span>First / Last slide</span><span><kbd>Home</kbd> / <kbd>End</kbd></span></div>
         <div class="kbd-row"><span>Jump to Team Member (1–7)</span><span><kbd>1</kbd> – <kbd>7</kbd></span></div>
-        <div class="kbd-row"><span>Toggle "More detail" drawer</span><kbd>D</kbd></div>
+        <div class="kbd-row"><span>Toggle “More detail” drawer</span><kbd>D</kbd></div>
         <div class="kbd-row"><span>17-slide overview grid</span><span><kbd>O</kbd> or <kbd>Esc</kbd></span></div>
         <div class="kbd-row"><span>Start / exit presentation</span><kbd>P</kbd></div>
         <div class="kbd-row"><span>Back to Home overview</span><kbd>B</kbd></div>
@@ -7756,9 +7767,9 @@ p.note, .note {
 
         <!-- Sub-navigation inside ROI to prevent vertical clutter -->
         <div class="m-seg" id="mRoiSeg" role="tablist" aria-label="ROI Simulator Views" style="--n:3">
-          <button type="button" role="tab" data-roi-tab="sim" aria-selected="true"><span class="m-seg-tab-ic">⚙️</span><span>Simulator</span></button>
-          <button type="button" role="tab" data-roi-tab="sens" aria-selected="false"><span class="m-seg-tab-ic">📊</span><span>Rate Test</span></button>
-          <button type="button" role="tab" data-roi-tab="table" aria-selected="false"><span class="m-seg-tab-ic">📑</span><span>Breakdown</span></button>
+          <button type="button" role="tab" data-roi-tab="sim" aria-selected="true"><span class="m-seg-tab-ic" data-ic="gear" data-s="15"></span><span>Simulator</span></button>
+          <button type="button" role="tab" data-roi-tab="sens" aria-selected="false"><span class="m-seg-tab-ic" data-ic="chart" data-s="15"></span><span>Rate Test</span></button>
+          <button type="button" role="tab" data-roi-tab="table" aria-selected="false"><span class="m-seg-tab-ic" data-ic="fileText" data-s="15"></span><span>Breakdown</span></button>
         </div>
 
         <!-- Pane 1: Interactive Sliders & Scenarios -->
@@ -7766,12 +7777,12 @@ p.note, .note {
           <div class="m-roi-scenarios-card">
             <div class="m-sec-h"><h3>Strategic Milestone Scenarios</h3><span>Tap preset</span></div>
             <div class="m-chips-row" role="group" aria-label="Scenario Presets">
-              <button type="button" class="m-chip" data-preset="plan" aria-pressed="true">🏆 ALFA Plan · 65%</button>
-              <button type="button" class="m-chip" data-preset="current" aria-pressed="false">📌 Today · 0%</button>
-              <button type="button" class="m-chip" data-preset="q1" aria-pressed="false">🌱 Q1 · 20%</button>
-              <button type="button" class="m-chip" data-preset="q2" aria-pressed="false">🌿 Q2 · 40%</button>
-              <button type="button" class="m-chip" data-preset="q3" aria-pressed="false">🚀 Q3 · 55%</button>
-              <button type="button" class="m-chip" data-preset="stretch" aria-pressed="false">⭐ Stretch · 85%</button>
+              <button type="button" class="m-chip" data-preset="plan" aria-pressed="true">ALFA Plan · 65%</button>
+              <button type="button" class="m-chip" data-preset="current" aria-pressed="false">Today · 0%</button>
+              <button type="button" class="m-chip" data-preset="q1" aria-pressed="false">Q1 · 20%</button>
+              <button type="button" class="m-chip" data-preset="q2" aria-pressed="false">Q2 · 40%</button>
+              <button type="button" class="m-chip" data-preset="q3" aria-pressed="false">Q3 · 55%</button>
+              <button type="button" class="m-chip" data-preset="stretch" aria-pressed="false">Stretch · 85%</button>
             </div>
           </div>
 
@@ -7793,12 +7804,12 @@ p.note, .note {
             <!-- Dual Macro-Capsules: Fixed vs Bonuses -->
             <div class="m-budget-split-capsules">
               <div class="m-budget-capsule fixed">
-                <span class="m-cap-lbl">🏛️ Fixed Foundation</span>
+                <span class="m-cap-lbl"><span data-ic="shield" data-s="14" style="vertical-align:-2px;margin-right:4px"></span>Fixed Foundation</span>
                 <span class="m-cap-val">$29,000</span>
                 <span class="m-cap-sub">Infra, Media &amp; Training (69%)</span>
               </div>
               <div class="m-budget-capsule bonus">
-                <span class="m-cap-lbl">🎯 Direct Bonuses</span>
+                <span class="m-cap-lbl"><span data-ic="target" data-s="14" style="vertical-align:-2px;margin-right:4px"></span>Direct Bonuses</span>
                 <span class="m-cap-val">$13,000</span>
                 <span class="m-cap-sub">260 students × $50 (31%)</span>
               </div>
@@ -7827,10 +7838,10 @@ p.note, .note {
             <!-- View Switcher (4 Pillars vs 7 Lines) -->
             <div class="m-budget-view-tabs" role="tablist" aria-label="Budget Breakdown View">
               <button type="button" role="tab" class="m-b-tab-btn active" id="btnBudgetPillars" onclick="toggleBudgetMobileView('pillars')" aria-selected="true">
-                <span>🎯</span> 4 Strategic Pillars
+                <span data-ic="target" data-s="15" style="vertical-align:-2px;margin-right:4px"></span>4 Strategic Pillars
               </button>
               <button type="button" role="tab" class="m-b-tab-btn" id="btnBudgetItemized" onclick="toggleBudgetMobileView('itemized')" aria-selected="false">
-                <span>📑</span> All 6 Line Items
+                <span data-ic="fileText" data-s="15" style="vertical-align:-2px;margin-right:4px"></span>All 6 Line Items
               </button>
             </div>
 
@@ -7838,7 +7849,7 @@ p.note, .note {
             <div class="m-budget-list" id="mBudgetPillars">
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">📢</div>
+                  <div class="m-b-row-icon" data-ic="megaphone" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Digital Growth &amp; Media</span>
                     <span class="m-b-row-desc">Meta/TikTok Ads ($12K) + Content Studio ($4K)</span>
@@ -7852,7 +7863,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">👥</div>
+                  <div class="m-b-row-icon" data-ic="users" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Staff Direct Bonuses</span>
                     <span class="m-b-row-desc">260 direct students × $50 direct payout</span>
@@ -7866,7 +7877,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">☁️</div>
+                  <div class="m-b-row-icon" data-ic="cloud" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">OneHub Cloud Upgrade</span>
                     <span class="m-b-row-desc">Paperless ERP/CRM/HRM infra (&lt;24h SLA)</span>
@@ -7880,7 +7891,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">🎓</div>
+                  <div class="m-b-row-icon" data-ic="graduation" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Training &amp; Governance</span>
                     <span class="m-b-row-desc">120 staff upskilling ($2K) + Legal audit ($1.5K)</span>
@@ -7897,7 +7908,7 @@ p.note, .note {
             <div class="m-budget-list" id="mBudgetItemized" hidden>
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">📢</div>
+                  <div class="m-b-row-icon" data-ic="megaphone" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Meta &amp; TikTok Ads</span>
                     <span class="m-b-row-desc">Targeted digital acquisition campaigns</span>
@@ -7911,7 +7922,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">👥</div>
+                  <div class="m-b-row-icon" data-ic="users" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Staff Direct Bonuses</span>
                     <span class="m-b-row-desc">260 direct students × $50 incentive</span>
@@ -7925,7 +7936,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">☁️</div>
+                  <div class="m-b-row-icon" data-ic="cloud" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">OneHub Cloud Upgrade</span>
                     <span class="m-b-row-desc">Paperless CRM, ERP &amp; HRM platform</span>
@@ -7939,7 +7950,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">🎬</div>
+                  <div class="m-b-row-icon" data-ic="film" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Studio &amp; 8 Ambassadors</span>
                     <span class="m-b-row-desc">Creator studio equipment &amp; stipends</span>
@@ -7953,7 +7964,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">🎓</div>
+                  <div class="m-b-row-icon" data-ic="graduation" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Training &amp; Awards</span>
                     <span class="m-b-row-desc">120 staff upskilling ($2,000, of which $400 awards)</span>
@@ -7967,7 +7978,7 @@ p.note, .note {
 
               <div class="m-budget-row-card">
                 <div class="m-b-row-left">
-                  <div class="m-b-row-icon">📋</div>
+                  <div class="m-b-row-icon" data-ic="clipboard" data-s="18"></div>
                   <div class="m-b-row-meta">
                     <span class="m-b-row-title">Contract Legal Audit</span>
                     <span class="m-b-row-desc">Master agency restructuring &amp; compliance</span>
@@ -8070,7 +8081,7 @@ p.note, .note {
               </div>
 
               <div class="m-defense-verdict-box">
-                <span class="m-verdict-icon">💡</span>
+                <span class="m-verdict-icon" data-ic="bulb" data-s="18"></span>
                 <div class="m-verdict-text">
                   <b>Strategic Lecturer Defense:</b>
                   <p>Higher master-agent commissions yield even greater net savings for ALFA ($71,750 to $88,000/yr). This proves our 5% baseline assumption is structurally conservative and defensible under any external audit.</p>
@@ -8129,20 +8140,20 @@ p.note, .note {
         <!-- Sleek Segmented Control without any text wrapping -->
         <div class="m-seg m-hub-seg" id="mHubSeg" role="tablist" aria-label="OneHub module" style="--n:4">
           <button role="tab" data-hub="crm" aria-selected="true">
-            <span class="m-seg-ico">💬</span>
+            <span class="m-seg-ico" data-ic="message" data-s="16"></span>
             <span class="m-seg-txt">CRM</span>
           </button>
           <button role="tab" data-hub="erp" aria-selected="false">
-            <span class="m-seg-ico">⚡</span>
+            <span class="m-seg-ico" data-ic="zap" data-s="16"></span>
             <span class="m-seg-txt">ERP</span>
           </button>
           <button role="tab" data-hub="hrm" aria-selected="false">
-            <span class="m-seg-ico">👥</span>
+            <span class="m-seg-ico" data-ic="users" data-s="16"></span>
             <span class="m-seg-txt">HRM</span>
             <span class="m-seg-badge">120</span>
           </button>
           <button role="tab" data-hub="map" aria-selected="false">
-            <span class="m-seg-ico">🗺️</span>
+            <span class="m-seg-ico" data-ic="map" data-s="16"></span>
             <span class="m-seg-txt">Diagram</span>
           </button>
         </div>
@@ -8250,11 +8261,11 @@ p.note, .note {
       <div class="m-adm-sheet-handle"></div>
       <div class="admin-panel-header">
         <div class="m-adm-head-title-wrap" style="min-width:0;flex:1">
+          <h2 id="admPanelTitle" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Q&amp;A Admin Studio</h2>
           <div class="admin-badge-row">
             <span class="admin-auth-badge" id="admAuthBadge"><span data-ic="check" data-s="14"></span> Authenticated</span>
             <span class="admin-count-badge" id="admTotalCount">8 Topics</span>
           </div>
-          <h2 id="admPanelTitle" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Q&amp;A Admin Studio</h2>
         </div>
         <div class="admin-header-actions">
           <button class="adm-settings-btn m-btn sm" id="admSettingsBtn" onclick="openProjectSettingsModal()" title="Project Settings & Access Control" style="display:none;padding:.35rem .65rem;font-size:.76rem;border-radius:8px">
@@ -8312,7 +8323,7 @@ p.note, .note {
                   <option value="L4">Lecture 4 · Organising (Span of Control, Delegation)</option>
                   <option value="L5">Lecture 5 · Leading (Power, Influence, Motivation)</option>
                   <option value="FG">Sections F &amp; G · Controlling &amp; People (Control Loop, Communication)</option>
-                  <option value="custom">+ Custom Lecture / Section...</option>
+                  <option value="custom">+ Custom Lecture / Section…</option>
                 </select>
               </div>
               
@@ -9949,7 +9960,20 @@ p.note, .note {
     check: '<path d="m5 12 5 5L20 7"/>',
     crown: '<path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/>',
     shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-    gear: '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>'
+    gear: '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>',
+    keyboard: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01M7 16h10"/>',
+    chart: '<path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/>',
+    fileText: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>',
+    target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+    zap: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+    message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+    map: '<polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>',
+    bulb: '<path d="M9 18h6M10 22h4M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .5 2.5 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/>',
+    cloud: '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>',
+    megaphone: '<path d="m3 11 18-5v12L3 14v-3zM11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+    graduation: '<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',
+    film: '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18M17 3v18M3 8h4M3 13h4M3 18h4M17 8h4M17 13h4M17 18h4"/>',
+    clipboard: '<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>',
   };
 
   /* =======================================================================
@@ -14170,6 +14194,7 @@ p.note, .note {
   applyHash();
   </script>
 <script>
+document.documentElement.classList.add('js');
 (function(){
   "use strict";
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

@@ -508,7 +508,14 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     /* Shortcuts modal */
     .kbd-modal { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.7); backdrop-filter: blur(8px); display: grid; place-items: center; padding: 1rem; }
     .kbd-box { background: #1e293b; border: 1px solid var(--line2); border-radius: var(--r-lg); max-width: 480px; width: 100%; padding: 2rem; position: relative; box-shadow: var(--shadow); }
-    .kbd-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: 0; color: var(--tx3); font-size: 1.3rem; }
+    .kbd-close {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 44px; height: 44px; min-width: 44px; min-height: 44px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: none; border: 0; color: var(--tx3); font-size: 1.3rem;
+      border-radius: 8px; cursor: pointer; transition: background .15s, color .15s;
+    }
+    .kbd-close:hover, .kbd-close:focus-visible { color: #fff; background: rgba(255,255,255,.08); }
     .kbd-box h2 { font-size: 1.35rem; font-weight: 800; margin-bottom: 1.2rem; }
     .kbd-row { display: flex; justify-content: space-between; align-items: center; padding: .6rem 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
     kbd { background: rgba(255,255,255,.1); border: 1px solid var(--line2); padding: .2rem .55rem; border-radius: 6px; font-family: monospace; font-size: .82rem; }
@@ -731,7 +738,12 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     .m-btn.full { width: 100%; }
     .m-btn.lg { padding: .78rem 1.1rem; font-size: .88rem; border-radius: 13px; }
     .m-btn.sm { padding: .38rem .7rem; font-size: .74rem; border-radius: 9px; }
-    .m-ibtn { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); color: #fff; width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; }
+    .m-ibtn {
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      color: #fff; width: 36px; height: 36px; border-radius: 10px;
+      display: grid; place-items: center; flex-shrink: 0; position: relative;
+    }
+    .m-ibtn::after { content: ''; position: absolute; inset: -4px; }
 
     /* Mobile Deck — Unified Pocket Stage */
     .m-deck-nav-wrap {
@@ -2618,7 +2630,14 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     .admin-modal { position: fixed; inset: 0; z-index: 250; background: rgba(0,0,0,.75); backdrop-filter: blur(10px); display: grid; place-items: center; padding: 1rem; }
     .admin-modal[hidden] { display: none !important; }
     .admin-dialog-box { background: #1e293b; border: 1px solid var(--border-subtle); border-radius: 18px; max-width: 440px; width: 100%; padding: 2rem; position: relative; box-shadow: 0 20px 45px rgba(0,0,0,.6); }
-    .admin-modal-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: 0; color: var(--text-muted); cursor: pointer; }
+    .admin-modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 44px; height: 44px; min-width: 44px; min-height: 44px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: none; border: 0; color: var(--text-muted); cursor: pointer;
+      border-radius: 8px; transition: background .15s, color .15s;
+    }
+    .admin-modal-close:hover, .admin-modal-close:focus-visible { color: #fff; background: rgba(255,255,255,.08); }
     .admin-dialog-head { text-align: center; margin-bottom: 1.5rem; }
     .admin-icon-wrap { width: 56px; height: 56px; border-radius: 50%; background: rgba(232,13,19,.15); color: #ff5a5f; display: grid; place-items: center; margin: 0 auto .8rem; }
     .admin-dialog-head h2 { font-size: 1.35rem; font-weight: 800; margin-bottom: .3rem; }
@@ -2627,7 +2646,13 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     .admin-field label { display: block; font-size: .8rem; font-weight: 700; color: var(--alfa-pink); margin-bottom: .35rem; }
     .admin-pwd-input-wrap { position: relative; }
     .admin-pwd-input-wrap input { width: 100%; background: rgba(15,23,42,.8); border: 1px solid rgba(255,255,255,.15); border-radius: 10px; padding: .75rem 2.5rem .75rem 1rem; font-size: .92rem; }
-    .admin-eye-btn { position: absolute; right: .75rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--text-muted); cursor: pointer; }
+    .admin-eye-btn {
+      position: absolute; right: .5rem; top: 50%; transform: translateY(-50%);
+      width: 40px; height: 40px; min-width: 40px; min-height: 40px;
+      display: grid; place-items: center; background: none; border: 0;
+      color: var(--text-muted); cursor: pointer; border-radius: 6px;
+    }
+    .admin-eye-btn::after { content: ''; position: absolute; inset: -2px; }
     .admin-err-msg { color: #ff5a5f; font-size: .78rem; font-weight: 700; margin-top: .4rem; }
     .admin-btn-row { display: flex; gap: .6rem; justify-content: flex-end; margin-top: 1.4rem; }
 
@@ -2699,7 +2724,10 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
       .admin-badge-row { grid-area: badges !important; margin: 0 !important; gap: .35rem; }
       .admin-panel-header h2 { grid-area: title !important; font-size: 1.15rem !important; margin: .15rem 0 0 !important; white-space: normal !important; }
       .admin-header-actions { grid-area: actions !important; display: flex !important; align-items: center !important; justify-content: flex-end !important; gap: .4rem !important; }
-      .admin-header-actions .m-btn.sm { padding: .35rem .6rem; min-height: 36px; border-radius: 8px; font-size: .75rem; }
+      .admin-header-actions .m-btn.sm {
+      padding: .35rem .6rem; min-height: 36px; border-radius: 8px; font-size: .75rem; position: relative;
+    }
+    .admin-header-actions .m-btn.sm::after { content: ''; position: absolute; inset: -4px 0; }
       .admin-panel-header .admin-modal-close { position: static !important; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 8px; background: rgba(255,255,255,.06); color: #cbd5e1; }
 
       /* Sticky Segmented Studio Tabs */
@@ -2957,7 +2985,10 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
   .m-viz-stage .viz-title { font-size: .73rem; }
   .m-viz-stage .viz-hint { font-size: .66rem; }
   .m-viz-stage .ix-tabs { gap: .3rem; margin-bottom: .55rem; }
-  .m-viz-stage .ix-tab { min-height: 36px; font-size: .71rem; padding: .32rem .5rem; border-radius: 8px; }
+  .m-viz-stage .ix-tab {
+      min-height: 36px; font-size: .71rem; padding: .32rem .5rem; border-radius: 8px; position: relative;
+    }
+    .m-viz-stage .ix-tab::after { content: ''; position: absolute; inset: -4px 0; }
   .m-viz-stage .ix-card { padding: .65rem .75rem; margin-top: .4rem; }
   .m-viz-stage .ix-card h4 { font-size: .82rem; }
   .m-viz-stage .ix-card p { font-size: .75rem; line-height: 1.4; }
@@ -5895,7 +5926,8 @@ p.note, .note {
 }
 .m-deck-dots-track::-webkit-scrollbar { display: none; }
 .m-deck-dot-btn {
-  padding: 4px 1.5px;
+  padding: 10px 4px;
+  min-height: 44px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -5903,6 +5935,12 @@ p.note, .note {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  position: relative;
+}
+.m-deck-dot-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0 -2px;
 }
 .m-deck-dot {
   display: block;
@@ -6153,6 +6191,12 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   color: #e2e8f0; padding: .38rem .78rem; border-radius: 10px;
   font-size: .78rem; font-weight: 700; display: inline-flex; align-items: center; gap: .35rem;
   min-height: 36px; transition: background .2s, color .2s, border-color .2s;
+  position: relative;
+}
+.p-btn::after {
+  content: '';
+  position: absolute;
+  inset: -4px 0;
 }
 .p-btn:hover { background: rgba(255,255,255,.15); color: #fff; border-color: rgba(255,255,255,.3); }
 .p-btn.accent {
@@ -6200,6 +6244,11 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 .p-dot {
   width: 9px; height: 9px; border-radius: 999px; border: 0;
   background: rgba(255,255,255,.22); transition: height .22s, background .22s, transform .22s, box-shadow .22s; position: relative;
+}
+.p-dot::after {
+  content: '';
+  position: absolute;
+  inset: -6px -8px;
 }
 .p-dot:hover { background: #ff8a8e; transform: scale(1.35); }
 .p-dot.active { height: 22px; background: var(--alfa-red); box-shadow: 0 0 8px var(--alfa-red); }
@@ -6547,7 +6596,11 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   .m-viz-stage { padding: .6rem .65rem !important; border-radius: 12px !important; }
   .m-viz-stage .viz-head { margin-bottom: .45rem !important; padding-bottom: .35rem !important; }
   .m-viz-stage .ix-tabs { gap: .28rem !important; margin-bottom: .45rem !important; }
-  .m-viz-stage .ix-tab { min-height: 36px !important; font-size: .71rem !important; padding: .28rem .45rem !important; border-radius: 8px !important; }
+  .m-viz-stage .ix-tab {
+    min-height: 36px !important; font-size: .71rem !important; padding: .28rem .45rem !important;
+    border-radius: 8px !important; position: relative;
+  }
+  .m-viz-stage .ix-tab::after { content: ''; position: absolute; inset: -4px 0; }
   .m-viz-stage .ix-card { padding: .55rem .68rem !important; margin-top: .35rem !important; }
   .m-viz-stage .ix-grid-2, .m-viz-stage .ix-grid-3, .m-viz-stage .ix-grid-4 {
     grid-template-columns: repeat(2, 1fr) !important; gap: .38rem !important;
@@ -10040,6 +10093,96 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   function lock(on) { document.documentElement.classList.toggle("lock", on); }
 
   /* =======================================================================
+     ACCESSIBILITY (A11Y): UNIVERSAL MODAL FOCUS TRAP & ARIA MANAGER
+     ======================================================================= */
+  const ModalA11y = {
+    stack: [],
+    focusableSel: 'a[href], button:not([disabled]):not([hidden]), textarea:not([disabled]):not([hidden]), input:not([disabled]):not([hidden]):not([type="hidden"]), select:not([disabled]):not([hidden]), [tabindex]:not([tabindex="-1"])',
+
+    onOpen(modalEl, initialFocusSel) {
+      if (!modalEl) return;
+      const prevActive = document.activeElement;
+      // Filter out duplicate entries
+      this.stack = this.stack.filter(item => item.el !== modalEl);
+      this.stack.push({ el: modalEl, prevActive: prevActive });
+
+      // Isolate background from assistive technologies
+      const dApp = document.querySelector(".d-app");
+      const mApp = document.querySelector(".m-app");
+      if (dApp) dApp.setAttribute("aria-hidden", "true");
+      if (mApp) mApp.setAttribute("aria-hidden", "true");
+
+      requestAnimationFrame(() => {
+        let target = null;
+        if (initialFocusSel) {
+          try { target = modalEl.querySelector(initialFocusSel); } catch(e) {}
+        }
+        if (!target) {
+          const focusables = Array.from(modalEl.querySelectorAll(this.focusableSel))
+            .filter(el => el.offsetParent !== null && !el.closest("[hidden]"));
+          target = focusables[0];
+        }
+        if (target && typeof target.focus === "function") {
+          try { target.focus(); } catch(e) {}
+        }
+      });
+    },
+
+    onClose(modalEl) {
+      if (!modalEl) return;
+      let entry = null;
+      const idx = this.stack.findIndex(item => item.el === modalEl);
+      if (idx !== -1) {
+        entry = this.stack.splice(idx, 1)[0];
+      }
+
+      if (this.stack.length === 0) {
+        const dApp = document.querySelector(".d-app");
+        const mApp = document.querySelector(".m-app");
+        if (dApp) dApp.removeAttribute("aria-hidden");
+        if (mApp) mApp.removeAttribute("aria-hidden");
+      }
+
+      if (entry && entry.prevActive && typeof entry.prevActive.focus === "function" && document.body.contains(entry.prevActive)) {
+        try { entry.prevActive.focus(); } catch(e) {}
+      }
+    },
+
+    handleKeydown(e) {
+      if (this.stack.length === 0) return false;
+      const top = this.stack[this.stack.length - 1];
+      if (!top || !top.el || top.el.hidden || top.el.style.display === "none") return false;
+
+      if (e.key === "Tab") {
+        const focusables = Array.from(top.el.querySelectorAll(this.focusableSel))
+          .filter(el => el.offsetParent !== null && !el.closest("[hidden]"));
+        if (focusables.length === 0) {
+          e.preventDefault();
+          return true;
+        }
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first || !top.el.contains(document.activeElement)) {
+            e.preventDefault();
+            last.focus();
+            return true;
+          }
+        } else {
+          if (document.activeElement === last || !top.el.contains(document.activeElement)) {
+            e.preventDefault();
+            first.focus();
+            return true;
+          }
+        }
+      }
+      return false;
+    }
+  };
+  window.ModalA11y = ModalA11y;
+
+  /* =======================================================================
      INTERACTIVE VISUAL RENDERERS FOR ALL 17 SLIDE PAGES (DESKTOP & MOBILE)
      ======================================================================= */
   function setIx(key, val) {
@@ -10734,14 +10877,21 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   function openOverview() {
     S.ovOpen = true;
     renderOverviewGrid();
-    $("#ovModal").hidden = false;
+    const m = $("#ovModal");
+    if (m) {
+      m.hidden = false;
+      ModalA11y.onOpen(m, ".ov-card.active, .p-btn");
+    }
     lock(true);
     haptic(8);
   }
   function closeOverview() {
     S.ovOpen = false;
     const m = $("#ovModal");
-    if (m) m.hidden = true;
+    if (m) {
+      m.hidden = true;
+      ModalA11y.onClose(m);
+    }
     lock(false);
   }
   function setOvFilter(mi) {
@@ -10959,11 +11109,15 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
       `;
     }
     drawer.hidden = false;
+    ModalA11y.onOpen(drawer, ".btn-outline");
   }
   
   function closeDesktopFigureDrawer() {
     const drawer = document.getElementById("dFigureDrawer");
-    if (drawer) drawer.hidden = true;
+    if (drawer) {
+      drawer.hidden = true;
+      ModalA11y.onClose(drawer);
+    }
   }
   
   /* Mobile Member Switch Sheet */
@@ -11684,12 +11838,23 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
       openPresenterMode();
       return;
     }
-    $("#mFocus").hidden = false;
+    const m = $("#mFocus");
+    if (m) {
+      m.hidden = false;
+      ModalA11y.onOpen(m, ".m-focus-nav-btn, .m-ibtn");
+    }
     renderFocus();
     lock(true);
     haptic(10);
   }
-  function closeFocus() { $("#mFocus").hidden = true; lock(!$("#lb").hidden); }
+  function closeFocus() {
+    const m = $("#mFocus");
+    if (m) {
+      m.hidden = true;
+      ModalA11y.onClose(m);
+    }
+    lock(!$("#lb").hidden);
+  }
   function renderFocus() {
     if (!vaultData) { closeFocus(); return; }
     const curSlide = ALL_SLIDES[S.slideIdx];
@@ -11942,6 +12107,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     const modal = $("#projectSettingsModal");
     if (modal) {
       modal.hidden = false;
+      ModalA11y.onOpen(modal, ".admin-modal-close");
       lock(true);
       haptic(10);
     }
@@ -11953,6 +12119,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     const modal = $("#projectSettingsModal");
     if (modal) {
       modal.hidden = true;
+      ModalA11y.onClose(modal);
       lock(false);
       haptic(6);
     }
@@ -12808,6 +12975,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     `;
 
     sheet.hidden = false;
+    ModalA11y.onOpen(sheet, ".m-sheet-close-circle");
     haptic(8);
   }
 
@@ -12816,6 +12984,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     if (!sheet || sheet.hidden) return;
     if (sheet.classList.contains("m-sheet-closing")) return;
     sheet.classList.add("m-sheet-closing");
+    ModalA11y.onClose(sheet);
     setTimeout(() => {
       sheet.hidden = true;
       sheet.classList.remove("m-sheet-closing");
@@ -13027,6 +13196,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
       `;
     }
     sheet.hidden = false;
+    ModalA11y.onOpen(sheet, ".m-sheet-close-circle");
     haptic(8);
   }
 
@@ -13035,6 +13205,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     if (!sheet || sheet.hidden) return;
     if (sheet.classList.contains("m-sheet-closing")) return;
     sheet.classList.add("m-sheet-closing");
+    ModalA11y.onClose(sheet);
     setTimeout(() => {
       sheet.hidden = true;
       sheet.classList.remove("m-sheet-closing");
@@ -13177,7 +13348,10 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
     lbScale = 1; lbPanX = 0; lbPanY = 0;
     const lb = $("#lb");
-    if (lb) lb.hidden = false;
+    if (lb) {
+      lb.hidden = false;
+      ModalA11y.onOpen(lb, "#lbClose");
+    }
     updateLbTransform();
     lock(true);
     haptic(10);
@@ -13186,7 +13360,10 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
   function closeLb() {
     const lb = $("#lb");
-    if (lb) lb.hidden = true;
+    if (lb) {
+      lb.hidden = true;
+      ModalA11y.onClose(lb);
+    }
     const stage = $("#lbStage");
     if (stage) stage.innerHTML = '';
     const focusEl = $("#mFocus");
@@ -13399,8 +13576,20 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     const resetBtn = $("#lbZoomReset");
     if (resetBtn) resetBtn.textContent = Math.round(lbScale * 100) + "%";
   }
-  function openKbd() { $("#kbd").hidden = false; }
-  function closeKbd() { $("#kbd").hidden = true; }
+  function openKbd() {
+    const k = $("#kbd");
+    if (k) {
+      k.hidden = false;
+      ModalA11y.onOpen(k, ".kbd-close");
+    }
+  }
+  function closeKbd() {
+    const k = $("#kbd");
+    if (k) {
+      k.hidden = true;
+      ModalA11y.onClose(k);
+    }
+  }
   function toggleFullscreen() {
     if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
     else document.exitFullscreen().catch(() => {});
@@ -13444,13 +13633,21 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     $("#admPasswordInput").value = "";
     $("#admLoginErr").hidden = true;
     $("#admLoginErr").textContent = "";
-    $("#adminLoginModal").hidden = false;
+    const m = $("#adminLoginModal");
+    if (m) {
+      m.hidden = false;
+      ModalA11y.onOpen(m, "#admPasswordInput");
+    }
     lock(true);
-    setTimeout(() => { $("#admPasswordInput").focus(); }, 100);
+    setTimeout(() => { const inp = $("#admPasswordInput"); if (inp) inp.focus(); }, 100);
   }
 
   function closeAdminLogin() {
-    $("#adminLoginModal").hidden = true;
+    const m = $("#adminLoginModal");
+    if (m) {
+      m.hidden = true;
+      ModalA11y.onClose(m);
+    }
     lock(false);
   }
 
@@ -13529,7 +13726,11 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   let currentAdminSearchQuery = '';
 
   function openAdminPanel() {
-    $("#adminPanelModal").hidden = false;
+    const m = $("#adminPanelModal");
+    if (m) {
+      m.hidden = false;
+      ModalA11y.onOpen(m, ".admin-modal-close");
+    }
     lock(true);
 
     let role = "admin";
@@ -13592,7 +13793,11 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   }
 
   function closeAdminPanel() {
-    $("#adminPanelModal").hidden = true;
+    const m = $("#adminPanelModal");
+    if (m) {
+      m.hidden = true;
+      ModalA11y.onClose(m);
+    }
     lock(false);
   }
 
@@ -14026,7 +14231,10 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
   // Keyboard navigation (arrows, PageUp/PageDown, Home/End, number keys 1-7 for Members, Esc for overview, hotkeys)
   document.addEventListener("keydown", e => {
-    if (e.target.matches("input, textarea, select")) {
+    // 1. Accessibility focus trap (Tab / Shift+Tab)
+    if (ModalA11y.handleKeydown(e)) return;
+
+    if (e.target && e.target.matches && e.target.matches("input, textarea, select")) {
       if (e.key === "Escape") e.target.blur();
       return;
     }
@@ -14036,13 +14244,16 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
       if (planSheet && !planSheet.hidden) { closePlanStepSheet(); return; }
       const figSheet = $("#mFigureSheet");
       if (figSheet && !figSheet.hidden) { closeFigureSheet(); return; }
-    }
-    if (isMobile()) return;
-    const anyModalOpen = !$("#lb").hidden || !$("#mFocus").hidden || !$("#kbd").hidden || !$("#adminLoginModal").hidden || !$("#adminPanelModal").hidden || !$("#projectSettingsModal").hidden || !$("#ovModal").hidden || ($("#dFigureDrawer") && !$("#dFigureDrawer").hidden);
-    if (k === "Escape") {
+
+      const anyModalOpen = (ModalA11y.stack.length > 0) || !$("#lb").hidden || !$("#mFocus").hidden || !$("#kbd").hidden || !$("#adminLoginModal").hidden || !$("#adminPanelModal").hidden || !$("#projectSettingsModal").hidden || !$("#ovModal").hidden || ($("#dFigureDrawer") && !$("#dFigureDrawer").hidden);
       if (anyModalOpen) {
         closeLb(); closeFocus(); closeKbd(); closeAdminLogin(); closeAdminPanel(); closeProjectSettingsModal(); closeMoreDetail(); closeDesktopFigureDrawer(); closeOverview();
-      } else if (S.dView === "deck") {
+        return;
+      }
+    }
+    if (isMobile()) return;
+    if (k === "Escape") {
+      if (S.dView === "deck") {
         toggleOverview();
       } else {
         dGo("home");

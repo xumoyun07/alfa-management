@@ -10092,8 +10092,24 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
   const MQ = window.matchMedia("(max-width: 767px), (pointer: coarse) and (max-height: 500px)");
   const isMobile = () => MQ.matches;
-  const $ = sel => document.querySelector(sel);
+  /* DOM Element Cache (Eliminates repeated layout sweeps & thrashing) */
+  const DOM = {
+    _cache: new Map(),
+    get(sel) {
+      if (typeof sel !== 'string') return sel;
+      let el = this._cache.get(sel);
+      if (!el || !document.contains(el)) {
+        el = document.querySelector(sel);
+        if (el) this._cache.set(sel, el);
+      }
+      return el;
+    },
+    clear() { this._cache.clear(); }
+  };
+  const $ = sel => DOM.get(sel);
   const $$ = sel => document.querySelectorAll(sel);
+  window.$ = $;
+  window.$$ = $$;
   const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const num = n => Number(n).toLocaleString("en-US");
   const money = n => (n < 0 ? "−$" : "$") + Math.abs(Math.round(n)).toLocaleString("en-US");
@@ -14441,6 +14457,96 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   applyAccessConfig();
   applyTheme(currentTheme);
   applyHash();
+
+  /* =======================================================================
+     ALFA ARCHITECTURAL NAMESPACE & STATE CONTAINER (P2 SENIOR REFACTOR)
+     ======================================================================= */
+  window.ALFA = {
+    version: "4.2.0",
+    build: "production-p2-senior",
+
+    // Immutable Data Registries (Guaranteed Academic & Financial Invariants)
+    data: Object.freeze({
+      charts: Object.freeze(CHARTS),
+      presets: Object.freeze(PRESETS),
+      fields: Object.freeze(FIELDS),
+      slides: Object.freeze(ALL_SLIDES),
+      hub: Object.freeze({
+        crm: Object.freeze(CRM),
+        erp: Object.freeze(ERP),
+        hrm: Object.freeze(HRM),
+        info: Object.freeze(HUB_INFO)
+      }),
+      memberMeta: Object.freeze(MEMBER_META),
+      planSteps: Object.freeze(PLAN_STEPS_DATA)
+    }),
+
+    // Structured State Accessors
+    state: {
+      get presentation() { return S; },
+      get interactive() { return IX; },
+      get mobileCharts() { return mChartState; },
+      get lightbox() { return { scale: lbScale, panX: lbPanX, panY: lbPanY }; },
+      get theory() { return THEORY; },
+      get isMobile() { return isMobile(); }
+    },
+
+    // Accessibility Engine (WCAG 2.1 Focus Trap & ARIA Isolation)
+    a11y: ModalA11y,
+
+    // Navigation & Slide Deck Controller
+    nav: {
+      goToSlide: (idx) => goToSlide(idx),
+      nextSlide: () => nextSlide(),
+      prevSlide: () => prevSlide(),
+      dGo: (view) => dGo(view),
+      mGo: (view) => mGo(view),
+      toggleOverview: () => toggleOverview(),
+      openOverview: () => openOverview(),
+      closeOverview: () => closeOverview(),
+      setOverviewFilter: (mi) => setOvFilter(mi)
+    },
+
+    // Modal & Stage Management
+    modal: {
+      openLb: (n) => openLb(n),
+      closeLb: () => closeLb(),
+      openKbd: () => openKbd(),
+      closeKbd: () => closeKbd(),
+      openAdmin: () => openAdmin(),
+      openAdminLogin: () => openAdminLogin(),
+      closeAdminLogin: () => closeAdminLogin(),
+      openAdminPanel: () => openAdminPanel(),
+      closeAdminPanel: () => closeAdminPanel(),
+      openProjectSettings: () => openProjectSettingsModal(),
+      closeProjectSettings: () => closeProjectSettingsModal(),
+      openPlanStepSheet: (key) => openPlanStepSheet(key),
+      closePlanStepSheet: () => closePlanStepSheet(),
+      openFigureSheet: (fig) => openFigureSheet(fig),
+      closeFigureSheet: () => closeFigureSheet(),
+      openDesktopFigureDrawer: (fig) => openDesktopFigureDrawer(fig),
+      closeDesktopFigureDrawer: () => closeDesktopFigureDrawer(),
+      openFocus: () => openFocus(),
+      closeFocus: () => closeFocus()
+    },
+
+    // Financial ROI Engine
+    roi: {
+      compute: (calc) => compute(calc || S.calc),
+      applyPreset: (k) => applyPreset(k),
+      exportCSV: () => exportCSV()
+    },
+
+    // Utilities & Helpers
+    utils: {
+      money: (n) => money(n),
+      money2: (n) => money2(n),
+      num: (n) => num(n),
+      pct: (x) => pct(x),
+      toast: (msg) => toast(msg),
+      haptic: (p) => haptic(p)
+    }
+  };
   </script>
 <script>
 document.documentElement.classList.add('js');

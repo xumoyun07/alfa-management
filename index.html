@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark" data-resolved-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -59,7 +59,7 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
   --text-white: #ffffff;
 
   /* Typographic Scale Tokens (7-Step Modular Scale) */
-  --text-2xs: 0.65rem;   /* 10.4px — Micro-labels, KPI badges, pillar tags */
+  --text-2xs: 0.75rem;   /* 12.0px — Taste-skill & WCAG AA compliant floor for tags/labels */
   --text-xs:  0.75rem;   /* 12.0px — Meta captions, secondary timestamps, small buttons */
   --text-sm:  0.875rem;  /* 14.0px — Compact body, card descriptions, list items */
   --text-base: 1rem;     /* 16.0px — Standard readable body copy */
@@ -451,12 +451,34 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     .bar-fill.old { background: linear-gradient(90deg, var(--red), var(--red-d)); }
     .bar-fill.new { background: linear-gradient(90deg, #10b981, #059669); }
 
+    .app-universal-h1 {
+      position: absolute; top: 0; left: 0; width: 100%; height: 1px;
+      margin: 0; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; font-size: 20px; line-height: 1; pointer-events: none; z-index: -1;
+    }
+
     .data-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm, 0.875rem); margin-top: .8rem; }
     .data-table th { background: rgba(139,0,0,.75); color: #fff; text-align: left; padding: .7rem .85rem; font-size: var(--text-sm, 0.875rem); text-transform: uppercase; letter-spacing: .5px; }
     .data-table td { padding: .65rem .85rem; border-bottom: 1px solid var(--line); color: #e2e8f0; }
     .data-table tr:hover td { background: rgba(255,255,255,.03); }
     .data-table td.good { color: #6ee7b7; font-weight: 700; }
     .data-table td.gold { color: #fcd34d; font-weight: 800; }
+    /* Taste-skill strict numeric alignment: Numbers, amounts and % right-aligned with tabular figures */
+    .data-table th:not(:first-child),
+    .data-table td:not(:first-child),
+    .sx-table th:not(:first-child),
+    .sx-table td:not(:first-child),
+    #dTable td:not(:first-child) {
+      text-align: right !important;
+      font-variant-numeric: tabular-nums !important;
+    }
+    .data-table th:first-child,
+    .data-table td:first-child,
+    .sx-table th:first-child,
+    .sx-table td:first-child,
+    #dTable td:first-child {
+      text-align: left !important;
+    }
     .table-actions { display: flex; gap: .6rem; margin-top: 1.2rem; justify-content: flex-end; }
 
     /* OneHub */
@@ -571,7 +593,7 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     .m-top-ibtn::after { content: ''; position: absolute; inset: -5px; }
     .m-top-ibtn:active { transform: scale(.93); }
 
-    .m-main { padding: .85rem .9rem 1.5rem; max-width: 540px; margin: 0 auto; }
+    .m-main { padding: .85rem 1rem 1.5rem; max-width: 540px; margin: 0 auto; }
     .m-screen { animation: mScreenIn .24s cubic-bezier(.16,1,.3,1); }@keyframes mScreenIn{ from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
     .m-head { margin-bottom: .75rem; }
@@ -2980,7 +3002,7 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
   
   .m-top-ibtn { width: 34px; height: 34px; min-width: 34px; min-height: 34px; position: relative; }
   .m-top-ibtn::after { content: ''; position: absolute; inset: -5px; }
-  .m-main { padding: .6rem .75rem 1.2rem; }
+  .m-main { padding: .6rem 1rem 1.2rem !important; }
 
   /* Unified Compact Deck Strip on #m-present */
   .m-deck-strip {
@@ -3976,7 +3998,8 @@ p.note, .note {
 .m-hero-sub {
   font-size: var(--text-sm, 0.875rem);
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: normal;
   color: #f87171 !important;
   margin-bottom: .4rem;
   letter-spacing: .03em;
@@ -5023,8 +5046,8 @@ p.note, .note {
     .m-hero-sub {
       font-size: var(--text-xs, 0.75rem);
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
+      text-transform: none;
+      letter-spacing: normal;
       color: var(--accent-red, #ff8a8e);
       margin-bottom: 0.45rem;
       display: block;
@@ -6685,6 +6708,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 </style>
 </head>
 <body>
+  <h1 id="appUniversalTitle" class="app-universal-h1">ALFA Management &amp; Financial Turnaround</h1>
 
   <!-- =====================================================================
        DESKTOP / TABLET DOM (.d-app)
@@ -6695,7 +6719,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
       <div class="brand">
         <div class="brand-logo" role="img" aria-label="ALFA University College logo"><i class="logo-i"></i></div>
         <div class="brand-text">
-          <h1 class="brand-h1">ALFA UNIVERSITY COLLEGE</h1>
+          <div class="brand-h1">ALFA UNIVERSITY COLLEGE</div>
           <span>FIB 2074 Introduction to Management · “A Leader For All” · Group Project Portal</span>
         </div>
       </div>
@@ -6727,8 +6751,8 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
                 <span class="d-pill-red">FIB 2074</span>
                 <span>Introduction to Management · ALFA University College</span>
               </div>
-              <h2 class="d-home-h2">From 100% agent dependency to 65% direct enrolment and one paperless platform.</h2>
-              <p class="d-home-lead">An integrated 12-month POLC turnaround restructuring recruitment channels and administrative speed across all 120 staff (assumption).</p>
+              <h2 class="d-home-h2">From 100% Agent Dependency to 65% Direct Intake</h2>
+              <p class="d-home-lead">An integrated 12-month POLC turnaround and paperless OneHub platform, restructuring recruitment channels and administrative speed across 120 staff (assumption).</p>
               
               <div class="d-home-actions">
                 <button type="button" class="d-btn primary lg" onclick="startDesktopPresentation(0)" aria-label="Present (17 slides) from slide 1">
@@ -7072,7 +7096,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
       <!-- View 2: ROI Simulator -->
       <section id="view-calculator" class="view-section" aria-label="ROI simulator">
-        <h1 class="sr-only">ALFA University College ROI Simulator and Sensitivity Analysis</h1>
+        <h2 class="sr-only">ALFA University College ROI Simulator and Sensitivity Analysis</h2>
         <div class="calc-grid">
           <div class="panel">
             <h2 class="panel-h">Tuition &amp; Commission Simulator</h2>
@@ -7162,7 +7186,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
       <!-- View 3: OneHub -->
       <section id="view-onehub" class="view-section" aria-label="ALFA OneHub">
-        <h1 class="sr-only">ALFA OneHub Unified Paperless Cloud Ecosystem</h1>
+        <h2 class="sr-only">ALFA OneHub Unified Paperless Cloud Ecosystem</h2>
         <div class="panel">
           <h2 class="panel-h">ALFA OneHub — Unified Paperless Cloud Ecosystem (Solving Challenge 2)</h2>
           <p class="panel-lead">Click through the modules to see how ALFA OneHub connects social media leads directly to paperless Admissions (CRM), Student Finance &amp; Visas (ERP) and 120-staff management (HRM).</p>
@@ -7178,7 +7202,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
       <!-- View 4: Theory -->
       <section id="view-theories" class="view-section" aria-label="Theory and Q&amp;A">
-        <h1 class="sr-only">FIB 2074 Management Theories and Lecturer Q&amp;A</h1>
+        <h2 class="sr-only">FIB 2074 Management Theories and Lecturer Q&amp;A</h2>
         <div class="theory-top-bar">
           <input type="search" class="theory-search" id="dThSearch" data-th-search placeholder="Search theories (POLC, SMART, power, span of control…) — press / to focus" aria-label="Search theories" autocomplete="off" />
           <button class="btn-admin" id="dOpenAdmin" onclick="openAdmin()" aria-label="Admin Panel"><span data-ic="lock" data-s="16"></span><span>Admin Panel</span></button>
@@ -7222,7 +7246,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     <header class="m-top" id="mTop" aria-label="Mobile Application Header">
       <div style="display:flex;align-items:center;gap:.55rem;overflow:hidden;flex:1;min-width:0">
         <span class="m-logo" role="img" aria-label="ALFA University College logo"><i class="logo-i"></i></span>
-        <h1 style="font-size:1.02rem;font-weight:900;margin:0;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">ALFA Management Plan</h1>
+        <div class="m-top-title" style="font-size:1.02rem;font-weight:900;margin:0;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">ALFA Management Plan</div>
       </div>
       <div class="m-top-actions" style="margin-left:auto;flex-shrink:0">
         <button type="button" class="m-top-ibtn pwa-install-btn" id="mInstallBtn" onclick="installPWA()" aria-label="Install App" title="Install as offline app" style="display:none"><span data-ic="download" data-s="16"></span></button>
@@ -7235,7 +7259,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <!-- 1. Hero Card -->
         <div class="m-home-hero">
           <p class="m-hero-sub">FIB 2074 Introduction to Management · ALFA University College</p>
-          <h2 class="m-hero-title" id="mtHome">From 100% agents to 65% direct enrolment and one paperless platform</h2>
+          <h2 class="m-hero-title" id="mtHome">From 100% Agent Dependency to 65% Direct Intake</h2>
           <div class="m-hero-actions">
             <button type="button" class="m-btn primary full" onclick="mGo('roi')" aria-label="Open ROI Simulator">
               <span data-ic="roi" data-s="18"></span><span>ROI Simulator</span>
@@ -7379,7 +7403,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <div class="m-charts-head">
               <div class="m-charts-head-left">
                 <div class="m-charts-eyebrow">
-                  <span class="m-tag red" style="font-size:.62rem;letter-spacing:0.04em;padding:2px 7px">EXECUTIVE INTELLIGENCE</span>
+                  <span class="m-tag red" style="padding:2px 7px">EXECUTIVE INTELLIGENCE</span>
                   <span class="m-charts-count-badge">11 Models</span>
                 </div>
                 <h3 class="m-charts-title">Turnaround &amp; Strategy Charts</h3>
@@ -7428,7 +7452,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card is-active" id="mChartCard1" data-num="1" data-cat="economics">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag red" style="font-size:.65rem">CHART 01</span>
+                    <span class="m-tag red">CHART 01</span>
                     <span class="m-pillar-tag">Economics & ROI</span>
                   </div>
                   <div class="m-card-kpi-badge">15% ($375) Commission</div>
@@ -7459,7 +7483,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard2" data-num="2" data-cat="economics">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag teal" style="font-size:.65rem">CHART 02</span>
+                    <span class="m-tag teal">CHART 02</span>
                     <span class="m-pillar-tag">Economics & ROI</span>
                   </div>
                   <div class="m-card-kpi-badge">+$55,500 Net Savings</div>
@@ -7490,7 +7514,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard3" data-num="3" data-cat="strategy">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag green" style="font-size:.65rem">CHART 03</span>
+                    <span class="m-tag green">CHART 03</span>
                     <span class="m-pillar-tag">POLC & Strategy</span>
                   </div>
                   <div class="m-card-kpi-badge">65% Direct Intake</div>
@@ -7521,7 +7545,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard4" data-num="4" data-cat="staff">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag gold" style="font-size:.65rem">CHART 04</span>
+                    <span class="m-tag gold">CHART 04</span>
                     <span class="m-pillar-tag">120 Staff & Governance</span>
                   </div>
                   <div class="m-card-kpi-badge">120 Staff</div>
@@ -7552,7 +7576,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard5" data-num="5" data-cat="ops">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag teal" style="font-size:.65rem">CHART 05</span>
+                    <span class="m-tag teal">CHART 05</span>
                     <span class="m-pillar-tag">OneHub & Operations</span>
                   </div>
                   <div class="m-card-kpi-badge"><24h SLA Direct CRM</div>
@@ -7583,7 +7607,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard6" data-num="6" data-cat="economics">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag red" style="font-size:.65rem">CHART 06</span>
+                    <span class="m-tag red">CHART 06</span>
                     <span class="m-pillar-tag">Economics & ROI</span>
                   </div>
                   <div class="m-card-kpi-badge">$42,000 Reconciled</div>
@@ -7614,7 +7638,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard7" data-num="7" data-cat="ops">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag green" style="font-size:.65rem">CHART 07</span>
+                    <span class="m-tag green">CHART 07</span>
                     <span class="m-pillar-tag">OneHub & Operations</span>
                   </div>
                   <div class="m-card-kpi-badge">90.55% Tuition Retained</div>
@@ -7645,7 +7669,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard8" data-num="8" data-cat="strategy">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag gold" style="font-size:.65rem">CHART 08</span>
+                    <span class="m-tag gold">CHART 08</span>
                     <span class="m-pillar-tag">POLC & Strategy</span>
                   </div>
                   <div class="m-card-kpi-badge">Continuous Loop</div>
@@ -7676,7 +7700,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard9" data-num="9" data-cat="staff">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag teal" style="font-size:.65rem">CHART 09</span>
+                    <span class="m-tag teal">CHART 09</span>
                     <span class="m-pillar-tag">120 Staff & Governance</span>
                   </div>
                   <div class="m-card-kpi-badge">Span 7 / 5–6 / 4–5</div>
@@ -7707,7 +7731,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard10" data-num="10" data-cat="strategy">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag red" style="font-size:.65rem">CHART 10</span>
+                    <span class="m-tag red">CHART 10</span>
                     <span class="m-pillar-tag">POLC & Strategy</span>
                   </div>
                   <div class="m-card-kpi-badge">Referent Power & <2h SLA</div>
@@ -7738,7 +7762,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <article class="m-chart-card " id="mChartCard11" data-num="11" data-cat="economics">
                 <div class="m-card-top">
                   <div class="m-card-tags">
-                    <span class="m-tag green" style="font-size:.65rem">CHART 11</span>
+                    <span class="m-tag green">CHART 11</span>
                     <span class="m-pillar-tag">Economics & ROI</span>
                   </div>
                   <div class="m-card-kpi-badge">12 Master / 96 Sub</div>
@@ -8265,7 +8289,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-chips-row" id="mFilters" role="group" aria-label="Filter by lecture"></div>
         <div class="m-th-toolbar">
           <p class="m-count" id="mThCount" aria-live="polite"></p>
-          <span style="font-size:.68rem;color:var(--text-muted)">Tap any card to expand</span>
+          <span style="font-size:var(--text-xs);color:var(--text-muted)">Tap any card to expand</span>
         </div>
         <div id="mTheory"></div>
       </section>
@@ -8557,7 +8581,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Sub-agent 10% ($250), Master agent 5% assumption ($125), Total 15% ($375), 12 master agents, 96 sub-agents, 400 students</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="${isMob ? 28 : 34}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">3-Tier Recruitment Commission Structure</text>
-          <text x="${w/2}" y="${isMob ? 46 : 54}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Baseline: 100% Agent Dependency · 400 Students · $1,000,000 Tuition</text>
+          <text x="${w/2}" y="${isMob ? 46 : 54}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Baseline: 100% Agent Dependency · 400 Students · $1,000,000 Tuition</text>
           
           <g transform="translate(${isMob ? 20 : 40}, ${isMob ? 65 : 75})">
             <rect width="${isMob ? 320 : 180}" height="${isMob ? 85 : 230}" rx="10" fill="rgba(232,13,19,0.12)" stroke="var(--accent-red, #E80D13)" stroke-width="2"/>
@@ -8565,7 +8589,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <text x="${isMob ? 160 : 90}" y="${isMob ? 48 : 65}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 18 : 22}" font-weight="900">10% · $250</text>
             <text x="${isMob ? 160 : 90}" y="${isMob ? 66 : 95}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11">Per enrolled student</text>
             <text x="${isMob ? 160 : 90}" y="${isMob ? 80 : 140}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.5" font-weight="700">96 Sub-Agents</text>
-            ${!isMob ? `<text x="90" y="165" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">(8 per Master Agent)</text>
+            ${!isMob ? `<text x="90" y="165" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">(8 per Master Agent)</text>
             <text x="90" y="202" text-anchor="middle" fill="var(--text, #fff)" font-size="12" font-weight="700">$100,000 Baseline</text>` : ''}
           </g>
           
@@ -8575,7 +8599,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <text x="${isMob ? 160 : 90}" y="${isMob ? 48 : 65}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 18 : 22}" font-weight="900">5% · $125</text>
             <text x="${isMob ? 160 : 90}" y="${isMob ? 66 : 95}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11">(our assumption)</text>
             <text x="${isMob ? 160 : 90}" y="${isMob ? 80 : 140}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.5" font-weight="700">12 Master Agents</text>
-            ${!isMob ? `<text x="90" y="165" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">University Partners</text>
+            ${!isMob ? `<text x="90" y="165" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">University Partners</text>
             <text x="90" y="202" text-anchor="middle" fill="var(--text, #fff)" font-size="12" font-weight="700">$50,000 Baseline</text>` : ''}
           </g>
           
@@ -8585,14 +8609,14 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <text x="${isMob ? 160 : 90}" y="${isMob ? 48 : 65}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 19 : 24}" font-weight="900">15% · $375</text>
             <text x="${isMob ? 160 : 90}" y="${isMob ? 66 : 95}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11">Per agent student</text>
             <text x="${isMob ? 160 : 90}" y="${isMob ? 84 : 140}" text-anchor="middle" fill="var(--accent-red, #E80D13)" font-size="12" font-weight="800">$150,000 / yr</text>
-            ${!isMob ? `<text x="90" y="165" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">Total agent spend today</text>
+            ${!isMob ? `<text x="90" y="165" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Total agent spend today</text>
             <text x="90" y="202" text-anchor="middle" fill="var(--green, #10b981)" font-size="11" font-weight="700">Cut to $52,500 under Plan</text>` : ''}
           </g>
           
           <rect x="${isMob ? 20 : 40}" y="${isMob ? 375 : 325}" width="${isMob ? 320 : 620}" height="${isMob ? 42 : 36}" rx="8" fill="rgba(16,185,129,0.12)" stroke="var(--green, #10b981)"/>
           ${isMob ? `
-            <text x="${w/2}" y="392" text-anchor="middle" fill="var(--green, #10b981)" font-size="9.5" font-weight="700">65% Direct Plan cuts agent commissions by $97,500/yr</text>
-            <text x="${w/2}" y="407" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="9">(From $150,000 baseline down to $52,500)</text>
+            <text x="${w/2}" y="392" text-anchor="middle" fill="var(--green, #10b981)" font-size="11.5" font-weight="700">65% Direct Plan cuts agent commissions by $97,500/yr</text>
+            <text x="${w/2}" y="407" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">(From $150,000 baseline down to $52,500)</text>
           ` : `
             <text x="${w/2}" y="348" text-anchor="middle" fill="var(--green, #10b981)" font-size="12" font-weight="700">65% Direct Plan cuts agent commission spend by $97,500/year (to $52,500)</text>
           `}
@@ -8604,11 +8628,11 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Total spend: baseline $160,000 vs plan $94,500; cost per student: $400 vs $236.25</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="32" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">Recruitment Spend: Baseline vs. Plan</text>
-          <text x="${w/2}" y="52" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Total Annual Spend ($160,000 vs. $94,500) and Per-Student Cost</text>
+          <text x="${w/2}" y="52" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Total Annual Spend ($160,000 vs. $94,500) and Per-Student Cost</text>
           
           <g transform="translate(${isMob ? 20 : 40}, 80)">
             ${isMob ? `
-            <text x="0" y="16" fill="var(--text, #fff)" font-size="10.5" font-weight="700">Today: <tspan fill="var(--accent-red, #E80D13)">$160K</tspan> ($400/stu)</text>
+            <text x="0" y="16" fill="var(--text, #fff)" font-size="11.5" font-weight="700">Today: <tspan fill="var(--accent-red, #E80D13)">$160K</tspan> ($400/stu)</text>
           ` : `
             <text x="0" y="16" fill="var(--text, #fff)" font-size="12" font-weight="700">Today Baseline (100% Agent): <tspan fill="var(--accent-red, #E80D13)" font-weight="900">$160,000</tspan> <tspan fill="var(--text-muted, #94a3b8)" font-size="11">($400.00 / stu)</tspan></text>
           `}
@@ -8618,21 +8642,21 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <text x="12" y="${isMob ? 45 : 49}" fill="var(--text, #fff)" font-size="11" font-weight="700">Commissions: $150,000 (15%)</text>
             
             <!-- Defect 8 fix: Ads label positioned outside bar with leader line -->
-            <text x="${isMob ? 310 : 595}" y="20" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 9 : 10.5}" font-weight="700">Ads: $10K</text>
+            <text x="${isMob ? 310 : 595}" y="20" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Ads: $10K</text>
             <line x1="${isMob ? 310 : 595}" y1="21" x2="${isMob ? 310 : 595}" y2="26" stroke="var(--gold, #f59e0b)" stroke-width="1.5"/>
           </g>
           
           <g transform="translate(${isMob ? 20 : 40}, ${isMob ? 170 : 175})">
             ${isMob ? `
-            <text x="0" y="16" fill="var(--text, #fff)" font-size="10.5" font-weight="700">Plan: <tspan fill="var(--green, #10b981)">$94.5K</tspan> ($236.25/stu)</text>
+            <text x="0" y="16" fill="var(--text, #fff)" font-size="11.5" font-weight="700">Plan: <tspan fill="var(--green, #10b981)">$94.5K</tspan> ($236.25/stu)</text>
           ` : `
             <text x="0" y="16" fill="var(--text, #fff)" font-size="12" font-weight="700">ALFA 12-Month Plan (65% Direct): <tspan fill="var(--green, #10b981)" font-weight="900">$94,500</tspan> <tspan fill="var(--text-muted, #94a3b8)" font-size="11">($236.25 / stu)</tspan></text>
           `}
             <rect y="26" width="${isMob ? 320 : 620}" height="${isMob ? 28 : 36}" rx="6" fill="rgba(16,185,129,0.15)" stroke="var(--green, #10b981)"/>
             <rect y="26" width="${(isMob ? 320 : 620) * (52.5/160)}" height="${isMob ? 28 : 36}" rx="6" fill="var(--accent-red, #E80D13)" opacity="0.85"/>
             <rect x="${(isMob ? 320 : 620) * (52.5/160)}" y="26" width="${(isMob ? 320 : 620) * (42/160)}" height="${isMob ? 28 : 36}" fill="var(--teal, #14b8a6)"/>
-            <text x="10" y="${isMob ? 45 : 49}" fill="var(--text, #fff)" font-size="10.5" font-weight="700">Agents: $52.5K</text>
-            <text x="${(isMob ? 320 : 620) * (52.5/160) + 8}" y="${isMob ? 45 : 49}" fill="var(--text, #fff)" font-size="10.5" font-weight="700">Plan: $42K</text>
+            <text x="10" y="${isMob ? 45 : 49}" fill="var(--text, #fff)" font-size="11.5" font-weight="700">Agents: $52.5K</text>
+            <text x="${(isMob ? 320 : 620) * (52.5/160) + 8}" y="${isMob ? 45 : 49}" fill="var(--text, #fff)" font-size="11.5" font-weight="700">Plan: $42K</text>
           </g>
           
           <!-- Defect 8 fix: 3 cards with ample space, followed by footer at least 16px below -->
@@ -8654,8 +8678,8 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           
           <!-- Defect 8 fix: At least 30px between bottom of cards (y=337) and footer line -->
           ${isMob ? `
-            <text x="${w/2}" y="368" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10">Baseline tuition retained: 84.00% ($840,000)</text>
-            <text x="${w/2}" y="386" text-anchor="middle" fill="var(--green, #10b981)" font-size="10" font-weight="700">Plan tuition retained: 90.55% ($905,500)</text>
+            <text x="${w/2}" y="368" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Baseline tuition retained: 84.00% ($840,000)</text>
+            <text x="${w/2}" y="386" text-anchor="middle" fill="var(--green, #10b981)" font-size="11.5" font-weight="700">Plan tuition retained: 90.55% ($905,500)</text>
           ` : `
             <text x="${w/2}" y="375" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11">Baseline tuition retained: 84.00% ($840,000) · Plan tuition retained: 90.55% ($905,500)</text>
           `}
@@ -8675,8 +8699,8 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="32" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">12-Month Direct-Intake Transition Path</text>
           ${isMob ? `
-            <text x="${w/2}" y="44" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="9.5">100% Agent Dependency → 65% Direct Intake</text>
-            <text x="${w/2}" y="56" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="9">(260 Direct Students · $97,500 Gross Saving)</text>
+            <text x="${w/2}" y="44" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">100% Agent Dependency → 65% Direct Intake</text>
+            <text x="${w/2}" y="56" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">(260 Direct Students · $97,500 Gross Saving)</text>
           ` : `
             <text x="${w/2}" y="52" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="12">Shifting from 100% Agent Dependency to 65% Direct Social Intake (260 Direct Students)</text>
           `}
@@ -8697,10 +8721,10 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           ${stages.map((st, i) => `
             <g transform="translate(${st.x}, ${st.y})">
               <circle r="${isMob ? 14 : 18}" fill="var(--bg-elevated, #1e293b)" stroke="${i === 4 ? 'var(--green, #10b981)' : 'var(--accent-red, #E80D13)'}" stroke-width="3"/>
-              <text y="5" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 10 : 12}" font-weight="900">${st.pct}</text>
-              <text y="${isMob ? -22 : -26}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 10 : 12}" font-weight="800">${st.label}</text>
-              <text y="${isMob ? 32 : 36}" text-anchor="middle" fill="var(--green, #10b981)" font-size="${isMob ? 9.5 : 11}" font-weight="700">${st.direct} Direct</text>
-              <text y="${isMob ? 44 : 50}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 8.5 : 10}">${st.agent} Agent</text>
+              <text y="5" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 12}" font-weight="900">${st.pct}</text>
+              <text y="${isMob ? -22 : -26}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 12}" font-weight="800">${st.label}</text>
+              <text y="${isMob ? 32 : 36}" text-anchor="middle" fill="var(--green, #10b981)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">${st.direct} Direct</text>
+              <text y="${isMob ? 44 : 50}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 11.5 : 11.5}">${st.agent} Agent</text>
             </g>
           `).join('')}
           
@@ -8708,15 +8732,15 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <g transform="translate(${isMob ? 20 : 60}, ${isMob ? 295 : 285})">
             <rect width="${isMob ? 320 : 580}" height="${isMob ? 95 : 75}" rx="8" fill="rgba(16,185,129,0.12)" stroke="var(--green, #10b981)"/>
             ${isMob ? `
-            <text x="160" y="20" text-anchor="middle" fill="var(--green, #10b981)" font-size="10.5" font-weight="800">Target Result: 65% Direct (260 Students)</text>
-            <text x="160" y="34" text-anchor="middle" fill="var(--green, #10b981)" font-size="10" font-weight="800">35% Agent (140 Students)</text>
-            <text x="160" y="52" text-anchor="middle" fill="var(--text, #fff)" font-size="9.5">Commission Saving: $97,500/yr · Bonuses: $13,000</text>
+            <text x="160" y="20" text-anchor="middle" fill="var(--green, #10b981)" font-size="11.5" font-weight="800">Target Result: 65% Direct (260 Students)</text>
+            <text x="160" y="34" text-anchor="middle" fill="var(--green, #10b981)" font-size="11.5" font-weight="800">35% Agent (140 Students)</text>
+            <text x="160" y="52" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5">Commission Saving: $97,500/yr · Bonuses: $13,000</text>
           ` : `
             <text x="290" y="24" text-anchor="middle" fill="var(--green, #10b981)" font-size="13" font-weight="800">Target Result: 65% Direct (260 Students) · 35% Agent (140 Students)</text>
             <text x="290" y="46" text-anchor="middle" fill="var(--text, #fff)" font-size="12">Commission Saving: $97,500/yr · Direct Bonuses: $13,000 (260 × $50)</text>
           `}
-            ${isMob ? `<text x="160" y="74" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="9.5">Contingency: if Q2 &lt; 40%, redeploy $1,500 into High School workshops</text>` : `
-            <text x="290" y="64" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="10.5">Contingency: if Q2 &lt; 40%, redeploy $1,500 into High School workshops</text>`}
+            ${isMob ? `<text x="160" y="74" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">Contingency: if Q2 &lt; 40%, redeploy $1,500 into High School workshops</text>` : `
+            <text x="290" y="64" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">Contingency: if Q2 &lt; 40%, redeploy $1,500 into High School workshops</text>`}
           </g>
         </svg>`;
       }
@@ -8726,7 +8750,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>120 staff assumption, Vice-Chancellor (5), Academic Affairs (65), Marketing/CRM (20), IT/Operations (30). Span of control 7 vs 4-6.</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">ALFA University College: 120-Staff Structure</text>
-          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Our Assumption · Span of Control: 7 Current vs. 4–6 Recommended</text>
+          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Our Assumption · Span of Control: 7 Current vs. 4–6 Recommended</text>
           
           <!-- Connectors drawn FIRST behind boxes -->
           ${!isMob ? `
@@ -8745,33 +8769,33 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <rect width="${isMob ? 320 : 190}" height="${isMob ? 65 : 135}" rx="8" fill="rgba(20,184,166,0.12)" stroke="var(--teal, #14b8a6)"/>
             <text x="${isMob ? 160 : 95}" y="22" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="11.5" font-weight="800">Academic Affairs</text>
             <text x="${isMob ? 160 : 95}" y="46" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 14 : 16}" font-weight="900">65 Staff</text>
-            <text x="${isMob ? 160 : 95}" y="${isMob ? 60 : 68}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="10.5">7 Schools &amp; 4 Centres</text>
-            ${!isMob ? `<text x="95" y="95" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10">68 Full-Time Programmes</text>
-            <text x="95" y="114" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="9.5">(ALFA website)</text>` : ''}
+            <text x="${isMob ? 160 : 95}" y="${isMob ? 60 : 68}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">7 Schools &amp; 4 Centres</text>
+            ${!isMob ? `<text x="95" y="95" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">68 Full-Time Programmes</text>
+            <text x="95" y="114" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">(ALFA website)</text>` : ''}
           </g>
           
           <g transform="translate(${isMob ? 20 : 255}, ${isMob ? 210 : 165})">
             <rect width="${isMob ? 320 : 190}" height="${isMob ? 65 : 135}" rx="8" fill="rgba(232,13,19,0.15)" stroke="var(--accent-red, #E80D13)"/>
             <text x="${isMob ? 160 : 95}" y="22" text-anchor="middle" fill="var(--accent-red, #E80D13)" font-size="11.5" font-weight="800">Marketing &amp; Direct CRM</text>
             <text x="${isMob ? 160 : 95}" y="46" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 14 : 16}" font-weight="900">20 Staff</text>
-            <text x="${isMob ? 160 : 95}" y="${isMob ? 60 : 68}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="10.5">+ 8 Student Ambassadors</text>
-            ${!isMob ? `<text x="95" y="95" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10">Controls $12K Ad Budget</text>
-            <text x="95" y="114" text-anchor="middle" fill="var(--green, #10b981)" font-size="10">&lt; 24h Inquiry SLA</text>` : ''}
+            <text x="${isMob ? 160 : 95}" y="${isMob ? 60 : 68}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.5">+ 8 Student Ambassadors</text>
+            ${!isMob ? `<text x="95" y="95" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Controls $12K Ad Budget</text>
+            <text x="95" y="114" text-anchor="middle" fill="var(--green, #10b981)" font-size="11.5">&lt; 24h Inquiry SLA</text>` : ''}
           </g>
           
           <g transform="translate(${isMob ? 20 : 470}, ${isMob ? 285 : 165})">
             <rect width="${isMob ? 320 : 190}" height="${isMob ? 65 : 135}" rx="8" fill="rgba(59,130,246,0.12)" stroke="var(--blue, #3b82f6)"/>
             <text x="${isMob ? 160 : 95}" y="22" text-anchor="middle" fill="var(--blue, #3b82f6)" font-size="11.5" font-weight="800">IT (12) &amp; Operations (18)</text>
             <text x="${isMob ? 160 : 95}" y="46" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 14 : 16}" font-weight="900">30 Staff</text>
-            <text x="${isMob ? 160 : 95}" y="${isMob ? 60 : 68}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="10.5">IT 4–5 · Operations 4–5</text>
-            ${!isMob ? `<text x="95" y="95" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10">12 IT (4–5) + 18 Ops (4–5)</text>
-            <text x="95" y="114" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="9.5">ERP Sandbox Practice Mode</text>` : ''}
+            <text x="${isMob ? 160 : 95}" y="${isMob ? 60 : 68}" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">IT 4–5 · Operations 4–5</text>
+            ${!isMob ? `<text x="95" y="95" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">12 IT (4–5) + 18 Ops (4–5)</text>
+            <text x="95" y="114" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">ERP Sandbox Practice Mode</text>` : ''}
           </g>
           
           <g transform="translate(${isMob ? 20 : 40}, ${isMob ? 365 : 325})">
             <rect width="${isMob ? 320 : 620}" height="${isMob ? 60 : 46}" rx="8" fill="rgba(245,158,11,0.12)" stroke="var(--gold, #f59e0b)"/>
-            <text x="${w/2}" y="${isMob ? 26 : 28}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11 : 12}" font-weight="800">Span: Academic Wide 7 (56÷8) · Marketing 5–6 · IT 4–5 · Ops 4–5</text>
-            ${isMob ? `<text x="${w/2}" y="46" text-anchor="middle" fill="var(--text, #fff)" font-size="9.5">Academic Affairs wide span 7 (56 ÷ 8); Marketing 5–6; IT 4–5; Operations 4–5</text>` : ''}
+            <text x="${w/2}" y="${isMob ? 26 : 28}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11.5 : 12}" font-weight="800">Span: Academic Wide 7 (56÷8) · Marketing 5–6 · IT 4–5 · Ops 4–5</text>
+            ${isMob ? `<text x="${w/2}" y="46" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5">Academic Affairs wide span 7 (56 ÷ 8); Marketing 5–6; IT 4–5; Operations 4–5</text>` : ''}
           </g>
         </svg>`;
       }
@@ -8782,17 +8806,17 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           ${isMob ? `
             <text x="${w/2}" y="22" text-anchor="middle" fill="var(--text, #fff)" font-size="12" font-weight="800">ALFA OneHub Platform</text>
-            <text x="${w/2}" y="35" text-anchor="middle" fill="var(--text, #fff)" font-size="10.5" font-weight="800">(CRM + ERP + HRM) — Our Proposal</text>
+            <text x="${w/2}" y="35" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">(CRM + ERP + HRM) — Our Proposal</text>
           ` : `
             <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="16" font-weight="800">ALFA OneHub (CRM + ERP + HRM, our proposal) — Our Proposal</text>
           `}
-          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Unified Digital Campus Platform · Cloud-Hosted · 99.9% Uptime SLA</text>
+          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Unified Digital Campus Platform · Cloud-Hosted · 99.9% Uptime SLA</text>
           
           <rect x="${isMob ? 20 : 40}" y="${isMob ? 65 : 75}" width="${isMob ? 320 : 620}" height="${isMob ? 58 : 55}" rx="8" fill="rgba(232,13,19,0.2)" stroke="var(--accent-red, #E80D13)" stroke-width="2"/>
           <text x="${w/2}" y="${isMob ? 86 : 98}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 14}" font-weight="800">Central OneHub Cloud &amp; Security Layer</text>
           ${isMob ? `
-            <text x="${w/2}" y="103" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="9">Single Sign-On · Real-Time Sync</text>
-            <text x="${w/2}" y="115" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="9">Role-Based Permissions · Automated Receipts</text>
+            <text x="${w/2}" y="103" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.5">Single Sign-On · Real-Time Sync</text>
+            <text x="${w/2}" y="115" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.5">Role-Based Permissions · Automated Receipts</text>
           ` : `
             <text x="${w/2}" y="118" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11">Single Sign-On · Real-Time Sync · Role-Based Permissions · Automated Receipts</text>
           `}
@@ -8800,36 +8824,36 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <g transform="translate(${isMob ? 20 : 40}, ${isMob ? 135 : 150})">
             <rect width="${isMob ? 320 : 190}" height="${isMob ? 80 : 165}" rx="8" fill="rgba(20,184,166,0.12)" stroke="var(--teal, #14b8a6)"/>
             <text x="${isMob ? 160 : 95}" y="24" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="12" font-weight="800">MODULE 1: CRM</text>
-            <text x="${isMob ? 160 : 95}" y="44" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11 : 12}" font-weight="700">Admissions &amp; Leads</text>
+            <text x="${isMob ? 160 : 95}" y="44" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 12}" font-weight="700">Admissions &amp; Leads</text>
             <text x="${isMob ? 160 : 95}" y="${isMob ? 64 : 75}" text-anchor="middle" fill="var(--green, #10b981)" font-size="11" font-weight="800">&lt; 24h Turnaround</text>
-            ${!isMob ? `<text x="95" y="105" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">Meta &amp; TikTok Leads</text>
-            <text x="95" y="125" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">Instant WhatsApp Chat</text>
-            <text x="95" y="145" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">$0 Agent Commission</text>` : ''}
+            ${!isMob ? `<text x="95" y="105" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Meta &amp; TikTok Leads</text>
+            <text x="95" y="125" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Instant WhatsApp Chat</text>
+            <text x="95" y="145" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">$0 Agent Commission</text>` : ''}
           </g>
           
           <g transform="translate(${isMob ? 20 : 255}, ${isMob ? 225 : 150})">
             <rect width="${isMob ? 320 : 190}" height="${isMob ? 80 : 165}" rx="8" fill="rgba(59,130,246,0.12)" stroke="var(--blue, #3b82f6)"/>
             <text x="${isMob ? 160 : 95}" y="24" text-anchor="middle" fill="var(--blue, #3b82f6)" font-size="12" font-weight="800">MODULE 2: ERP</text>
-            <text x="${isMob ? 160 : 95}" y="44" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11 : 12}" font-weight="700">Registry &amp; Academic</text>
+            <text x="${isMob ? 160 : 95}" y="44" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 12}" font-weight="700">Registry &amp; Academic</text>
             <text x="${isMob ? 160 : 95}" y="${isMob ? 64 : 75}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11" font-weight="800">100% Paperless</text>
-            ${!isMob ? `<text x="95" y="105" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">1-Click Add / Drop</text>
-            <text x="95" y="125" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">QR Exam Hall Passes</text>
-            <text x="95" y="145" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">Sandbox Practice Mode</text>` : ''}
+            ${!isMob ? `<text x="95" y="105" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">1-Click Add / Drop</text>
+            <text x="95" y="125" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">QR Exam Hall Passes</text>
+            <text x="95" y="145" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Sandbox Practice Mode</text>` : ''}
           </g>
           
           <g transform="translate(${isMob ? 20 : 470}, ${isMob ? 315 : 150})">
             <rect width="${isMob ? 320 : 190}" height="${isMob ? 80 : 165}" rx="8" fill="rgba(16,185,129,0.12)" stroke="var(--green, #10b981)"/>
             <text x="${isMob ? 160 : 95}" y="24" text-anchor="middle" fill="var(--green, #10b981)" font-size="12" font-weight="800">MODULE 3: HRM</text>
-            <text x="${isMob ? 160 : 95}" y="44" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11 : 12}" font-weight="700">Staff &amp; Motivation</text>
+            <text x="${isMob ? 160 : 95}" y="44" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 12}" font-weight="700">Staff &amp; Motivation</text>
             <text x="${isMob ? 160 : 95}" y="${isMob ? 64 : 75}" text-anchor="middle" fill="var(--green, #10b981)" font-size="11" font-weight="800">$50 Direct Bonus</text>
-            ${!isMob ? `<text x="95" y="105" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">Staff Incentive Pool</text>
-            <text x="95" y="125" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">Peer Recognition Awards</text>
-            <text x="95" y="145" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="10.5">Weekly SLA Trackers</text>` : ''}
+            ${!isMob ? `<text x="95" y="105" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Staff Incentive Pool</text>
+            <text x="95" y="125" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Peer Recognition Awards</text>
+            <text x="95" y="145" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Weekly SLA Trackers</text>` : ''}
           </g>
           
           ${isMob ? `
-            <text x="${w/2}" y="420" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="9.5">Replaces paper forms and 5–7 days (our estimate) delays</text>
-            <text x="${w/2}" y="435" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="9">Note: MyClass offers student login but registry runs on paper</text>
+            <text x="${w/2}" y="420" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Replaces paper forms and 5–7 days (our estimate) delays</text>
+            <text x="${w/2}" y="435" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11.5">Note: MyClass offers student login but registry runs on paper</text>
           ` : `
             <text x="${w/2}" y="355" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="11">Replaces paper forms and email delays · Note: MyClass offers student login but registry runs on paper (our observation)</text>
           `}
@@ -8849,12 +8873,12 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Reconciled $42,000 transformation budget: P1 Studio $4K (M1–M2), P2 Contracts $1.5K (M2–M4), P3 OneHub $9.5K (M3–M6, Live M6), P4 Ads & Bonuses $25K (M4–M12), P5 Training & Awards $2K (M5–M8), P6 Control Audits $0 (M6–M12)</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="28" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">12-Month Action Plan &amp; $42,000 Budget</text>
-          <text x="${w/2}" y="45" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">$29,000 Fixed + $13,000 Direct Bonuses = Exactly $42,000 Reconciled</text>
+          <text x="${w/2}" y="45" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">$29,000 Fixed + $13,000 Direct Bonuses = Exactly $42,000 Reconciled</text>
           
           <g transform="translate(${isMob ? 20 : 40}, 58)">
             <rect width="${isMob ? 320 : 620}" height="22" rx="4" fill="rgba(255,255,255,0.05)"/>
             ${[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(m => `
-              <text x="${((isMob ? 320 : 620) / 12) * (m - 0.5)}" y="15" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 8 : 9.5}">M${m}</text>
+              <text x="${((isMob ? 320 : 620) / 12) * (m - 0.5)}" y="15" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">M${m}</text>
             `).join('')}
           </g>
           
@@ -8864,8 +8888,8 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             const barX = (isMob ? 20 : 40) + (isMob ? 320 : 620) * p.xPct;
             return `
               <g transform="translate(0, ${y})">
-                <text x="${isMob ? 20 : 40}" y="-3" fill="var(--text, #fff)" font-size="${isMob ? 9.5 : 11}" font-weight="700">${p.name} (${p.span})</text>
-                <text x="${(isMob ? 340 : 660)}" y="-3" text-anchor="end" fill="${p.col}" font-size="${isMob ? 10 : 11.5}" font-weight="900">${p.cost}</text>
+                <text x="${isMob ? 20 : 40}" y="-3" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">${p.name} (${p.span})</text>
+                <text x="${(isMob ? 340 : 660)}" y="-3" text-anchor="end" fill="${p.col}" font-size="${isMob ? 11.5 : 11.5}" font-weight="900">${p.cost}</text>
                 <rect x="${barX}" width="${barW}" height="${isMob ? 15 : 17}" rx="5" fill="${p.col}" opacity="0.85"/>
               </g>
             `;
@@ -8890,14 +8914,14 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Today: 5–7 days (our estimate) paper delay (our estimate). OneHub: under 24 hours direct SOP.</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">Student Intake Journey: Today vs. OneHub</text>
-          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Replacing 5–7 days (our estimate) Paper Backlog with &lt; 24h Direct Cloud SOP</text>
+          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Replacing 5–7 days (our estimate) Paper Backlog with &lt; 24h Direct Cloud SOP</text>
           
           <!-- Defect 1 fix: Box 1 made taller (h=146 on desktop, h=165 on mob) so Result line sits cleanly inside with padding -->
           <g transform="translate(${isMob ? 20 : 40}, 65)">
             <rect width="${isMob ? 320 : 620}" height="${isMob ? 165 : 146}" rx="8" fill="rgba(232,13,19,0.1)" stroke="var(--accent-red, #E80D13)"/>
             ${isMob ? `
             <text x="16" y="22" fill="var(--accent-red, #E80D13)" font-size="11" font-weight="800">TODAY: AGENT BOTTLENECK</text>
-            <text x="304" y="22" text-anchor="end" fill="var(--accent-red, #E80D13)" font-size="10.5" font-weight="900">5–7 Days (est.)</text>
+            <text x="304" y="22" text-anchor="end" fill="var(--accent-red, #E80D13)" font-size="11.5" font-weight="900">5–7 Days (est.)</text>
           ` : `
             <text x="16" y="24" fill="var(--accent-red, #E80D13)" font-size="12" font-weight="800">TODAY: AGENT &amp; PAPER BOTTLENECK</text>
             <text x="604" y="24" text-anchor="end" fill="var(--accent-red, #E80D13)" font-size="12" font-weight="900">5–7 Days (our estimate)</text>
@@ -8905,10 +8929,10 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             
             <g transform="translate(16, 40)">
               <!-- Defect 1 fix: replace ($375 fee) with (commission $250 + $125 = $375) -->
-              <text x="0" y="16" fill="var(--text, #fff)" font-size="${isMob ? 10 : 11}">${isMob ? '1. Student Inquires via Sub-Agent ($375 total commission)' : '1. Student Inquires via Sub-Agent (commission $250 + $125 = $375)'}</text>
-              <text x="0" y="${isMob ? 38 : 40}" fill="var(--text, #fff)" font-size="${isMob ? 10 : 11}">2. Paper forms mailed to registry; physical verification</text>
-              <text x="0" y="${isMob ? 60 : 64}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 11}">3. Manual add/drop queues (40-student backlog risk)</text>
-              <text x="0" y="${isMob ? 84 : 90}" fill="var(--accent-red, #E80D13)" font-size="${isMob ? 10.5 : 11.5}" font-weight="700">Result: Slow turnaround, risk of student dropout</text>
+              <text x="0" y="16" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}">${isMob ? '1. Student Inquires via Sub-Agent ($375 total commission)' : '1. Student Inquires via Sub-Agent (commission $250 + $125 = $375)'}</text>
+              <text x="0" y="${isMob ? 38 : 40}" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}">2. Paper forms mailed to registry; physical verification</text>
+              <text x="0" y="${isMob ? 60 : 64}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">3. Manual add/drop queues (40-student backlog risk)</text>
+              <text x="0" y="${isMob ? 84 : 90}" fill="var(--accent-red, #E80D13)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Result: Slow turnaround, risk of student dropout</text>
             </g>
           </g>
           
@@ -8917,21 +8941,21 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <rect width="${isMob ? 320 : 620}" height="${isMob ? 165 : 146}" rx="8" fill="rgba(16,185,129,0.12)" stroke="var(--green, #10b981)"/>
             ${isMob ? `
             <text x="16" y="22" fill="var(--green, #10b981)" font-size="11" font-weight="800">ONEHUB: DIRECT CLOUD FLOW</text>
-            <text x="304" y="22" text-anchor="end" fill="var(--green, #10b981)" font-size="10.5" font-weight="900">&lt; 24h SOP</text>
+            <text x="304" y="22" text-anchor="end" fill="var(--green, #10b981)" font-size="11.5" font-weight="900">&lt; 24h SOP</text>
           ` : `
             <text x="16" y="24" fill="var(--green, #10b981)" font-size="12" font-weight="800">ALFA ONEHUB: DIRECT CLOUD FLOW (Our Proposal)</text>
             <text x="604" y="24" text-anchor="end" fill="var(--green, #10b981)" font-size="12" font-weight="900">&lt; 24 Hours SOP</text>
           `}
             
             <g transform="translate(16, 40)">
-              <text x="0" y="16" fill="var(--text, #fff)" font-size="${isMob ? 10 : 11}">1. Social Media Reel / Website Inquiry (&lt; 2h fast reply)</text>
-              <text x="0" y="${isMob ? 38 : 40}" fill="var(--text, #fff)" font-size="${isMob ? 10 : 11}">2. OneHub Portal self-service document upload</text>
-              <text x="0" y="${isMob ? 60 : 64}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 11}">3. Automated fee receipts &amp; instant digital timetable</text>
-              <text x="0" y="${isMob ? 84 : 90}" fill="var(--green, #10b981)" font-size="${isMob ? 10.5 : 11.5}" font-weight="700">Result: 90.55% tuition retained, delighted students</text>
+              <text x="0" y="16" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}">1. Social Media Reel / Website Inquiry (&lt; 2h fast reply)</text>
+              <text x="0" y="${isMob ? 38 : 40}" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}">2. OneHub Portal self-service document upload</text>
+              <text x="0" y="${isMob ? 60 : 64}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">3. Automated fee receipts &amp; instant digital timetable</text>
+              <text x="0" y="${isMob ? 84 : 90}" fill="var(--green, #10b981)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Result: 90.55% tuition retained, delighted students</text>
             </g>
           </g>
           
-          <text x="${w/2}" y="${isMob ? 435 : 392}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 9 : 11}">Enables 65% direct student enrolment without consultancy sub-agents</text>
+          <text x="${w/2}" y="${isMob ? 435 : 392}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 11.5 : 11.5}">Enables 65% direct student enrolment without consultancy sub-agents</text>
         </svg>`;
       }
       case 8: {
@@ -8940,7 +8964,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Planning, Organising, Leading, Controlling interconnected framework</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">Integrated POLC Turnaround Cycle</text>
-          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">FIB 2074 Introduction to Management Academic Framework</text>
+          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">FIB 2074 Introduction to Management Academic Framework</text>
           
           <!-- Connectors between 4 boxes drawn first -->
           ${!isMob ? `
@@ -8959,46 +8983,46 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <g transform="translate(${isMob ? 15 : 45}, ${isMob ? 65 : 65})">
             <rect width="${isMob ? 150 : 260}" height="${isMob ? 130 : 110}" rx="8" fill="rgba(232,13,19,0.15)" stroke="var(--accent-red, #E80D13)"/>
             <text x="14" y="24" fill="var(--accent-red, #E80D13)" font-size="12" font-weight="800">1. PLANNING</text>
-            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 10.5 : 11.5}" font-weight="700">65% Direct Target</text>
-            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">$42,000 Budget</text>
-            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">400 New Students</text>
-            <text x="14" y="${isMob ? 110 : 100}" fill="var(--gold, #f59e0b)" font-size="${isMob ? 9.5 : 10.5}" font-weight="700">M1–M12 Milestones</text>
+            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">65% Direct Target</text>
+            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">$42,000 Budget</text>
+            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">400 New Students</text>
+            <text x="14" y="${isMob ? 110 : 100}" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">M1–M12 Milestones</text>
           </g>
           
           <g transform="translate(${isMob ? 195 : 395}, ${isMob ? 65 : 65})">
             <rect width="${isMob ? 150 : 260}" height="${isMob ? 130 : 110}" rx="8" fill="rgba(20,184,166,0.12)" stroke="var(--teal, #14b8a6)"/>
             <text x="14" y="24" fill="var(--teal, #14b8a6)" font-size="12" font-weight="800">2. ORGANISING</text>
-            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 10.5 : 11.5}" font-weight="700">120 Staff Realignment</text>
-            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">Span 7 → 4–6</text>
-            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">Unity of Command</text>
-            <text x="14" y="${isMob ? 110 : 100}" fill="var(--teal, #14b8a6)" font-size="${isMob ? 9.5 : 10.5}" font-weight="700">OneHub Platform Core</text>
+            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">120 Staff Realignment</text>
+            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Span 7 → 4–6</text>
+            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Unity of Command</text>
+            <text x="14" y="${isMob ? 110 : 100}" fill="var(--teal, #14b8a6)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">OneHub Platform Core</text>
           </g>
           
           <g transform="translate(${isMob ? 15 : 45}, ${isMob ? 225 : 225})">
             <rect width="${isMob ? 150 : 260}" height="${isMob ? 130 : 110}" rx="8" fill="rgba(245,158,11,0.15)" stroke="var(--gold, #f59e0b)"/>
             <text x="14" y="24" fill="var(--gold, #f59e0b)" font-size="12" font-weight="800">3. LEADING</text>
-            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 10.5 : 11.5}" font-weight="700">Referent Power Listening</text>
-            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">Safe IT Sandbox Mode</text>
-            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">Junior Tech Buddies</text>
-            <text x="14" y="${isMob ? 110 : 100}" fill="var(--gold, #f59e0b)" font-size="${isMob ? 9.5 : 10.5}" font-weight="700">15-Min Daily Standup</text>
+            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Referent Power Listening</text>
+            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Safe IT Sandbox Mode</text>
+            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Junior Tech Buddies</text>
+            <text x="14" y="${isMob ? 110 : 100}" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">15-Min Daily Standup</text>
           </g>
           
           <g transform="translate(${isMob ? 195 : 395}, ${isMob ? 225 : 225})">
             <rect width="${isMob ? 150 : 260}" height="${isMob ? 130 : 110}" rx="8" fill="rgba(16,185,129,0.12)" stroke="var(--green, #10b981)"/>
             <text x="14" y="24" fill="var(--green, #10b981)" font-size="12" font-weight="800">4. CONTROLLING</text>
-            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 10.5 : 11.5}" font-weight="700">Feedforward: CRM SLA</text>
-            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">Concurrent: Weekly KPIs</text>
-            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9.5 : 10.5}">Feedback: Quarterly</text>
-            <text x="14" y="${isMob ? 110 : 100}" fill="var(--green, #10b981)" font-size="${isMob ? 9.5 : 10.5}" font-weight="700">Traffic-Light Matrix</text>
+            <text x="14" y="44" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Feedforward: CRM SLA</text>
+            <text x="14" y="64" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Concurrent: Weekly KPIs</text>
+            <text x="14" y="84" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Feedback: Quarterly</text>
+            <text x="14" y="${isMob ? 110 : 100}" fill="var(--green, #10b981)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Traffic-Light Matrix</text>
           </g>
           
           <!-- Central POLC badge perfectly placed in central gap with zero overlap -->
           <g>
             <circle cx="${w/2}" cy="${isMob ? 210 : 200}" r="${isMob ? 16 : 22}" fill="var(--bg-elevated, #1e293b)" stroke="var(--text, #fff)" stroke-width="2"/>
-            <text x="${w/2}" y="${isMob ? 214 : 204}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 9 : 11}" font-weight="900">POLC</text>
+            <text x="${w/2}" y="${isMob ? 214 : 204}" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="900">POLC</text>
           </g>
           
-          <text x="${w/2}" y="${isMob ? 435 : 365}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 9 : 11}">Continuous feedback loop drives institution toward $55,500 net annual savings</text>
+          <text x="${w/2}" y="${isMob ? 435 : 365}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 11.5 : 11.5}">Continuous feedback loop drives institution toward $55,500 net annual savings</text>
         </svg>`;
       }
       case 9: {
@@ -9014,15 +9038,15 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Green 100%+, Amber 90-99%, Red below 90% traffic light control rule</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">Operational Control Matrix &amp; Thresholds</text>
-          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Traffic-Light Rule: Green (≥100%), Amber (90–99%), Red (&lt;90%)</text>
+          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Traffic-Light Rule: Green (≥100%), Amber (90–99%), Red (&lt;90%)</text>
           
           <g transform="translate(${isMob ? 20 : 60}, 65)">
             <circle cx="10" cy="8" r="6" fill="var(--green, #10b981)"/>
-            <text x="22" y="12" fill="var(--text, #fff)" font-size="10">Green: Target Met</text>
+            <text x="22" y="12" fill="var(--text, #fff)" font-size="11.5">Green: Target Met</text>
             <circle cx="${isMob ? 115 : 200}" cy="8" r="6" fill="var(--gold, #f59e0b)"/>
-            <text x="${isMob ? 127 : 212}" y="12" fill="var(--text, #fff)" font-size="10">Amber: 90–99% Warning</text>
+            <text x="${isMob ? 127 : 212}" y="12" fill="var(--text, #fff)" font-size="11.5">Amber: 90–99% Warning</text>
             <circle cx="${isMob ? 230 : 400}" cy="8" r="6" fill="var(--accent-red, #E80D13)"/>
-            <text x="${isMob ? 242 : 412}" y="12" fill="var(--text, #fff)" font-size="10">Red: &lt;90% Action</text>
+            <text x="${isMob ? 242 : 412}" y="12" fill="var(--text, #fff)" font-size="11.5">Red: &lt;90% Action</text>
           </g>
           
           ${rows.map((r, idx) => {
@@ -9031,14 +9055,14 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <g transform="translate(${isMob ? 20 : 40}, ${y})">
                 <rect width="${isMob ? 320 : 620}" height="${isMob ? 44 : 36}" rx="6" fill="rgba(255,255,255,0.03)" stroke="var(--chart-grid, rgba(255,255,255,0.08))"/>
                 <circle cx="18" cy="${isMob ? 22 : 18}" r="7" fill="var(--green, #10b981)"/>
-                <text x="34" y="${isMob ? 26 : 22}" fill="var(--text, #fff)" font-size="${isMob ? 10.5 : 12}" font-weight="700">${r.area}</text>
-                <text x="${isMob ? 165 : 300}" y="${isMob ? 26 : 22}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 11}">Target: ${r.tgt}</text>
-                <text x="${isMob ? 304 : 604}" y="${isMob ? 26 : 22}" text-anchor="end" fill="var(--green, #10b981)" font-size="${isMob ? 11 : 12}" font-weight="800">${r.act}</text>
+                <text x="34" y="${isMob ? 26 : 22}" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 12}" font-weight="700">${r.area}</text>
+                <text x="${isMob ? 165 : 300}" y="${isMob ? 26 : 22}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Target: ${r.tgt}</text>
+                <text x="${isMob ? 304 : 604}" y="${isMob ? 26 : 22}" text-anchor="end" fill="var(--green, #10b981)" font-size="${isMob ? 11.5 : 12}" font-weight="800">${r.act}</text>
               </g>
             `;
           }).join('')}
           
-          <text x="${w/2}" y="${isMob ? 435 : 355}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 9 : 11}">Evaluated weekly on OneHub HRM · Triggers automated manager alerts</text>
+          <text x="${w/2}" y="${isMob ? 435 : 355}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 11.5 : 11.5}">Evaluated weekly on OneHub HRM · Triggers automated manager alerts</text>
         </svg>`;
       }
       case 10: {
@@ -9047,7 +9071,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Situational Leadership, Team Communication Protocols, Two-Factor Motivation Theory</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">Leadership, Communication &amp; Motivation</text>
-          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Behavioural Management Theories Applied to ALFA's 120 Staff</text>
+          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Behavioural Management Theories Applied to ALFA's 120 Staff</text>
           
           <!-- Defect 4 fix: Connecting lines drawn BEHIND boxes, strictly between box edges -->
           ${!isMob ? `
@@ -9069,7 +9093,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           ` : `
             <g>
               <rect x="100" y="166" width="160" height="26" rx="13" fill="rgba(16,185,129,0.18)" stroke="var(--green, #10b981)"/>
-              <text x="180" y="183" text-anchor="middle" fill="var(--green, #10b981)" font-size="10" font-weight="800">Better Staff Performance</text>
+              <text x="180" y="183" text-anchor="middle" fill="var(--green, #10b981)" font-size="11.5" font-weight="800">Better Staff Performance</text>
             </g>
           `}
           
@@ -9078,28 +9102,28 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <rect width="${isMob ? 280 : 250}" height="${isMob ? 75 : 80}" rx="8" fill="rgba(232,13,19,0.15)" stroke="var(--accent-red, #E80D13)"/>
             <text x="${isMob ? 140 : 125}" y="22" text-anchor="middle" fill="var(--accent-red, #E80D13)" font-size="11.5" font-weight="800">SITUATIONAL LEADERSHIP</text>
             <text x="${isMob ? 140 : 125}" y="42" text-anchor="middle" fill="var(--text, #fff)" font-size="11" font-weight="700">Hersey-Blanchard Framework</text>
-            <text x="${isMob ? 140 : 125}" y="62" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="10">Directing → Coaching → Delegating</text>
+            <text x="${isMob ? 140 : 125}" y="62" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">Directing → Coaching → Delegating</text>
           </g>
           
           <!-- Box 2: Communication at bottom-left -->
           <g transform="translate(${isMob ? 15 : 45}, ${isMob ? 220 : 230})">
             <rect width="${isMob ? 155 : 250}" height="${isMob ? 110 : 95}" rx="8" fill="rgba(20,184,166,0.12)" stroke="var(--teal, #14b8a6)"/>
-            <text x="${isMob ? 77 : 125}" y="22" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="${isMob ? 10.5 : 11.5}" font-weight="800">COMMUNICATION</text>
-            <text x="${isMob ? 77 : 125}" y="42" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 10 : 11}" font-weight="700">Protocols</text>
-            <text x="${isMob ? 77 : 125}" y="64" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9 : 10}">15-Min Daily Standup</text>
-            <text x="${isMob ? 77 : 125}" y="82" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="${isMob ? 9 : 10}">&lt; 2h Fast CRM Reply</text>
+            <text x="${isMob ? 77 : 125}" y="22" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="${isMob ? 11.5 : 11.5}" font-weight="800">COMMUNICATION</text>
+            <text x="${isMob ? 77 : 125}" y="42" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Protocols</text>
+            <text x="${isMob ? 77 : 125}" y="64" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">15-Min Daily Standup</text>
+            <text x="${isMob ? 77 : 125}" y="82" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="${isMob ? 11.5 : 11.5}">&lt; 2h Fast CRM Reply</text>
           </g>
           
           <!-- Box 3: Motivation at bottom-right -->
           <g transform="translate(${isMob ? 190 : 405}, ${isMob ? 220 : 230})">
             <rect width="${isMob ? 155 : 250}" height="${isMob ? 110 : 95}" rx="8" fill="rgba(245,158,11,0.15)" stroke="var(--gold, #f59e0b)"/>
-            <text x="${isMob ? 77 : 125}" y="22" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 10.5 : 11.5}" font-weight="800">MOTIVATION</text>
-            <text x="${isMob ? 77 : 125}" y="42" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 10 : 11}" font-weight="700">Herzberg &amp; Maslow</text>
-            <text x="${isMob ? 77 : 125}" y="64" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 9 : 10}">Hygiene: Fair Salary</text>
-            <text x="${isMob ? 77 : 125}" y="82" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 9 : 10}">Motivator: $50 Bonus</text>
+            <text x="${isMob ? 77 : 125}" y="22" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11.5 : 11.5}" font-weight="800">MOTIVATION</text>
+            <text x="${isMob ? 77 : 125}" y="42" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 11.5 : 11.5}" font-weight="700">Herzberg &amp; Maslow</text>
+            <text x="${isMob ? 77 : 125}" y="64" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">Hygiene: Fair Salary</text>
+            <text x="${isMob ? 77 : 125}" y="82" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11.5 : 11.5}">Motivator: $50 Bonus</text>
           </g>
           
-          <text x="${w/2}" y="${isMob ? 435 : 365}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 9 : 11}">Aligns staff incentives with institutional goal of 65% direct student enrolment</text>
+          <text x="${w/2}" y="${isMob ? 435 : 365}" text-anchor="middle" fill="var(--text-dim, #64748b)" font-size="${isMob ? 11.5 : 11.5}">Aligns staff incentives with institutional goal of 65% direct student enrolment</text>
         </svg>`;
       }
       case 11: {
@@ -9113,7 +9137,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <desc>Sensitivity analysis for master-agent rates at 5%, 7.5%, and 10%. Sources: QualyHQ 2026, GradPilot 2026.</desc>
           <rect width="${w}" height="${h}" rx="12" fill="var(--chart-bg, #0f172a)" stroke="var(--chart-grid, rgba(255,255,255,0.1))"/>
           <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="${isMob ? 13 : 16}" font-weight="800">Master-Agent Rate Sensitivity Analysis</text>
-          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 12}">Testing Financial Robustness Across 5.0%, 7.5%, and 10.0% Commission Rates</text>
+          <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 12}">Testing Financial Robustness Across 5.0%, 7.5%, and 10.0% Commission Rates</text>
           
           ${rates.map((r, idx) => {
             const y = isMob ? (75 + idx * 82) : (75 + idx * 68);
@@ -9121,11 +9145,11 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
               <g transform="translate(${isMob ? 20 : 40}, ${y})">
                 <rect width="${isMob ? 320 : 620}" height="${isMob ? 72 : 54}" rx="8" fill="rgba(255,255,255,0.03)" stroke="${r.col}" stroke-width="1.5"/>
                 <text x="16" y="24" fill="${r.col}" font-size="${isMob ? 12 : 13}" font-weight="800">${r.rate}</text>
-                <text x="16" y="${isMob ? 44 : 42}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 10 : 11}">${r.desc}</text>
+                <text x="16" y="${isMob ? 44 : 42}" fill="var(--text-muted, #94a3b8)" font-size="${isMob ? 11.5 : 11.5}">${r.desc}</text>
                 ${isMob ? `
-                  <text x="16" y="62" fill="var(--text-dim, #64748b)" font-size="9.5">Remaining Comm: ${r.comm}</text>
+                  <text x="16" y="62" fill="var(--text-dim, #64748b)" font-size="11.5">Remaining Comm: ${r.comm}</text>
                   <text x="304" y="42" text-anchor="end" fill="${r.col}" font-size="16" font-weight="900">${r.net}</text>
-                  <text x="304" y="60" text-anchor="end" fill="var(--text-muted, #94a3b8)" font-size="9.5">Net Saving / yr</text>
+                  <text x="304" y="60" text-anchor="end" fill="var(--text-muted, #94a3b8)" font-size="11.5">Net Saving / yr</text>
                 ` : `
                   <text x="320" y="32" fill="var(--text-dim, #64748b)" font-size="11">Remaining Comm: ${r.comm}</text>
                   <text x="604" y="35" text-anchor="end" fill="${r.col}" font-size="18" font-weight="900">${r.net} / yr</text>
@@ -9136,12 +9160,12 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           
           <g transform="translate(${isMob ? 20 : 40}, ${isMob ? 335 : 295})">
             <rect width="${isMob ? 320 : 620}" height="${isMob ? 95 : 55}" rx="8" fill="rgba(245,158,11,0.1)" stroke="var(--gold, #f59e0b)"/>
-            <text x="${w/2}" y="${isMob ? 24 : 22}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 10.5 : 11.5}" font-weight="800">Sources: QualyHQ (2026), GradPilot (2026)</text>
+            <text x="${w/2}" y="${isMob ? 24 : 22}" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="${isMob ? 11.5 : 11.5}" font-weight="800">Sources: QualyHQ (2026), GradPilot (2026)</text>
             ${isMob ? `
-              <text x="${w/2}" y="44" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="9.5">Industry typical commission range is 10% to 15%.</text>
-              <text x="${w/2}" y="62" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="9.5">Even at 10% master rate, ALFA still nets +$88,000/yr.</text>
+              <text x="${w/2}" y="44" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">Industry typical commission range is 10% to 15%.</text>
+              <text x="${w/2}" y="62" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">Even at 10% master rate, ALFA still nets +$88,000/yr.</text>
             ` : `
-              <text x="${w/2}" y="40" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="10.5">Industry typical commission range is 10% to 15%. Even at 10% master rate, ALFA still nets +$88,000/yr.</text>
+              <text x="${w/2}" y="40" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11.5">Industry typical commission range is 10% to 15%. Even at 10% master rate, ALFA still nets +$88,000/yr.</text>
             `}
           </g>
         </svg>`;
@@ -10254,7 +10278,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <g style="cursor:pointer" onclick="setIx('s1Year','${yr}')">
               <circle cx="${cx}" cy="54" r="${IX.s1Year===yr?13:9}" fill="${IX.s1Year===yr?"#E80D13":"#1e293b"}" stroke="var(--alfa-pink, #FBE9E7)" stroke-width="2.5"/>
               <text x="${cx}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="12" font-weight="800">${yr}</text>
-              <text x="${cx}" y="84" text-anchor="middle" fill="var(--text-muted, #cbd5e1)" font-size="10.5" font-weight="600">${lbl}</text>
+              <text x="${cx}" y="84" text-anchor="middle" fill="var(--text-muted, #cbd5e1)" font-size="11.5" font-weight="600">${lbl}</text>
             </g>
           `).join("")}
         </svg>
@@ -10290,7 +10314,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <text x="69" y="38" text-anchor="middle" fill="var(--alfa-pink, #FBE9E7)" font-size="11" font-weight="800">ENROLLED</text>
             <text x="69" y="68" text-anchor="middle" fill="var(--text, #fff)" font-size="18" font-weight="900">${stu} Stu</text>
             <text x="69" y="92" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11" font-weight="700">$2,500 Tuition</text>
-            <text x="69" y="116" text-anchor="middle" fill="var(--accent-red, #ff5a5f)" font-size="10" font-weight="700">0 Direct Online</text>
+            <text x="69" y="116" text-anchor="middle" fill="var(--accent-red, #ff5a5f)" font-size="11.5" font-weight="700">0 Direct Online</text>
 
             <!-- Connectors drawn BEHIND boxes stopping at edges -->
             <path d="M132 50 L198 40 M132 102 L198 112" stroke="var(--accent-red, #ff5a5f)" stroke-width="2.5" stroke-dasharray="5 3"/>
@@ -10298,21 +10322,21 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <!-- Defect 5 fix: Sub-agent box taller (h=64), wrapped into two clean lines -->
             <rect x="198" y="8" width="174" height="64" rx="10" fill="rgba(232,13,19,0.22)" stroke="var(--accent-red, #ff5a5f)"/>
             <text x="285" y="26" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">96 Consultancy Sub-Agents</text>
-            <text x="285" y="44" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="10.5" font-weight="700">10% = $250 / student</text>
+            <text x="285" y="44" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.5" font-weight="700">10% = $250 / student</text>
             <text x="285" y="60" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11" font-weight="800">= ${money(subCost)} a year</text>
 
             <!-- Defect 5 fix: Master agent box taller (h=64), wrapped into two clean lines -->
             <rect x="198" y="80" width="174" height="64" rx="10" fill="rgba(245,158,11,0.18)" stroke="var(--gold, #f59e0b)"/>
             <text x="285" y="98" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">12 Univ. Master Agents</text>
-            <text x="285" y="116" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="10.5" font-weight="700">5% = $125/stu (our assumption)</text>
+            <text x="285" y="116" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.5" font-weight="700">5% = $125/stu (our assumption)</text>
             <text x="285" y="132" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11" font-weight="800">= ${money(masCost)} a year</text>
 
             <path d="M372 40 L418 60 M372 112 L418 92" stroke="var(--accent-red, #ff5a5f)" stroke-width="2.5"/>
 
             <rect x="418" y="8" width="136" height="136" rx="12" fill="rgba(139,0,0,0.55)" stroke="var(--alfa-pink, #FBE9E7)" stroke-width="1.5"/>
-            <text x="486" y="34" text-anchor="middle" fill="var(--alfa-pink, #FBE9E7)" font-size="10.5" font-weight="800">15% ($375 / STU)</text>
+            <text x="486" y="34" text-anchor="middle" fill="var(--alfa-pink, #FBE9E7)" font-size="11.5" font-weight="800">15% ($375 / STU)</text>
             <text x="486" y="66" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="19" font-weight="900">${money(totComm)}</text>
-            <text x="486" y="90" text-anchor="middle" fill="var(--text, #fff)" font-size="10" font-weight="700">+$10K mktg (assumption)</text>
+            <text x="486" y="90" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="700">+$10K mktg (assumption)</text>
             <text x="486" y="114" text-anchor="middle" fill="var(--accent-red, #ff5a5f)" font-size="11" font-weight="800">= ${money(totComm + 10000)} / yr</text>
           </svg>
           <div class="ix-card">
@@ -10355,7 +10379,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             ${[["1. Student Tap","5-min mobile form",10],["2. Auto-Verify","FPX / Flywire API",150],["3. 1-Click Sign","Supervisor <= 24h",290],["4. Instant Issue","QR Pass & Letter",430]].map(([t,s,x],i)=>`
               <rect x="${x}" y="12" width="120" height="72" rx="10" fill="rgba(20,184,166,0.16)" stroke="var(--teal, #14b8a6)"/>
               <text x="${x+60}" y="40" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">${t}</text>
-              <text x="${x+60}" y="62" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="10">${s}</text>
+              <text x="${x+60}" y="62" text-anchor="middle" fill="var(--teal, #14b8a6)" font-size="11.5">${s}</text>
               ${i<3?`<text x="${x+135}" y="52" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="15" font-weight="900">→</text>`:""}
             `).join("")}
           </svg>
@@ -10493,41 +10517,41 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <!-- Row 1: P1 Studio ($4K) M1-M2 -->
           <g style="cursor:pointer" onclick="setIx('s7Phase',0)">
             <rect x="18" y="12" width="76" height="16" rx="5" fill="#E80D13" opacity="${IX.s7Phase===0?1:0.45}"/>
-            <text x="24" y="24" fill="#fff" font-size="9" font-weight="900">M1–2</text>
-            <text x="100" y="24" fill="var(--text, #fff)" font-size="9.5" font-weight="700">P1 Studio &amp; Ambassadors ($4K)</text>
+            <text x="24" y="24" fill="#fff" font-size="11.5" font-weight="900">M1–2</text>
+            <text x="100" y="24" fill="var(--text, #fff)" font-size="11.5" font-weight="700">P1 Studio &amp; Ambassadors ($4K)</text>
           </g>
           
           <!-- Row 2: P2 Contracts ($1.5K) M2-M4 -->
           <g style="cursor:pointer" onclick="setIx('s7Phase',1)">
             <rect x="56" y="32" width="76" height="16" rx="5" fill="#14b8a6" opacity="${IX.s7Phase===1?1:0.45}"/>
-            <text x="62" y="44" fill="#fff" font-size="9" font-weight="800">M2–4</text>
-            <text x="138" y="44" fill="var(--text, #fff)" font-size="9.5" font-weight="700">P2 Contracts &amp; Portal ($1.5K)</text>
+            <text x="62" y="44" fill="#fff" font-size="11.5" font-weight="800">M2–4</text>
+            <text x="138" y="44" fill="var(--text, #fff)" font-size="11.5" font-weight="700">P2 Contracts &amp; Portal ($1.5K)</text>
           </g>
           
           <!-- Row 3: P3 OneHub ($9.5K) M3-M6 -->
           <g style="cursor:pointer" onclick="setIx('s7Phase',2)">
             <rect x="94" y="52" width="114" height="16" rx="5" fill="#3b82f6" opacity="${IX.s7Phase===2?1:0.45}"/>
-            <text x="100" y="64" fill="#fff" font-size="9" font-weight="800">M3–6 (Live M6)</text>
-            <text x="214" y="64" fill="var(--text, #fff)" font-size="9.5" font-weight="700">P3 OneHub ($9.5K)</text>
+            <text x="100" y="64" fill="#fff" font-size="11.5" font-weight="800">M3–6 (Live M6)</text>
+            <text x="214" y="64" fill="var(--text, #fff)" font-size="11.5" font-weight="700">P3 OneHub ($9.5K)</text>
           </g>
           
           <!-- Row 4: P4 Ads & Bonuses ($25K) M4-M12 -->
           <g style="cursor:pointer" onclick="setIx('s7Phase',3)">
             <rect x="132" y="72" width="304" height="16" rx="5" fill="#10b981" opacity="${IX.s7Phase===3?1:0.45}"/>
-            <text x="140" y="84" fill="#fff" font-size="9" font-weight="800">M4–12 Meta/TikTok Ads &amp; Bonuses ($25K)</text>
+            <text x="140" y="84" fill="#fff" font-size="11.5" font-weight="800">M4–12 Meta/TikTok Ads &amp; Bonuses ($25K)</text>
           </g>
           
           <!-- Row 5: P5 Training ($2K) M5-M8 -->
           <g style="cursor:pointer" onclick="setIx('s7Phase',4)">
             <rect x="170" y="92" width="114" height="16" rx="5" fill="#f59e0b" opacity="${IX.s7Phase===4?1:0.45}"/>
-            <text x="176" y="104" fill="#fff" font-size="9" font-weight="800">M5–8</text>
-            <text x="290" y="104" fill="var(--text, #fff)" font-size="9.5" font-weight="700">P5 Training &amp; Awards ($2K)</text>
+            <text x="176" y="104" fill="#fff" font-size="11.5" font-weight="800">M5–8</text>
+            <text x="290" y="104" fill="var(--text, #fff)" font-size="11.5" font-weight="700">P5 Training &amp; Awards ($2K)</text>
           </g>
           
           <!-- Row 6: P6 Control Audits ($0) M6-M12 -->
           <g style="cursor:pointer" onclick="setIx('s7Phase',5)">
             <rect x="208" y="112" width="228" height="16" rx="5" fill="#ec4899" opacity="${IX.s7Phase===5?1:0.45}"/>
-            <text x="216" y="124" fill="#fff" font-size="9" font-weight="800">M6–12 Control Audits ($0)</text>
+            <text x="216" y="124" fill="#fff" font-size="11.5" font-weight="800">M6–12 Control Audits ($0)</text>
           </g>
         </svg>
         <div class="ix-card" style="margin-bottom:.5rem">
@@ -10590,7 +10614,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           ${(isRec ? [110,195,280,365,450] : [64,136,208,280,352,424,496]).map((cx, idx) => `
             <line x1="280" y1="42" x2="${cx}" y2="61" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
             <circle cx="${cx}" cy="74" r="13" fill="rgba(30,41,59,0.95)" stroke="${isRec ? "#34d399" : "#ff5a5f"}" stroke-width="2"/>
-            <text x="${cx}" y="78" text-anchor="middle" fill="var(--text, #fff)" font-size="10" font-weight="800">${isRec ? ["Mkt","Mkt","IT","Ops","Ops"][idx] : "L" + (idx+1)}</text>
+            <text x="${cx}" y="78" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">${isRec ? ["Mkt","Mkt","IT","Ops","Ops"][idx] : "L" + (idx+1)}</text>
           `).join("")}
         </svg>
         <div class="ix-grid-2">
@@ -10666,7 +10690,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           ${[["1. Set Standards","65% direct · <=24h",8],["2. Measure Actual","Live CRM/ERP logs",148],["3. Find Variance","Actual − Standard",288],["4. Corrective Action","$100 rebate / coach",428]].map(([h,s,x],i)=>`
             <rect x="${x}" y="8" width="120" height="60" rx="10" fill="rgba(30,41,59,0.9)" stroke="var(--accent-red, #ff5a5f)"/>
             <text x="${x+60}" y="33" text-anchor="middle" fill="var(--text, #fff)" font-size="11" font-weight="800">${h}</text>
-            <text x="${x+60}" y="52" text-anchor="middle" fill="var(--alfa-pink, #FBE9E7)" font-size="9.5">${s}</text>
+            <text x="${x+60}" y="52" text-anchor="middle" fill="var(--alfa-pink, #FBE9E7)" font-size="11.5">${s}</text>
             ${i<3?`<text x="${x+134}" y="42" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="14" font-weight="900">→</text>`:""}
           `).join("")}
         </svg>
@@ -10756,32 +10780,32 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <g style="cursor:pointer" onclick="setIx('s15Tier',0)">
             <polygon points="195,8 158,42 232,42" fill="${curTierIdx===0?'#10b981':'rgba(16,185,129,0.35)'}" stroke="var(--line, rgba(255,255,255,0.2))"/>
             <line x1="232" y1="25" x2="258" y2="25" stroke="var(--green, #10b981)" stroke-width="1.5"/>
-            <text x="264" y="29.5" fill="var(--green, #10b981)" font-size="10.8" font-weight="800">5. Self-Actualisation</text>
+            <text x="264" y="29.5" fill="var(--green, #10b981)" font-size="11.5" font-weight="800">5. Self-Actualisation</text>
           </g>
           
           <!-- Tier 4: Esteem -->
           <g style="cursor:pointer" onclick="setIx('s15Tier',1)">
             <polygon points="158,42 121,76 269,76 232,42" fill="${curTierIdx===1?'#14b8a6':'rgba(20,184,166,0.35)'}" stroke="var(--line, rgba(255,255,255,0.2))"/>
             <line x1="269" y1="59" x2="290" y2="59" stroke="var(--teal, #14b8a6)" stroke-width="1.5"/>
-            <text x="296" y="63.5" fill="var(--teal, #14b8a6)" font-size="10.8" font-weight="800">4. Esteem (Awards)</text>
+            <text x="296" y="63.5" fill="var(--teal, #14b8a6)" font-size="11.5" font-weight="800">4. Esteem (Awards)</text>
           </g>
           
           <!-- Tier 3: Social -->
           <g style="cursor:pointer" onclick="setIx('s15Tier',2)">
             <polygon points="121,76 84,110 306,110 269,76" fill="${curTierIdx===2?'#f59e0b':'rgba(245,158,11,0.35)'}" stroke="var(--line, rgba(255,255,255,0.2))"/>
-            <text x="195" y="97.5" text-anchor="middle" fill="var(--text, #fff)" font-size="10.2" font-weight="800">3. Social (Weekly Huddles)</text>
+            <text x="195" y="97.5" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">3. Social (Weekly Huddles)</text>
           </g>
           
           <!-- Tier 2: Safety -->
           <g style="cursor:pointer" onclick="setIx('s15Tier',3)">
             <polygon points="84,110 47,144 343,144 306,110" fill="${curTierIdx===3?'#E80D13':'rgba(232,13,19,0.35)'}" stroke="var(--line, rgba(255,255,255,0.2))"/>
-            <text x="195" y="131.5" text-anchor="middle" fill="var(--text, #fff)" font-size="9.8" font-weight="800">2. Safety (Job Security &amp; Sandbox)</text>
+            <text x="195" y="131.5" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">2. Safety (Job Security &amp; Sandbox)</text>
           </g>
           
           <!-- Tier 1: Physiological -->
           <g style="cursor:pointer" onclick="setIx('s15Tier',4)">
             <polygon points="47,144 10,178 380,178 343,144" fill="${curTierIdx===4?'#8b5cf6':'rgba(139,92,246,0.35)'}" stroke="var(--line, rgba(255,255,255,0.2))"/>
-            <text x="195" y="165.5" text-anchor="middle" fill="var(--text, #fff)" font-size="9.8" font-weight="800">1. Physiological (Fair Base Pay)</text>
+            <text x="195" y="165.5" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">1. Physiological (Fair Base Pay)</text>
           </g>
           
           <!-- Herzberg Two-Factor Model Container Card: Balanced height 170px, perfectly matching pyramid height -->
@@ -10789,12 +10813,12 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <text x="590" y="32" text-anchor="middle" fill="var(--gold, #f59e0b)" font-size="11.8" font-weight="800">Herzberg Two-Factor Balance</text>
           
           <rect x="465" y="44" width="250" height="56" rx="7" fill="rgba(245,158,11,0.12)" stroke="var(--gold, #f59e0b)" stroke-width="1"/>
-          <text x="475" y="66" fill="var(--gold, #f59e0b)" font-size="10.2" font-weight="800">Hygiene (Baseline Dissatisfaction Prevention)</text>
-          <text x="475" y="86" fill="var(--text-muted, #cbd5e1)" font-size="9.6">Fair salary, all 120 staff retained, IT sandbox</text>
+          <text x="475" y="66" fill="var(--gold, #f59e0b)" font-size="11.5" font-weight="800">Hygiene (Baseline Dissatisfaction Prevention)</text>
+          <text x="475" y="86" fill="var(--text-muted, #cbd5e1)" font-size="11.5">Fair salary, all 120 staff retained, IT sandbox</text>
           
           <rect x="465" y="108" width="250" height="56" rx="7" fill="rgba(16,185,129,0.14)" stroke="var(--green, #10b981)" stroke-width="1"/>
-          <text x="475" y="130" fill="var(--green, #10b981)" font-size="10.2" font-weight="800">Motivators (True Performance Drive)</text>
-          <text x="475" y="150" fill="var(--text, #fff)" font-size="9.6">$50 direct bonus, awards &amp; approval autonomy</text>
+          <text x="475" y="130" fill="var(--green, #10b981)" font-size="11.5" font-weight="800">Motivators (True Performance Drive)</text>
+          <text x="475" y="150" fill="var(--text, #fff)" font-size="11.5">$50 direct bonus, awards &amp; approval autonomy</text>
         </svg>
         <div class="ix-card">
           <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem">
@@ -12248,7 +12272,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
                   <button type="button" class="settings-btn-cancel" onclick="cancelEditPassword()">Cancel</button>
                 </div>
                 ${editingPasswordError ? `<div style="font-size:.72rem;color:#f87171;font-weight:600">${esc(editingPasswordError)}</div>` : ""}
-                <div style="font-size:.68rem;color:#64748b">Only the password string changes. Permissions (${esc(item.roleName)} scope) remain strictly unchanged.</div>
+                <div style="font-size:var(--text-xs);color:#64748b">Only the password string changes. Permissions (${esc(item.roleName)} scope) remain strictly unchanged.</div>
               </div>
             </div>
           `;
@@ -12501,7 +12525,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
             <span class="m-hub-banner-pill">⚡ Direct Admissions</span>
-            <span class="m-tag amber" style="font-size:.65rem">$0 Agent Comm</span>
+            <span class="m-tag amber">$0 Agent Comm</span>
           </div>
           <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
           <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
@@ -12543,7 +12567,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
             <span class="m-hub-banner-pill">⚡ Core Digital Operations</span>
-            <span class="m-tag green" style="font-size:.65rem">Zero Paper Squeeze</span>
+            <span class="m-tag green">Zero Paper Squeeze</span>
           </div>
           <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
           <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
@@ -12580,7 +12604,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
             <span class="m-hub-banner-pill">👥 120-Staff Governance</span>
-            <span class="m-tag red" style="font-size:.65rem">POLC Organizing</span>
+            <span class="m-tag red">POLC Organizing</span>
           </div>
           <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
           <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
@@ -12625,7 +12649,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
             <span class="m-hub-banner-pill">🗺️ Enterprise Architecture</span>
-            <span class="m-tag teal" style="font-size:.65rem">Interactive SVGs</span>
+            <span class="m-tag teal">Interactive SVGs</span>
           </div>
           <h3 class="m-hub-banner-title m-hub-t">${esc(info.t)}</h3>
           <p class="m-hub-banner-sub m-lead sm">${esc(info.d)}</p>
@@ -12656,7 +12680,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-card m-arch-card" style="margin-bottom:0.75rem">
           <div class="m-arch-card-h">
             <div>
-              <span class="m-tag teal" style="font-size:0.62rem;margin-bottom:0.2rem">Primary Action Blueprint</span>
+              <span class="m-tag teal" style="margin-bottom:0.2rem">Primary Action Blueprint</span>
               <h3>Chart 5 · 12-Month Action Plan</h3>
             </div>
             <button type="button" class="btn btn-sm btn-outline" style="border-color:#14b8a6;color:#5eead4" onclick="openLb(5)">🔍 Zoom</button>
@@ -12667,7 +12691,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-card m-arch-card">
           <div class="m-arch-card-h">
             <div>
-              <span class="m-tag teal" style="font-size:0.62rem;margin-bottom:0.2rem">Governance Structure</span>
+              <span class="m-tag teal" style="margin-bottom:0.2rem">Governance Structure</span>
               <h3>Chart 4 · 120-Staff Organisation</h3>
             </div>
             <button type="button" class="btn btn-sm btn-outline" style="border-color:#14b8a6;color:#5eead4" onclick="openLb(4)">🔍 Zoom</button>
@@ -12968,7 +12992,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
       <div class="m-sheet-calc-card" style="border-left: 3.5px solid var(--accent-${theme.color}, #3b82f6)">
         <div class="m-sheet-calc-title">
           <span>Core Strategic Focus</span>
-          <span class="m-tag ${theme.color}" style="font-size:0.6rem">POLC Priority</span>
+          <span class="m-tag ${theme.color}">POLC Priority</span>
         </div>
         <p style="margin:0;font-size:0.86rem;font-weight:800;color:#fff;line-height:1.35">${esc(data.badge)}</p>
       </div>
@@ -13044,7 +13068,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-sheet-calc-card">
           <div class="m-sheet-calc-title">
             <span>Annual Net Equation</span>
-            <span class="m-tag green" style="font-size:0.6rem">Retained Profit</span>
+            <span class="m-tag green">Retained Profit</span>
           </div>
           <div class="m-sheet-formula-row">
             <span>Gross Commissions Saved (260 Direct @ $375)</span>
@@ -13093,7 +13117,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-sheet-calc-card">
           <div class="m-sheet-calc-title">
             <span>Intake Channel Redistribution</span>
-            <span class="m-tag amber" style="font-size:0.6rem">Zero Agent Drag</span>
+            <span class="m-tag amber">Zero Agent Drag</span>
           </div>
           <div class="m-sheet-formula-row">
             <span>Direct Social Pipeline (65% Target)</span>
@@ -13142,7 +13166,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-sheet-calc-card">
           <div class="m-sheet-calc-title">
             <span>Blended Cost Benchmark</span>
-            <span class="m-tag red" style="font-size:0.6rem">-41% Cheaper</span>
+            <span class="m-tag red">-41% Cheaper</span>
           </div>
           <div class="m-sheet-formula-row">
             <span>Baseline Cost (100% Agent Dependency)</span>
@@ -13191,7 +13215,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-sheet-calc-card">
           <div class="m-sheet-calc-title">
             <span>Service Turnaround Improvement</span>
-            <span class="m-tag teal" style="font-size:0.6rem">Zero Paper Queue</span>
+            <span class="m-tag teal">Zero Paper Queue</span>
           </div>
           <div class="m-sheet-formula-row">
             <span>Legacy Paper Queues (Counter approvals)</span>

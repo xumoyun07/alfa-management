@@ -12,3 +12,14 @@ Thumbs.db
 # Large Archive Files & Test Screenshots (>100MB exceeds GitHub push limits)
 *.zip
 docs/shots/
+
+# Local backups & artifacts
+*.bak
+*.bak.*
+*.bak_*
+*.bak_safe.*
+.taste-skill/
+
+# Unencrypted sensitive payloads (keep outside repo)
+docs/speaker-script.json
+

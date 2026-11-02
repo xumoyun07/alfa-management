@@ -1,26 +1,83 @@
 #!/usr/bin/env node
 /**
  * build-lock.js — AES-GCM (256-bit) + PBKDF2-SHA256 (210,000 iterations)
- * Encrypts the Speaker Script JSON payload into ALFA_Interactive_Presentation_Portal_v4.html.
+ * Encrypts the Speaker Script JSON payload and role envelopes into index.html.
+ *
+ * SECURITY NOTICE:
+ * Passwords must NEVER be passed as command-line arguments (to prevent exposure
+ * in shell history and system process tables). Passwords are entered at a hidden
+ * interactive prompt or read from environment variables.
  *
  * Usage:
- *   1. Encrypt from plain JSON file:
- *      node build-lock.js "<PASSWORD>" ./speaker-script.json ./ALFA_Interactive_Presentation_Portal_v4.html
+ *   1. Rebuild vault interactively (prompts for passwords with hidden echo):
+ *      node docs/build-lock.js [jsonPath] [htmlPath]
  *
- *   2. Change password directly in the HTML file (decrypts existing block with old password, re-encrypts with new):
- *      node build-lock.js --rekey "<OLD_PASSWORD>" "<NEW_PASSWORD>" ./ALFA_Interactive_Presentation_Portal_v4.html
+ *      Example (defaults to docs/speaker-script.json and index.html):
+ *      node docs/build-lock.js
  *
- *   3. Export decrypted JSON from the HTML file (requires current password):
- *      node build-lock.js --export "<CURRENT_PASSWORD>" ./speaker-script.json ./ALFA_Interactive_Presentation_Portal_v4.html
+ *   2. Non-interactive via environment variables:
+ *      $env:MASTER_PASSWORD="YourPassword"
+ *      $env:ADMIN_PASSWORD="AdminPassword"        # optional
+ *      $env:PRESENTER_PASSWORD="PresenterPassword"# optional
+ *      node docs/build-lock.js
+ *
+ *   3. Export unencrypted JSON from HTML (prompts for current password):
+ *      node docs/build-lock.js --export [outJsonPath] [htmlPath]
+ *
+ * IMPORTANT POST-BUILD STEP:
+ * After rebuilding index.html, move or delete docs/speaker-script.json from the
+ * shared project folder so plaintext speeches are not exposed.
  */
 
 const fs = require("fs");
 const path = require("path");
+const readline = require("readline");
 const crypto = require("crypto");
 const { subtle } = crypto.webcrypto;
 
 const ITERATIONS = 210000;
-const DEFAULT_HTML = path.join(__dirname, "ALFA_Interactive_Presentation_Portal_v4.html");
+const DEFAULT_JSON = path.resolve(__dirname, "speaker-script.json");
+const DEFAULT_HTML = fs.existsSync(path.resolve(__dirname, "index.html"))
+  ? path.resolve(__dirname, "index.html")
+  : path.resolve(__dirname, "../index.html");
+
+function askPassword(promptText) {
+  return new Promise(resolve => {
+    if (process.stdin.isTTY) {
+      process.stdout.write(promptText);
+      let pwd = "";
+      process.stdin.setRawMode(true);
+      process.stdin.resume();
+      process.stdin.setEncoding("utf8");
+      const onData = (ch) => {
+        if (ch === "\n" || ch === "\r" || ch === "\u0004") {
+          process.stdin.setRawMode(false);
+          process.stdin.pause();
+          process.stdin.removeListener("data", onData);
+          process.stdout.write("\n");
+          resolve(pwd);
+        } else if (ch === "\u0003") { // Ctrl+C
+          process.exit(1);
+        } else if (ch === "\u007f" || ch === "\b") { // Backspace
+          if (pwd.length > 0) {
+            pwd = pwd.slice(0, -1);
+            process.stdout.write("\b \b");
+          }
+        } else {
+          pwd += ch;
+          process.stdout.write("*");
+        }
+      };
+      process.stdin.on("data", onData);
+    } else {
+      const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+      rl.question(promptText, answer => {
+        rl.close();
+        resolve(answer.trim());
+      });
+    }
+  });
+}
 
 async function deriveKey(password, saltBytes, iterations = ITERATIONS) {
   const enc = new TextEncoder();
@@ -69,6 +126,26 @@ async function encryptPayload(jsonText, password) {
   }
 }
 
+async function createEnvelope(secretPayload, password) {
+  const salt = crypto.randomBytes(16);
+  const iv = crypto.randomBytes(12);
+  const key = await deriveKey(password, salt, ITERATIONS);
+  const cipherBuf = await subtle.encrypt(
+    { name: "AES-GCM", iv },
+    key,
+    new TextEncoder().encode(secretPayload)
+  );
+  return {
+    v: 1,
+    alg: "AES-256-GCM",
+    kdf: "PBKDF2-SHA256",
+    iterations: ITERATIONS,
+    salt: Buffer.from(salt).toString("base64"),
+    iv: Buffer.from(iv).toString("base64"),
+    ct: Buffer.from(cipherBuf).toString("base64")
+  };
+}
+
 async function decryptPayload(vault, password) {
   const salt = Buffer.from(vault.salt, "base64");
   const iv = Buffer.from(vault.iv, "base64");
@@ -92,75 +169,112 @@ function injectVaultIntoHtml(html, vaultObj) {
   return html.replace(/const\s+ENCRYPTED_SCRIPT_VAULT\s*=\s*\{[\s\S]*?\};/, replacement);
 }
 
+function injectEnvelopesIntoHtml(html, envelopesObj) {
+  const replacement = `const SCRIPT_ENVELOPES = ${JSON.stringify(envelopesObj, null, 2)};`;
+  if (!/const\s+SCRIPT_ENVELOPES\s*=\s*\{[\s\S]*?\};/.test(html)) {
+    throw new Error("Could not find SCRIPT_ENVELOPES placeholder in HTML file.");
+  }
+  return html.replace(/const\s+SCRIPT_ENVELOPES\s*=\s*\{[\s\S]*?\};/, replacement);
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const mode = args[0];
 
-  if (mode === "--rekey") {
-    const oldPassword = args[1];
-    const newPassword = args[2];
-    const htmlPath = path.resolve(args[3] || DEFAULT_HTML);
-    if (!oldPassword || !newPassword) {
-      console.error("Usage: node build-lock.js --rekey \"<OLD_PASSWORD>\" \"<NEW_PASSWORD>\" [htmlFile]");
-      process.exit(1);
-    }
-    const html = fs.readFileSync(htmlPath, "utf8");
-    const currentVault = extractVaultFromHtml(html);
-    const plainJson = await decryptPayload(currentVault, oldPassword);
-    JSON.parse(plainJson); // validate JSON
-    const newVault = await encryptPayload(plainJson, newPassword);
-    const updatedHtml = injectVaultIntoHtml(html, newVault);
-    fs.writeFileSync(htmlPath, updatedHtml, "utf8");
-    console.log("Successfully re-encrypted ENCRYPTED_SCRIPT_VAULT in", path.basename(htmlPath));
-    return;
-  }
-
   if (mode === "--export") {
-    const currentPassword = args[1];
-    const outJsonPath = path.resolve(args[2] || "speaker-script.json");
-    const htmlPath = path.resolve(args[3] || DEFAULT_HTML);
-    if (!currentPassword) {
-      console.error("Usage: node build-lock.js --export \"<CURRENT_PASSWORD>\" <out.json> [htmlFile]");
+    const outJsonPath = path.resolve(args[1] || DEFAULT_JSON);
+    const htmlPath = path.resolve(args[2] || DEFAULT_HTML);
+
+    let password = process.env.MASTER_PASSWORD || process.env.PASSWORD;
+    if (!password) {
+      password = await askPassword("Enter vault password to export JSON: ");
+    }
+    if (!password) {
+      console.error("Error: A password is required to decrypt and export the vault.");
       process.exit(1);
     }
+
     const html = fs.readFileSync(htmlPath, "utf8");
     const currentVault = extractVaultFromHtml(html);
-    const plainJson = await decryptPayload(currentVault, currentPassword);
+    const plainJson = await decryptPayload(currentVault, password);
     fs.writeFileSync(outJsonPath, JSON.stringify(JSON.parse(plainJson), null, 2), "utf8");
-    console.log("Exported decrypted script JSON to", outJsonPath);
+    console.log("Exported decrypted script JSON to:", outJsonPath);
     return;
   }
 
-  const PASSWORD = process.env.PASSWORD || args[0] || "<I WILL PROVIDE>";
-  const jsonPath = path.resolve(args[1] || "speaker-script.json");
-  const htmlPath = path.resolve(args[2] || DEFAULT_HTML);
+  // Paths can be passed as CLI arguments, but NEVER passwords
+  const jsonPath = path.resolve(args[0] || DEFAULT_JSON);
+  const htmlPath = path.resolve(args[1] || DEFAULT_HTML);
 
-  if (!PASSWORD || PASSWORD === "<I WILL PROVIDE>") {
-    console.error("Error: Please provide the password via CLI argument or PASSWORD env variable.");
-    console.error("Usage: node build-lock.js \"<PASSWORD>\" <script.json> [htmlFile]");
+  if (!fs.existsSync(jsonPath)) {
+    console.error(`Error: JSON file not found at: ${jsonPath}`);
+    process.exit(1);
+  }
+  if (!fs.existsSync(htmlPath)) {
+    console.error(`Error: HTML file not found at: ${htmlPath}`);
     process.exit(1);
   }
 
-  const rawJson = fs.readFileSync(jsonPath, "utf8");
-  JSON.parse(rawJson); // Ensure valid JSON
-  const vault = await encryptPayload(rawJson, PASSWORD);
+  // Retrieve passwords from environment or interactive hidden prompt
+  let masterPassword = process.env.MASTER_PASSWORD || process.env.PASSWORD;
+  let adminPassword = process.env.ADMIN_PASSWORD;
+  let presenterPassword = process.env.PRESENTER_PASSWORD;
 
-  // Verify round-trip decryption before writing
-  const verifyPlain = await decryptPayload(vault, PASSWORD);
+  if (!masterPassword) {
+    masterPassword = await askPassword("Enter New Master Password (Super Admin): ");
+  }
+
+  if (!masterPassword || masterPassword.trim().length < 3) {
+    console.error("Error: Master password must be at least 3 characters.");
+    process.exit(1);
+  }
+  masterPassword = masterPassword.trim();
+
+  // If role passwords not in env, ask optionally
+  if (!adminPassword && process.stdin.isTTY) {
+    const p1 = await askPassword("Enter New Admin Password [env_1] (press Enter to skip): ");
+    if (p1 && p1.trim()) adminPassword = p1.trim();
+  }
+
+  if (!presenterPassword && process.stdin.isTTY) {
+    const p2 = await askPassword("Enter New Presenter Password [env_2] (press Enter to skip): ");
+    if (p2 && p2.trim()) presenterPassword = p2.trim();
+  }
+
+  const rawJson = fs.readFileSync(jsonPath, "utf8");
+  JSON.parse(rawJson); // Validate JSON format
+
+  console.log(`Encrypting ${path.basename(jsonPath)} into ${path.basename(htmlPath)}...`);
+  const vault = await encryptPayload(rawJson, masterPassword);
+
+  // Verify round-trip decryption before writing to disk
+  const verifyPlain = await decryptPayload(vault, masterPassword);
   if (verifyPlain !== rawJson) {
     throw new Error("Round-trip decryption verification failed.");
   }
 
-  if (fs.existsSync(htmlPath)) {
-    const html = fs.readFileSync(htmlPath, "utf8");
-    if (/const\s+ENCRYPTED_SCRIPT_VAULT\s*=\s*\{[\s\S]*?\};/.test(html)) {
-      const updated = injectVaultIntoHtml(html, vault);
-      fs.writeFileSync(htmlPath, updated, "utf8");
-      console.log("Encrypted and updated ENCRYPTED_SCRIPT_VAULT in", path.basename(htmlPath));
-      return;
-    }
+  let html = fs.readFileSync(htmlPath, "utf8");
+  html = injectVaultIntoHtml(html, vault);
+
+  // Generate role envelopes if provided
+  if (adminPassword || presenterPassword) {
+    const envAdmin = adminPassword ? await createEnvelope(masterPassword, adminPassword) : null;
+    const envPresenter = presenterPassword ? await createEnvelope(masterPassword, presenterPassword) : null;
+
+    const envelopes = {
+      env_1: envAdmin,
+      env_2: envPresenter
+    };
+    html = injectEnvelopesIntoHtml(html, envelopes);
+    console.log("Generated and injected role envelopes (env_1 and env_2).");
   }
-  console.log(JSON.stringify(vault));
+
+  fs.writeFileSync(htmlPath, html, "utf8");
+  console.log("Successfully rebuilt and locked vault in", path.basename(htmlPath));
+  console.log("\n==================================================================");
+  console.log("IMPORTANT: Move or delete the plaintext script JSON out of the shared folder:");
+  console.log(jsonPath);
+  console.log("==================================================================");
 }
 
 main().catch(err => {

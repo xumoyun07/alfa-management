@@ -8321,17 +8321,273 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <div class="d-home-problems-row" role="region" aria-label="Two strategic challenges">
             <!-- Problem 1: Agents -->
             <div class="d-prob-card">
+              <div class="d-prob-head">
+                <div class="d-prob-tag-grp">
+                  <span class="m-tag red">Problem 1 · Recruitment Drain</span>
+                  <span class="d-prob-pill">100% Agent Dependency</span>
+                </div>
+                <button type="button" class="d-btn sm" onclick="dGo('calculator')">Open Savings Calculator →</button>
+              </div>
+              <p class="d-prob-desc">All 400 students currently arrive through 108 external agents at 15% ($375) commission, costing $150,000 annually. Shifting 260 students (65%) to direct social channels saves $97,500 gross.</p>
+              <div class="d-prob-chart-box" id="dHomeProbChart1" onclick="openLb(2)" style="cursor:pointer" title="Click to view full-screen Chart 2 (Vector)">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Problem 2: Paper -->
+            <div class="d-prob-card">
+              <div class="d-prob-head">
+                <div class="d-prob-tag-grp">
+                  <span class="m-tag teal">Problem 2 · Paper Bottleneck</span>
+                  <span class="d-prob-pill">Manual Approvals &amp; Queues</span>
+                </div>
+                <button type="button" class="d-btn sm" onclick="dGo('onehub')">Open OneHub →</button>
+              </div>
+              <p class="d-prob-desc">Physical registration and fee slips take 5–7 days to process (our estimate). Deploying ALFA OneHub (CRM, ERP, HRM self-service, our proposal) delivers digital service in under 24 hours.</p>
+              <div class="d-prob-chart-box" id="dHomeProbChart2" onclick="openLb(7)" style="cursor:pointer" title="Click to view full-screen Chart 7 (Vector)">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: 7 Member Cards Grid -->
+          <div class="d-home-members-section" role="region" aria-label="Presentation chapters by team member">
+            <div class="d-home-sec-head">
+              <div>
+                <h3 class="d-home-h3">Presentation Chapters by Team Member</h3>
+                <span class="d-home-sec-sub">Select a member to enter presentation mode at their opening slide</span>
+              </div>
+              <button type="button" class="d-btn" onclick="startDesktopPresentation(0)"><span data-ic="play" data-s="14"></span><span>Play from start</span></button>
+            </div>
+
+            <div class="d-home-members-grid">
+              <button type="button" class="d-mem-tile" onclick="startDesktopPresentation(0)">
+                <div class="d-mem-tile-top"><span class="d-mem-badge">Member 1</span><span class="d-mem-pages">Pages 01–04</span></div>
+                <h4 class="d-mem-title">Business Profile, Problems &amp; Theories</h4>
+                <p class="d-mem-desc">Institutional background, agent dependency analysis, and classical/behavioural theory fit.</p>
+                <div class="d-mem-foot"><span>Start Chapter</span><span>→</span></div>
+              </button>
+
+              <button type="button" class="d-mem-tile" onclick="startDesktopPresentation(4)">
+                <div class="d-mem-tile-top"><span class="d-mem-badge">Member 2</span><span class="d-mem-pages">Pages 05–07</span></div>
+                <h4 class="d-mem-title">Strategic Planning &amp; $42K Budget</h4>
+                <p class="d-mem-desc">SMART objectives, quarterly intake milestones, direct rebate backup, and 12-month budget.</p>
+                <div class="d-mem-foot"><span>Start Chapter</span><span>→</span></div>
+              </button>
+
+              <button type="button" class="d-mem-tile" onclick="startDesktopPresentation(7)">
+                <div class="d-mem-tile-top"><span class="d-mem-badge">Member 3</span><span class="d-mem-pages">Pages 08–09</span></div>
+                <h4 class="d-mem-title">Organising 120 Staff &amp; Span</h4>
+                <p class="d-mem-desc">Authority delegation, departmental realignment, and span of control: Academic 7, Marketing 4–6, IT 4–5, Operations 4–5.</p>
+                <div class="d-mem-foot"><span>Start Chapter</span><span>→</span></div>
+              </button>
+
+              <button type="button" class="d-mem-tile" onclick="startDesktopPresentation(9)">
+                <div class="d-mem-tile-top"><span class="d-mem-badge">Member 4</span><span class="d-mem-pages">Pages 10–11</span></div>
+                <h4 class="d-mem-title">Leading Steps, Power &amp; System Sandbox</h4>
+                <p class="d-mem-desc">Six leading steps, five power sources, and hands-on senior clerk onboarding scenario.</p>
+                <div class="d-mem-foot"><span>Start Chapter</span><span>→</span></div>
+              </button>
+
+              <button type="button" class="d-mem-tile" onclick="startDesktopPresentation(11)">
+                <div class="d-mem-tile-top"><span class="d-mem-badge">Member 5</span><span class="d-mem-pages">Pages 12–13</span></div>
+                <h4 class="d-mem-title">Lecture 6 Controlling &amp; 5 Functional Areas</h4>
+                <p class="d-mem-desc">Lecture 6 six-step process, feedforward/concurrent/feedback controls, and 5 functional control areas.</p>
+                <div class="d-mem-foot"><span>Start Chapter</span><span>→</span></div>
+              </button>
+
+              <button type="button" class="d-mem-tile" onclick="startDesktopPresentation(13)">
+                <div class="d-mem-tile-top"><span class="d-mem-badge">Member 6</span><span class="d-mem-pages">Pages 14–15</span></div>
+                <h4 class="d-mem-title">Situational Leadership &amp; Motivation</h4>
+                <p class="d-mem-desc">Situational leadership, stand-up communication, job security, and recognition bonuses.</p>
+                <div class="d-mem-foot"><span>Start Chapter</span><span>→</span></div>
+              </button>
+
+              <button type="button" class="d-mem-tile" onclick="startDesktopPresentation(15)">
+                <div class="d-mem-tile-top"><span class="d-mem-badge">Member 7</span><span class="d-mem-pages">Pages 16–17</span></div>
+                <h4 class="d-mem-title">Integrated POLC &amp; Final Scorecard</h4>
+                <p class="d-mem-desc">Continuous POLC synthesis, top 3 90-day rollout priorities, and today vs. month-12 scorecard.</p>
+                <div class="d-mem-foot"><span>Start Chapter</span><span>→</span></div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Collapsed Facts & Sources Accordion -->
+          <details class="d-sources-accordion">
+            <summary class="d-sources-summary">
+              <div class="d-sources-title">
+                <span data-ic="book" data-s="16"></span>
+                <strong>Facts &amp; Official Sources (Methodology &amp; Disclaimers)</strong>
+              </div>
+              <span class="d-sources-chev">▾</span>
+            </summary>
+            <div class="d-sources-body">
+              <div class="d-sources-grid">
+                <div class="d-source-col">
+                  <h4>Verified Institutional Profile</h4>
+                  <ul>
+                    <li><strong>Campus Location:</strong> Lot 13, Persiaran Kewajipan, USJ 1, 47600 Subang Jaya, Selangor, Malaysia.</li>
+                    <li><strong>Programme Range:</strong> 68 full-time programmes across 7 Schools and 4 Centres (ALFA website).</li>
+                    <li><strong>History &amp; Motto:</strong> Established 1998 as Alif Creative Academy; acquired 2017 by Nusantara Education Group; University College since 2021; motto “A Leader For All”.</li>
+                  </ul>
+                </div>
+                <div class="d-source-col">
+                  <h4>Working Assumptions &amp; Disclaimers</h4>
+                  <ul>
+                    <li><strong>Staff Scale:</strong> 120 full-time staff across administrative and academic units <span class="d-tag-dim">(our assumption)</span>.</li>
+                    <li><strong>Paper Queues:</strong> 5–7 day turnaround for manual course registration, fee clearance, and exam slips <span class="d-tag-dim">(our estimate)</span>.</li>
+                    <li><strong>Social Media:</strong> Instagram baseline ~2,100 followers <span class="d-tag-dim">(our observation)</span>, scaling to 20,000 via TikTok and Reels.</li>
+                    <li><strong>Platform Architecture:</strong> ALFA OneHub unified cloud portal combining student enquiry, course and fee, and staff records systems <span class="d-tag-dim">(our proposal)</span>.</li>
+                    <li><strong>Commission Breakdown:</strong> 15% ($375/student) total commission split into 10% sub-agent ($250) + 5% master agent ($125) <span class="d-tag-dim">(our assumption)</span>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      
+          
+          <!-- All 11 Turnaround & Management Charts Section -->
+          <div class="d-home-charts-section" id="dHomeChartsSection" style="margin-top:2.75rem;padding-top:2rem;border-top:1px solid var(--border,rgba(255,255,255,0.08))">
+            <div class="d-home-sec-head" style="margin-bottom:1.5rem">
+              <div>
+                <div class="d-home-badge" style="margin-bottom:.5rem">
+                  <span class="d-pill-red">EXECUTIVE VISUALIZATIONS</span>
+                  <span>All 11 Vector Charts &amp; Architectural Models</span>
+                </div>
+                <h3 class="d-home-h3">Management Architecture &amp; Analytics Portfolio</h3>
+                <p class="d-home-sec-sub">Live vector previews of all 11 turnaround models. Click any chart preview to launch the interactive viewer with zoom and pan.</p>
+              </div>
+            </div>
+
+            <div class="d-home-charts-grid">
+              <div class="d-prob-card">
                 <div class="d-prob-head">
                   <div class="d-prob-tag-grp">
-                    <span class="m-tag green">CHART 11</span>
-                    <span class="d-prob-pill">What If the Fee Is Different?</span>
+                    <span class="m-tag red">CHART 01</span>
+                    <span class="d-prob-pill">3-Tier Recruitment Commission Chain</span>
                   </div>
                 </div>
-                <p class="d-prob-desc">Testing master-agent rates across 5.0% (+$55.5K), 7.5% (+$71.8K), and 10.0% (+$88K) scenarios. Verified against QualyHQ (2026) and GradPilot (2026) industry benchmarks.</p>
-                <div class="d-prob-chart-box" id="dHomeChartPreview11" onclick="openLb(11)" style="cursor:pointer" title="Click to view full-screen Chart 11 (Vector)">
+                <p class="d-prob-desc">Baseline: 100% agent dependency across 12 master agents and 96 sub-agents, spending $150,000 on 400 enrolled students ($375/student total commission).</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview1" onclick="openLb(1)" style="cursor:pointer" title="Click to view full-screen Chart 1 (Vector)">
                   <!-- Injected via populateHomeChartPreviews() -->
                 </div>
               </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag teal">CHART 02</span>
+                    <span class="d-prob-pill">Recruitment Spend: Baseline vs. Plan</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Total annual spend drops from $160,000 to $94,500 ($400.00 to $236.25/student). Shifting 260 students (65%) direct saves $97,500 gross and $55,500 net.</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview2" onclick="openLb(2)" style="cursor:pointer" title="Click to view full-screen Chart 2 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag green">CHART 03</span>
+                    <span class="d-prob-pill">12-Month Transition Path</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Quarterly direct intake targets (0% → 20% → 40% → 55% → 65%), shifting 260 students direct with contingency triggers if Q2 direct intake is below 40%.</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview3" onclick="openLb(3)" style="cursor:pointer" title="Click to view full-screen Chart 3 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag gold">CHART 04</span>
+                    <span class="d-prob-pill">ALFA Organisation Structure (120 Staff)</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">120 full-time staff across Academic (65), Digital Marketing (20), IT (12), and Operations (18), structuring span of control (Academic 7, Marketing 4–6, IT 4–5, Operations 4–5).</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview4" onclick="openLb(4)" style="cursor:pointer" title="Click to view full-screen Chart 4 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag teal">CHART 05</span>
+                    <span class="d-prob-pill">ALFA OneHub Architecture (Enquiry, Course &amp; Staff Systems)</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Unified cloud platform combining student enquiry system (&lt;24h reply promise), the course and fee system (paperless workflow), and Staff HRM with $50 direct enrollment bonus portal.</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview5" onclick="openLb(5)" style="cursor:pointer" title="Click to view full-screen Chart 5 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag red">CHART 06</span>
+                    <span class="d-prob-pill">12-Month Phased Plan & $42,000 Budget</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Reconciled $42,000 investment: P1 Studio ($4K), P2 Contracts ($1.5K), P3 OneHub ($9.5K), P4 Ads &amp; Bonuses ($25K), P5 Training/Awards ($2K), P6 Audits ($0).</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview6" onclick="openLb(6)" style="cursor:pointer" title="Click to view full-screen Chart 6 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag green">CHART 07</span>
+                    <span class="d-prob-pill">Student Intake Journey: Today vs. OneHub</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Eliminates 5–7 day paperwork delays, reducing enrollment turnaround to <24h and retaining 90.55% tuition ($905,500 retained) on direct intake.</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview7" onclick="openLb(7)" style="cursor:pointer" title="Click to view full-screen Chart 7 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag gold">CHART 08</span>
+                    <span class="d-prob-pill">Integrated POLC Turnaround Cycle</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Interconnected management cycle: Planning (65% direct, $42K budget), Organising (120 staff), Leading (referent power), Controlling (service promise feedback loop).</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview8" onclick="openLb(8)" style="cursor:pointer" title="Click to view full-screen Chart 8 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag teal">CHART 09</span>
+                    <span class="d-prob-pill">Span of Control</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Academic Affairs wide span 7 (56 lecturers ÷ 8 programme coordinators); Marketing 4–6; IT 4–5; Operations 4–5.</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview9" onclick="openLb(9)" style="cursor:pointer" title="Click to view full-screen Chart 9 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag red">CHART 10</span>
+                    <span class="d-prob-pill">Leadership, Communication & Motivation Triangle</span>
+                  </div>
+                </div>
+                <p class="d-prob-desc">Situational leadership, 15-minute daily standup protocols (<2h reply promise), job security (0 job cuts), and recognition bonuses ($50 direct bonus pool).</p>
+                <div class="d-prob-chart-box" id="dHomeChartPreview10" onclick="openLb(10)" style="cursor:pointer" title="Click to view full-screen Chart 10 (Vector)">
+                  <!-- Injected via populateHomeChartPreviews() -->
+                </div>
+              </div>
+              <div class="d-prob-card">
+                <div class="d-prob-head">
+                  <div class="d-prob-tag-grp">
+                    <span class="m-tag green">CHART 11</span>
+                    <span class="d-prob-pill">Master-Agent vs. Sub-Agent Network Mapping</span>
+                  </div>
+                </div>
                 <p class="d-prob-desc">Full network mapping of 12 master agencies and 96 sub-agents, splitting $375/student commission into $250 sub-agent (10%) + $125 master agent (5%).</p>
                 <div class="d-prob-chart-box" id="dHomeChartPreview11" onclick="openLb(11)" style="cursor:pointer" title="Click to view full-screen Chart 11 (Vector)">
                   <!-- Injected via populateHomeChartPreviews() -->

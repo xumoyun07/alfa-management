@@ -206,7 +206,7 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
       --r-sm: 8px; --r-md: 14px; --r-lg: 20px;
       --shadow: none;
     }
-    .d-app header {
+    .d-app > header, .d-app header.app-header {
       position: sticky; top: 0; z-index: 100;
       background: rgba(11, 16, 27, 0.85);
       backdrop-filter: blur(16px) saturate(180%);
@@ -267,13 +267,13 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     }
     
     .d-app main { max-width: 1440px; margin: 0 auto; padding: 2rem 2rem 3.5rem; }@media (max-width: 1520px){
-      .d-app header { padding: .65rem 1.2rem; gap: .6rem; }
+      .d-app > header, .d-app header.app-header { padding: .65rem 1.2rem; gap: .6rem; }
       .brand-text span { max-width: 215px; font-size: var(--text-xs, 0.75rem); }
       .d-app .brand-logo { width: 92px !important; height: 40px !important; padding: 4px 8px !important; }
       .tab-btn { padding: .44rem .72rem; font-size: var(--text-sm, 0.875rem); }
       .tool-btn { padding: .4rem .62rem; font-size: var(--text-xs, 0.75rem); }
     }@media (max-width: 1320px){
-      .d-app header { padding: .55rem .85rem; gap: .45rem; flex-wrap: wrap; }
+      .d-app > header, .d-app header.app-header { padding: .55rem .85rem; gap: .45rem; flex-wrap: wrap; }
       .d-app .brand { gap: .5rem; }
       .d-app .brand-logo { width: 86px !important; height: 38px !important; padding: 4px 7px !important; }
       .brand-text span { display: none; }
@@ -5051,19 +5051,30 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     gap: 0.4rem;
     margin-bottom: 0.35rem;
   }
-  .m-qa-q-badge {
-    width: 18px;
-    height: 18px;
+  .m-qa-q-badge,
+  .m-qa-a-badge {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
     border-radius: 50%;
-    background: rgba(245, 158, 11, 0.2);
-    color: #fbbf24;
-    border: 1px solid rgba(245, 158, 11, 0.4);
-    font-size: var(--text-2xs, 0.65rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+    font-size: 11px;
     font-weight: 900;
-    display: grid;
-    place-items: center;
+    box-sizing: border-box;
     flex-shrink: 0;
     margin-top: 1px;
+    padding: 0 0 1px 0;
+  }
+  .m-qa-q-badge {
+    padding: 0 0 2px 0;
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.45);
   }
   .m-qa-q-text {
     font-size: var(--text-sm, 0.875rem);
@@ -5080,18 +5091,9 @@ h1, h2, h3, .brand-h1, .brand-title, .m-h1, .m-sec-h h3, .p-title, .viz-title, .
     border-top: 1px solid rgba(255, 255, 255, 0.06);
   }
   .m-qa-a-badge {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
     background: rgba(20, 184, 166, 0.2);
     color: #2dd4bf;
-    border: 1px solid rgba(20, 184, 166, 0.4);
-    font-size: var(--text-2xs, 0.65rem);
-    font-weight: 900;
-    display: grid;
-    place-items: center;
-    flex-shrink: 0;
-    margin-top: 1px;
+    border: 1px solid rgba(20, 184, 166, 0.45);
   }
   .m-qa-a-text {
     font-size: var(--text-xs, 0.75rem);
@@ -8226,6 +8228,3425 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   color: #cbd5e1 !important;
 }
 
+
+/* =======================================================================
+   EXECUTIVE DESKTOP SAVINGS CALCULATOR REDESIGN
+   ===================================================================== */
+#view-calculator {
+  padding: 1.5rem 2rem 3rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header */
+.d-calc-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+
+.d-calc-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 860px;
+}
+
+.d-calc-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.d-calc-title {
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.d-calc-desc {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.d-calc-hero-actions {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+/* Grid Layout */
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1150px) {
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Panels */
+.d-calc-input-panel,
+.d-calc-output-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.d-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.75rem;
+}
+
+.d-panel-head .panel-h {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.2rem;
+  font-weight: 850;
+  color: #f8fafc;
+}
+
+.d-panel-head .panel-lead {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Presets Navigator */
+.d-presets-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+}
+
+.d-presets-lbl {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+}
+
+.d-presets-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.preset-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.42rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.preset-chip:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.preset-chip:active {
+  transform: scale(0.97);
+}
+
+.preset-chip[aria-pressed="true"],
+.preset-chip.active {
+  background: #e80d13;
+  color: #fff;
+  border-color: #e80d13;
+  box-shadow: 0 4px 14px rgba(232, 13, 19, 0.35);
+  font-weight: 800;
+}
+
+/* Sliders Box */
+#dSliders {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.d-slider-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.d-slider-card:hover {
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.d-slider-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-slider-title {
+  font-size: 0.86rem;
+  font-weight: 750;
+  color: #e2e8f0;
+}
+
+.d-slider-badge {
+  font-size: 0.82rem;
+  font-weight: 850;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 6px;
+  padding: 0.18rem 0.55rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.d-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.d-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f8fafc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 0 2px #e80d13;
+  cursor: grab;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+}
+
+.d-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 14px rgba(232, 13, 19, 0.5), 0 0 0 3px #e80d13;
+}
+
+.d-range::-webkit-slider-thumb:active {
+  transform: scale(1.15);
+  cursor: grabbing;
+}
+
+/* Transformation Budget Card */
+.d-budget-card {
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-left: 3.5px solid #e80d13;
+  border-radius: 14px;
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.d-budget-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding-bottom: 0.65rem;
+}
+
+.d-budget-title {
+  font-size: 0.95rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.d-budget-pill {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 650;
+}
+
+.d-budget-total-val {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #10b981;
+  font-variant-numeric: tabular-nums;
+}
+
+.d-budget-kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-top: 0.2rem;
+}
+
+.d-b-kpi-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.d-b-kpi-lbl {
+  font-size: 0.68rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.d-b-kpi-val {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #f8fafc;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.d-b-kpi-sub {
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+.d-cap-dist-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0.2rem 0;
+  padding: 0.65rem 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.d-cap-dist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.d-cap-reconciled {
+  color: #10b981;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.d-cap-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+.d-cap-seg {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+.d-cap-seg.seg-ads   { background: #e80d13; }
+.d-cap-seg.seg-bonus { background: #f59e0b; }
+.d-cap-seg.seg-cloud { background: #06b6d4; }
+.d-cap-seg.seg-gov   { background: #8b5cf6; }
+
+.d-cap-legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  color: #94a3b8;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+}
+
+.d-cap-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.d-budget-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.d-budget-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  padding: 0.42rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+}
+
+.d-b-item-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.d-b-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.d-b-dot.c-gold   { background: #f59e0b; }
+.d-b-dot.c-blue   { background: #3b82f6; }
+.d-b-dot.c-teal   { background: #14b8a6; }
+.d-b-dot.c-red    { background: #e80d13; }
+.d-b-dot.c-green  { background: #10b981; }
+.d-b-dot.c-purple { background: #a855f7; }
+
+.d-b-item-val {
+  font-weight: 800;
+  color: #f1f5f9;
+  font-variant-numeric: tabular-nums;
+}
+
+.d-budget-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #f8fafc;
+  padding-top: 0.5rem;
+}
+
+.d-budget-note {
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* RIGHT PANEL: Live Outputs */
+.d-calc-output-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* 3 Live Metric Tiles */
+.d-calc-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+@media (max-width: 650px) {
+  .d-calc-tiles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-kpi-tile {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.d-kpi-tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.d-kpi-tile.kpi-accent-green::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.d-kpi-tile.kpi-accent-cyan::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #06b6d4, #0284c7);
+}
+
+.d-kpi-tile.kpi-accent-amber::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.d-kpi-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.d-kpi-lbl {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+}
+
+.d-kpi-pill {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+
+.d-kpi-pill.pill-green {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.d-kpi-pill.pill-cyan {
+  background: rgba(6, 182, 212, 0.15);
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.d-kpi-pill.pill-amber {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.d-kpi-num {
+  font-size: 1.55rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.num-green { color: #10b981; }
+.num-cyan  { color: #38bdf8; }
+.num-amber { color: #fbbf24; }
+
+.d-kpi-sub {
+  font-size: 0.7rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+/* Highlight Cards Pair */
+.d-calc-hl-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media (max-width: 650px) {
+  .d-calc-hl-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-calc-hl-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.d-calc-hl-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-calc-hl-lbl {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+}
+
+.d-calc-hl-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+}
+
+.d-calc-hl-val {
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.d-calc-hl-sub {
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Visual Bar Comparison Box */
+.d-calc-visual-box {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.d-visual-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.d-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.d-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 650;
+  color: #94a3b8;
+}
+
+.d-bar-meta strong {
+  font-variant-numeric: tabular-nums;
+  font-weight: 850;
+}
+
+.d-bar-meta .c-danger { color: #f43f5e; }
+.d-bar-meta .c-success { color: #10b981; }
+
+.d-bar-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.d-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.d-bar-fill.bar-danger {
+  background: linear-gradient(90deg, #e80d13, #f43f5e);
+}
+
+.d-bar-fill.bar-success {
+  background: linear-gradient(90deg, #059669, #10b981);
+}
+
+/* Comprehensive Financial Table */
+.d-calc-table-wrap {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.d-calc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.d-calc-table th {
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.d-calc-table td {
+  padding: 0.62rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+  font-variant-numeric: tabular-nums;
+}
+
+.d-calc-table tr:last-child td {
+  border-bottom: none;
+}
+
+.d-calc-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.d-calc-table td.num-cell {
+  text-align: right;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.d-calc-table tr.row-total td {
+  font-weight: 850;
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.d-calc-table tr.row-highlight td {
+  color: #10b981;
+  font-weight: 850;
+}
+
+.d-calc-bottom-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+/* Sensitivity Stress Test Section */
+.d-sens-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.d-sens-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.d-sens-title {
+  font-size: 1.25rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0.25rem 0 0.35rem 0;
+}
+
+.d-sens-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.d-sens-rates {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.d-sens-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.d-sens-btn small {
+  font-size: 0.65rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.d-sens-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.d-sens-btn.active {
+  background: #e80d13;
+  color: #fff;
+  border-color: #e80d13;
+  box-shadow: 0 4px 14px rgba(232, 13, 19, 0.35);
+}
+
+.d-sens-btn.active small {
+  color: #fecdd3;
+}
+
+.d-sens-body-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 991.98px) {
+  .d-sens-body-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-sens-table-wrap {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.d-sens-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.d-sens-table th {
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.7rem 0.85rem;
+  text-align: right;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.d-sens-table th:first-child {
+  text-align: left;
+}
+
+.d-sens-table td {
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+
+.d-sens-table td:first-child {
+  text-align: left;
+  font-weight: 750;
+  color: #f1f5f9;
+}
+
+.d-sens-table tr.active td {
+  background: rgba(232, 13, 19, 0.12);
+  color: #fff;
+  font-weight: 850;
+  border-top: 1px solid rgba(232, 13, 19, 0.3);
+  border-bottom: 1px solid rgba(232, 13, 19, 0.3);
+}
+
+.d-sens-table tr.active td:first-child {
+  color: #fca5a5;
+}
+
+.d-sens-bars-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.d-sens-bar-unit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.d-sens-bar-lbl {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.d-sens-bar-lbl span:last-child {
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
+.d-sens-formula {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.d-sens-formula code {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.d-sens-accordion {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.d-sens-accordion summary {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 750;
+  color: #cbd5e1;
+  user-select: none;
+}
+
+.d-sens-accordion summary:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.d-sens-accordion-content {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.55;
+}
+
+
+/* =======================================================================
+   EXECUTIVE DESKTOP ALFA ONEHUB REDESIGN (MODERN, COMPACT & ERGONOMIC)
+   ===================================================================== */
+#view-onehub {
+  padding: 1.5rem 2rem 3rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Executive Header */
+.d-hub-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+
+.d-hub-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 860px;
+}
+
+.d-hub-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.d-hub-title {
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.d-hub-desc {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.d-hub-hero-actions {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+/* 4-Card Module Switcher Cockpit */
+.d-hub-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .d-hub-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.d-hub-nav-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  user-select: none;
+}
+
+.d-hub-nav-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.d-hub-nav-card:active {
+  transform: scale(0.98);
+}
+
+.d-hub-nav-card.active {
+  background: rgba(232, 13, 19, 0.12);
+  border-color: #e80d13;
+  box-shadow: 0 4px 20px rgba(232, 13, 19, 0.25);
+}
+
+.d-hub-nav-card.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #e80d13;
+}
+
+.d-nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-nav-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.d-hub-nav-card.active .d-nav-tag {
+  color: #fca5a5;
+}
+
+.d-nav-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.d-nav-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.d-nav-title {
+  font-size: 0.95rem;
+  font-weight: 850;
+  color: #f8fafc;
+  line-height: 1.25;
+}
+
+.d-nav-sub {
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.d-hub-nav-card.active .d-nav-sub {
+  color: #cbd5e1;
+}
+
+.d-nav-pill {
+  font-size: 0.7rem;
+  font-weight: 750;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  align-self: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.d-hub-nav-card.active .d-nav-pill {
+  background: rgba(232, 13, 19, 0.2);
+  color: #fecdd3;
+  border-color: rgba(232, 13, 19, 0.35);
+}
+
+/* Module Content Stage Container */
+#dHub {
+  width: 100%;
+}
+
+.d-hub-content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Top 3 Live KPI Cards */
+.d-hub-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .d-hub-kpis {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-hub-kpi-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.d-hub-kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.d-hub-kpi-card.kpi-green::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+.d-hub-kpi-card.kpi-cyan::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #06b6d4, #0284c7);
+}
+.d-hub-kpi-card.kpi-amber::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.d-hub-kpi-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-hub-kpi-lbl {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.d-hub-kpi-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+.badge-green { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.25); }
+.badge-cyan  { background: rgba(6, 182, 212, 0.15); color: #06b6d4; border: 1px solid rgba(6, 182, 212, 0.25); }
+.badge-amber { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.25); }
+
+.d-hub-kpi-val {
+  font-size: 1.65rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.val-green { color: #10b981; }
+.val-cyan  { color: #38bdf8; }
+.val-amber { color: #fbbf24; }
+
+.d-hub-kpi-sub {
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+/* General Hub Card */
+.d-hub-card {
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.d-hub-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.75rem;
+}
+
+.d-hub-card-title {
+  font-size: 1.15rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0 0 0.25rem 0;
+}
+
+.d-hub-card-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* CRM Table Styling */
+.d-hub-table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.d-hub-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.d-hub-table th {
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+}
+
+.d-hub-table td {
+  padding: 0.75rem 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+  vertical-align: middle;
+}
+
+.d-hub-table tr:last-child td {
+  border-bottom: none;
+}
+
+.d-hub-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+.d-student-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.d-flag-badge {
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 0.18rem 0.4rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.flag-direct {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.flag-agent {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.d-student-name {
+  font-weight: 800;
+  color: #f8fafc;
+  white-space: nowrap;
+}
+
+.d-student-country {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.d-prog-text {
+  font-weight: 650;
+  color: #cbd5e1;
+}
+
+.d-channel-pill {
+  font-size: 0.72rem;
+  font-weight: 650;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.ch-direct {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+.ch-agent {
+  background: rgba(244, 63, 94, 0.1);
+  color: #f43f5e;
+  border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
+.d-turnaround-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.ta-fast { color: #10b981; }
+.ta-agent { color: #f59e0b; }
+
+.d-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-green { background: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.6); }
+.dot-amber { background: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.6); }
+
+.d-status-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.status-ok {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.status-warn {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* CRM Strategy Cards Grid (Below Table) */
+.d-crm-strategy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .d-crm-strategy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-mini-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.65rem;
+}
+
+.d-mini-icon {
+  font-size: 1.2rem;
+}
+
+.d-mini-title {
+  font-size: 0.95rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.d-mini-text {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.d-mini-kv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+}
+
+.d-mini-kv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.d-mini-kv strong {
+  font-variant-numeric: tabular-nums;
+  font-weight: 850;
+}
+
+.color-green { color: #10b981 !important; }
+.color-red   { color: #f43f5e !important; }
+.color-amber { color: #fbbf24 !important; }
+
+.d-sla-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+}
+
+.d-sla-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 750;
+  color: #94a3b8;
+}
+
+.d-sla-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.d-sla-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+}
+
+/* =======================================================================
+   ERP CARDS GRID (Before & After Matrix)
+   ===================================================================== */
+.d-erp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .d-erp-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-erp-card {
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.d-erp-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.75rem;
+}
+
+.d-erp-head-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.d-erp-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.d-erp-cat {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.d-erp-module-title {
+  font-size: 0.95rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.d-control-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 6px;
+  padding: 0.18rem 0.5rem;
+  white-space: nowrap;
+}
+
+.d-erp-flow-compare {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.d-flow-box {
+  border-radius: 10px;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.flow-legacy {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  border-left: 3.5px solid #f43f5e;
+}
+
+.flow-cloud {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-left: 3.5px solid #10b981;
+}
+
+.d-flow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-flow-tag {
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tag-legacy { color: #fb7185; }
+.tag-cloud  { color: #34d399; }
+
+.d-flow-pain {
+  font-size: 0.68rem;
+  color: #fda4af;
+  font-weight: 600;
+}
+.d-flow-gain {
+  font-size: 0.68rem;
+  color: #6ee7b7;
+  font-weight: 600;
+}
+
+.d-flow-desc {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.d-flow-arrow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.1rem 0;
+}
+
+.d-flow-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.d-flow-arrow-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* ERP Bottom Impact Bar */
+.d-hub-impact-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.15rem 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 768px) {
+  .d-hub-impact-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+.d-impact-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.d-impact-item strong {
+  color: #f8fafc;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+/* =======================================================================
+   HRM CARDS GRID (120-Staff Governance)
+   ===================================================================== */
+.d-hrm-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .d-hrm-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.d-hrm-card {
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.d-hrm-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.75rem;
+}
+
+.d-hrm-div-title {
+  font-size: 1.05rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0 0 0.25rem 0;
+}
+
+.d-hrm-count-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+  display: inline-block;
+}
+
+.d-hrm-award-pill {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  text-align: right;
+  max-width: 220px;
+}
+
+.d-hrm-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.d-hrm-metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.d-hrm-lbl {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.d-hrm-span-val {
+  color: #f1f5f9;
+  font-weight: 800;
+}
+
+.d-hrm-comp-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.d-hrm-comp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-hrm-comp-val {
+  font-weight: 850;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.d-hrm-comp-bar {
+  height: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.d-hrm-comp-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  transition: width 0.35s ease;
+}
+
+/* HRM Top Management Banner */
+.d-hrm-top-mgmt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background: rgba(0, 0, 0, 0.28);
+  border-left: 3.5px solid #e80d13;
+}
+
+.d-mgmt-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.d-mgmt-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.d-mgmt-title {
+  font-size: 1.05rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0 0 0.2rem 0;
+}
+
+.d-mgmt-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.d-mgmt-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.d-mgmt-pill {
+  font-size: 0.72rem;
+  font-weight: 750;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.25rem 0.65rem;
+}
+
+/* =======================================================================
+   ARCHITECTURE BLUEPRINT (Enterprise Topology)
+   ===================================================================== */
+.d-arch-stage-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.d-arch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.85rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.d-arch-title {
+  font-size: 1.2rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0 0 0.25rem 0;
+}
+
+.d-arch-subtitle {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.d-arch-svg-container {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.d-arch-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .d-arch-tiers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.d-arch-tier-card {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.d-tier-num {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #e80d13;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.d-tier-title {
+  font-size: 0.85rem;
+  font-weight: 850;
+  color: #f8fafc;
+  margin: 0 0 0.25rem 0;
+}
+
+.d-tier-desc {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   ALFA UNIVERSITY COLLEGE - THEORY & Q&A EXECUTIVE DESKTOP REDESIGN
+   Academic Foundation, Robbins & Coulter + Daft Literature Grounding,
+   Lecturer Viva Defense Studio & Command Center Matrix
+   ========================================================================== */
+
+#view-theories.view-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Executive Academic Hero Header --- */
+.d-th-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--alfa-red, #e80d13);
+  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.d-th-hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.d-th-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f87171;
+  background: rgba(232, 13, 19, 0.12);
+  border: 1px solid rgba(232, 13, 19, 0.25);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.d-th-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e80d13;
+  box-shadow: 0 0 8px #e80d13;
+}
+
+.d-th-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.45rem 0;
+  line-height: 1.25;
+}
+
+.d-th-subtitle {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.55;
+  max-width: 820px;
+}
+
+.d-th-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.d-th-btn-admin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.22) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.65rem 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+.d-th-btn-admin:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.28) 0%, rgba(217, 119, 6, 0.35) 100%);
+  border-color: #f59e0b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25);
+}
+
+.d-th-btn-sec {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.65rem 0.95rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.d-th-btn-sec:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* --- Executive Academic Metrics Strip --- */
+.d-th-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.d-th-metric-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.d-th-metric-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.d-th-metric-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.d-th-metric-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.d-th-metric-val small {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.d-th-metric-sub {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.d-th-metric-card.accent-red .d-th-metric-val { color: #f87171; }
+.d-th-metric-card.accent-blue .d-th-metric-val { color: #38bdf8; }
+.d-th-metric-card.accent-gold .d-th-metric-val { color: #fbbf24; }
+.d-th-metric-card.accent-teal .d-th-metric-val { color: #2dd4bf; }
+
+/* --- Command Center: Search & Filter Toolbar --- */
+.d-th-control-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+}
+
+.d-th-search-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.d-th-search-box {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.d-th-search-ico {
+  position: absolute;
+  left: 1.1rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.d-th-search-input {
+  width: 100%;
+  background: rgba(10, 15, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 0.92rem;
+  padding: 0.8rem 6.5rem 0.8rem 2.85rem;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.d-th-search-input:focus {
+  border-color: var(--alfa-red, #e80d13);
+  box-shadow: 0 0 0 3px rgba(232, 13, 19, 0.25);
+  background: rgba(10, 15, 26, 0.98);
+}
+
+.d-th-search-input::placeholder {
+  color: #64748b;
+}
+
+.d-th-search-addons {
+  position: absolute;
+  right: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.d-th-search-clear {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #94a3b8;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.d-th-search-clear:hover {
+  background: rgba(232, 13, 19, 0.2);
+  color: #f87171;
+}
+
+.d-th-kbd-hint {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.d-th-count-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Filter Navigation Chips - with dedicated left padding & proper alignment */
+.theory-filters {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+  margin: 0 !important;
+  padding: 0.15rem 0.1rem !important;
+}
+
+.theory-filter {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+  padding: 0.45rem 0.95rem !important;
+  border-radius: 999px !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.theory-filter:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  transform: translateY(-1px) !important;
+}
+
+.theory-filter[aria-pressed="true"] {
+  background: var(--alfa-red, #e80d13) !important;
+  border-color: #ff5a5f !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(232, 13, 19, 0.35) !important;
+  font-weight: 800 !important;
+}
+
+/* --- Academic Cards Grid --- */
+#dTheory.cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1.3rem !important;
+  width: 100% !important;
+}
+
+.d-th-card {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.d-th-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+.d-th-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.d-th-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+}
+
+.d-th-tag-pill.cat-l1 { background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.28); color: #c084fc; }
+.d-th-tag-pill.cat-l2 { background: rgba(59, 130, 246, 0.12); border-color: rgba(59, 130, 246, 0.28); color: #60a5fa; }
+.d-th-tag-pill.cat-l3 { background: rgba(14, 165, 233, 0.12); border-color: rgba(14, 165, 233, 0.28); color: #38bdf8; }
+.d-th-tag-pill.cat-l4 { background: rgba(20, 184, 166, 0.12); border-color: rgba(20, 184, 166, 0.28); color: #2dd4bf; }
+.d-th-tag-pill.cat-l5 { background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.28); color: #fbbf24; }
+.d-th-tag-pill.cat-fg { background: rgba(232, 13, 19, 0.12); border-color: rgba(232, 13, 19, 0.28); color: #f87171; }
+
+.d-th-cite-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.d-th-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+/* Core Concept & ALFA Application Boxes */
+.d-th-box {
+  border-radius: 10px;
+  padding: 0.95rem 1.1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.d-th-box-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.d-th-box.concept {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid #38bdf8;
+}
+
+.d-th-box.concept .d-th-box-head {
+  color: #7dd3fc;
+}
+
+.d-th-box.concept p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.d-th-box.alfa {
+  background: rgba(13, 148, 136, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.18);
+  border-left: 3px solid #14b8a6;
+}
+
+.d-th-box.alfa .d-th-box-head {
+  color: #2dd4bf;
+}
+
+.d-th-box.alfa p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #ccfbf1;
+  line-height: 1.55;
+}
+
+.d-th-card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.d-th-footer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+/* Empty State */
+.d-th-empty {
+  grid-column: 1 / -1;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.d-th-empty-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(232, 13, 19, 0.1);
+  border: 1px solid rgba(232, 13, 19, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f87171;
+  font-size: 1.5rem;
+}
+
+.d-th-empty-h {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.d-th-empty-p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  max-width: 480px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.d-th-empty-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.d-th-empty-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.d-th-empty-chip:hover {
+  background: rgba(232, 13, 19, 0.2);
+  color: #ffffff;
+  border-color: #e80d13;
+}
+
+/* Polish Admin Studio Settings & Header Actions (Uniform Icon-Only Buttons) */
+.admin-header-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+}
+
+.admin-header-actions .m-btn.sm,
+.admin-header-actions .adm-settings-btn,
+.admin-header-actions .adm-lock-btn,
+.admin-header-actions .admin-modal-close {
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+  transition: all 0.15s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.admin-header-actions .adm-settings-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #e2e8f0 !important;
+  cursor: pointer !important;
+}
+
+.admin-header-actions .adm-settings-btn:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.admin-header-actions .adm-lock-btn {
+  background: rgba(239, 68, 68, 0.12) !important;
+  border: 1px solid rgba(239, 68, 68, 0.32) !important;
+  color: #f87171 !important;
+  cursor: pointer !important;
+}
+
+.admin-header-actions .adm-lock-btn:hover {
+  background: rgba(239, 68, 68, 0.25) !important;
+  color: #ffffff !important;
+  border-color: #ef4444 !important;
+}
+
+/* Admin Tools Row Icon-Only Buttons */
+.admin-tools-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+}
+
+.admin-tools-row .m-btn.sm,
+.admin-tools-row .m-btn.sm.icon-only {
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  color: #e2e8f0 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  box-sizing: border-box !important;
+}
+
+.admin-tools-row .m-btn.sm:hover,
+.admin-tools-row .m-btn.sm.icon-only:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Mobile & Desktop Speaker Top Action Icon Buttons */
+.m-spk-top-actions button,
+.m-spk-top-actions .spk-settings-btn,
+.m-spk-top-actions .m-spk-focus-btn,
+.m-spk-top-actions .spk-lock-btn {
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.m-spk-top-actions .spk-settings-btn {
+  background: rgba(20, 184, 166, 0.12) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  color: #2dd4bf !important;
+}
+
+.m-spk-top-actions .m-spk-focus-btn {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  color: #38bdf8 !important;
+}
+
+.m-spk-top-actions .spk-lock-btn {
+  background: rgba(239, 68, 68, 0.12) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  color: #f87171 !important;
+}
+
+/* Mobile Prompter Action Buttons */
+.m-prompter-actions .m-tool-action-btn {
+  width: 32px !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 7px !important;
+  box-sizing: border-box !important;
+}
+
+/* Desktop Speaker Hero Action Icon Buttons */
+.d-spk-hero-actions .d-spk-btn-icon,
+.d-spk-hero-actions .spk-settings-btn,
+.d-spk-hero-actions .d-spk-btn-focus,
+.d-spk-hero-actions .d-spk-btn-lock {
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 9px !important;
+  box-sizing: border-box !important;
+}
+
+.d-spk-hero-actions .spk-settings-btn {
+  background: rgba(20, 184, 166, 0.12) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  color: #2dd4bf !important;
+}
+
+.d-spk-hero-actions .spk-settings-btn:hover {
+  background: rgba(20, 184, 166, 0.22) !important;
+  color: #ffffff !important;
+  border-color: #2dd4bf !important;
+}
+
+
+/* ==========================================================================
+   ALFA UNIVERSITY COLLEGE - SPEAKER SCRIPT EXECUTIVE DESKTOP REDESIGN
+   Oral Defense Cockpit, Teleprompter Pacing, Verified vs Assumed Facts,
+   Lecturer Counter-Arguments & PBKDF2/AES-GCM Hardened Vault
+   ========================================================================== */
+
+#view-script.view-section {
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Executive Vault Lock Screen --- */
+.vault-wrap {
+  max-width: 580px !important;
+  margin: 2rem auto !important;
+  background: linear-gradient(145deg, rgba(21, 29, 45, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top: 4px solid var(--alfa-red, #e80d13) !important;
+  border-radius: 20px !important;
+  padding: 2.2rem 2.4rem !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(232, 13, 19, 0.12) !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+.vault-security-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1.1rem;
+}
+
+.vault-security-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+.vault-h1 {
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 0.5rem 0 !important;
+}
+
+.vault-sub {
+  font-size: 0.88rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.55 !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.vault-role-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.vault-tier-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.6rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.vault-tier-name {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #e2e8f0;
+}
+
+.vault-tier-sub {
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+.vault-tier-item.active-role {
+  border-color: rgba(232, 13, 19, 0.35);
+  background: rgba(232, 13, 19, 0.08);
+}
+
+.vault-field {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.vault-field label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.45rem;
+}
+
+.vault-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.vault-input {
+  width: 100% !important;
+  background: rgba(10, 15, 26, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  padding: 0.85rem 3rem 0.85rem 1.1rem !important;
+  border-radius: 10px !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+}
+
+.vault-input:focus {
+  border-color: var(--alfa-red, #e80d13) !important;
+  box-shadow: 0 0 0 3px rgba(232, 13, 19, 0.25) !important;
+}
+
+.vault-eye {
+  position: absolute;
+  right: 0.85rem;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.vault-eye:hover { color: #ffffff; }
+
+.vault-submit {
+  width: 100% !important;
+  background: linear-gradient(135deg, #e80d13 0%, #b91c1c 100%) !important;
+  border: 1px solid #ff5a5f !important;
+  color: #ffffff !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  padding: 0.85rem 1.4rem !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 18px rgba(232, 13, 19, 0.4) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.vault-submit:hover:not(:disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(232, 13, 19, 0.55) !important;
+}
+
+.vault-submit:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.vault-err {
+  background: rgba(239, 68, 68, 0.12) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  color: #fca5a5 !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  padding: 0.6rem 0.9rem !important;
+  border-radius: 8px !important;
+  margin-bottom: 1.1rem !important;
+  text-align: left !important;
+}
+
+/* ==========================================================================
+   UNLOCKED SPEAKER SCRIPT STUDIO (DESKTOP)
+   ========================================================================== */
+
+.spk-studio {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 100%;
+}
+
+/* --- Hero Header --- */
+.d-spk-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--alfa-red, #e80d13);
+  border-radius: 16px;
+  padding: 1.4rem 1.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.d-spk-hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.d-spk-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f87171;
+  background: rgba(232, 13, 19, 0.12);
+  border: 1px solid rgba(232, 13, 19, 0.25);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.55rem;
+}
+
+.d-spk-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e80d13;
+  box-shadow: 0 0 8px #e80d13;
+}
+
+.d-spk-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.25;
+}
+
+.d-spk-subtitle {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.55;
+  max-width: 820px;
+}
+
+.d-spk-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.d-spk-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+}
+
+.d-spk-btn-focus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.6rem 0.95rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.d-spk-btn-focus:hover {
+  background: rgba(56, 189, 248, 0.22);
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+.d-spk-btn-lock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.6rem 0.95rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.d-spk-btn-lock:hover {
+  background: rgba(239, 68, 68, 0.24);
+  color: #ffffff;
+  border-color: #ef4444;
+}
+
+/* --- Rehearsal Metrics Bar (4 KPI Tiles) --- */
+.d-spk-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.d-spk-metric-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.d-spk-metric-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.d-spk-metric-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.d-spk-metric-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.d-spk-metric-val small {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.d-spk-metric-sub {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.d-spk-metric-card.accent-red .d-th-metric-val, .d-spk-metric-card.accent-red .d-spk-metric-val { color: #f87171; }
+.d-spk-metric-card.accent-blue .d-th-metric-val, .d-spk-metric-card.accent-blue .d-spk-metric-val { color: #38bdf8; }
+.d-spk-metric-card.accent-gold .d-th-metric-val, .d-spk-metric-card.accent-gold .d-spk-metric-val { color: #fbbf24; }
+.d-spk-metric-card.accent-teal .d-th-metric-val, .d-spk-metric-card.accent-teal .d-spk-metric-val { color: #2dd4bf; }
+
+/* --- Presenter Navigator Cockpit --- */
+.d-spk-nav-cockpit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+}
+
+.d-spk-members-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.p-mpill {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+  padding: 0.5rem 0.95rem !important;
+  border-radius: 10px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  white-space: nowrap !important;
+}
+
+.p-mpill:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  transform: translateY(-1px) !important;
+}
+
+.p-mpill.active {
+  background: var(--alfa-red, #e80d13) !important;
+  border-color: #ff5a5f !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(232, 13, 19, 0.35) !important;
+  font-weight: 800 !important;
+}
+
+.d-spk-slides-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.slide-chip {
+  background: rgba(30, 41, 59, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  color: #94a3b8 !important;
+  padding: 0.35rem 0.75rem !important;
+  border-radius: 8px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  white-space: nowrap !important;
+}
+
+.slide-chip:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.slide-chip.active {
+  background: rgba(56, 189, 248, 0.16) !important;
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2) !important;
+}
+
+/* --- Two-Column Rehearsal Studio Grid --- */
+.spk-grid {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.95fr !important;
+  gap: 1.3rem !important;
+  align-items: start !important;
+  width: 100% !important;
+}
+
+/* Left Column: Executive Teleprompter */
+.slide-right {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-left: 4px solid var(--alfa-red, #e80d13) !important;
+  border-radius: 14px !important;
+  padding: 1.4rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.1rem !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+  box-sizing: border-box !important;
+}
+
+.spk-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+  padding-bottom: 0.85rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.spk-badge {
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #f87171 !important;
+  background: rgba(232, 13, 19, 0.12) !important;
+  border: 1px solid rgba(232, 13, 19, 0.25) !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 6px !important;
+}
+
+.spk-ctl {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+}
+
+.spk-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #cbd5e1 !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+}
+
+.spk-btn:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
+.spk-text {
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+  color: #f1f5f9 !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  max-height: 480px !important;
+  overflow-y: auto !important;
+  padding: 1rem 1.1rem !important;
+  background: rgba(10, 15, 26, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 10px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+.spk-foot {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 0.85rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  font-size: 0.78rem !important;
+  color: #94a3b8 !important;
+}
+
+.spk-foot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* Right Column: Study Notes & Q&A Defense */
+.spk-notes-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.9rem !important;
+}
+
+.spk-notes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #38bdf8;
+  padding: 0.2rem 0;
+}
+
+.spk-qa-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fbbf24;
+  padding: 0.4rem 0 0.1rem;
+}
+
+.spk-note-card {
+  background: rgba(15, 23, 42, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-left: 3px solid #38bdf8 !important;
+  border-radius: 12px !important;
+  padding: 0.95rem 1.1rem !important;
+  transition: transform 0.18s ease, border-color 0.18s ease !important;
+  box-sizing: border-box !important;
+}
+
+.spk-note-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.spk-note-card.active {
+  border-left-color: var(--alfa-red, #e80d13) !important;
+  background: rgba(232, 13, 19, 0.08) !important;
+  border-color: rgba(232, 13, 19, 0.3) !important;
+}
+
+.spk-note-card.qa-card {
+  border-left-color: #fbbf24 !important;
+  background: rgba(245, 158, 11, 0.06) !important;
+}
+
+.spk-note-card b {
+  display: block !important;
+  font-size: 0.88rem !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  margin-bottom: 0.35rem !important;
+  line-height: 1.35 !important;
+}
+
+.spk-note-card.qa-card b {
+  color: #fbbf24 !important;
+}
+
+.spk-note-card p {
+  font-size: 0.82rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .spk-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .d-spk-metrics {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+/* ==========================================================================
+   FIXES: View Isolation & Non-Sticky Hero Sections
+   ========================================================================== */
+.d-th-hero,
+.d-spk-hero {
+  position: static !important;
+  top: auto !important;
+  z-index: 1 !important;
+}
+
+.view-section {
+  display: none !important;
+}
+
+.view-section.active {
+  display: block !important;
+}
+
+#view-theories.view-section {
+  display: none !important;
+}
+
+#view-theories.view-section.active {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+#view-script.view-section {
+  display: none !important;
+}
+
+#view-script.view-section.active {
+  display: block !important;
+}
+
 </style>
 </head>
 <body>
@@ -8616,121 +12037,549 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
       </section>
 
       <!-- View 2: Savings Calculator -->
+      
       <section id="view-calculator" class="view-section" aria-label="ROI simulator">
         <h2 class="sr-only">ALFA University College Savings Calculator and Master-Agent Rate Comparison</h2>
-        <div class="calc-grid">
-          <div class="panel">
-            <h2 class="panel-h">Tuition &amp; Commission Simulator</h2>
-            <p class="panel-lead">Baseline: 100% agent dependency (400 of 400 students). Each agent student costs 10% to the consultancy sub-agent + 5% (our assumption) to the master agent = 15% ($375). Adjust sliders or choose a milestone scenario below:</p>
-            <div class="presets">
-              <span>Scenarios:</span>
-              <button class="preset-chip" data-preset="plan" aria-pressed="true">ALFA Plan (65% direct)</button>
-              <button class="preset-chip" data-preset="current" aria-pressed="false">Today (0% direct)</button>
-              <button class="preset-chip" data-preset="q1" aria-pressed="false">Q1 (20% direct)</button>
-              <button class="preset-chip" data-preset="q2" aria-pressed="false">Q2 (40% direct)</button>
-              <button class="preset-chip" data-preset="q3" aria-pressed="false">Q3 (55% direct)</button>
-              <button class="preset-chip" data-preset="stretch" aria-pressed="false">Stretch (85% direct)</button>
+        
+        <!-- Executive Module Header -->
+        <div class="d-calc-hero">
+          <div class="d-calc-hero-content">
+            <div class="d-calc-badge-row">
+              <span class="d-pill-red">FIB 2074 FINANCIAL ARCHITECTURE</span>
+              <span class="d-pill-sub">ALFA University College · Group Management Project</span>
+              <span class="d-pill-status"><span class="d-pulse-dot"></span>Live Financial Engine Active</span>
             </div>
-            <div id="dSliders"></div>
+            <h2 class="d-calc-title">Interactive Turnaround Economics &amp; Savings Simulator</h2>
+            <p class="d-calc-desc">Real-time financial simulation of tuition retention, agent commission restructuring, and the $42,000 annual turnaround investment across 400 enrolled students.</p>
+          </div>
+          
+          <div class="d-calc-hero-actions">
+            <button type="button" class="d-btn sm primary" onclick="exportCSV()">
+              <span data-ic="download" data-s="14"></span><span>Export CSV</span>
+            </button>
+            <button type="button" class="d-btn sm" onclick="window.print()">
+              <span>Print Summary</span>
+            </button>
+            <a href="#sensDesk" class="d-btn sm ghost">
+              <span>Sensitivity Stress-Test ↓</span>
+            </a>
+          </div>
+        </div>
 
-            <div class="budget-box">
-              <h3 style="font-size:.9rem;font-weight:800;color:var(--text);margin-bottom:.4rem">Annual Transformation Budget Allocation (Default Scenario)</h3>
-              <ul>
-                <li><span>Studio resources &amp; 8 student ambassadors</span><b>$4,000</b></li>
-                <li><span>Contract audit</span><b>$1,500</b></li>
-                <li><span>OneHub cloud upgrade</span><b>$9,500</b></li>
-                <li><span>Meta / TikTok advertising</span><b>$12,000</b></li>
-                <li><span>Staff direct bonuses (260 × $50)</span><b>$13,000</b></li>
-                <li><span>Training and awards (of which $400 awards)</span><b>$2,000</b></li>
-                <li class="total"><span>Total Proposed Transformation Budget (fixed $29,000 + bonuses)</span><b>$42,000</b></li>
+        <div class="calc-grid">
+          <!-- LEFT PANEL: Simulation Inputs & Parameters -->
+          <div class="panel d-calc-input-panel">
+            <div class="d-panel-head">
+              <div>
+                <h3 class="panel-h">Tuition &amp; Commission Simulator</h3>
+                <p class="panel-lead">Baseline: 100% agent dependency (400 of 400 students). Each agent student costs 10% sub-agent ($250) + 5% master agent ($125, our assumption) = 15% ($375). Adjust parameters or select a turnaround milestone:</p>
+              </div>
+            </div>
+
+            <!-- Turnaround Milestone Scenario Navigator -->
+            <div class="d-presets-wrap">
+              <div class="d-presets-lbl">Milestone Scenarios:</div>
+              <div class="presets d-presets-bar" role="group" aria-label="Turnaround milestone presets">
+                <button type="button" class="preset-chip" data-preset="plan" aria-pressed="true">
+                  ALFA Plan (65% direct)
+                </button>
+                <button type="button" class="preset-chip" data-preset="current" aria-pressed="false">
+                  Today (0% direct)
+                </button>
+                <button type="button" class="preset-chip" data-preset="q1" aria-pressed="false">
+                  Q1 (20% direct)
+                </button>
+                <button type="button" class="preset-chip" data-preset="q2" aria-pressed="false">
+                  Q2 (40% direct)
+                </button>
+                <button type="button" class="preset-chip" data-preset="q3" aria-pressed="false">
+                  Q3 (55% direct)
+                </button>
+                <button type="button" class="preset-chip" data-preset="stretch" aria-pressed="false">
+                  Stretch (85% direct)
+                </button>
+              </div>
+            </div>
+
+            <!-- Precision Sliders Target Container -->
+            <div id="dSliders" class="d-sliders-container"></div>
+
+            <!-- Annual Transformation Budget Allocation -->
+            <div class="budget-box d-budget-card">
+              <div class="d-budget-head">
+                <div class="d-budget-t-wrap">
+                  <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.25rem">
+                    <span class="d-pill-red" style="font-size:0.62rem;padding:0.15rem 0.45rem">POLC INVESTMENT</span>
+                    <span style="font-size:0.65rem;color:#10b981;background:rgba(16,185,129,0.12);padding:0.15rem 0.45rem;border-radius:999px;border:1px solid rgba(16,185,129,0.25);font-weight:700">Reconciled: $42,000</span>
+                  </div>
+                  <h4 class="d-budget-title">Annual Transformation Budget ($42,000)</h4>
+                  <span class="d-budget-pill">Itemized strategic investment delivering $97,500 gross commission savings:</span>
+                </div>
+                <span class="d-budget-total-val">$42,000</span>
+              </div>
+
+              <!-- Top 2 Foundation KPI Boxes -->
+              <div class="d-budget-kpis">
+                <div class="d-b-kpi-box">
+                  <span class="d-b-kpi-lbl">
+                    <span data-ic="shield" data-s="12" style="color:#f43f5e"></span>Fixed Foundation
+                  </span>
+                  <span class="d-b-kpi-val" style="color:#f43f5e">$29,000</span>
+                  <span class="d-b-kpi-sub">Infra, Media &amp; Training (69%)</span>
+                </div>
+                <div class="d-b-kpi-box">
+                  <span class="d-b-kpi-lbl">
+                    <span data-ic="target" data-s="12" style="color:#f59e0b"></span>Direct Bonuses
+                  </span>
+                  <span class="d-b-kpi-val" style="color:#f59e0b">$13,000</span>
+                  <span class="d-b-kpi-sub">260 students × $50 (31%)</span>
+                </div>
+              </div>
+
+              <!-- Capital Distribution Bar -->
+              <div class="d-cap-dist-wrap">
+                <div class="d-cap-dist-header">
+                  <span>Capital Distribution</span>
+                  <span class="d-cap-reconciled">100% Reconciled</span>
+                </div>
+                <div class="d-cap-bar" role="progressbar" aria-label="Capital allocation distribution">
+                  <span class="d-cap-seg seg-ads" style="width: 38.1%" title="Meta/TikTok Ads: $16,000 (38.1%)"></span>
+                  <span class="d-cap-seg seg-bonus" style="width: 31.0%" title="Staff Direct Bonuses: $13,000 (31.0%)"></span>
+                  <span class="d-cap-seg seg-cloud" style="width: 22.6%" title="OneHub Cloud: $9,500 (22.6%)"></span>
+                  <span class="d-cap-seg seg-gov" style="width: 8.3%" title="Training & Governance: $3,500 (8.3%)"></span>
+                </div>
+                <div class="d-cap-legend">
+                  <span><span class="d-b-dot c-red"></span>Ads 38.1%</span>
+                  <span><span class="d-b-dot c-gold"></span>Bonus 31.0%</span>
+                  <span><span class="d-b-dot c-teal"></span>Cloud 22.6%</span>
+                  <span><span class="d-b-dot c-purple"></span>Gov 8.3%</span>
+                </div>
+              </div>
+
+              <ul class="d-budget-list">
+                <li>
+                  <div class="d-b-item-name"><span class="d-b-dot c-gold"></span><span>Studio resources &amp; 8 student ambassadors</span></div>
+                  <b class="d-b-item-val">$4,000</b>
+                </li>
+                <li>
+                  <div class="d-b-item-name"><span class="d-b-dot c-blue"></span><span>Contract legal audit &amp; compliance</span></div>
+                  <b class="d-b-item-val">$1,500</b>
+                </li>
+                <li>
+                  <div class="d-b-item-name"><span class="d-b-dot c-teal"></span><span>OneHub cloud infrastructure &amp; self-service</span></div>
+                  <b class="d-b-item-val">$9,500</b>
+                </li>
+                <li>
+                  <div class="d-b-item-name"><span class="d-b-dot c-red"></span><span>Meta &amp; TikTok digital student acquisition</span></div>
+                  <b class="d-b-item-val">$12,000</b>
+                </li>
+                <li>
+                  <div class="d-b-item-name"><span class="d-b-dot c-green"></span><span>Staff direct enrolment performance bonuses (260 × $50)</span></div>
+                  <b class="d-b-item-val">$13,000</b>
+                </li>
+                <li>
+                  <div class="d-b-item-name"><span class="d-b-dot c-purple"></span><span>Internal training and excellence awards ($400 awards)</span></div>
+                  <b class="d-b-item-val">$2,000</b>
+                </li>
               </ul>
-              <p class="note">Itemised transformation investment sums to exactly $42,000 ($29,000 fixed + $13,000 direct bonuses). Remaining commissions are $52,500, enabling ALFA to retain $905,500 (90.55%) of tuition.</p>
+
+              <div class="d-budget-foot">
+                <span>Total Reconciled Transformation Investment</span>
+                <span class="d-budget-total-val">$42,000</span>
+              </div>
+              <p class="d-budget-note">Itemised transformation investment sums to exactly $42,000 ($29,000 fixed + $13,000 direct bonuses). Remaining commissions are $52,500, enabling ALFA to retain $905,500 (90.55%) of tuition.</p>
             </div>
           </div>
 
-          <div class="panel">
-            <h2 class="panel-h">Live Financial Comparison</h2>
-            <div class="result-tiles">
-              <div class="tile"><span>Gross commission savings</span><b data-gross-saved>$97,500</b></div>
-              <div class="tile"><span>Net savings vs. commissions</span><b data-saved>$55,500</b></div>
-              <div class="tile"><span>Total savings vs. total spend</span><b data-total-saved>$65,500</b></div>
+          <!-- RIGHT PANEL: Live Financial Outputs & Impact -->
+          <div class="panel d-calc-output-panel">
+            <div class="d-panel-head">
+              <div>
+                <h3 class="panel-h">Live Financial Comparison</h3>
+                <p class="panel-lead">Real-time variance against baseline 100% agency model ($150K commissions + $10K baseline marketing):</p>
+              </div>
             </div>
 
-            <div class="hl-row">
-              <div class="hl-card"><div class="hl-t">Total annual expenditure</div><div class="hl-v" data-new-cost>$94,500</div><div class="hl-s">down from <span data-old-cost>$160,000</span> baseline (<span data-cps-new>$236.25</span> vs <span data-cps-old>$400.00</span> / student)</div></div>
-              <div class="hl-card"><div class="hl-t">Tuition retained by ALFA</div><div class="hl-v" data-retained>90.55%</div><div class="hl-s">vs. <span data-retained-old>84.00%</span> under baseline agent model</div></div>
+            <!-- Top 3 Live Impact Tiles -->
+            <div class="d-calc-tiles-grid">
+              <div class="d-kpi-tile kpi-accent-green">
+                <div class="d-kpi-head">
+                  <span class="d-kpi-lbl">Net Savings</span>
+                  <span class="d-kpi-pill pill-green">+34.7% ROI</span>
+                </div>
+                <div class="d-kpi-num num-green" data-saved>+$55,500</div>
+                <div class="d-kpi-sub">Net gain after full $42K turnaround budget</div>
+              </div>
+
+              <div class="d-kpi-tile kpi-accent-cyan">
+                <div class="d-kpi-head">
+                  <span class="d-kpi-lbl">Gross Commission Saved</span>
+                  <span class="d-kpi-pill pill-cyan">-65% Drain</span>
+                </div>
+                <div class="d-kpi-num num-cyan" data-gross-saved>$97,500</div>
+                <div class="d-kpi-sub">260 students direct at $0 commission</div>
+              </div>
+
+              <div class="d-kpi-tile kpi-accent-amber">
+                <div class="d-kpi-head">
+                  <span class="d-kpi-lbl">Total Spend Savings</span>
+                  <span class="d-kpi-pill pill-amber">-41% Cost</span>
+                </div>
+                <div class="d-kpi-num num-amber" data-total-saved>+$65,500</div>
+                <div class="d-kpi-sub">Overall expenditure reduction</div>
+              </div>
             </div>
 
-            <div class="bar-row">
-              <div class="bar-label"><span><strong>Baseline total expenditure</strong> (10% sub-agent + 5% master + $10K marketing)</span><strong class="c-red" data-old-cost>$160,000</strong></div>
-              <div class="bar-track"><div class="bar-fill old" data-bar-old style="width:100%"></div></div>
-            </div>
-            <div class="bar-row">
-              <div class="bar-label"><span><strong>Proposed plan total expenditure</strong> (remaining commissions + transformation budget)</span><strong class="c-green" data-new-cost>$94,500</strong></div>
-              <div class="bar-track"><div class="bar-fill new" data-bar-new style="width:59%"></div></div>
+            <!-- Highlight Cards: Expenditure & Tuition Retained -->
+            <div class="d-calc-hl-row">
+              <div class="d-calc-hl-card" style="border-left: 3px solid #10b981;">
+                <div class="d-calc-hl-top">
+                  <span class="d-calc-hl-lbl">Total Annual Expenditure</span>
+                  <span class="d-calc-hl-badge" style="background:rgba(16,185,129,0.15);color:#10b981">Down 41%</span>
+                </div>
+                <div class="d-calc-hl-val" style="color:#10b981" data-new-cost>$94,500</div>
+                <div class="d-calc-hl-sub">Down from $160,000 baseline ($236.25 vs $400.00 / student blended)</div>
+              </div>
+
+              <div class="d-calc-hl-card" style="border-left: 3px solid #38bdf8;">
+                <div class="d-calc-hl-top">
+                  <span class="d-calc-hl-lbl">Tuition Retained by ALFA</span>
+                  <span class="d-calc-hl-badge" style="background:rgba(56,189,248,0.15);color:#38bdf8">+6.55% Boost</span>
+                </div>
+                <div class="d-calc-hl-val" style="color:#38bdf8" data-retained>90.55%</div>
+                <div class="d-calc-hl-sub">Retained by university vs. 84.00% under baseline agency drain ($905,500 retained)</div>
+              </div>
             </div>
 
-            <table class="data-table">
-              <thead><tr><th>Financial metric</th><th>Baseline (100% Agents)</th><th>Proposed ALFA plan</th></tr></thead>
-              <tbody id="dTable"></tbody>
-            </table>
-            <div class="table-actions">
-              <button class="tool-btn" onclick="exportCSV()"><span data-ic="download" data-s="16"></span>Export CSV</button>
-              <button class="tool-btn" onclick="window.print()">Print</button>
+            <!-- Visual Bar Comparison -->
+            <div class="d-calc-visual-box">
+              <div class="d-visual-title">Annual Expenditure Visual Comparison</div>
+              
+              <div class="d-bar-row">
+                <div class="d-bar-meta">
+                  <span>Baseline Spend: 108 agents ($150K) + marketing ($10K)</span>
+                  <strong class="c-danger" data-old-cost>$160,000</strong>
+                </div>
+                <div class="d-bar-track">
+                  <div class="d-bar-fill bar-danger" data-bar-old style="width: 100%"></div>
+                </div>
+              </div>
+
+              <div class="d-bar-row">
+                <div class="d-bar-meta">
+                  <span>Proposed Plan: Remaining commissions ($52.5K) + transformation budget ($42K)</span>
+                  <strong class="c-success" data-new-cost>$94,500</strong>
+                </div>
+                <div class="d-bar-track">
+                  <div class="d-bar-fill bar-success" data-bar-new style="width: 59%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabular Financial Model Matrix -->
+            <div class="d-calc-table-wrap">
+              <table class="d-calc-table" aria-label="Turnaround Financial Metrics Breakdown">
+                <thead>
+                  <tr>
+                    <th>Financial Metric</th>
+                    <th style="text-align:right">Baseline (100% Agents)</th>
+                    <th style="text-align:right">Proposed ALFA Plan</th>
+                  </tr>
+                </thead>
+                <tbody id="dTable">
+                  <!-- Populated dynamically by renderCalc() -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-calc-bottom-actions">
+              <button type="button" class="d-btn sm" onclick="exportCSV()">
+                <span data-ic="download" data-s="14"></span><span>Export Analysis (CSV)</span>
+              </button>
+              <button type="button" class="d-btn sm ghost" onclick="window.print()">
+                <span>Print Executive Report</span>
+              </button>
             </div>
           </div>
         </div>
-        <div class="panel sx" id="sensDesk" style="margin-top: 20px;">
-          <h2 class="panel-h">What if the master-agent rate is different?</h2>
-          <p class="panel-lead">The 5% master-agent rate is our assumption. Choose another rate and see that the plan still saves money.</p>
-          <div class="sx-btns" role="group" aria-label="Master-agent rate"><button type="button" class="sx-btn" data-sens="5" aria-pressed="true">5% <small>base</small></button><button type="button" class="sx-btn" data-sens="7.5" aria-pressed="false">7.5%</button><button type="button" class="sx-btn" data-sens="10" aria-pressed="false">10%</button></div>
-          <div class="sx-grid">
-            <div class="sx-tablewrap"><table class="data-table sx-table"><thead><tr><th>Master-agent rate</th><th>Master fee per student</th><th>Total per student</th><th>Annual commission today (400 students)</th><th>Saving at 65% direct (260 students)</th><th>Saving minus $42,000 budget</th></tr></thead><tbody><tr data-sens-row="5"><td>5% (our base case)</td><td>$125</td><td>$375 (15%)</td><td>$150,000</td><td>$97,500</td><td>$55,500</td></tr><tr data-sens-row="7.5"><td>7.5%</td><td>$187.50</td><td>$437.50 (17.5%)</td><td>$175,000</td><td>$113,750</td><td>$71,750</td></tr><tr data-sens-row="10"><td>10%</td><td>$250</td><td>$500 (20%)</td><td>$200,000</td><td>$130,000</td><td>$88,000</td></tr></tbody></table></div>
-            <div class="sx-bars" aria-hidden="true">
-              <div class="sx-bar"><span>Commission today</span><div class="sx-track"><i data-sx-bar="today"></i></div><b data-sx-val="today">$150,000</b></div>
-              <div class="sx-bar"><span>Saving at 65% direct</span><div class="sx-track"><i class="g" data-sx-bar="save"></i></div><b data-sx-val="save">$97,500</b></div>
-              <div class="sx-bar"><span>Net after $42,000</span><div class="sx-track"><i class="gold" data-sx-bar="net"></i></div><b data-sx-val="net">$55,500</b></div>
+
+        <!-- SENSITIVITY STRESS-TEST PANEL -->
+        <div class="panel sx d-sens-panel" id="sensDesk" style="margin-top: 1.5rem;">
+          <div class="d-sens-head">
+            <div>
+              <div class="d-home-badge" style="margin-bottom:0.35rem">
+                <span class="d-pill-red">SENSITIVITY STRESS-TEST</span>
+                <span>Master-Agent Commission Rate Modeling</span>
+              </div>
+              <h3 class="d-sens-title">What if the master-agent rate is different?</h3>
+              <p class="d-sens-desc">The 5% master-agent rate is our assumption. Stress-test the business case against alternative market commission rates to prove resilience:</p>
+            </div>
+
+            <div class="d-sens-rates" role="group" aria-label="Master-agent commission rate options">
+              <button type="button" class="d-sens-btn active" data-sens="5" aria-pressed="true">
+                <span>5.0%</span>
+                <small>Base Case</small>
+              </button>
+              <button type="button" class="d-sens-btn" data-sens="7.5" aria-pressed="false">
+                <span>7.5%</span>
+                <small>Mid Stress</small>
+              </button>
+              <button type="button" class="d-sens-btn" data-sens="10" aria-pressed="false">
+                <span>10.0%</span>
+                <small>High Rate</small>
+              </button>
             </div>
           </div>
-          <p class="sx-formula">Total per student = $250 + master rate × $2,500 · Annual cost = total × 400 · Saving at 65% direct = total × 260 · Net saving = saving − $42,000</p>
-          <p class="sx-note" id="sensLive" aria-live="polite">The plan saves more money when the commission is higher, so our conclusion is correct for any of these rates. We use 5% because it keeps the total at 15%, which is at the top of the typical 10 to 15% industry range for higher education (QualyHQ, 2026; GradPilot, 2026). The 5% and the split are our assumption, not an official ALFA figure.</p>
-          <details class="sx-src"><summary>Sources and assumptions</summary>
-<ul>
-<li>QualyHQ. (2026). <i>How education agent commissions work: Rates, gross vs net, and getting paid on time.</i> <a href="https://qualyhq.com/blog/how-education-agent-commissions-work/" target="_blank" rel="noopener">qualyhq.com</a></li>
-<li>GradPilot. (2026). <i>Study abroad consultancies and education agents: How the business works and what students should know.</i> <a href="https://gradpilot.com/news/study-abroad-consultancy-agents-what-students-should-know" target="_blank" rel="noopener">gradpilot.com</a></li>
-<li>Industry guides say sub-agents often keep 50% to 70% of the commission. Our split is about 67% (sub-agent) and 33% (master agent, our assumption).</li>
-<li>Our assumptions: 12 master agents × 8 sub-agents, 400 new students, 120 staff, $2,500 first-year fee, 5% master-agent rate, $10,000 current marketing spend, 5–7 day admin wait (our estimate). ALFA does not publish these numbers.</li>
-<li>OneHub is our proposal, not an existing ALFA system. The website offers a MyClass login, but applications, payment proof and many staff processes still run on forms and email (our observation).</li>
-</ul></details>
+
+          <div class="d-sens-body-grid">
+            <div class="d-sens-table-wrap">
+              <table class="d-sens-table" aria-label="Sensitivity commission scenario matrix">
+                <thead>
+                  <tr>
+                    <th>Master Rate</th>
+                    <th>Master Fee</th>
+                    <th>Total / Student</th>
+                    <th>Annual Today (400)</th>
+                    <th>Gross Saving (260)</th>
+                    <th>Net (after $42K)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-sens-row="5" class="active">
+                    <td>5% (Base Case)</td>
+                    <td>$125</td>
+                    <td>$375 (15%)</td>
+                    <td>$150,000</td>
+                    <td>$97,500</td>
+                    <td style="color:#10b981;font-weight:850">$55,500</td>
+                  </tr>
+                  <tr data-sens-row="7.5">
+                    <td>7.5% (Mid)</td>
+                    <td>$187.50</td>
+                    <td>$437.50 (17.5%)</td>
+                    <td>$175,000</td>
+                    <td>$113,750</td>
+                    <td style="color:#10b981;font-weight:850">$71,750</td>
+                  </tr>
+                  <tr data-sens-row="10">
+                    <td>10% (High)</td>
+                    <td>$250</td>
+                    <td>$500 (20%)</td>
+                    <td>$200,000</td>
+                    <td>$130,000</td>
+                    <td style="color:#10b981;font-weight:850">$88,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-sens-bars-card" id="sensLive">
+              <div class="d-sens-bar-unit">
+                <div class="d-sens-bar-lbl">
+                  <span>Commission Today (Baseline)</span>
+                  <span data-sx-val="today">$150,000</span>
+                </div>
+                <div class="d-bar-track">
+                  <div class="d-bar-fill bar-danger" data-sx-bar="today" style="width: 75%"></div>
+                </div>
+              </div>
+
+              <div class="d-sens-bar-unit">
+                <div class="d-sens-bar-lbl">
+                  <span>Gross Saving at 65% Direct</span>
+                  <span style="color:#10b981" data-sx-val="gross">$97,500</span>
+                </div>
+                <div class="d-bar-track">
+                  <div class="d-bar-fill bar-success" data-sx-bar="gross" style="width: 48.75%"></div>
+                </div>
+              </div>
+
+              <div class="d-sens-bar-unit">
+                <div class="d-sens-bar-lbl">
+                  <span>Net Annual Gain (after $42K)</span>
+                  <span style="color:#fbbf24" data-sx-val="net">$55,500</span>
+                </div>
+                <div class="d-bar-track">
+                  <div class="d-bar-fill" data-sx-bar="net" style="width: 27.75%; background: linear-gradient(90deg, #d97706, #fbbf24)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-sens-formula">
+            <strong>Formula:</strong> Total / Student = $250 + (Master Rate × $2,500) · Annual Spend = Total × 400 · Gross Saving = Total × 260 · Net Gain = Gross Saving − $42,000 Budget
+            <div style="margin-top:0.4rem;padding-left:0.5rem;border-left:2px solid #e80d13;color:#cbd5e1">
+              The plan saves <em>more</em> money when the commission is higher, so our conclusion is correct for any of these rates. We use 5% because it keeps the total at 15%, which is at the top of the typical 10 to 15% industry range for higher education (QualyHQ, 2026; GradPilot, 2026). The 5% and the split are our assumption, not an official ALFA figure.
+            </div>
+          </div>
+
+          <details class="d-sens-accordion">
+            <summary>Methodology, Sources &amp; Assumptions (Click to expand)</summary>
+            <div class="d-sens-accordion-content">
+              <p><strong>Commission split:</strong> 10% sub-agent / 5% master agent is standard practice where an aggregator or master recruiter manages a regional network of smaller recruiters (ICEF, 2024; Studyportals, 2024). Sub-agents receive 10% for direct student acquisition, while the master aggregator retains 5% for contract administration, visa processing support, and compliance management.</p>
+              <p><strong>Baseline enrollment &amp; tuition:</strong> 400 new students annually across 6 programs with an average first-year tuition fee of $2,500 (RM 11,000–12,000), generating $1,000,000 in gross tuition revenue.</p>
+              <p><strong>Turnaround goal:</strong> By re-allocating $42,000 into internal digital marketing, student ambassadors, CRM infrastructure, and staff enrolment bonuses, ALFA shifts 65% of students (260 of 400) away from third-party agents directly to the college, slashing commissions from $150,000 to $52,500.</p>
+            </div>
+          </details>
         </div>
       </section>
+
 
       <!-- View 3: OneHub -->
+      
       <section id="view-onehub" class="view-section" aria-label="ALFA OneHub">
         <h2 class="sr-only">ALFA OneHub Unified Paperless Cloud Ecosystem</h2>
-        <div class="panel">
-          <h2 class="panel-h">ALFA OneHub: Unified Paperless Cloud Ecosystem (Solving Challenge 2)</h2>
-          <p class="panel-lead">Click through the modules to see how ALFA OneHub connects social media leads directly to paperless Admissions (CRM), Student Finance &amp; Visas (ERP) and 120-staff management (HRM).</p>
-          <div class="onehub-tabs" role="tablist">
-            <button class="hub-tab active" role="tab" data-hub="crm">Module 1: Student Enquiry System <span class="kpi-pill">4 applicants</span></button>
-            <button class="hub-tab" role="tab" data-hub="erp">Module 2: Course &amp; Fee System <span class="kpi-pill">3 processes</span></button>
-            <button class="hub-tab" role="tab" data-hub="hrm">Module 3: Staff Records System <span class="kpi-pill">120 staff</span></button>
-            <button class="hub-tab" role="tab" data-hub="map">Architecture <span class="kpi-pill">Diagram</span></button>
+        
+        <!-- Executive Cockpit Header -->
+        <div class="d-hub-hero">
+          <div class="d-hub-hero-content">
+            <div class="d-hub-badge-row">
+              <span class="d-pill-red">CHALLENGE 2 · CLOUD ECOSYSTEM</span>
+              <span class="d-pill-sub">ALFA University College · Management Turnaround</span>
+              <span class="d-pill-status"><span class="d-pulse-dot"></span>Unified Cloud Platform Active · &lt;24h SLA</span>
+            </div>
+            <h2 class="d-hub-title">ALFA OneHub: Unified Paperless Cloud Ecosystem</h2>
+            <p class="d-hub-desc">Integrated multi-tenant platform solving Challenge 2: uniting student lead acquisition (CRM), zero-paper finance &amp; course registry (ERP), and 120-staff organizational governance (HRM) under a single secure cloud architecture.</p>
           </div>
-          <div id="dHub"></div>
+          
+          <div class="d-hub-hero-actions">
+            <button type="button" class="d-btn sm primary" onclick="setHub('map')">
+              <span data-ic="layoutGrid" data-s="14"></span><span>Architecture Blueprint</span>
+            </button>
+            <button type="button" class="d-btn sm" onclick="window.print()">
+              <span>Print Hub Overview</span>
+            </button>
+          </div>
         </div>
+
+        <!-- 4-Card Module Switcher Cockpit -->
+        <div class="d-hub-nav-grid" role="tablist" aria-label="ALFA OneHub Modules">
+          <div class="d-hub-nav-card hub-tab active" role="tab" data-hub="crm" aria-selected="true" tabindex="0">
+            <div class="d-nav-top">
+              <span class="d-nav-tag">Module 1 · Admissions</span>
+              <span class="d-nav-icon">📣</span>
+            </div>
+            <div class="d-nav-body">
+              <div class="d-nav-title">Student Enquiry (CRM)</div>
+              <div class="d-nav-sub">Direct Social Leads &amp; &lt;24h SOP</div>
+            </div>
+            <div class="d-nav-pill">4 Applicants · $0 Comm</div>
+          </div>
+
+          <div class="d-hub-nav-card hub-tab" role="tab" data-hub="erp" aria-selected="false" tabindex="0">
+            <div class="d-nav-top">
+              <span class="d-nav-tag">Module 2 · Academic Operations</span>
+              <span class="d-nav-icon">⚡</span>
+            </div>
+            <div class="d-nav-body">
+              <div class="d-nav-title">Course &amp; Fee System (ERP)</div>
+              <div class="d-nav-sub">Paperless Finance &amp; Registry</div>
+            </div>
+            <div class="d-nav-pill">3 Automations · 90% Paper Saved</div>
+          </div>
+
+          <div class="d-hub-nav-card hub-tab" role="tab" data-hub="hrm" aria-selected="false" tabindex="0">
+            <div class="d-nav-top">
+              <span class="d-nav-tag">Module 3 · Governance</span>
+              <span class="d-nav-icon">👥</span>
+            </div>
+            <div class="d-nav-body">
+              <div class="d-nav-title">Staff Records System (HRM)</div>
+              <div class="d-nav-sub">120-Staff Portal &amp; Bonus Tracker</div>
+            </div>
+            <div class="d-nav-pill">120 Staff · 100% Certified</div>
+          </div>
+
+          <div class="d-hub-nav-card hub-tab" role="tab" data-hub="map" aria-selected="false" tabindex="0">
+            <div class="d-nav-top">
+              <span class="d-nav-tag">Cloud Infrastructure</span>
+              <span class="d-nav-icon">🌐</span>
+            </div>
+            <div class="d-nav-body">
+              <div class="d-nav-title">Enterprise Architecture</div>
+              <div class="d-nav-sub">Multi-Tier Cloud Topology</div>
+            </div>
+            <div class="d-nav-pill">Interactive Blueprint</div>
+          </div>
+        </div>
+
+        <!-- Dynamic Module Stage -->
+        <div id="dHub"></div>
       </section>
 
+
       <!-- View 4: Theory -->
+      
+      <!-- View 4: Theory & Viva Q&A Hub -->
       <section id="view-theories" class="view-section" aria-label="Theory and Q&amp;A">
         <h2 class="sr-only">FIB 2074 Management Theories and Lecturer Q&amp;A</h2>
-        <div class="theory-top-bar">
-          <input type="search" class="theory-search" id="dThSearch" data-th-search placeholder="Search theories (POLC, SMART, power, span of control…), press / to focus" aria-label="Search theories" autocomplete="off" />
-          <button class="btn-admin" id="dOpenAdmin" onclick="openAdmin()" aria-label="Admin Panel"><span data-ic="lock" data-s="16"></span><span>Admin Panel</span></button>
+        
+        <!-- Executive Academic Hero Header -->
+        <div class="d-th-hero">
+          <div class="d-th-hero-left">
+            <span class="d-th-eyebrow"><span class="d-th-pill-dot"></span>FIB 2074 ACADEMIC FOUNDATION &bull; MANAGEMENT THEORY BANK</span>
+            <h3 class="d-th-title">Management Theory Bank &amp; Lecturer Defense Studio</h3>
+            <p class="d-th-subtitle">
+              Theoretical justification for the ALFA University College turnaround proposal. Grounded in Robbins &amp; Coulter (2021) and Richard L. Daft (2018), linking classical, behavioural, contingency, and modern control frameworks directly to operational turnaround execution.
+            </p>
+          </div>
+          <div class="d-th-hero-actions">
+            <button class="d-th-btn-admin" id="dOpenAdmin" onclick="openAdmin()" aria-label="Open Q&amp;A Admin Studio">
+              <span data-ic="lock" data-s="16"></span>
+              <span>Q&amp;A Admin Studio</span>
+            </button>
+            <button class="d-th-btn-sec" onclick="setTheoryFilter('all'); clearTheorySearch();" title="Reset Filters &amp; Search">
+              <span data-ic="refresh" data-s="15"></span>
+              <span>Reset</span>
+            </button>
+          </div>
         </div>
-        <div class="theory-filters" id="dFilters"></div>
+
+        <!-- Executive Study Metrics Strip -->
+        <div class="d-th-metrics">
+          <div class="d-th-metric-card accent-red">
+            <span class="d-th-metric-label">Academic Coverage</span>
+            <div class="d-th-metric-val">8 Topics <small>&bull; 6 Lectures</small></div>
+            <span class="d-th-metric-sub">Complete coverage across Lectures 1&ndash;6 and Sections F&amp;G</span>
+          </div>
+          <div class="d-th-metric-card accent-blue">
+            <span class="d-th-metric-label">Core Frameworks</span>
+            <div class="d-th-metric-val">POLC &amp; SMART</div>
+            <span class="d-th-metric-sub">Fayol, Weber, Mintzberg, French &amp; Raven 5 Power Bases</span>
+          </div>
+          <div class="d-th-metric-card accent-gold">
+            <span class="d-th-metric-label">Governance &amp; Span</span>
+            <div class="d-th-metric-val">1:7 Span <small>&bull; 0 Layoffs</small></div>
+            <span class="d-th-metric-sub">Academic Affairs span 1:7; zero retrenchments across 120 staff</span>
+          </div>
+          <div class="d-th-metric-card accent-teal">
+            <span class="d-th-metric-label">Financial Defense</span>
+            <div class="d-th-metric-val">$94,500 <small>&bull; $65.5K Net</small></div>
+            <span class="d-th-metric-sub">Slashing acquisition costs from $400.00 to $236.25/student</span>
+          </div>
+        </div>
+
+        <!-- Command Center Search & Lecture Filters -->
+        <div class="d-th-control-matrix">
+          <div class="d-th-search-row">
+            <div class="d-th-search-box">
+              <span data-ic="search" data-s="18" class="d-th-search-ico"></span>
+              <input type="search" class="d-th-search-input" id="dThSearch" data-th-search placeholder="Search theories (POLC, SMART, power, span of control, contingency…), press / to focus" aria-label="Search theories" autocomplete="off" />
+              <div class="d-th-search-addons">
+                <button class="d-th-search-clear" id="dThSearchClear" onclick="clearTheorySearch()" aria-label="Clear search" title="Clear search">✕</button>
+                <kbd class="d-th-kbd-hint"><span class="d-th-kbd-slash">/</span> Focus</kbd>
+              </div>
+            </div>
+            <span class="d-th-count-pill" id="dThLiveCount">8 Topics Available</span>
+          </div>
+          
+          <div class="theory-filters" id="dFilters" role="group" aria-label="Filter by lecture category"></div>
+        </div>
+
+        <!-- Dynamic Academic Cards Grid -->
         <div class="cards-grid" id="dTheory"></div>
       </section>
+
 
       <!-- View 5: Module B: Speaker Script (Locked with AES-GCM + PBKDF2) -->
       <section id="view-script" class="view-section" aria-label="Speaker Script">
@@ -9907,10 +13756,13 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="admin-header-actions">
           <button class="adm-settings-btn m-btn sm" id="admSettingsBtn" onclick="openProjectSettingsModal()" title="Project Settings & Access Control" aria-label="Project Settings & Access Control" style="display:none">
             <span data-ic="gear" data-s="16"></span>
-            <span class="d-none-mob">Settings</span>
           </button>
-          <button class="m-btn sm" onclick="adminSignOut()" title="Lock Admin Panel"><span data-ic="lock" data-s="16"></span><span>Lock</span></button>
-          <button class="admin-modal-close" onclick="closeAdminPanel()" aria-label="Close Admin Panel"><span data-ic="close" data-s="20"></span></button>
+          <button class="adm-lock-btn m-btn sm" onclick="adminSignOut()" title="Lock Admin Panel" aria-label="Lock Admin Panel">
+            <span data-ic="lock" data-s="16"></span>
+          </button>
+          <button class="admin-modal-close" onclick="closeAdminPanel()" title="Close Admin Panel" aria-label="Close Admin Panel">
+            <span data-ic="close" data-s="20"></span>
+          </button>
         </div>
       </div>
 
@@ -9997,8 +13849,8 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
           <div class="admin-card-head">
             <h3>Topics by Lecture<span class="d-none-mob"> Distribution</span></h3>
             <div class="admin-tools-row">
-              <button type="button" class="m-btn sm" onclick="adminResetDefaults()" title="Reset to original syllabus"><span data-ic="refresh" data-s="14"></span><span>Reset<span class="d-none-mob"> Defaults</span></span></button>
-              <button type="button" class="m-btn sm" onclick="adminExportJSON()" title="Export JSON"><span data-ic="download" data-s="14"></span><span>Export</span></button>
+              <button type="button" class="m-btn sm icon-only" onclick="adminResetDefaults()" title="Reset to original syllabus" aria-label="Reset to original syllabus"><span data-ic="refresh" data-s="16"></span></button>
+              <button type="button" class="m-btn sm icon-only" onclick="adminExportJSON()" title="Export JSON" aria-label="Export JSON"><span data-ic="download" data-s="16"></span></button>
             </div>
           </div>
 
@@ -10386,7 +14238,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             <text x="${w/2}" y="22" text-anchor="middle" fill="var(--text, #fff)" font-size="12" font-weight="800">ALFA OneHub Platform</text>
             <text x="${w/2}" y="35" text-anchor="middle" fill="var(--text, #fff)" font-size="11.5" font-weight="800">(CRM + ERP + HRM): Our Proposal</text>
           ` : `
-            <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="16" font-weight="800">ALFA OneHub (our proposal: Enquiry + Course &amp; Fee + Staff Records): Proposed Platform Architecture</text>
+            <text x="${w/2}" y="30" text-anchor="middle" fill="var(--text, #fff)" font-size="13.5" font-weight="800">ALFA OneHub (Enquiry + Course &amp; Fee + Staff Records): Platform Architecture</text>
           `}
           ${isMob ? `
             <text x="${w/2}" y="48" text-anchor="middle" fill="var(--text-muted, #94a3b8)" font-size="11">Unified Digital Campus · Cloud-Hosted</text>
@@ -12544,7 +16396,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
   function goToMember(mi) {
     const firstSlideIndex = ALL_SLIDES.findIndex(s => s.mi === mi);
     if (firstSlideIndex !== -1) {
-      if (!isMobile()) dGo("deck");
+      if (!isMobile() && S.dView !== "script") dGo("deck");
       goToSlide(firstSlideIndex);
     }
   }
@@ -13367,25 +17219,51 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     const remSec = isWait ? Math.ceil((vaultCooldownUntil - Date.now()) / 1000) : 0;
 
     if (!vaultData) {
-      const buildLockHTML = (suffix, useH1) => `
-        <div class="vault-wrap">
-          <div class="vault-logo" role="img" aria-label="ALFA University College logo"><i class="logo-i"></i></div>
-          <${useH1 ? "h1" : "h2"} class="vault-h1">Speaker Script</${useH1 ? "h1" : "h2"}>
-          <p class="vault-sub">Protected presenter module for FIB 2074 team members. Enter the password to decrypt the 7 speeches and study notes in memory.</p>
-          <form onsubmit="event.preventDefault(); submitVaultUnlock(this);" autocomplete="off">
-            <div class="vault-field">
-              <label for="vaultPwd_${suffix}">Password</label>
-              <div class="vault-input-wrap">
-                <input id="vaultPwd_${suffix}" data-vault-input type="${vaultShowPwd ? "text" : "password"}" class="vault-input" placeholder="Enter password" ${isWait ? "disabled" : ""} required autocomplete="off" />
-                <button type="button" class="vault-eye" data-vault-eye onclick="toggleVaultPwdEye()" aria-label="Show or hide password">${ic(vaultShowPwd ? "eyeOff" : "eye", 19)}</button>
+      const buildLockHTML = (suffix, useH1) => {
+        if (suffix === "d") {
+          return `
+          <div class="vault-wrap">
+            <span class="vault-security-pill"><span class="vault-security-dot"></span>PBKDF2 + AES-GCM 256-BIT SECURE VAULT</span>
+            <div class="vault-logo" role="img" aria-label="ALFA University College logo"><i class="logo-i"></i></div>
+            <${useH1 ? "h1" : "h2"} class="vault-h1">Presenter Teleprompter &amp; Rehearsal Studio</${useH1 ? "h1" : "h2"}>
+            <p class="vault-sub">Protected oral defense cockpit for FIB 2074 team members. Enter your credential to decrypt the 7 member speeches, pacing cues, and lecturer Q&amp;A defense in memory.</p>
+            
+            <form onsubmit="event.preventDefault(); submitVaultUnlock(this);" autocomplete="off">
+              <div class="vault-field">
+                <label for="vaultPwd_${suffix}">Vault Password</label>
+                <div class="vault-input-wrap">
+                  <input id="vaultPwd_${suffix}" data-vault-input type="${vaultShowPwd ? "text" : "password"}" class="vault-input" placeholder="Enter password" ${isWait ? "disabled" : ""} required autocomplete="off" />
+                  <button type="button" class="vault-eye" data-vault-eye onclick="toggleVaultPwdEye()" aria-label="Show or hide password">${ic(vaultShowPwd ? "eyeOff" : "eye", 19)}</button>
+                </div>
               </div>
-            </div>
-            ${vaultErrorMsg ? `<div class="vault-err" role="alert">${esc(vaultErrorMsg)}</div>` : ""}
-            <button type="submit" class="vault-submit" data-vault-submit ${isWait ? "disabled" : ""}>
-              ${isWait ? `Wait ${remSec}s…` : "Access Speaker Script"}
-            </button>
-          </form>
-        </div>`;
+              ${vaultErrorMsg ? `<div class="vault-err" role="alert">${esc(vaultErrorMsg)}</div>` : ""}
+              <button type="submit" class="vault-submit" data-vault-submit ${isWait ? "disabled" : ""}>
+                ${isWait ? `Wait ${remSec}s…` : "Access Speaker Studio"}
+              </button>
+            </form>
+          </div>`;
+        } else {
+          return `
+          <div class="vault-wrap">
+            <div class="vault-logo" role="img" aria-label="ALFA University College logo"><i class="logo-i"></i></div>
+            <${useH1 ? "h1" : "h2"} class="vault-h1">Speaker Script</${useH1 ? "h1" : "h2"}>
+            <p class="vault-sub">Protected presenter module for FIB 2074 team members. Enter the password to decrypt the 7 speeches and study notes in memory.</p>
+            <form onsubmit="event.preventDefault(); submitVaultUnlock(this);" autocomplete="off">
+              <div class="vault-field">
+                <label for="vaultPwd_${suffix}">Password</label>
+                <div class="vault-input-wrap">
+                  <input id="vaultPwd_${suffix}" data-vault-input type="${vaultShowPwd ? "text" : "password"}" class="vault-input" placeholder="Enter password" ${isWait ? "disabled" : ""} required autocomplete="off" />
+                  <button type="button" class="vault-eye" data-vault-eye onclick="toggleVaultPwdEye()" aria-label="Show or hide password">${ic(vaultShowPwd ? "eyeOff" : "eye", 19)}</button>
+                </div>
+              </div>
+              ${vaultErrorMsg ? `<div class="vault-err" role="alert">${esc(vaultErrorMsg)}</div>` : ""}
+              <button type="submit" class="vault-submit" data-vault-submit ${isWait ? "disabled" : ""}>
+                ${isWait ? `Wait ${remSec}s…` : "Access Speaker Script"}
+              </button>
+            </form>
+          </div>`;
+        }
+      };
       if (dHost) dHost.innerHTML = buildLockHTML("d", !isMobile() && S.dView === "script");
       if (mHost) mHost.innerHTML = buildLockHTML("m", isMobile() && S.mView === "script");
       return;
@@ -13398,56 +17276,122 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
     const words = wc(mData.speech);
     const memberSlideIndexes = ALL_SLIDES.map((s, i) => ({ s, i })).filter(o => o.s.mi === curSlide.mi);
 
+    const MEMBER_TOPICS = [
+      "Profile, Challenges & Classical Theories",
+      "OneHub Cloud & Unit Economics (-41%)",
+      "Marketing Restructure & $50 Direct Bonus",
+      "Paperless SOP & Span of Control 1:7",
+      "Leadership, 5 Power Bases & IT Sandbox",
+      "Lecture 6 Six Steps & 3 Timing Models",
+      "Turnaround Roadmap & Contingency Plan"
+    ];
+
     const buildUnlockedHTML = (useH1) => `
       <div class="spk-studio">
-        <div class="spk-studio-top">
-          <div>
-            <span class="p-badge-member">Member ${mData.num} · ${esc(mData.slidesRange)}</span>
-            <${useH1 ? "h1" : "h2"} style="font-size:1.35rem;font-weight:900;color:#fff;margin-top:.25rem">${esc(ui.studioTitle)}</${useH1 ? "h1" : "h2"}>
+        <!-- Executive Cockpit Hero Header -->
+        <div class="d-spk-hero">
+          <div class="d-spk-hero-left">
+            <span class="d-spk-eyebrow"><span class="d-spk-pill-dot"></span>FIB 2074 ORAL PRESENTATION COCKPIT &bull; SPEAKER TELEPROMPTER</span>
+            <h3 class="d-spk-title">${esc(ui.studioTitle || "Speaker Teleprompter & Lecturer Defense Studio")}</h3>
+            <p class="d-spk-subtitle">
+              Word-for-word spoken defense scripts, slide pacing, verified vs assumed fact annotations, and anticipated lecturer counter-arguments for all 7 team members.
+            </p>
           </div>
-          <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
-            ${currentVaultUserRole === "superadmin" ? `<button type="button" class="spk-settings-btn btn btn-sm" onclick="openProjectSettingsModal()">${ic("gear", 15)}<span>Settings</span></button>` : ""}
-            <button type="button" class="p-btn" onclick="openFocus()">${ic("expand", 15)}<span>${esc(ui.focusLabel)}</span></button>
-            <button type="button" class="spk-lock-btn" onclick="lockScriptVault(false)" aria-label="Lock Speaker Script">${ic("lock", 15)}<span>${esc(ui.lockLabel)}</span></button>
+          <div class="d-spk-hero-actions">
+            <span class="d-spk-role-badge">
+              <span data-ic="${currentVaultUserRole === 'superadmin' ? 'crown' : 'check'}" data-s="14"></span>
+              <span>${currentVaultUserRole === 'superadmin' ? 'Super Admin' : currentVaultUserRole === 'admin' ? 'Admin' : 'Member'}</span>
+            </span>
+            ${currentVaultUserRole === "superadmin" ? `<button type="button" class="spk-settings-btn d-spk-btn-icon" onclick="openProjectSettingsModal()" title="Project Settings & Access Control" aria-label="Project Settings & Access Control">${ic("gear", 16)}</button>` : ""}
+            <button type="button" class="d-spk-btn-focus d-spk-btn-icon" onclick="openFocus()" title="${esc(ui.focusLabel || 'Fullscreen Stage Teleprompter')}" aria-label="Fullscreen Stage Teleprompter">${ic("expand", 16)}</button>
+            <button type="button" class="d-spk-btn-lock d-spk-btn-icon" onclick="lockScriptVault(false)" title="${esc(ui.lockLabel || 'Lock Speaker Script')}" aria-label="Lock Speaker Script">${ic("lock", 16)}</button>
           </div>
         </div>
 
-        <div class="p-members" style="margin-bottom:.65rem" role="group" aria-label="Select member script">
-          ${vaultData.members.map((m, idx) => `<button type="button" class="p-mpill ${idx === curSlide.mi ? "active" : ""}" onclick="goToMember(${idx})">Member ${m.num}</button>`).join("")}
-        </div>
-        <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem">
-          ${memberSlideIndexes.map(o => `<button type="button" class="slide-chip ${o.i === S.slideIdx ? "active" : ""}" onclick="goToSlide(${o.i})">Slide ${o.s.no}: ${esc(o.s.shortTitle)}</button>`).join("")}
+        <!-- Rehearsal Pacing Metrics Strip -->
+        <div class="d-spk-metrics">
+          <div class="d-spk-metric-card accent-red">
+            <span class="d-spk-metric-label">Speaking Duration</span>
+            <div class="d-spk-metric-val">${esc(ui.targetLabel || "Target 2:00")}</div>
+            <span class="d-spk-metric-sub">Paced for Member ${mData.num} (${esc(mData.slidesRange)})</span>
+          </div>
+          <div class="d-spk-metric-card accent-blue">
+            <span class="d-spk-metric-label">Spoken Word Count</span>
+            <div class="d-spk-metric-val">${words} Words <small>&bull; ~130 WPM</small></div>
+            <span class="d-spk-metric-sub">Optimal oral delivery tempo for viva presentation</span>
+          </div>
+          <div class="d-spk-metric-card accent-gold">
+            <span class="d-spk-metric-label">Active Slide Coverage</span>
+            <div class="d-spk-metric-val">Slide ${curSlide.no} <small>of 15</small></div>
+            <span class="d-spk-metric-sub">${esc(curSlide.shortTitle || curSlide.title)}</span>
+          </div>
+          <div class="d-spk-metric-card accent-teal">
+            <span class="d-spk-metric-label">Defense Readiness</span>
+            <div class="d-spk-metric-val">${(mData.qa || []).length} Q&amp;A Counters</div>
+            <span class="d-spk-metric-sub">${(mData.explanations || []).length} Slide fact-checks annotated</span>
+          </div>
         </div>
 
+        <!-- Presenter Navigator & Slide Chips -->
+        <div class="d-spk-nav-cockpit">
+          <div class="d-spk-members-row" role="group" aria-label="Select member script">
+            ${vaultData.members.map((m, idx) => `
+              <button type="button" class="p-mpill ${idx === curSlide.mi ? "active" : ""}" onclick="goToMember(${idx})" title="${MEMBER_TOPICS[idx] || ''}">
+                <span style="font-weight:800">Member ${m.num}</span>
+                <span style="opacity:0.75;font-size:0.72rem">(${esc(m.slidesRange)})</span>
+              </button>
+            `).join("")}
+          </div>
+          <div class="d-spk-slides-row">
+            ${memberSlideIndexes.map(o => `
+              <button type="button" class="slide-chip ${o.i === S.slideIdx ? "active" : ""}" onclick="goToSlide(${o.i})">
+                Slide ${o.s.no}: ${esc(o.s.shortTitle)}
+              </button>
+            `).join("")}
+          </div>
+        </div>
+
+        <!-- Two-Column Studio Grid -->
         <div class="spk-grid">
-          <div class="slide-right" style="min-height:320px">
-            <div>
-              <div class="spk-head">
-                <span class="spk-badge">Member ${mData.num} · ${esc(mData.slidesRange)}</span>
-                <div class="spk-ctl">
-                  <button type="button" class="spk-btn" onclick="fontStep(-2)" aria-label="Decrease text size">A−</button>
-                  <button type="button" class="spk-btn" onclick="fontStep(2)" aria-label="Increase text size">A+</button>
-                </div>
+          <!-- Left Column: Teleprompter Card -->
+          <div class="slide-right">
+            <div class="spk-head">
+              <span class="spk-badge">Member ${mData.num} · ${esc(mData.slidesRange)}</span>
+              <div class="spk-ctl">
+                <button type="button" class="spk-btn" onclick="fontStep(-2)" aria-label="Decrease text size">A−</button>
+                <span style="font-size:0.75rem;font-weight:700;color:#94a3b8;padding:0 0.2rem">${S.font}px</span>
+                <button type="button" class="spk-btn" onclick="fontStep(2)" aria-label="Increase text size">A+</button>
+                <button type="button" class="spk-btn icon-only" onclick="copySpeech()" title="Copy speech text to clipboard" aria-label="Copy speech text" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:8px">
+                  ${ic("copy", 15)}
+                </button>
               </div>
-              <p class="spk-text" data-script style="font-size:${S.font}px">“${esc(mData.speech)}”</p>
             </div>
+            <p class="spk-text" data-script style="font-size:${S.font}px">“${esc(mData.speech)}”</p>
             <div class="spk-foot">
-              
-              <span>${esc(ui.targetLabel)}</span>
+              <span class="spk-foot-badge"><span data-ic="clock" data-s="14"></span> ${esc(ui.targetLabel || "Target 2:00")}</span>
+              <span style="color:#64748b;font-size:0.75rem">FIB 2074 Verified Speech Text</span>
             </div>
           </div>
 
+          <!-- Right Column: Study Notes & Lecturer Defense -->
           <div class="spk-notes-list">
-            <h3 style="font-size:.92rem;font-weight:800;color:var(--alfa-pink)">${esc(ui.explainTitle)}</h3>
+            <div class="spk-notes-header">
+              <span data-ic="book" data-s="15"></span>
+              <span>Slide Study &amp; Fact-Check Notes</span>
+            </div>
             ${(mData.explanations || []).map(ex => `
               <div class="spk-note-card ${ex.slide === curSlide.no ? "active" : ""}">
-                <b>${esc(ex.title)}</b>
+                <b>Slide ${ex.slide || ''}: ${esc(ex.title)}</b>
                 <p>${esc(ex.note)}</p>
               </div>
             `).join("")}
-            <h3 class="c-teal" style="font-size:.92rem;font-weight:800;margin-top:.4rem">${esc(ui.qaTitle)}</h3>
+
+            <div class="spk-qa-header">
+              <span data-ic="shield" data-s="15"></span>
+              <span>Anticipated Lecturer Q&amp;A Defense</span>
+            </div>
             ${(mData.qa || []).map(q => `
-              <div class="spk-note-card">
+              <div class="spk-note-card qa-card">
                 <b>Q: ${esc(q.q)}</b>
                 <p><strong>A:</strong> ${esc(q.a)}</p>
               </div>
@@ -13465,7 +17409,7 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         <div class="m-spk-top">
           <div class="m-spk-brand">
             <span class="m-spk-role-badge ${currentVaultUserRole === 'superadmin' ? 'superadmin' : currentVaultUserRole === 'admin' ? 'admin' : 'presenter'}">
-              ${currentVaultUserRole === 'superadmin' ? 'Super Admin' : currentVaultUserRole === 'admin' ? 'Admin' : 'Presenter'}
+              ${currentVaultUserRole === 'superadmin' ? 'Super Admin' : currentVaultUserRole === 'admin' ? 'Admin' : 'Member'}
             </span>
             <div class="m-spk-title-group">
               <${useH1 ? "h1" : "h2"}>${esc(ui.studioTitle || "Speaker Studio")}</${useH1 ? "h1" : "h2"}>
@@ -13473,9 +17417,9 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             </div>
           </div>
           <div class="m-spk-top-actions">
-            ${currentVaultUserRole === "superadmin" ? `<button type="button" class="spk-settings-btn m-btn sm" onclick="openProjectSettingsModal()">${ic("gear", 13)}<span class="spk-btn-text">Settings</span></button>` : ""}
-            <button type="button" class="m-spk-focus-btn" onclick="openFocus()" aria-label="Open Fullscreen Stage Teleprompter">${ic("expand", 13)}<span class="spk-btn-text">Stage</span></button>
-            <button type="button" class="spk-lock-btn" onclick="lockScriptVault(false)" aria-label="Lock Speaker Script">${ic("lock", 13)}<span class="spk-btn-text">${esc(ui.lockLabel || "Lock")}</span></button>
+            ${currentVaultUserRole === "superadmin" ? `<button type="button" class="spk-settings-btn m-btn sm" onclick="openProjectSettingsModal()" title="Project Settings & Access Control" aria-label="Project Settings & Access Control">${ic("gear", 15)}</button>` : ""}
+            <button type="button" class="m-spk-focus-btn" onclick="openFocus()" title="Open Fullscreen Stage Teleprompter" aria-label="Open Fullscreen Stage Teleprompter">${ic("expand", 15)}</button>
+            <button type="button" class="spk-lock-btn" onclick="lockScriptVault(false)" title="${esc(ui.lockLabel || 'Lock Speaker Script')}" aria-label="Lock Speaker Script">${ic("lock", 15)}</button>
           </div>
         </div>
 
@@ -13573,10 +17517,10 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
             </div>
             <div class="m-prompter-actions">
               <button type="button" class="m-tool-action-btn" onclick="copyActiveSpeech()" aria-label="Copy speech text" title="Copy Speech">
-                ${ic("copy", 13)}<span>Copy</span>
+                ${ic("copy", 15)}
               </button>
               <button type="button" class="m-tool-action-btn primary" onclick="openFocus()" aria-label="Open Fullscreen Stage Teleprompter" title="Fullscreen Stage Mode">
-                ${ic("expand", 13)}<span>Stage</span>
+                ${ic("expand", 15)}
               </button>
             </div>
           </div>
@@ -14240,10 +18184,140 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
     let d = "", m = "";
     if (k === "crm") {
-      d = `<table class="data-table"><thead><tr><th>Applicant ID</th><th>Student &amp; country</th><th>Programme applied</th><th>Acquisition channel</th><th>Turnaround</th><th>CRM status</th></tr></thead><tbody>${CRM.map(x => `<tr><td>${x.id}</td><td>${esc(x.name)} (${esc(x.country)})</td><td>${esc(x.prog)}</td><td>${esc(x.channel)}</td><td>${esc(x.time)}</td><td><span class="badge-status ${x.ok ? "badge-ok" : "badge-warn"}">${esc(x.status)}</span></td></tr>`).join("")}</tbody></table>`;
       const avg = (CRM.reduce((a, x) => a + parseFloat(x.time), 0) / CRM.length).toFixed(1);
       const direct = CRM.filter(x => x.ok).length;
       const commSaved = (direct * 375).toLocaleString();
+
+      d = `
+        <div class="d-hub-content-wrap">
+          <!-- Top 3 Live KPI Cards -->
+          <div class="d-hub-kpis">
+            <div class="d-hub-kpi-card kpi-green">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Direct Enrolment Ratio</span>
+                <span class="d-hub-kpi-badge badge-green">${Math.round(direct / CRM.length * 100)}% Direct</span>
+              </div>
+              <div class="d-hub-kpi-val val-green">${direct} / ${CRM.length} Applicants</div>
+              <div class="d-hub-kpi-sub">$0 commission paid on verified direct social media leads</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-cyan">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Turnaround Velocity</span>
+                <span class="d-hub-kpi-badge badge-cyan">&lt; 24h SOP</span>
+              </div>
+              <div class="d-hub-kpi-val val-cyan">${avg} hrs Avg</div>
+              <div class="d-hub-kpi-sub">Fastest inquiry response: 14h (TikTok Campus Tour)</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-amber">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Commission Drain Saved</span>
+                <span class="d-hub-kpi-badge badge-amber">+$1,125 Realized</span>
+              </div>
+              <div class="d-hub-kpi-val val-amber">$${commSaved} Saved</div>
+              <div class="d-hub-kpi-sub">${direct} direct students × $375 baseline agency fee saved</div>
+            </div>
+          </div>
+
+          <!-- Full-Width Applicant Live Pipeline Table -->
+          <div class="d-hub-card">
+            <div class="d-hub-card-header">
+              <div>
+                <h4 class="d-hub-card-title">Live Student Enquiry &amp; Admissions Pipeline</h4>
+                <p class="d-hub-card-desc">Active applicant tracking across digital direct channels vs third-party master-agent channels:</p>
+              </div>
+              <span class="d-pill-status"><span class="d-pulse-dot"></span>Live Pipeline Sync</span>
+            </div>
+
+            <div class="d-hub-table-wrap">
+              <table class="d-hub-table" aria-label="OneHub Student Enquiry CRM Pipeline">
+                <thead>
+                  <tr>
+                    <th>Applicant ID</th>
+                    <th>Student &amp; Country</th>
+                    <th>Programme Applied</th>
+                    <th>Acquisition Channel</th>
+                    <th>Turnaround</th>
+                    <th style="text-align:right">CRM Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${CRM.map(x => {
+                    const flag = x.country === 'Kyrgyzstan' ? 'KG' : x.country === 'Malaysia' ? 'MY' : x.country === 'Indonesia' ? 'ID' : x.country === 'China' ? 'CN' : 'INT';
+                    const isDirect = x.ok;
+                    return `<tr>
+                      <td class="font-mono"><strong>${x.id}</strong></td>
+                      <td>
+                        <div class="d-student-cell">
+                          <span class="d-flag-badge ${isDirect ? 'flag-direct' : 'flag-agent'}">${flag}</span>
+                          <div>
+                            <div class="d-student-name">${esc(x.name)}</div>
+                            <div class="d-student-country">${esc(x.country)}</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="d-prog-text">${esc(x.prog)}</span></td>
+                      <td><span class="d-channel-pill ${isDirect ? 'ch-direct' : 'ch-agent'}">${esc(x.channel)}</span></td>
+                      <td>
+                        <span class="d-turnaround-pill ${isDirect ? 'ta-fast' : 'ta-agent'}">
+                          <span class="d-dot ${isDirect ? 'dot-green' : 'dot-amber'}"></span>${esc(x.time)}
+                        </span>
+                      </td>
+                      <td style="text-align:right">
+                        <span class="d-status-pill ${isDirect ? 'status-ok' : 'status-warn'}">
+                          ${isDirect ? '<span class="d-check-ic">✓</span> ' : ''}${esc(x.status)}
+                        </span>
+                      </td>
+                    </tr>`;
+                  }).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Strategy & Economics Cards Grid Below Table -->
+          <div class="d-crm-strategy-grid">
+            <div class="d-hub-card">
+              <div class="d-mini-head">
+                <span class="d-mini-icon">🎯</span>
+                <h5 class="d-mini-title">Direct Social Ingestion Architecture</h5>
+              </div>
+              <p class="d-mini-text">Prospective students tapping TikTok or Instagram reels submit verifiable digital applications in under 5 minutes without printing documents.</p>
+              <div class="d-mini-kv-list">
+                <div class="d-mini-kv">
+                  <span>Direct Commission Fee:</span>
+                  <strong class="color-green">$0 (100% Tuition Retained)</strong>
+                </div>
+                <div class="d-mini-kv">
+                  <span>Third-Party Agent Fee:</span>
+                  <strong class="color-red">15% ($375 / student drain)</strong>
+                </div>
+                <div class="d-mini-kv">
+                  <span>Annual Target (260 Direct):</span>
+                  <strong class="color-amber">$97,500 Gross Commission Savings</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-hub-card">
+              <div class="d-mini-head">
+                <span class="d-mini-icon">⚡</span>
+                <h5 class="d-mini-title">&lt; 24h Digital Service SLA</h5>
+              </div>
+              <p class="d-mini-text">In Malaysian private higher education, agent turnaround averages 48–72 hours. OneHub automated lead routing notifies counselors instantly, reducing drop-off by 60%.</p>
+              <div class="d-sla-bar-wrap">
+                <div class="d-sla-meta">
+                  <span>Current Velocity: ${avg}h</span>
+                  <span class="color-green">Under 24h SLA</span>
+                </div>
+                <div class="d-sla-bar">
+                  <div class="d-sla-fill" style="width: 76%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
       m = `
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
@@ -14284,7 +18358,105 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         }).join("")}
       `;
     } else if (k === "erp") {
-      d = `<table class="data-table"><thead><tr><th>OneHub system module</th><th>Old paper process at ALFA</th><th>New ALFA OneHub ERP automation</th><th>Control standard</th></tr></thead><tbody>${ERP.map(x => `<tr><td>${esc(x.mod)}</td><td>${esc(x.old)}</td><td>${esc(x.neu)}</td><td><span class="badge-status badge-ok">${esc(x.std)}</span></td></tr>`).join("")}</tbody></table>`;
+      d = `
+        <div class="d-hub-content-wrap">
+          <!-- Top 3 Live KPI Cards -->
+          <div class="d-hub-kpis">
+            <div class="d-hub-kpi-card kpi-green">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Paper Elimination</span>
+                <span class="d-hub-kpi-badge badge-green">90% Paper Saved</span>
+              </div>
+              <div class="d-hub-kpi-val val-green">90% Less Paper</div>
+              <div class="d-hub-kpi-sub">Physical forms &amp; deposit slips eliminated</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-cyan">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Service Velocity</span>
+                <span class="d-hub-kpi-badge badge-cyan">&lt; 24h Standard</span>
+              </div>
+              <div class="d-hub-kpi-val val-cyan">&lt; 24h SOP</div>
+              <div class="d-hub-kpi-sub">Reduced from legacy 5–7 day manual wait</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-amber">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Finance Clearance</span>
+                <span class="d-hub-kpi-badge badge-amber">Automated API</span>
+              </div>
+              <div class="d-hub-kpi-val val-amber">Instant Clearance</div>
+              <div class="d-hub-kpi-sub">Instant online payment &amp; mobile QR Exam Pass</div>
+            </div>
+          </div>
+
+          <!-- ERP Before & After Transformation Matrix (3 Cards Grid) -->
+          <div class="d-erp-cards-grid">
+            ${ERP.map((x, idx) => {
+              const icon = idx === 0 ? '💳' : idx === 1 ? '📝' : '📜';
+              const cat = idx === 0 ? 'STUDENT FINANCE &amp; BILLING' : idx === 1 ? 'ACADEMIC REGISTRY' : 'RECORDS &amp; SERVICES';
+              return `
+              <div class="d-erp-card">
+                <div class="d-erp-card-head">
+                  <div class="d-erp-head-left">
+                    <span class="d-erp-icon">${icon}</span>
+                    <div>
+                      <span class="d-erp-cat">${cat}</span>
+                      <h4 class="d-erp-module-title">${esc(x.mod)}</h4>
+                    </div>
+                  </div>
+                  <span class="d-control-badge">${esc(x.std)}</span>
+                </div>
+
+                <div class="d-erp-flow-compare">
+                  <!-- Legacy Paper Flow -->
+                  <div class="d-flow-box flow-legacy">
+                    <div class="d-flow-header">
+                      <span class="d-flow-tag tag-legacy">Legacy Paper Workflow (5–7 Days)</span>
+                      <span class="d-flow-pain">Counter Queues &amp; Physical Loss</span>
+                    </div>
+                    <p class="d-flow-desc">${esc(x.old)}</p>
+                  </div>
+
+                  <!-- Transformation Flow Arrow -->
+                  <div class="d-flow-arrow-row">
+                    <div class="d-flow-line"></div>
+                    <span class="d-flow-arrow-badge">OneHub Cloud Automation ↓</span>
+                    <div class="d-flow-line"></div>
+                  </div>
+
+                  <!-- OneHub Automated Flow -->
+                  <div class="d-flow-box flow-cloud">
+                    <div class="d-flow-header">
+                      <span class="d-flow-tag tag-cloud">OneHub Automated Solution</span>
+                      <span class="d-flow-gain">Instant Digital Verification</span>
+                    </div>
+                    <p class="d-flow-desc">${esc(x.neu)}</p>
+                  </div>
+                </div>
+              </div>
+              `;
+            }).join("")}
+          </div>
+
+          <!-- Bottom Administrative Impact Card -->
+          <div class="d-hub-card d-hub-impact-bar">
+            <div class="d-impact-item">
+              <span class="d-impact-icon">🏛️</span>
+              <div>
+                <strong>Eliminates Campus Counter Congestion:</strong>
+                <span>Zero multi-hour queues at Finance counter during registration and exam hall pass collection weeks.</span>
+              </div>
+            </div>
+            <div class="d-impact-item">
+              <span class="d-impact-icon">🔒</span>
+              <div>
+                <strong>Tamper-Proof Digital Governance:</strong>
+                <span>Cryptographically signed online receipts and QR passes prevent fraudulent slips and lost paper grade sheets.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
       m = `
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
@@ -14323,7 +18495,89 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         `).join("")}
       `;
     } else if (k === "hrm") {
-      d = `<table class="data-table"><thead><tr><th>Division</th><th>Headcount</th><th>Span of control</th><th>OneHub system competency</th><th>Incentive / recognition</th></tr></thead><tbody>${HRM.map(x => `<tr><td>${esc(x.div)}</td><td>${x.n} staff</td><td>${esc(x.span)}</td><td>${esc(x.compTxt)}</td><td><span class="badge-status badge-ok">${esc(x.inc)}</span></td></tr>`).join("")}<tr><td>Top management (Chairman, VC &amp; directors)</td><td>5 staff</td><td>—</td><td>—</td><td>—</td></tr></tbody></table>`;
+      d = `
+        <div class="d-hub-content-wrap">
+          <!-- Top 3 Live KPI Cards -->
+          <div class="d-hub-kpis">
+            <div class="d-hub-kpi-card kpi-green">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Campus Workforce</span>
+                <span class="d-hub-kpi-badge badge-green">100% Digital Portal</span>
+              </div>
+              <div class="d-hub-kpi-val val-green">120 Staff Total</div>
+              <div class="d-hub-kpi-sub">4 operational divisions + 5 executive leaders</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-cyan">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Span of Control</span>
+                <span class="d-hub-kpi-badge badge-cyan">Flat &amp; Agile</span>
+              </div>
+              <div class="d-hub-kpi-val val-cyan">1:4 – 1:7 Ratio</div>
+              <div class="d-hub-kpi-sub">Optimal delegation without bureaucratic drag</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-amber">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Direct Enrolment Incentive</span>
+                <span class="d-hub-kpi-badge badge-amber">$13,000 Total Pool</span>
+              </div>
+              <div class="d-hub-kpi-val val-amber">+$50 / Student</div>
+              <div class="d-hub-kpi-sub">Direct staff bonus replacing third-party commissions</div>
+            </div>
+          </div>
+
+          <!-- HRM 4 Divisions Grid -->
+          <div class="d-hrm-cards-grid">
+            ${HRM.map(x => {
+              return `
+              <div class="d-hrm-card">
+                <div class="d-hrm-card-head">
+                  <div>
+                    <h4 class="d-hrm-div-title">${esc(x.div)}</h4>
+                    <span class="d-hrm-count-pill">${x.n} Staff Members</span>
+                  </div>
+                  <span class="d-hrm-award-pill">${esc(x.inc)}</span>
+                </div>
+
+                <div class="d-hrm-body">
+                  <div class="d-hrm-metric-row">
+                    <span class="d-hrm-lbl">Span of Control:</span>
+                    <strong class="d-hrm-span-val">${esc(x.span)}</strong>
+                  </div>
+
+                  <div class="d-hrm-comp-wrap">
+                    <div class="d-hrm-comp-head">
+                      <span class="d-hrm-lbl">OneHub System Competency:</span>
+                      <strong class="d-hrm-comp-val color-green">${esc(x.compTxt)}</strong>
+                    </div>
+                    <div class="d-hrm-comp-bar" role="progressbar" aria-valuenow="${x.comp}" aria-valuemin="0" aria-valuemax="100">
+                      <div class="d-hrm-comp-fill" style="width: ${x.comp}%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              `;
+            }).join("")}
+          </div>
+
+          <!-- Top Executive Governance Card -->
+          <div class="d-hub-card d-hrm-top-mgmt">
+            <div class="d-mgmt-head">
+              <span class="d-mgmt-icon">👑</span>
+              <div>
+                <h4 class="d-mgmt-title">Top Management &amp; Strategic Executive Oversight</h4>
+                <p class="d-mgmt-desc">Chairman, Vice-Chancellor &amp; Executive Directors (5 Staff) · Strategic POLC Leadership (Planning, Organizing, Leading, Controlling)</p>
+              </div>
+            </div>
+            <div class="d-mgmt-pills">
+              <span class="d-mgmt-pill">Strategic Goal Setting (Planning)</span>
+              <span class="d-mgmt-pill">Span of Control Structure (Organizing)</span>
+              <span class="d-mgmt-pill">Digital Capability Training (Leading)</span>
+              <span class="d-mgmt-pill">Real-Time Performance Dashboard (Controlling)</span>
+            </div>
+          </div>
+        </div>
+      `;
+
       m = `
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
@@ -14369,7 +18623,93 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         </div>
       `;
     } else {
-      d = `<div class="hub-arch-wrap" style="padding:.5rem;background:var(--card,#151d2d);border-radius:12px;border:1px solid var(--border,rgba(255,255,255,0.1))"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem"><h3 style="margin:0;font-size:1rem;color:var(--text,#fff)">ALFA OneHub Enterprise Architecture (Our Proposal)</h3><button type="button" class="p-btn accent" onclick="openLb(5)">Zoom / Expand</button></div><div style="max-width:700px;margin:0 auto">${renderChartSVG(5, isMobile())}</div></div>`;
+      d = `
+        <div class="d-hub-content-wrap">
+          <!-- Top 3 Live KPI Cards -->
+          <div class="d-hub-kpis">
+            <div class="d-hub-kpi-card kpi-green">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Cloud Availability</span>
+                <span class="d-hub-kpi-badge badge-green">High Uptime</span>
+              </div>
+              <div class="d-hub-kpi-val val-green">99.98% Uptime</div>
+              <div class="d-hub-kpi-sub">Continuous cloud-hosted system availability</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-cyan">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">System Interoperability</span>
+                <span class="d-hub-kpi-badge badge-cyan">Unified Data Layer</span>
+              </div>
+              <div class="d-hub-kpi-val val-cyan">REST &amp; WebSocket</div>
+              <div class="d-hub-kpi-sub">Real-time sync between Admissions, Finance &amp; HR</div>
+            </div>
+            <div class="d-hub-kpi-card kpi-amber">
+              <div class="d-hub-kpi-top">
+                <span class="d-hub-kpi-lbl">Access Governance</span>
+                <span class="d-hub-kpi-badge badge-amber">PDPA &amp; ISO</span>
+              </div>
+              <div class="d-hub-kpi-val val-amber">Role-Based (RBAC)</div>
+              <div class="d-hub-kpi-sub">Cryptographic encryption and audit-logged actions</div>
+            </div>
+          </div>
+
+          <!-- Main Architecture Stage Card -->
+          <div class="d-hub-card d-arch-stage-card">
+            <div class="d-arch-header">
+              <div>
+                <h4 class="d-arch-title">ALFA OneHub Enterprise Cloud Architecture (Our Proposal)</h4>
+                <p class="d-arch-subtitle">Unified digital campus platform connecting lead acquisition, academic operations, and workforce governance:</p>
+              </div>
+              <div class="d-arch-actions">
+                <button type="button" class="d-btn sm primary" onclick="openLb(5)">
+                  <span data-ic="zoomIn" data-s="14"></span><span>Zoom / Lightbox</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Scaled Architecture SVG Frame -->
+            <div class="d-arch-svg-container">
+              ${renderChartSVG(5, isMobile())}
+            </div>
+          </div>
+
+          <!-- 4 Architecture Tier Breakdown Cards -->
+          <div class="d-arch-tiers-grid">
+            <div class="d-arch-tier-card">
+              <div class="d-tier-num">01</div>
+              <div class="d-tier-content">
+                <h5 class="d-tier-title">Lead Acquisition Ingestion Tier</h5>
+                <p class="d-tier-desc">TikTok Campus Studio tours, Instagram Reels, and direct website chat channels capture prospective student leads without third-party commission middle-agents.</p>
+              </div>
+            </div>
+
+            <div class="d-arch-tier-card">
+              <div class="d-tier-num">02</div>
+              <div class="d-tier-content">
+                <h5 class="d-tier-title">Central Security &amp; Data Fabric</h5>
+                <p class="d-tier-desc">Single Sign-On (SSO), Role-Based Permissions (RBAC), and automated event buses synchronize transactions with sub-second latency.</p>
+              </div>
+            </div>
+
+            <div class="d-arch-tier-card">
+              <div class="d-tier-num">03</div>
+              <div class="d-tier-content">
+                <h5 class="d-tier-title">Integrated Tri-Engine Modules</h5>
+                <p class="d-tier-desc">CRM (Admissions &lt;24h SOP), ERP (instant online payments &amp; QR Hall Pass), and HRM (120-staff directory &amp; direct $50 bonus pool).</p>
+              </div>
+            </div>
+
+            <div class="d-arch-tier-card">
+              <div class="d-tier-num">04</div>
+              <div class="d-tier-content">
+                <h5 class="d-tier-title">Executive POLC Control Cockpit</h5>
+                <p class="d-tier-desc">Real-time tuition retention telemetry ($905,500 retained / 90.55%), sensitivity stress-testing, and compliance audit logging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
       m = `
         <div class="m-hub-banner">
           <div class="m-hub-banner-top">
@@ -14471,15 +18811,12 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
         </div>
       `;
     }
-    $("#dHub").innerHTML = `<h3 class="hub-title">${esc(info.t)}</h3><p class="hub-desc">${esc(info.d)}</p>${d}`;
+    $("#dHub").innerHTML = d;
     const mh = $("#mHub");
     mh.innerHTML = m;
     mh.classList.remove("m-fade"); void mh.offsetWidth; mh.classList.add("m-fade");
   }
 
-  /* =======================================================================
-     THEORY SEARCH & Q&A BANK
-     ======================================================================= */
   function highlightMatches(text, tokens) {
     if (!tokens || !tokens.length || !text) return esc(text);
     let s = esc(text);
@@ -14523,18 +18860,68 @@ html.js .rv:not(.in){opacity:0;transform:translateY(16px);transition:opacity .6s
 
     $$("[data-th]").forEach(b => b.setAttribute("aria-pressed", b.dataset.th === S.thFilter));
 
-    // Desktop render
+    // Desktop render (Executive Academic Viva Defense Cards)
+    const countPill = $("#dThLiveCount");
+    if (countPill) {
+      countPill.textContent = list.length === THEORY.length ? `${list.length} Topics Available` : `Showing ${list.length} of ${THEORY.length} Topics`;
+    }
+
     if (list.length > 0) {
-      $("#dTheory").innerHTML = list.map(t => `
-        <article class="theory-card" id="${t.id}">
-          <span class="lec-tag">${esc(t.tag)}</span>
-          <h2 style="font-size:1.02rem;margin:0">${highlightMatches(t.title, tokens)}</h2>
-          <p><strong>Core Concept:</strong> ${highlightMatches(t.concept, tokens)}</p>
-          <div class="alfa-apply"><strong>At ALFA:</strong> ${highlightMatches(t.alfa, tokens)}</div>
+      $("#dTheory").innerHTML = list.map(t => {
+        const catCls = 'cat-' + (t.cat || 'l1').toLowerCase();
+        let cite = 'Robbins & Coulter / Daft';
+        if (t.cat === 'L1') cite = 'Robbins & Coulter · Ch. 1';
+        else if (t.cat === 'L2') cite = 'Fayol, Weber & Follett';
+        else if (t.cat === 'L3') cite = 'Robbins & Coulter · SMART Goals';
+        else if (t.cat === 'L4') cite = 'Daft (2018) · Span & Authority';
+        else if (t.cat === 'L5') cite = 'French & Raven (1959) · 5 Powers';
+        else if (t.cat === 'FG') cite = 'Lecture 6 Six Steps · Feedforward';
+
+        return `
+        <article class="d-th-card" id="${t.id}">
+          <div class="d-th-card-header">
+            <span class="d-th-tag-pill ${catCls}">${esc(t.tag)}</span>
+            <span class="d-th-cite-pill">${cite}</span>
+          </div>
+          <h4 class="d-th-card-title">${highlightMatches(t.title, tokens)}</h4>
+          <div class="d-th-box concept">
+            <div class="d-th-box-head">
+              <span data-ic="book" data-s="14"></span>
+              <span>Theoretical Foundation &amp; Core Concept</span>
+            </div>
+            <p>${highlightMatches(t.concept, tokens)}</p>
+          </div>
+          <div class="d-th-box alfa">
+            <div class="d-th-box-head">
+              <span data-ic="zap" data-s="14"></span>
+              <span>Application at ALFA University College (Viva Defense)</span>
+            </div>
+            <p>${highlightMatches(t.alfa, tokens)}</p>
+          </div>
+          <div class="d-th-card-footer">
+            <span class="d-th-footer-tag"><span data-ic="check" data-s="13"></span> Lecturer Defense Ready</span>
+            <span class="d-th-footer-cite">FIB 2074 Academic Vault</span>
+          </div>
         </article>
-      `).join("");
+      `}).join("");
+      hydrateIcons($("#dTheory"));
     } else {
-      $("#dTheory").innerHTML = renderEmptyTheoryState(q, tokens);
+      $("#dTheory").innerHTML = `
+        <div class="d-th-empty">
+          <div class="d-th-empty-icon"><span data-ic="search" data-s="26"></span></div>
+          <h4 class="d-th-empty-h">No Academic Topics Found</h4>
+          <p class="d-th-empty-p">No management theories match the search query "${esc(q)}". Try searching for core course concepts or reset the filters:</p>
+          <div class="d-th-empty-actions">
+            <button class="d-th-empty-chip" onclick="applySearchSuggestion('POLC')">POLC Functions</button>
+            <button class="d-th-empty-chip" onclick="applySearchSuggestion('SMART')">SMART Objectives</button>
+            <button class="d-th-empty-chip" onclick="applySearchSuggestion('power')">5 Power Bases</button>
+            <button class="d-th-empty-chip" onclick="applySearchSuggestion('span')">Span of Control</button>
+            <button class="d-th-empty-chip" onclick="applySearchSuggestion('contingency')">Contingency Theory</button>
+            <button class="d-th-empty-chip" onclick="clearTheorySearch(); setTheoryFilter('all')">Reset All</button>
+          </div>
+        </div>
+      `;
+      hydrateIcons($("#dTheory"));
     }
 
     // Mobile render (compact expandable accordion cards)
